@@ -1,68 +1,49 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+<nav>
+<div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
 
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    </head>
-    <body class="bg-bb">
-    <section class="h-screen">
-  <div class="px-6 h-full text-gray-800">
-    <div class="flex  xl:justify-center lg:justify-between justify-center items-center flex-wrap g-6">
-      <div class="grow-0 shrink-1 md:shrink-0 basis-auto  items-center xl:w-6/12 lg:w-6/12 md:w-9/12 xl:mt-10 md:mb-0">
-        <span class="flex flex-row justify-center text-center pt-8 lg:text-4xl md:text-3xl sm:text-base font-bold">BARBIZON EVERYDAY GROUP OF COMPANIES</span>
-        <img
+
+  <div @click.away="open = false" class="flex flex-col w-full items-center grid place-content-center md:w-96 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
+    <div class="grid grid-flex overflow-hidden flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
+	<div class="flex flex-row justify-center place-items-center">
+  <img
           src="img\Login-image.png"
-          class="xl:w-5/6 sm:w-full xl:mx-20 lg:mx-20"
+          class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
           alt="Sample image"
         />
-      </div>
-      <div class="xl:ml-20 xl:w-2/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0 bg-themecolor rounded-3xl">
-        <form>
-          <div class="flex flex-row justify-center">
-            <p class="text-lg mb-0 mr-4 px-8 pt-8 lg:text-3xl text-white font-bold">LOG IN</p>
-          </div>
-
-          <!-- Email input -->
-          <div class="mb-6 px-10 pt-8">
-            <input
-              type="text"
-              class="form-control block w-full px-4 py-2 text-base font-normal text-white placeholder-white bg-transparent bg-clip-padding rounded-3xl border-4 border-white rounded transition ease-in-out m-0 focus:text-white focus:outline-none"
-              id="exampleFormControlInput2"
-              placeholder="Email Address"
-            />
-          </div>
-
-          <!-- Password input -->
-          <div class=" px-10 pb-8">
-            <input
-              type="password"
-              class="form-control block w-full px-4 py-2 xl:text-base sm:text-base font-normal text-white placeholder-white bg-transparent bg-clip-padding rounded-3xl border-4 border-white rounded transition ease-in-out m-0 focus:text-white focus:outline-none"
-              id="exampleFormControlInput2"
-              placeholder="Password"
-            />
-          </div>
-
-          <div class="text-center justify-center pb-4">
-            <button
-              type="button"
-              class="inline-block px-7 py-3 bg-white font-themecolor font-medium text-sm leading-snug uppercase font-bold rounded-3xl shadow-md hover:bg-transparent hover:text-white hover:shadow-lg focus:bg-white focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring focus:ring-gray-100 active:shadow-lg transition duration-150 ease-in-out"
-            >
-              Login
-            </button>
-          </div>
-
-          <div class="flex justify-center items-center mb-6 pb-4 pb-4">
-            <a href="#!" class="text-white">Forgot password?</a>
-          </div>
-        </form>
-      </div>
-    </div>
   </div>
-</section>
+  	  <h1 class="text-center text-lg xl:mt-9 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">FIRSTNAME MN. LASTNAME</h1>
+      <h1 class="text-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">SALESMAN</h1>
+      <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
+      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
+      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:block hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <span>Dropdown</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+</nav>
 
-    </body>
-</html>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
