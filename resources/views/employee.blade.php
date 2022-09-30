@@ -12,12 +12,12 @@
     <!-- <link href="/dist/output.css" rel="stylesheet"> -->
 </head>
 
-<body class="flex" >
+<body class="xl:flex">
     <!-- component -->
-<div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
-  <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
+<div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-3/12 ">
+  <sidebar @click.away="open = false" class="flex flex-col w-full  text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
     <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
-      <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Flowtrail UI</a>
+	  
       <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
           <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -26,7 +26,43 @@
       </button>
     </div>
     <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
-      <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+		<img src="img\Login-image.png"
+				class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
+				alt="Sample image"
+				/>
+				<h1 class="text-center text-lg xl:mt-9 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">FIRSTNAME MN. LASTNAME</h1>
+				<h1 class="text-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Job Position</h1>
+				<div class="basis-1 px-3 grid ">
+				<table class="table-fixed w-full content-center text-left xl:mt-20">
+					<tr>
+						<th>ID NO. :</th>
+						<th class="font-medium">0000-0001</th>
+					</tr>
+					<tr>
+						<th>CONTACT NUMBER :</th>
+						<th class="font-medium">09123456789</th>
+					</tr>
+					<tr>
+						<th>EMAIL: </th>
+						<th class="font-medium">fm.lastname@email.com</th>
+					</tr>
+					<tr>
+						<th>BRANCH: </th>
+						<th class="font-medium">SM Bicutan</th>
+					</tr>
+					<tr>
+						<th>CHAIN: </th>
+						<th class="font-medium">SM Department Store</th>
+					</tr>
+					<tr>
+						<th>BIRTHDAY: </th>
+						<th class="font-medium">January 01, 1993</th>
+					</tr>
+				</table>
+
+				<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1">Log Out</button>
+			</div>
+      <!-- <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
       <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
       <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
       <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
@@ -42,31 +78,27 @@
             <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
           </div>
         </div>
-      </div>
+      </div> -->
     </nav>
-  </div>
+  </sidebar>
 </div>
 
-<div class="flex flex-row  bgprofile rounded-lg justify-center">
-  <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
-  <img
-          src="img\Login-image.png"
-          class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
-          alt="Sample image"
-        />
-  </div>
-  <div class="basis-1/2 py-8 px-8">
-	<h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
-		<ul class="py-3">
-			<li class="text-lg text-gray-800"><span class="font-bold">Name:</span> Maria Clara</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">ID No. :</span> 0000-0001</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Contact No. :</span> 09123456789</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Email :</span> fn.lastname@email.com</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Department :</span> SM Bicutan</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Chain : </span> SM Department Store</li>
-		</ul>
-  </div>
-</div>
+<content class="xl:w-9/12 sm:w-full px-20">
+        <div class="grid md:grid-flow-row grid-rows-2 grid-cols-4">
+			<div class="row-start-1 row-span-1 bg-green-900 px-5 py-5">
+				<div class="bg-gray-700 rounded-lg">
+					<h1>Worked Hour Today</h1>
+					<span class="countdown font-mono text-2xl">
+						<span style="--value:10;"></span>h
+						<span style="--value:24;"></span>m
+						<span style="--value:4;"></span>s
+					</span>
+				</div>
+			</div>
+			<div class="row-start-2 row-span-1 bg-red-900">02</div>
+			<div class="row-start-1 row-span-2 col-span-3 bg-blue-900">09</div>
+		</div>
+</content>
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
