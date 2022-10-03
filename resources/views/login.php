@@ -51,10 +51,8 @@
           <div class="text-center justify-center pb-4">
             <a href="hr"><button
               type="button"
-              class="inline-block px-7 py-3 bg-white font-themecolor font-medium text-sm leading-snug uppercase font-bold rounded-3xl shadow-md hover:bg-transparent hover:text-white hover:shadow-lg focus:bg-white focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring focus:ring-gray-100 active:shadow-lg transition duration-150 ease-in-out"
-            >
-              Login
-            </button></a>
+              class="inline-block px-7 py-3 bg-white font-themecolor font-medium text-sm leading-snug uppercase font-bold rounded-3xl shadow-md hover:bg-transparent hover:text-white hover:shadow-lg focus:bg-white focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring focus:ring-gray-100 active:shadow-lg transition duration-150 ease-in-out">
+              Login</button></a>
           </div>
 
           <div class="flex justify-center items-center mb-6 pb-4 pb-4">
