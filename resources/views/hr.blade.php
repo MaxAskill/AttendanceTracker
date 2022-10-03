@@ -13,40 +13,43 @@
 </head>
 
 <body >
-    <header class="w-full h-16 bgcolor drop-shadow-lg sticky top-0overflow-visible">
-        <div class="container px-1 md:px-0 h-full  flex justify-between items-center">
+    <header class="w-full h-20 bgcolor drop-shadow-lg sticky top-0 top-overflow-visible">
+        <div class="container h-full  flex justify-between items-center">
             <!-- Logo Here -->
-            <a class="text-white xl:text-4xl font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
+            <a class="text-white xl:text-4xl xl:ml-80 font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
 
             <!-- Menu links here -->
-            <ul id="navmenu" class="hidden fixed top-0 right-0 px-10 py-16 bg-gray-800 z-50
-                md:relative md:flex md:p-0 md:bg-transparent md:flex-row md:space-x-6 content-center">
+            <ul id="navmenu" class="hidden fixed top-0 right-0  bg-gray-800 z-50
+                md:relative md:flex md:p-0 md:bg-transparent md:flex-row md:space-x-6">
 
                 <li class="md:hidden z-90 fixed top-4 right-6">
                     <a href="javascript:void(0)" class="text-right text-white text-4xl"
                         onclick="toggleMenu()">&times;</a>
                 </li>
 
-                <li class="bg-green-900">
-					<img
-					src="img\Login-image.png"
-					class="w-16 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
-					alt="Sample image"
-					/>
-					<button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none">
-          <span>Chain</span>
-      </button>
-      <div class="absolute hidden w-56 bg-white bordercolor group-hover:block">
-          <div class="px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
-		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Department Store</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Sucat</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-2">Makati Robinsons</a>
-          </div>
-      </div>
+                <li class="justify-center xl:relative group">
+					<button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 border-transparent  focus:outline-none">
+          			<img src="img\Login-image.png"
+					class="w-12 rounded-full border-white border-2 "
+					alt="Sample image" />
+					</button>
+					<div class="absolute hidden xl:w-80 rounded-full group-hover:block">
+						<div class="flex-none w-full text-left px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
+						<div class="content-center flex items-center justify-center mb-5"><img src="img\Login-image.png" class="w-2/3 rounded-full border-white border-2 object-center" alt="Sample image" /></div>
+							<p><span class="font-bold">ID NO. : </span><br>0000-0001</p>
+							<p><span class="font-bold">CONTACT NUMBER : </span><br>09123456789</p>
+							<p><span class="font-bold">EMAIL : </span><br>crisostomo.ibarra@barbizonfashion.com</p>
+							<p><span class="font-bold">BRANCH : </span><br>SM Bicutan</p>
+							<p><span class="font-bold">CHAIN : </span><br>SM Department Store</p>
+							<p><span class="font-bold">BIRTHDAY : </span><br>January 12, 1995</p>
+						</div>
+					</div>
                 </li>
-                <li class="bg-red-900 content-center justify-center">
-                    <a class="text-white" href="#"><button class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border border-white hover:border-transparent rounded">Log Out</button></a>
-                </li>
+                <li class="my-3 ml-20">
+					<div>
+                    	<a class="text-white" href="#"><button class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded  focus:outline-none">Log Out</button></a>
+					</div>
+				</li>
             </ul>
 
             <!-- This is used to open the menu on mobile devices -->
@@ -75,7 +78,7 @@
       </button>
       <div class="absolute hidden w-56 bg-white bordercolor group-hover:block">
           <div class="px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
-		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Department Store</a>
+		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Bicutan</a>
 				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Sucat</a>
 				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-2">Makati Robinsons</a>
           </div>
@@ -88,7 +91,7 @@
       <div class="absolute hidden w-56 bg-white bordercolor group-hover:block">
           <div class="px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
 		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Department Store</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Sucat</a>
+				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Appliances</a>
 				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-2">Makati Robinsons</a>
           </div>
       </div>
