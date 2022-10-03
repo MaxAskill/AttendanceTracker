@@ -571,7 +571,9 @@ body{
 .bordercolor{
   border-color: #00A3AD;
 }
-
+.capitalized{
+  text-transform: capitalize;
+}
 /* tr:nth-child(even) {
   background-color: #F6F4F4;
 } */
