@@ -42,7 +42,8 @@
 							<p><span class="font-bold">BIRTHDAY : </span><br>January 12, 1995</p>
 						</div>
 						
-						<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 mt-28 font-bold font-themecolor">Log Out</button>
+						<a href="/" class="flex items-center justify-center">
+							<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 mt-28 font-bold font-themecolor focu:outline-none">Log Out</button></a>
 					</div>
 		</nav>
 	</sidebar>
