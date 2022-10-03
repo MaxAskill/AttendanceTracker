@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-		
+		<script src="../js/components/time.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link href="/dist/output.css" rel="stylesheet"> -->
 </head>
@@ -54,16 +54,15 @@
 				<div class="row-start-1 row-span-1 pt-2 drop-shadow-md">
 					<div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Worked Hour Today</h1>
-						<span class="countdown font-mono text-2xl">
-							07:30:20
-						</span>
+						<!-- <div class="countdown font-mono text-2xl" id="tens"></div> -->
+						<p><span id="hours" class="countdown font-mono text-2xl">00</span>:<span id="minutes" class="countdown font-mono text-2xl">00</span>:<span id="seconds" class="countdown font-mono text-2xl ">00</span><span id="tens" class="countdown font-mono text-2xl hidden">00</span></p>
 					</div>
 				</div>
 				<div class="row-start-2 row-span-1 pt-3 drop-shadow-md">
 					<div class="bg-green-500 rounded-lg px2 py-5 text-center text-white">
 						<h1 class="font-bold">Timed In Today</h1>
-						<span class="countdown font-mono text-2xl">
-							07:30:20
+						<span class="countdown font-mono text-2xl" id="timedIn">
+							
 						</span>
 					</div>
 				</div>
@@ -101,8 +100,8 @@
 				<div class="row-start-1 row-span-1 pt-2">
 					<div class="bg-red-500  rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Estimated Time Out</h1>
-						<span class="countdown font-mono text-2xl">
-							07:30:20
+						<span class="countdown font-mono text-2xl" id = "time_out">
+							
 						</span>
 					</div>
 				</div>
@@ -116,7 +115,7 @@
 				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-5 text-center text-white overflow-hidden mt-3">
 					<h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
 					<h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
-					<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2">Check In<button>
+					<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2" onClick="time_in()" onClick="realtimeClock()" id="button-start">Check In<button>
 					<table class="table-fixed w-full content-center text-left text-gray-700 border-separate border-spacing-2">
 						<tr>
 							<th>A.M. IN :</th>
@@ -553,12 +552,6 @@
         </div>
     </div> 
 	</content>
-	<body class="antialiased">
-		<div id="view">
-
-		</div>
-	</body>
-
 
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 	<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
@@ -577,9 +570,99 @@ function hideShow() {
   }
 }
 
-function myTime(){
-	var event = new Date();
+var seconds = 00; 
+var tens = 00; 
+var minutes = 00;
+var hours = 00;
+var appendTens = document.getElementById("tens")
+var appendSeconds = document.getElementById("seconds")
+var appendMinutes = document.getElementById("minutes")
+var appendHours = document.getElementById("hours")
+var buttonStart = document.getElementById('button-start');
+var buttonStop = document.getElementById('button-stop');
+var buttonReset = document.getElementById('button-reset');
+var Interval ;
 
-	console.log(event.toLocaleTimeString('PST'));
+buttonStart.onclick = function() {
+    
+    clearInterval(Interval);
+     Interval = setInterval(startTimer, 10);
+	 time_in();
+  }
+
+function startTimer(){
+	tens++; 
+    
+    if(tens <= 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+    
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+      
+    } 
+    
+    if (tens > 99) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+    
+	if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+	if (seconds > 60){
+		
+		console.log("minutes")
+		minutes++;
+		appendMinutes.innerHTML = "0" + minutes;
+		seconds = 0;
+		appendSeconds.innerHTML = "0" + 0;
+	}
+	if (minutes > 9){
+		appendMinutes.innerHTML = minutes;
+	}
+	if (minutes > 60){
+		
+		console.log("hours")
+		hours++;
+		appendHours.innerHTML = "0" + hours;
+		minutes = 0;
+		appendMinutes.innerHTML = "0" + 0;
+	}
+	if (minutes > 9){
+		appendHours.innerHTML = hours;
+	}
+}
+function time_in(){
+	var rtClock = new Date();
+	console.log(rtClock.toLocaleTimeString('PST'));
+	document.getElementById('timedIn').innerHTML = rtClock.toLocaleTimeString('PST');
+
+	var hours = rtClock.getHours();
+	var minutes = rtClock.getMinutes();
+	var seconds = rtClock.getSeconds();
+
+
+	hours = ("0" + hours).slice(-2);
+	minutes = ("0" + minutes).slice(-2);
+	seconds = ("0" + seconds).slice(-2);
+
+	var amPm = (hours <= 12 ) ? "AM" : "PM";
+
+	hours = (hours > 12) ? hours - 12 : hours;
+	document.getElementById('timedIn').innerHTML = 
+		hours + " : " + minutes + " : "+ seconds + " " + amPm;
+
+	hours = parseInt(hours) + 8 ;
+	
+	var amPm = (hours <= 12 ) ? "AM" : "PM";
+
+	hours = (hours > 12) ? hours - 12 : hours;
+
+	document.getElementById('time_out').innerHTML = 
+		hours + " : " + minutes + " : "+ seconds + " " + amPm;
 }
 </script>

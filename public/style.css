@@ -594,6 +594,15 @@ body{
   background-color: #AA0061;
 }
 
+/* #clock{
+  width: 100%;
+  position: absolute;
+  font-size: 9vw;
+  color: white;
+  text-align: center;
+  
+} */
+
 
 
 /* tr:nth-child(even) {

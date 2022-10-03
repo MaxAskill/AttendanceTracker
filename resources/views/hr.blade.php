@@ -91,7 +91,7 @@
                     </div>
 					<div>
                         <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">First Name</label>
-                        <input @input="capitalizeFName"  type="text" name="fName" id="fName" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="First Name" required="">
+                        <input type="text" name="fName" id="fName" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="First Name" required="">
                     </div>
 					<div>
                         <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Middle Name</label>
@@ -675,25 +675,6 @@
             navmenu.classList.toggle('h-screen');
         };
 
-		function capitalizeTheFirstLetterOfEachWord(words) {
-		var separateWord = words.toLowerCase().split(" ");
-		for (var i = 0; i < separateWord.length; i++) {
-			separateWord[i] =
-			separateWord[i].charAt(0).toUpperCase() +
-			separateWord[i].substring(1);
-		}
-		return separateWord.join(" ");
-		};
-
-		function capitalizeFName() {
-		// if (!this.PersonalInfo.firstName) return ''
-		// this.PersonalInfo.firstName.toLowerCase().split(' ');
-		// var hi= this.PersonalInfo.firstName.charAt(0).toUpperCase() + this.PersonalInfo.firstName.slice(1);
-		this.PersonalInfo.firstName = this.capitalizeTheFirstLetterOfEachWord(this.PersonalInfo.firstName);
-		console.log(
-			this.capitalizeTheFirstLetterOfEachWord(this.PersonalInfo.firstName)
-		);
-		};
 
 		document.getElementById("fName").addEventListener("keypress", isLetter)
 		document.getElementById("mName").addEventListener("keypress", isLetter)
