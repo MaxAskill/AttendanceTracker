@@ -15,7 +15,7 @@
 
 <body >
     <header class="w-full h-16 bgcolor drop-shadow-lg sticky top-0">
-        <div class="container px-1 md:px-0 h-full mx-auto flex justify-between items-center">
+        <div class="container px-1 md:px-0 h-full  flex justify-between items-center">
             <!-- Logo Here -->
             <a class="text-white xl:text-4xl font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
 
@@ -328,172 +328,8 @@
 			<li class="text-lg text-gray-800"><span class="font-bold">Chain : </span> SM Department Store</li>
 		</ul>
   </div>
-</div>
-
-
-<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 rounded-lg mb-5">
-    <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-        <div class="row-start-1 row-span-1 flex">
-            <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
-        </div>
-		<div class="row-start-2 row-span-1 flex">
-		<span class="text-white"> Sort By: <input type="date" class="bg-transparent text-white font-themecolor px-1 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-			<input type="date" class="bg-transparent text-white font-themecolor px-1 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
-		</div>
-        
-		<!-- <div class="row-start-2 row-span-1 flex bg-green-900 floar">
-			<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">OT History</button>
-			<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">Print</button>
-		</div> -->
-		<div class="row-start-2 row-span-2">
-			<div class="flex  float-right">
-				<button class="text-white px-1 py-1 border-2 border-white mt-2 mr-3 rounded-lg">OT History</button>
-				<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">Print</button>
-			</div>
-        </div>
-    </div>
-    <div>
-	<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed " >
-	<thead class="bg-gray-100 flex text-gray w-full ">
-			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-				<th class="p-4 w-2/6">Date</th>
-				<th class="p-4 w-2/6">Time In</th>
-				<th class="p-4 w-2/6">Time Out</th>
-				<th class="p-4 w-2/6">Late</th>
-				<th class="p-4 w-2/6">Undertime</th>
-				<th class="p-4 w-2/6">Overtime</th>
-				<th class="p-4 w-2/6">Hours Rendered</th>
-				<th class="p-4 w-2/6"></th>
-			</tr>
-		</thead>
-    <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 65vh;">
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">--</td>
-			<td class="py-4 px-0.5 w-2/6">--</td>
-			<td class="py-4 px-1 w-2/6">--</td>
-			<td class="py-4 px-1 w-2/6">--</td>
-			<td class="py-4 px-1 w-2/6">--</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">1</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
-			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
-			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
-			<td class="py-4 px-0.5 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">0</td>
-			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		</tbody>
-		<tfoot class="bg-gray-100 flex text-gray w-full ">
-			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-				<th class="p-4 px-1 w-2/6">Date</th>
-				<th class="p-4 px-1 w-2/6">--</th>
-				<th class="p-4 px-1 w-2/6">--</th>
-				<th class="p-4 px-1 w-2/6">1</th>
-				<th class="p-4 px-1 w-2/6">0</th>
-				<th class="p-4 px-1 w-2/6">1 hrs 5 mins</th>
-				<th class="p-4 px-1 w-2/6">81 hrs 45 mins</th>
-				<th class="p-4 px-1 w-2/6"></th>
-			</tr>
-		</tfoot>
-	</table>
-    </div>
 </div><!--end attendance summary-->
+
 
 <div class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
@@ -649,7 +485,7 @@
 		</tfoot>
 	</table>
     </div>
-</div><!--end attendance summary-->
+</div><!--end overtime history-->
 
     </main>
 

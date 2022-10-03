@@ -574,6 +574,19 @@ body{
 .capitalized{
   text-transform: capitalize;
 }
+
+.font-pantone{
+  color: #AA0061;
+}
+
+.bordercolor{
+  border-color: #00A3AD;
+}
+
+.border-pantone{
+  border-color: #AA0061;
+}
+
 /* tr:nth-child(even) {
   background-color: #F6F4F4;
 } */
