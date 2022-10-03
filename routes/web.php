@@ -24,3 +24,7 @@ Route::get('/employee', function () {
 Route::get('/hr', function () {
     return view('hr');
 });
+
+Route::get('/approver', function () {
+    return view('approver');
+});

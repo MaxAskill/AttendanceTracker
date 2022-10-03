@@ -15,7 +15,7 @@
 <body class="xl:flex">
     <!-- component -->
 	<div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-3/12">
-	<sidebar @click.away="open = false" class="flex flex-col w-full  text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
+	<sidebar @click.away="open = false" class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
 		<div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
 		
 		<button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
@@ -78,7 +78,7 @@
 					</div>
 				</div>
 				<div class="row-start-2 row-span-1 pt-3 drop-shadow-md">
-					<div class="bg-gray-500 rounded-lg px2 py-5 text-center text-white">
+					<div class="bg-green-500 rounded-lg px2 py-5 text-center text-white">
 						<h1 class="font-bold">Timed In Today</h1>
 						<span class="countdown font-mono text-2xl">
 							07:30:20
@@ -116,7 +116,7 @@
 
 			<div class="grid md:grid-flow-row grid-row-6 grid-cols-4 py-5 drop-shadow-md">
 				<div class="row-start-1 row-span-1 pt-2">
-					<div class="bg-green-500 rounded-lg px-2 py-5 text-white text-center">
+					<div class="bg-red-500  rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Time In Today</h1>
 						<span class="countdown font-mono text-2xl">
 							07:30:20
@@ -124,11 +124,10 @@
 					</div>
 				</div>
 				<div class="row-start-2 row-span-1 pt-3">
-					<div class="bg-red-500 rounded-lg px2 py-5 text-center text-white">
-						<h1 class="font-bold">Estimated Out Today</h1>
-						<span class="countdown font-mono text-2xl text-center ">
-							06:00:20
-						</span>
+					<div class="bg-white rounded-lg px2 py-5 text-center text-white space-x-4">
+						<h1 class="text-gray-700 text-4xl font-bold">FILING OT</h1>
+						<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-1 mt-1">File OT<button>
+						<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-1 mt-1">History<button>
 					</div>
 				</div>
 				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-5 text-center text-white overflow-hidden mt-3">
@@ -193,7 +192,7 @@
 										<th class="p-4 w-2/6">DURATION</th>
 									</tr>
 								</thead>
-								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 53vh;">
+								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 54vh;">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 										<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
@@ -381,7 +380,7 @@
 				</div><!--tABLE GRID END-->
 			</div><!--2nd Grid-->
 
-			<div class="grid bgcolor overflow-auto rounded-lg mb-5 drop-shadow-md">
+<div class="grid bgcolor overflow-auto rounded-lg mb-5 drop-shadow-md">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold">Attendance Summary</h1>
