@@ -589,6 +589,13 @@ body{
 .hide-show{
   display: block
 }
+
+.bgpantone{
+  background-color: #AA0061;
+}
+
+
+
 /* tr:nth-child(even) {
   background-color: #F6F4F4;
 } */
