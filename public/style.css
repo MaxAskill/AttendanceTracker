@@ -572,6 +572,6 @@ body{
   border-color: #00A3AD;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #F6F4F4;
-}
+} */

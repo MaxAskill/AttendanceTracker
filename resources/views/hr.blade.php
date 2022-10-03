@@ -114,8 +114,8 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full " style="height: 70vh;">
-		<tr class="flex w-full ">
+		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 70vh;">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -124,7 +124,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -133,7 +133,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -142,7 +142,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -151,7 +151,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -160,7 +160,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -169,7 +169,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -178,7 +178,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -187,7 +187,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -196,7 +196,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -205,7 +205,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -214,7 +214,7 @@
 			<td class="p-4 w-2/6">SM Department Store</td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
 		</tr>
-		<tr class="flex w-full ">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
@@ -276,9 +276,9 @@
         </div>
     </div>
     <div>
-	<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed" >
+	<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed " >
 	<thead class="bg-gray-100 flex text-gray w-full ">
-			<tr class="flex w-full">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<th class="p-4 w-2/6">Date</th>
 				<th class="p-4 w-2/6">Time In</th>
 				<th class="p-4 w-2/6">Time Out</th>
@@ -291,7 +291,7 @@
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
 		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 65vh;">
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">--</td>
@@ -301,7 +301,7 @@
 			<td class="py-4 px-1 w-2/6">--</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -311,7 +311,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -321,7 +321,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -331,7 +331,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -341,7 +341,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -351,7 +351,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -361,7 +361,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -371,7 +371,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -381,7 +381,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -391,7 +391,7 @@
 			<td class="py-4 px-1 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 px-1 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 			<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
 			<td class="py-4 px-0.5 w-2/6">8 : 05 pm</td>
@@ -403,7 +403,7 @@
 		</tr>
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full ">
-			<tr class="flex w-full">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<th class="p-4 px-1 w-2/6">Date</th>
 				<th class="p-4 px-1 w-2/6">--</th>
 				<th class="p-4 px-1 w-2/6">--</th>
@@ -445,7 +445,7 @@
     <div>
 	<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed" >
 		<thead class="bg-gray-100 flex text-gray w-full ">
-			<tr class="flex w-full">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<th class="py-4 w-2/6">Date</th>
 				<th class="py-4 w-2/6">Time In</th>
 				<th class="py-4 w-2/6">Time Out</th>
@@ -455,104 +455,105 @@
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
 		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full " style="height: 65vh;">
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
-			<td class="py-4  w-3/6">September 19, 2021</td>
-			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-			<td class="py-4 px-2  w-3/6">Approved</td>
-		</tr><tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
 			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
 			<td class="py-4 px-2  w-3/6">Approved</td>
 		</tr>
-		<tr class="flex w-full">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4  w-3/6">September 19, 2021</td>
 			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
 			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
@@ -561,7 +562,7 @@
 		</tr>
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full ">
-			<tr class="flex w-full">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<th class="p-4 px-1 w-2/6">Date</th>
 				<th class="p-4 px-1 w-2/6">--</th>
 				<th class="p-4 px-1 w-2/6">--</th>
