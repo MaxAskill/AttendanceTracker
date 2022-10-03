@@ -15,8 +15,8 @@
 <body class="xl:flex">
     <!-- component -->
 	<div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-3/12">
-	<sidebar @click.away="open = false" class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
-		<div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
+	<sidebar @click.away="open = false" class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0" x-data="{ open: false }">
+		<div class="flex-shrink-0 px-8 py-4 flex flex-row">
 		
 		<button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
 			<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -25,43 +25,24 @@
 			</svg>
 		</button>
 		</div>
-		<nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
+		<nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block xl:px-10 pb-4 md:pb-0 items-center justify-between">
 			<img src="img\Login-image.png"
 					class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
 					alt="Sample image"
 					/>
-					<h1 class="text-center text-lg xl:mt-9 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">FIRSTNAME MN. LASTNAME</h1>
-					<h1 class="text-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Job Position</h1>
-					<div class="basis-1 px-3 grid ">
-						<table class="table-fixed w-full content-center text-left xl:mt-20 border-separate border-spacing-2">
-							<tr>
-								<th>ID NO. :</th>
-								<th class="font-medium">0000-0001</th>
-							</tr>
-							<tr>
-								<th>CONTACT NUMBER :</th>
-								<th class="font-medium">09123456789</th>
-							</tr>
-							<tr>
-								<th>EMAIL: </th>
-								<th class="font-medium">fm.lastname@email.com</th>
-							</tr>
-							<tr>
-								<th>BRANCH: </th>
-								<th class="font-medium">SM Bicutan</th>
-							</tr>
-							<tr>
-								<th>CHAIN: </th>
-								<th class="font-medium">SM Department Store</th>
-							</tr>
-							<tr>
-								<th>BIRTHDAY: </th>
-								<th class="font-medium">January 01, 1993</th>
-							</tr>
-						</table>
-
-						<!-- <button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 absolute inset-x-0 bottom-0 flex-shrink-0">Log Out</button> -->
-						<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 mt-72">Log Out</button>
+					<h1 class="text-center text-2xl break-words font-bold xl:mt-9 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">CRISOSTOMO IBARRA</h1>
+					<h1 class="text-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">NBFI Sales</h1>
+					<div class="basis-1 px-5 grid">
+						<div class="flex-none w-full text-left xl:mt-20 tracking-wide leading-loose">
+							<p><span class="font-bold">ID NO. : </span><br>0000-0001</p>
+							<p><span class="font-bold">CONTACT NUMBER : </span><br>09123456789</p>
+							<p><span class="font-bold">EMAIL : </span><br>crisostomo.ibarra@barbizonfashion.com</p>
+							<p><span class="font-bold">BRANCH : </span><br>SM Bicutan</p>
+							<p><span class="font-bold">CHAIN : </span><br>SM Department Store</p>
+							<p><span class="font-bold">BIRTHDAY : </span><br>January 12, 1995</p>
+						</div>
+						
+						<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 mt-28 font-bold font-themecolor">Log Out</button>
 					</div>
 		</nav>
 	</sidebar>
@@ -95,29 +76,29 @@
 							<button class="border-2 border-solid bordercolor rounded-2xl px-2 py-2 font-themecolor ml-16">View More</button>
 						</div>
 						<div class="text-center py-2 text-gray-700">
-							<h1 class="text-lg">Late</h1>
+							<h1 class="text-lg font-bold">Late</h1>
 							<h2 class="text-4xl">0 Day/s</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
-							<h1 class="text-lg">Undertime</h1>
+							<h1 class="text-lg font-bold">Undertime</h1>
 							<h2 class="text-4xl">0 Day/s</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
-							<h1 class="text-lg">Overtime</h1>
+							<h1 class="text-lg font-bold">Overtime</h1>
 							<h2 class="text-4xl">0 Day/s</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
-							<h1 class="text-lg">Hours Rendered</h1>
+							<h1 class="text-lg font-bold">Hours Rendered</h1>
 							<h2 class="text-4xl">0 Day/s</h2>
 						</div>
 					</div>
 				</div>
 			</div><!--1st Grid-->
 
-			<div class="grid md:grid-flow-row grid-row-6 grid-cols-4 py-5 drop-shadow-md">
+			<div class="grid md:grid-flow-row grid-row-6 grid-cols-4 pt-2 pb-5 drop-shadow-md">
 				<div class="row-start-1 row-span-1 pt-2">
 					<div class="bg-red-500  rounded-lg px-2 py-5 text-white text-center">
-						<h1 class="font-bold">Time In Today</h1>
+						<h1 class="font-bold">Estimated Time Out</h1>
 						<span class="countdown font-mono text-2xl">
 							07:30:20
 						</span>
@@ -192,7 +173,7 @@
 										<th class="p-4 w-2/6">DURATION</th>
 									</tr>
 								</thead>
-								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 54vh;">
+								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 55vh;">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6 px-5">September 19, 2021</td>
 										<td class="py-4 px-0.5 w-2/6">07 : 34 am</td>
