@@ -27,7 +27,7 @@
 		</button>
 		</div>
 		<nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block xl:px-10 pb-4 md:pb-0 items-center justify-between">
-			<img src="img\Login-image.png"
+			<img src="img\profilepic.png"
 					class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
 					alt="Sample image"
 					/>
@@ -50,7 +50,7 @@
 	</sidebar>
 	</div>
 
-	<content class="xl:w-9/12 sm:w-full px-10 py-5">
+	<content class="xl:w-9/12 sm:w-full px-10">
 			<div class="grid md:grid-flow-row grid-rows-2 grid-cols-4 ">
 				<div class="row-start-1 row-span-1 pt-2 drop-shadow-md">
 					<div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<div class="row-start-2 row-span-1 pt-3 drop-shadow-md">
-					<div class="bg-green-500 rounded-lg px2 py-5 text-center text-white">
+					<div class="bg-green-500 rounded-lg  py-5 text-center text-white">
 						<h1 class="font-bold">Timed In Today</h1>
 						<span class="countdown font-mono text-2xl" id="timedIn">
 						00 : 00 : 00
@@ -79,26 +79,26 @@
 						
 						<div class="text-center py-2 text-gray-700">
 							<h1 class="text-lg font-bold">Late</h1>
-							<h2 class="text-4xl">0 Day/s</h2>
+							<h2 class="text-3xl">0 Day/s</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
 							<h1 class="text-lg font-bold">Undertime</h1>
-							<h2 class="text-4xl">0 Day/s</h2>
+							<h2 class="text-3xl">0 Day/s</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
 							<h1 class="text-lg font-bold">Overtime</h1>
-							<h2 class="text-4xl">00 hrs 00 hrs</h2>
+							<h2 class="text-3xl">00 hrs 00 mins</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
 							<h1 class="text-lg font-bold">Hours Rendered</h1>
-							<h2 class="text-4xl">110 hrs 08 hrs</h2>
+							<h2 class="text-3xl">110 hrs 08 mins</h2>
 						</div>
 					</div>
 				</div>
 			</div><!--1st Grid-->
 
 			<div class="grid md:grid-flow-row grid-row-6 grid-cols-4 pt-2 pb-5 drop-shadow-md">
-				<div class="row-start-1 row-span-1 pt-2">
+				<div class="row-start-1 row-span-1 pt-1">
 					<div class="bg-red-500  rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Estimated Time Out</h1>
 						<span class="countdown font-mono text-2xl" id = "time_out">
@@ -106,14 +106,14 @@
 						</span>
 					</div>
 				</div>
-				<div class="row-start-2 row-span-1 pt-3">
-					<div class="bg-white rounded-lg px2 py-5 text-center text-white space-x-4">
+				<div class="row-start-2 row-span-1">
+					<div class="bg-white rounded-lg py-5 text-center text-white space-x-4">
 						<h1 class="text-gray-700 text-4xl font-bold">FILING OT</h1>
 						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">File OT<button>
 						<a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" onClick="showOT()">History<button></a>
 					</div>
 				</div>
-				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-5 text-center text-white overflow-hidden mt-3">
+				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-2 text-center text-white overflow-hidden">
 					<h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
 					<h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
 					<div class="grid place-content-center">
@@ -151,8 +151,9 @@
 						</tr>
 					</table>
 				</div><!--Card CHECK IN-->
-				<div class="row-start-1 row-span-6 col-span-3 pl-5 drop-shadow-md">
-					<div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full bgcolor rounded-lg">
+
+				<div class="row-start-1 row-span-6 col-span-3 pl-5 pt-1 drop-shadow-md">
+					<div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full bgcolor rounded-t-lg">
 						<div class="row-start-1 row-span-1 flex">
 							<h1 class="text-white text-4xl font-bold px">Daily Time Record</h1>
 						</div>
@@ -314,9 +315,9 @@
 				</div><!--tABLE GRID END-->
 			</div><!--2nd Grid-->
 
-<div class="grid bgcolor overflow-auto rounded-lg mb-5 drop-shadow-md hide-show" id="attendanceSummary" style="display: none">
+<div class="grid bg-transparent overflow-auto rounded-lg drop-shadow-md hide-show py-5 " id="attendanceSummary" style="display: none">
 <a href="bottom"></a>
-    <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+    <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold">Attendance Summary</h1>
         </div>
@@ -344,7 +345,7 @@
 				<th class="p-4 w-2/6">Hours Rendered</th>
 			</tr>
 		</thead>
-		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 72vh;">
+		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 70vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 16, 2021</td>
 				<td class="py-4 w-2/6">09 : 25 am</td>
@@ -478,8 +479,8 @@
     </div>
 </div><!--end attendance summary-->
 
-<div class="grid bgcolor overflow-auto rounded-lg drop-shadow-md" id="history" style="display:none">
-<div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+<div class="grid bg-transparent overflow-auto drop-shadow-md py-5 " id="history" style="display:none">
+<div class="grid bgcolor  rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
 			<div class="row-start-1 row-span-1 flex">
 				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
 
@@ -541,7 +542,7 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">Maria D. Clara</td>
 			<td class="py-4 w-2/6">September 15, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone">Denied</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 15, 2021</td>
@@ -571,7 +572,7 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">Maria D. Clara</td>
 			<td class="py-4 w-2/6">September 18, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone">Denied</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 05, 2021</td>
@@ -611,7 +612,7 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">Padre Damaso</td>
 			<td class="py-4 w-2/6">August 16, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone">Denied</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">August 18, 2021</td>
@@ -631,7 +632,7 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">Padre Damaso</td>
 			<td class="py-4 w-2/6">August 11, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone">Denied</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">August 11, 2021</td>
@@ -651,7 +652,7 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">Padre Damaso</td>
 			<td class="py-4 w-2/6">August 10, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone">Denied</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
@@ -669,6 +670,51 @@
 	</table>
     </div>
  </div><!--end attendance summary  -->
+
+  <!-- Main modal -->
+<div id="denied-ot" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+        <div class="relative xl:w-2/3 sm:w-full xl:px-4 h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="flex justify-end p-2">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="denied-ot">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">OVERTIME REQUEST DENIED!</h3>
+                   
+					<div>
+                        <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Applicant Name: Maria M. Clara</label>
+                        <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                    </div>
+					<div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Applied: September 21, 2022</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Overtime Date: September 22, 2022</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+					<div>
+					<div class="flex justify-center">
+						<div class="mb-3 xl:w-full">
+							<label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">Reason</label>
+									<textarea
+							class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+							id="exampleFormControlTextarea1"
+							rows="8"
+							placeholder="Your messge" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. 
+                            Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
+									</div>
+								</div>
+						</div>
+                    <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
  <!-- Main modal -->
  <div id="authentication-modal" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
         <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
