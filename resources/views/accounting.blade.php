@@ -123,34 +123,7 @@
         </div>
     </div> 
         </div>
-		<div class="row-start-2 row-span-1 flex">
-			
-  <div class="relative group mt-2">
-      <button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none">
-          <span>Branch</span>
-      </button>
-      <div class="absolute hidden w-56 bg-white bordercolor group-hover:block">
-          <div class="px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
-		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Bicutan</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Sucat</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-2">Makati Robinsons</a>
-          </div>
-      </div>
-  </div>  
-  <div class="relative group mt-2 ml-5">
-      <button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none">
-          <span>Chain</span>
-      </button>
-      <div class="absolute hidden w-56 bg-white bordercolor group-hover:block">
-          <div class="px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
-		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Department Store</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Appliances</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-2">Makati Robinsons</a>
-          </div>
-      </div>
-  </div>  
-
-        </div>
+		
         <div class="row-start-1 row-span-2">
 			<div class="flex float-right">
 				<div class="mb-3 xl:w-96">
@@ -308,25 +281,21 @@
 </div> <!--end employee list-->
 
 <div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" >
-    <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-        <div class="row-start-1 row-span-1 flex">
+    <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+        <div class="row-start-1 col-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Employee Salary</h1>
         </div>
-		<div class="row-start-2 row-span-1 flex">
-		<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+		
+		<div class="row-start-1 col-span-1 flex">
+		<div class="mb-3 xl:w-full">
+					<input type="search"
+					class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl"
+					id="exampleSearch"
+					placeholder="Search"
+					/>
+				</div>
 		</div>
-        
-		<!-- <div class="row-start-2 row-span-1 flex bg-green-900 floar">
-			<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">OT History</button>
-			<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">Print</button>
-		</div> -->
-		<div class="row-start-2 row-span-2">
-			<div class="flex  float-right">
-				<a href="#overtimeHistory"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button></a>
-				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">Print</button>
-			</div>
-        </div>
     </div>
     <div>
 	<table class="text-center w-full bg-white rounded-lg hover:table-fixed " >
@@ -344,7 +313,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full" style="height: 65vh;">
+		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full" style="height: 70vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">0000-0001</td>
 			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
@@ -354,21 +323,130 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">View</button></td>
 		</tr>
 		</tbody>
-		<tfoot class="bg-gray-100 flex text-gray w-full ">
-			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-				<th class="p-4 px-1 w-2/6">Date</th>
-				<th class="p-4 px-1 w-2/6">--</th>
-				<th class="p-4 px-1 w-2/6">--</th>
-				<th class="p-4 px-1 w-2/6">1</th>
-				<th class="p-4 px-1 w-2/6">0</th>
-				<th class="p-4 px-1 w-2/6">1 hrs 5 mins</th>
-				<th class="p-4 px-1 w-2/6">81 hrs 45 mins</th>
-				<th class="p-4 px-1 w-2/6"></th>
-			</tr>
-		</tfoot>
 	</table>
     </div>
 </div><!--end attendance summary-->
