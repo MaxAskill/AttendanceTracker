@@ -33,6 +33,8 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::get('/othistory', function () {
-    return view('othistory');
+Route::get('/accounting', function () {
+    return view('accounting');
 });
+
+
