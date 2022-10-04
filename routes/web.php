@@ -28,3 +28,6 @@ Route::get('/hr', function () {
 Route::get('/approver', function () {
     return view('approver');
 });
+Route::get('/othistory', function () {
+    return view('othistory');
+});

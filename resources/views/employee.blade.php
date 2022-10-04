@@ -56,14 +56,14 @@
 					<div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Worked Hour Today</h1>
 						<!-- <div class="countdown font-mono text-2xl" id="tens"></div> -->
-						<p><span id="hours" class="countdown font-mono text-2xl">00</span>:<span id="minutes" class="countdown font-mono text-2xl">00</span>:<span id="seconds" class="countdown font-mono text-2xl ">00</span><span id="tens" class="countdown font-mono text-2xl hidden">00</span></p>
+						<p><span id="hours" class="countdown font-mono text-2xl"> 00 : 00 : 00 : 00  </span></p>
 					</div>
 				</div>
 				<div class="row-start-2 row-span-1 pt-3 drop-shadow-md">
 					<div class="bg-green-500 rounded-lg px2 py-5 text-center text-white">
 						<h1 class="font-bold">Timed In Today</h1>
 						<span class="countdown font-mono text-2xl" id="timedIn">
-							
+						00 : 00 : 00
 						</span>
 					</div>
 				</div>
@@ -74,7 +74,7 @@
 							<h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
 						</div>
 						<div class="row-start-1  col-span-3 flex items-center ">
-							<button class="border-2 border-solid bordercolor rounded-2xl px-2 py-2 font-themecolor ml-16" onClick="hideShow()">View More</button>
+						<a href='#attendanceSummary'><button class="border-2 border-solid bordercolor rounded-2xl px-2 py-2 font-themecolor ml-16">View More </button></a>
 						</div>
 						
 						<div class="text-center py-2 text-gray-700">
@@ -102,7 +102,7 @@
 					<div class="bg-red-500  rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Estimated Time Out</h1>
 						<span class="countdown font-mono text-2xl" id = "time_out">
-							
+							00 : 00 : 00
 						</span>
 					</div>
 				</div>
@@ -116,7 +116,10 @@
 				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-5 text-center text-white overflow-hidden mt-3">
 					<h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
 					<h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
+					<div class="grid place-content-center">
 					<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2" onClick="time_in()" onClick="realtimeClock()" id="button-start">Check In<button>
+					<button class="border-4 rounded-2xl text-xl bordercolor font-pantone py-2 px-2 my-2 hidden" id="button-stop" onClick="hideButton()">Check Out<button>
+					</div>
 					<table class="table-fixed w-full content-center text-left text-gray-700 border-separate border-spacing-2">
 						<tr>
 							<th>A.M. IN :</th>
@@ -363,7 +366,8 @@
 				</div><!--tABLE GRID END-->
 			</div><!--2nd Grid-->
 
-<div class="grid bgcolor overflow-auto rounded-lg mb-5 drop-shadow-md hide-show" id="attendanceSummary" style="display: none">
+<div class="grid bgcolor overflow-auto rounded-lg mb-5 drop-shadow-md hide-show" id="attendanceSummary" >
+<a href="bottom"></a>
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold">Attendance Summary</h1>
@@ -562,14 +566,45 @@
 </html>
 
 <script>
-function hideShow() {
-  var x = document.getElementById("attendanceSummary");
+// function hideShow() {
+//   var x = document.getElementById("attendanceSummary");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+
+//   document.body.scrollBottom= 0;
+//   document.documentElement.scrollBottom = 0;
+// }
+
+
+function hideButton() {
+  var x = document.getElementById("button-start");
+  
   if (x.style.display === "none") {
     x.style.display = "block";
+	
+	console.log("Button - stop")
   } else {
     x.style.display = "none";
+	
+  }
+  showButton();
+}
+function showButton(){
+	var y = document.getElementById("button-stop");
+	  if (y.style.display === "block") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "block";
   }
 }
+//   if (y.style.display === "block") {
+//     y.style.display = "none";
+//   } else {
+//     y.style.display = "block";
+//   }
 
 var seconds = 00; 
 var tens = 00; 
@@ -580,7 +615,7 @@ var appendSeconds = document.getElementById("seconds")
 var appendMinutes = document.getElementById("minutes")
 var appendHours = document.getElementById("hours")
 var buttonStart = document.getElementById('button-start');
-var buttonStop = document.getElementById('button-stop');
+// var buttonStop = document.getElementById('button-stop');
 var buttonReset = document.getElementById('button-reset');
 var Interval ;
 
@@ -589,53 +624,76 @@ buttonStart.onclick = function() {
     clearInterval(Interval);
      Interval = setInterval(startTimer, 10);
 	 time_in();
+	 hideButton();
+
+	//  document.getElementById("button-start").innerHTML = 'Check Out';
+	//  document.getElementById("button-start").style.background='#AA0061';
   }
+
+
 
 function startTimer(){
 	tens++; 
     
     if(tens <= 9){
-      appendTens.innerHTML = "0" + tens;
+    
+	  	tens = "0" + tens;
+	  
     }
     
-    if (tens > 9){
-      appendTens.innerHTML = tens;
-      
-    } 
+    // if (tens > 9){
+   
+	// 	tens = " " + tens
+    // } 
     
     if (tens > 99) {
-      console.log("seconds");
+    //   console.log("seconds");
       seconds++;
-      appendSeconds.innerHTML = "0" + seconds;
-      tens = 0;
-      appendTens.innerHTML = "0" + 0;
+   
+		if(seconds <= 9){		
+			seconds = "0" + seconds;		
+		}else{
+			seconds =  seconds;
+		}
+      tens = 0;   
+		tens = "0" + 0;
     }
-    
-	if (seconds > 9){
-      appendSeconds.innerHTML = seconds;
+   
+	if (seconds == 0){
+		seconds = "00"
     }
-	if (seconds > 60){
+	if (seconds > 60){	
+		// console.log("minutes")
+		minutes++;	
+		if(minutes <= 9){		
+			minutes = "0" + minutes;
+		}else{
+			minutes =  minutes;
+		}	
 		
-		console.log("minutes")
-		minutes++;
-		appendMinutes.innerHTML = "0" + minutes;
-		seconds = 0;
-		appendSeconds.innerHTML = "0" + 0;
+		seconds = 0;		
+		seconds = "0" + 0;
 	}
-	if (minutes > 9){
-		appendMinutes.innerHTML = minutes;
+	if (minutes == 0){
+		minutes = "00";
 	}
-	if (minutes > 60){
-		
-		console.log("hours")
-		hours++;
-		appendHours.innerHTML = "0" + hours;
+	if (minutes > 60){		
+		// console.log("hours")
+		hours++;		
+		if(hours <= 9){		
+			hours = "0" + hours;
+		}else{
+			hours =  hours;
+		}	
 		minutes = 0;
-		appendMinutes.innerHTML = "0" + 0;
+		minutes = "0" + 0;
 	}
-	if (minutes > 9){
-		appendHours.innerHTML = hours;
+	if (hours == 0){
+		hours = "00";
 	}
+	// console.log(hours + " : " + minutes + " : " + seconds + " : " + tens)
+	document.getElementById('hours').innerHTML = hours + " : " + minutes + " : " + seconds + " : " + tens;
+
 }
 function time_in(){
 	var rtClock = new Date();
