@@ -28,3 +28,11 @@ Route::get('/hr', function () {
 Route::get('/approver', function () {
     return view('approver');
 });
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+Route::get('/othistory', function () {
+    return view('othistory');
+});

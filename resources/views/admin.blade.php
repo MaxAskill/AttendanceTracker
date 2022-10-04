@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HR</title>
+        <title>Admin</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -111,6 +111,12 @@
 				</div>
 			</div>
         </div>
+		<!-- </div>
+		<div class="row-start-2 row-span-2">
+			<div class="flex  float-right">
+				<button class="font-themecolor font-bold px-1 py-1 border-2 border border-solid bordercolor mt-2 mr-3 rounded-lg">File Overtime</button>
+			</div>
+        </div> -->
     </div>
     <div>
 	<table class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto" >
@@ -252,6 +258,7 @@
           alt="Sample image"
         />
   </div>
+
   <div class="basis-1/2 py-8 px-8">
 	<h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
 		<ul class="py-3">
@@ -265,6 +272,52 @@
   </div>
 </div>
 
+    <div class="grid grid-rows-3 grid-cols-6 flex flex-row xl:w-5/6 xl:mx-40 xl:my-8 rounded-lg justify-center">
+    <div class="col-start-2 row-span-1 col-span-1 pt-2 drop-shadow-md">
+            <div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
+                <h1 class="font-bold">Worked Hour Today</h1>
+                <span class="countdown font-mono text-2xl">
+                    07:30:20
+                </span>
+            </div>
+        </div>
+        <div class="col-start-2 row-start-2 row-span-1 col-span-1 pt-2 drop-shadow-md">
+            <div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
+                <h1 class="font-bold">Worked Hour Today</h1>
+                <span class="countdown font-mono text-2xl">
+                    07:30:20
+                </span>
+            </div>
+        </div>
+        <div class="col-start-2 row-start-3 col-span-1 pt-2 drop-shadow-md">
+            <div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
+                <h1 class="font-bold">Worked Hour Today</h1>
+                <span class="countdown font-mono text-2xl">
+                    07:30:20
+                </span>
+            </div>
+        </div>
+        <div class="col-start-3 row-span-3 col-span-2 pt-2 drop-shadow-md bg-red-400 px-5">
+            <!-- <div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
+                <h1 class="font-bold">Worked Hour Today</h1>
+                <span class="countdown font-mono text-2xl">
+                    07:30:20
+                </span>
+            </div> -->
+        </div>
+        <div class="col-start-5 row-span-1 col-span-1 pt-2 drop-shadow-md bg-blue-400">
+            <!-- <div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
+                <h1 class="font-bold">Worked Hour Today</h1>
+                <span class="countdown font-mono text-2xl">
+                    07:30:20
+                </span>
+            </div> -->
+        </div>
+        <!-- <div class="row-start-1 span-col-3"></div>
+        <div class="row-start-1 span-col-3"></div>
+        <div class="row-start-2 span-col-1"></div>
+        <div class="row-start-2 span-col-1"></div> -->
+    </div>
 
 <div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 rounded-lg mb-5">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
@@ -272,8 +325,8 @@
             <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
         </div>
 		<div class="row-start-2 row-span-1 flex">
-		<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+		<span class="text-white"> Sort By: <input type="date" class="bg-transparent text-white font-themecolor px-1 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
+			<input type="date" class="bg-transparent text-white font-themecolor px-1 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
 		</div>
         
 		<!-- <div class="row-start-2 row-span-1 flex bg-green-900 floar">
@@ -282,8 +335,8 @@
 		</div> -->
 		<div class="row-start-2 row-span-2">
 			<div class="flex  float-right">
-				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button>
-				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">Print</button>
+				<button class="text-white px-1 py-1 border-2 border-white mt-2 mr-3 rounded-lg">OT History</button>
+				<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">Print</button>
 			</div>
         </div>
     </div>
@@ -429,156 +482,161 @@
     </div>
 </div><!--end attendance summary-->
 
-	<div class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5">
-		<div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-			<div class="row-start-1 row-span-1 flex">
-				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
+<div class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5">
+    <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+        <div class="row-start-1 row-span-1 flex">
+            <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
 
-			</div>
-			<div class="row-start-2 row-span-1 flex items-center">
-				<div class="xl:w-96 xl:h-46">
-					<input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch" placeholder="Search"/>
+        </div>
+		<div class="row-start-2 row-span-1 flex items-center">
+		<div class="xl:w-96 xl:h-46">
+					<input type="search"
+					class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl"
+					id="exampleSearch"
+					placeholder="Search"
+					/>
 				</div>
-				<span class="text-white ml-5 h-10 mb-3"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-				<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
-			</div>
-			<div class="row-start-2 row-span-2">
-				<div class="flex  float-right">
-					<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">File Overtime</button>
-				</div>
-			</div>
+			<span class="text-white ml-5 h-10 mb-3"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
+			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
 		</div>
-		<div>
-			<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed" >
-				<thead class="bg-gray-100 flex text-gray w-full ">
-					<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-						<th class="py-4 w-2/6">Date</th>
-						<th class="py-4 w-2/6">Time In</th>
-						<th class="py-4 w-2/6">Time Out</th>
-						<th class="py-4 w-2/6">Hours Rendered</th>
-						<th class="py-4 w-2/6">Status</th>
-					</tr>
-				</thead>
-				<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full " style="height: 65vh;">
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				</tbody>
-				<tfoot class="bg-gray-100 flex text-gray w-full ">
-					<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-						<th class="p-4 px-1 w-2/6">Date</th>
-						<th class="p-4 px-1 w-2/6">--</th>
-						<th class="p-4 px-1 w-2/6">--</th>
-						<th class="p-4 px-1 w-2/6">9 hrs 5 mins</th>
-						<th class="p-4 px-1 w-2/6">--</th>
-					</tr>
-				</tfoot>
-			</table>
-		</div>
-	</div><!--end overtime history-->
+		<div class="row-start-2 row-span-2">
+			<div class="flex  float-right">
+				<button class="text-white px-1 py-1 border-2 border-white mt-2 mr-3 rounded-lg">File Overtime</button>
+			</div>
+        </div>
+    </div>
+    <div>
+	<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed" >
+		<thead class="bg-gray-100 flex text-gray w-full ">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<th class="py-4 w-2/6">Date</th>
+				<th class="py-4 w-2/6">Time In</th>
+				<th class="py-4 w-2/6">Time Out</th>
+				<th class="py-4 w-2/6">Hours Rendered</th>
+				<th class="py-4 w-2/6">Status</th>
+			</tr>
+		</thead>
+    <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
+		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full " style="height: 65vh;">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4  w-3/6">September 19, 2021</td>
+			<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
+			<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
+			<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
+			<td class="py-4 px-2  w-3/6">Approved</td>
+		</tr>
+		</tbody>
+		<tfoot class="bg-gray-100 flex text-gray w-full ">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<th class="p-4 px-1 w-2/6">Date</th>
+				<th class="p-4 px-1 w-2/6">--</th>
+				<th class="p-4 px-1 w-2/6">--</th>
+				<th class="p-4 px-1 w-2/6">9 hrs 5 mins</th>
+				<th class="p-4 px-1 w-2/6">--</th>
+			</tr>
+		</tfoot>
+	</table>
+    </div>
+</div><!--end overtime history-->
 
     </main>
 
