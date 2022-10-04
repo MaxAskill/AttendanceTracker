@@ -797,15 +797,15 @@
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
 
-		var x = document.getElementById("attendanceSummary");
-		if (x.style.display === "block") {
-			x.style.display = "none";
-			} 
+		// var x = document.getElementById("attendanceSummary");
+		// if (x.style.display === "block") {
+		// 	x.style.display = "none";
+		// 	} 
 
-		var x = document.getElementById("overtimeHistory");
-			if (x.style.display === "block") {
-				x.style.display = "none";
-				}
+		// var x = document.getElementById("overtimeHistory");
+		// 	if (x.style.display === "block") {
+		// 		x.style.display = "none";
+		// 		}
 		}
 
 		function showAttendance() {
