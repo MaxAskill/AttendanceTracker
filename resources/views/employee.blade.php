@@ -109,16 +109,16 @@
 				<div class="row-start-2 row-span-1 pt-3">
 					<div class="bg-white rounded-lg px2 py-5 text-center text-white space-x-4">
 						<h1 class="text-gray-700 text-4xl font-bold">FILING OT</h1>
-						<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-1 mt-1" data-modal-toggle="authentication-modal">File OT<button>
-						<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-1 mt-1">History<button>
+						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">File OT<button>
+						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none">History<button>
 					</div>
 				</div>
 				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-5 text-center text-white overflow-hidden mt-3">
 					<h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
 					<h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
 					<div class="grid place-content-center">
-					<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2" id="button-start">Check In<button>
-					<button class="border-4 rounded-2xl text-xl bordercolor font-pantone py-2 px-2 my-2 hidden" id="button-stop" onClick="hideButton()">Check Out<button>
+					<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2 focus:outline-none" id="button-start">Check In<button>
+					<button class="border-4 rounded-2xl text-xl border-pantone font-pantone py-2 px-2 my-2 hidden focus:outline-none" id="button-stop" onClick="hideButton()">Check Out<button>
 					</div>
 					<table class="table-fixed w-full content-center text-left text-gray-700 border-separate border-spacing-2">
 						<tr>
