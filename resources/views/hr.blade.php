@@ -310,7 +310,7 @@
     </div>
 </div> <!--end employee list-->
 
-<div class="grid xl:py-12"  id="attendanceSummary" style="display:none">
+<div class="grid xl:py-12"  id="attendanceSummary" style="display: none">
 <div class="flex flex-row xl:w-5/6 xl:mx-40 xl:mb-12 bgprofile rounded-lg justify-center">
   <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
   <img
@@ -727,15 +727,23 @@
 		function backToTop() {
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
+
+		var x = document.getElementById("attendanceSummary");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+			} 
+
+		var x = document.getElementById("overtimeHistory");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
 		}
 
 		function showAttendance() {
 			var x = document.getElementById("attendanceSummary");
 			if (x.style.display === "none") {
 				x.style.display = "block";
-			} else {
-				x.style.display = "none";
-			}
+			} 
 
 		}
 
@@ -743,9 +751,8 @@
 			var x = document.getElementById("overtimeHistory");
 			if (x.style.display === "none") {
 				x.style.display = "block";
-			} else {
-				x.style.display = "none";
+				}
 			}
 
-		}
+		
     </script>
