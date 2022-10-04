@@ -768,8 +768,6 @@ function hideShow() {
   var x = document.getElementById("attendanceSummary");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-    x.style.display = "none";
   }
 
 }
@@ -778,8 +776,6 @@ function showOT() {
   var x = document.getElementById("history");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
-    x.style.display = "none";
   }
 
 }
@@ -953,5 +949,15 @@ mybutton.addEventListener("click", backToTop);
 function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+
+  var x = document.getElementById("history");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  }
+
+  var x = document.getElementById("attendanceSummary");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  }
 }
 </script>
