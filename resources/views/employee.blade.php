@@ -110,7 +110,7 @@
 					<div class="bg-white rounded-lg px2 py-5 text-center text-white space-x-4">
 						<h1 class="text-gray-700 text-4xl font-bold">FILING OT</h1>
 						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">File OT<button>
-						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none">History<button>
+						<a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none">History<button></a>
 					</div>
 				</div>
 				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-5 text-center text-white overflow-hidden mt-3">
@@ -167,7 +167,7 @@
 						</div> -->
 						<div class="row-start-2 row-span-2">
 							<div class="flex  float-right">
-								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button>
+								<a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button></a>
 								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">Print</button>
 							</div>
 						</div>
@@ -316,7 +316,7 @@
 		</div>
 		<div class="row-start-2 row-span-2">
 			<div class="flex  float-right">
-				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button>
+				<a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button></a>
 				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">Print</button>
 			</div>
         </div>
@@ -478,7 +478,7 @@
     </div>
 </div><!--end attendance summary-->
 
-<div class="grid bgcolor overflow-auto rounded-lg drop-shadow-md">
+<div class="grid bgcolor overflow-auto rounded-lg drop-shadow-md" id="history">
 <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
 			<div class="row-start-1 row-span-1 flex">
 				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
@@ -494,7 +494,7 @@
 			</div>
 			<div class="row-start-2 row-span-2">
 				<div class="flex  float-right">
-					<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">File Overtime</button>
+					<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="authentication-modal">File Overtime</button>
 				</div>
 			</div>
 		</div>
