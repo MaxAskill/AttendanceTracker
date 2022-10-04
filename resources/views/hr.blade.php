@@ -68,7 +68,7 @@
 <div class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
-            <h1 class="text-gray-800 text-4xl font-bold px">Employee List</h1>
+            <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
 			<!-- Modal toggle -->
             <button class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" data-modal-toggle="authentication-modal">Add New</button>
     <!-- Main modal -->
@@ -117,25 +117,7 @@
                         <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
                         <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
                     </div>
-                    <!-- <div>
-                        <label for="password" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
-                    </div> -->
-                    <!-- <div class="flex justify-between">
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="remember" aria-describedby="remember" type="checkbox" class="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                            </div>
-                            <div class="text-sm ml-3">
-                            <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                            </div>
-                        </div>
-                        <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                    </div> -->
                     <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Account</button>
-                    <!-- <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                    </div> -->
                 </form>
             </div>
         </div>
@@ -184,127 +166,100 @@
     </div>
     <div>
 	<table class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto" >
-		<thead class="bg-gray-100 flex text-gray w-full ">
+		<thead class="bg-gray-100 flex text-gray w-full pr-5">
 			<tr class="flex w-full">
-				<th class="p-4 w-2/6">Name</th>
-				<th class="p-4 w-2/6">Email</th>
 				<th class="p-4 w-2/6">ID Number</th>
-				<th class="p-4 w-2/6">Contact Number</th>
+				<th class="p-4 w-2/6">Name</th>
 				<th class="p-4 w-2/6">Branch</th>
 				<th class="p-4 w-2/6">Chain</th>
-				<th class="p-4 w-2/6">Attendance</th>
-				<th class="p-4 w-2/6"></th>
+				<th class="p-4 w-2/6 ">Attendance</th>
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 68vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
+			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		</tbody>
 	</table>
@@ -370,7 +325,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full" style="height: 65vh;">
+		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 63vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
@@ -481,7 +436,7 @@
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		</tbody>
-		<tfoot class="bg-gray-100 flex text-gray w-full ">
+		<tfoot class="bg-gray-100 flex text-gray w-full pr-5">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<th class="p-4 px-1 w-2/6">Date</th>
 				<th class="p-4 px-1 w-2/6">--</th>
@@ -518,133 +473,158 @@
 			</div>
 		</div>
 		<div>
-			<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed" >
-				<thead class="bg-gray-100 flex text-gray w-full ">
-					<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-						<th class="py-4 w-2/6">Date</th>
-						<th class="py-4 w-2/6">Time In</th>
-						<th class="py-4 w-2/6">Time Out</th>
-						<th class="py-4 w-2/6">Hours Rendered</th>
-						<th class="py-4 w-2/6">Status</th>
-					</tr>
-				</thead>
-				<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full " style="height: 65vh;">
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-					<td class="py-4  w-3/6">September 19, 2021</td>
-					<td class="py-4 w-3/6 xl:ml-7 px-2">07 : 34 am</td>
-					<td class="py-4 px-2 xl:ml-1 w-3/6">8 : 05 pm</td>
-					<td class="py-4 px-2 xl:ml-3 w-3/6">9 hrs 5 mins</td>
-					<td class="py-4 px-2  w-3/6">Approved</td>
-				</tr>
-				</tbody>
-				<tfoot class="bg-gray-100 flex text-gray w-full ">
-					<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-						<th class="p-4 px-1 w-2/6">Date</th>
-						<th class="p-4 px-1 w-2/6">--</th>
-						<th class="p-4 px-1 w-2/6">--</th>
-						<th class="p-4 px-1 w-2/6">9 hrs 5 mins</th>
-						<th class="p-4 px-1 w-2/6">--</th>
-					</tr>
-				</tfoot>
-			</table>
+		<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed " >
+	<thead class="bg-gray-100 flex text-gray w-full pr-5">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<th class="p-4 w-2/6">Overtime Date</th>
+				<th class="p-4 w-2/6">Time In</th>
+				<th class="p-4 w-2/6">Time Out</th>
+				<th class="p-4 w-2/6">Total OT Hours</th>
+				<th class="p-4 w-2/6">Approved By</th>
+				<th class="p-4 w-2/6">Approval Date</th>
+				<th class="p-4 w-2/6">Status</th>
+			</tr>
+		</thead>
+		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 60vh;">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 : 05 am</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 18, 2021</td>
+			<td class="py-4 w-2/6">06 : 05 pm</td>
+			<td class="py-4 w-2/6">08 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Maria D. Clara</td>
+			<td class="py-4 w-2/6">September 15, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 17, 2021</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">Maria D. Clara</td>
+			<td class="py-4 w-2/6">September 15, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 15, 2021</td>
+			<td class="py-4 w-2/6">06 : 05 pm</td>
+			<td class="py-4 w-2/6">08 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Padre Damaso</td>
+			<td class="py-4 w-2/6">September 25, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 11, 2021</td>
+			<td class="py-4 w-2/6">06 : 05 pm</td>
+			<td class="py-4 w-2/6">08 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Maria D. Clara</td>
+			<td class="py-4 w-2/6">September 16, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 08, 2021</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">Maria D. Clara</td>
+			<td class="py-4 w-2/6">September 18, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 05, 2021</td>
+			<td class="py-4 w-2/6">06 : 05 pm</td>
+			<td class="py-4 w-2/6">08 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Maria D. Clara</td>
+			<td class="py-4 w-2/6">September 13, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 03, 2021</td>
+			<td class="py-4 w-2/6">06 : 05 pm</td>
+			<td class="py-4 w-2/6">08 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Padre Damaso</td>
+			<td class="py-4 w-2/6">September 02, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">August 27, 2021</td>
+			<td class="py-4 w-2/6">06 : 05 pm</td>
+			<td class="py-4 w-2/6">08 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Padre Damaso</td>
+			<td class="py-4 w-2/6">September 18, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">August 18, 2021</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">Padre Damaso</td>
+			<td class="py-4 w-2/6">August 16, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">August 18, 2021</td>
+			<td class="py-4 w-2/6">06 : 05 pm</td>
+			<td class="py-4 w-2/6">08 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Maria D. Clara</td>
+			<td class="py-4 w-2/6">August 16, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">August 13, 2021</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">Padre Damaso</td>
+			<td class="py-4 w-2/6">August 11, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">August 11, 2021</td>
+			<td class="py-4 w-2/6">6 : 05 pm</td>
+			<td class="py-4 w-2/6">8 : 05 pm</td>
+			<td class="py-4 w-2/6">02 hrs 00 mins</td>
+			<td class="py-4 w-2/6">Maria D. Clara</td>
+			<td class="py-4 w-2/6">August 09, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">August 09, 2021</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">Padre Damaso</td>
+			<td class="py-4 w-2/6">August 10, 2021</td>
+			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+		</tr>
+		</tbody>
+		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<th class="p-4 w-2/6">TOTAL</th>
+				<th class="p-4 w-2/6">--</th>
+				<th class="p-4 w-2/6">--</th>
+				<th class="p-4 w-2/6">16 hrs 00 hrs</th>
+				<th class="p-4 w-2/6">--</th>
+				<th class="p-4 w-2/6">--</th>
+				<th class="p-4 w-2/6">--</th>
+			</tr>
+		</tfoot>
+	</table>
 		</div>
 	</div><!--end overtime history-->
 
@@ -687,6 +667,94 @@
             </div>
         </div>
     </div> <!--end modal-->
+
+	<!-- Main modal -->
+<div id="view-ot" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+        <div class="relative xl:w-2/3 sm:w-full xl:px-4 h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="flex justify-end p-2">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="view-ot">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">OVERTIME REQUEST</h3>
+                   
+					<div>
+                        <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Applicant Name: Maria M. Clara</label>
+                        <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                    </div>
+					<div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Applied: September 21, 2022</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Overtime Date: September 22, 2022</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+					<div>
+					<div class="flex justify-center">
+						<div class="mb-3 xl:w-full">
+							<label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">Reason</label>
+									<textarea
+							class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+							id="exampleFormControlTextarea1"
+							rows="8"
+							placeholder="Your messge" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. 
+                            Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
+									</div>
+								</div>
+						</div>
+                    <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+	<!-- Main modal -->
+<div id="denied-ot" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+        <div class="relative xl:w-2/3 sm:w-full xl:px-4 h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="flex justify-end p-2">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="denied-ot">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">OVERTIME REQUEST DENIED!</h3>
+                   
+					<div>
+                        <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Applicant Name: Maria M. Clara</label>
+                        <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                    </div>
+					<div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Applied: September 21, 2022</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Overtime Date: September 22, 2022</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+					<div>
+					<div class="flex justify-center">
+						<div class="mb-3 xl:w-full">
+							<label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">Reason</label>
+									<textarea
+							class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+							id="exampleFormControlTextarea1"
+							rows="8"
+							placeholder="Your messge" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. 
+                            Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
+									</div>
+								</div>
+						</div>
+                    <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                </form>
+            </div>
+        </div>
+    </div>  
     <!-- Javascript Code -->
     <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
 		<svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>

@@ -68,7 +68,7 @@
 <div class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
-            <h1 class="text-gray-800 text-4xl font-bold px">Store Ratings</h1>
+            <h1 class="text-gray-800 text-4xl font-bold px">Store Salary Ratings</h1>
 			<!-- Modal toggle -->
             <button class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" data-modal-toggle="authentication-modal">Add New</button>
     <!-- Main modal -->
@@ -117,25 +117,7 @@
                         <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
                         <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
                     </div>
-                    <!-- <div>
-                        <label for="password" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
-                    </div> -->
-                    <!-- <div class="flex justify-between">
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="remember" aria-describedby="remember" type="checkbox" class="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                            </div>
-                            <div class="text-sm ml-3">
-                            <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                            </div>
-                        </div>
-                        <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                    </div> -->
                     <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Account</button>
-                    <!-- <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                    </div> -->
                 </form>
             </div>
         </div>
@@ -184,163 +166,151 @@
     </div>
     <div>
 	<table class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto" >
-		<thead class="bg-gray-100 flex text-gray w-full ">
+		<thead class="bg-gray-100 flex text-gray w-full pr-5">
 			<tr class="flex w-full">
-				<th class="p-4 w-2/6">Store ID</th>
-				<th class="p-4 w-2/6">Store Name</th>
-				<th class="p-4 w-2/6">Basic Rate</th>
-				<th class="p-4 w-2/6">Rate per Hour</th>
-				<th class="p-4 w-2/6">Rate per Min</th>
-				<th class="p-4 w-2/6">Branch</th>
+				<th class="p-4 w-2/6">Branch ID</th>
+				<th class="p-4 w-2/6">Region</th>
+				<th class="p-4 w-2/6">Municipality/City</th>
 				<th class="p-4 w-2/6">Chain</th>
-				<th class="p-4 w-2/6">Attendance</th>
+				<th class="p-4 w-2/6">Branch</th>
+				<th class="p-4 w-2/6">Basic Rate</th>
+				<th class="p-4 w-2/6">Per Hour</th>
+				<th class="p-4 w-2/6">Per Min</th>
+				<th class="p-4 w-2/6">COLA</th>
+				<th class="p-4 w-2/6"></th>
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 70vh;">
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">fn.lastname@email.com</td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">123</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
-		</tr>
+		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 65vh;">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0001</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Las Pinas City</td>
+				<td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+				<td class="p-4 w-2/6">Vista Mall Las Pinas, Finds Finds Department Store</td>
+				<td class="p-4 w-2/6">P370.00</td>
+				<td class="p-4 w-2/6">P46.25</td>
+				<td class="p-4 w-2/6">P0.77</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0002</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Las Pinas City</td>
+				<td class="p-4 w-2/6">Robinsons Las Pinas</td>
+				<td class="p-4 w-2/6">Robinsons Place Las Pinas Department Store</td>
+				<td class="p-4 w-2/6">P373.00</td>
+				<td class="p-4 w-2/6">P46.63</td>
+				<td class="p-4 w-2/6">P0.78</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0003</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Makati City</td>
+				<td class="p-4 w-2/6">Waltermart Makati</td>
+				<td class="p-4 w-2/6">Waltermart Makati Department Store</td>
+				<td class="p-4 w-2/6">P401.00</td>
+				<td class="p-4 w-2/6">P50.13</td>
+				<td class="p-4 w-2/6">P0.84</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0004</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Malabon City</td>
+				<td class="p-4 w-2/6">Fisher Mall Malabon</td>
+				<td class="p-4 w-2/6">Fisher Mall Malabon Department Store</td>
+				<td class="p-4 w-2/6">P435.00</td>
+				<td class="p-4 w-2/6">P54.38</td>
+				<td class="p-4 w-2/6">P0.91</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0005</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Malabon City</td>
+				<td class="p-4 w-2/6">Robinsons Malabon</td>
+				<td class="p-4 w-2/6">Robinsons Citi Square Malabon Department Store</td>
+				<td class="p-4 w-2/6">P450.00</td>
+				<td class="p-4 w-2/6">P56.25</td>
+				<td class="p-4 w-2/6">P0.94</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0006</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Mandaluyong City</td>
+				<td class="p-4 w-2/6">Robinsons Forum Pioneer</td>
+				<td class="p-4 w-2/6">Robinsons Forum Pioneer Department Store</td>
+				<td class="p-4 w-2/6">P570.00</td>
+				<td class="p-4 w-2/6">P71.25</td>
+				<td class="p-4 w-2/6">P1.19</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0007</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Manila</td>
+				<td class="p-4 w-2/6"></td>
+				<td class="p-4 w-2/6">Robinsons Place Ermita Department Store</td>
+				<td class="p-4 w-2/6">P373.00</td>
+				<td class="p-4 w-2/6">P46.63</td>
+				<td class="p-4 w-2/6">P0.78</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0008</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Muntinlupa City</td>
+				<td class="p-4 w-2/6">Metro Alabang</td>
+				<td class="p-4 w-2/6">Alabang Town Center Muntinlupa Metro Department Store</td>
+				<td class="p-4 w-2/6">P373.00</td>
+				<td class="p-4 w-2/6">P46.63</td>
+				<td class="p-4 w-2/6">P0.78</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0009</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Muntinlupa City</td>
+				<td class="p-4 w-2/6">Festival Alabang</td>
+				<td class="p-4 w-2/6">Festival Mall Alabang, Robinsons Department Store</td>
+				<td class="p-4 w-2/6">P570.00</td>
+				<td class="p-4 w-2/6">P71.25</td>
+				<td class="p-4 w-2/6">P1.19</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<td class="p-4 w-2/6">BRANCH-0010</td>
+				<td class="p-4 w-2/6">NCR</td>
+				<td class="p-4 w-2/6">Muntinlupa City</td>
+				<td class="p-4 w-2/6">The Landmark Makati</td>
+				<td class="p-4 w-2/6">The Landmark Makati Department Store</td>
+				<td class="p-4 w-2/6">P373.00</td>
+				<td class="p-4 w-2/6">P46.63</td>
+				<td class="p-4 w-2/6">P0.78</td>
+				<td class="p-4 w-2/6">P0.00</td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+			</tr>
 		</tbody>
 	</table>
     </div>
 </div> <!--end employee list-->
 
-<div class="grid"  id="attendanceSummary">
-
-</div>
-
-<div class="flex flex-row xl:w-5/6 xl:mx-40 xl:my-12 bgprofile rounded-lg justify-center">
-  <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
-  <img
-          src="img\Login-image.png"
-          class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
-          alt="Sample image"
-        />
-  </div>
-  <div class="basis-1/2 py-8 px-8" >
-	<h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
-		<ul class="py-3">
-			<li class="text-lg text-gray-800"><span class="font-bold">Name:</span> Maria Clara</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">ID No. :</span> 0000-0001</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Contact No. :</span> 09123456789</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Email :</span> fn.lastname@email.com</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Department :</span> SM Bicutan</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Chain : </span> SM Department Store</li>
-		</ul>
-  </div>
-</div>
-
-
-<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 rounded-lg mb-5" >
+<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" >
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
-            <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
+            <h1 class="text-white text-4xl font-bold px">Employee Salary</h1>
         </div>
 		<div class="row-start-2 row-span-1 flex">
 		<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
@@ -362,125 +332,28 @@
 	<table class="text-center w-full bg-white rounded-lg hover:table-fixed " >
 	<thead class="bg-gray-100 flex text-gray w-full pr-5">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-				<th class="p-4 w-2/6">Date</th>
-				<th class="p-4 w-2/6">Time In</th>
-				<th class="p-4 w-2/6">Time Out</th>
-				<th class="p-4 w-2/6">Late</th>
-				<th class="p-4 w-2/6">Undertime</th>
-				<th class="p-4 w-2/6">Overtime</th>
-				<th class="p-4 w-2/6">Hours Rendered</th>
+				<th class="p-4 w-2/6">ID Number</th>
+				<th class="p-4 w-2/6">Name</th>
+				<th class="p-4 w-2/6">Cut-Off Date</th>
+				<th class="p-4 w-2/6">No. of Days</th>
+				<th class="p-4 w-2/6">Daily Rate</th>
+				<th class="p-4 w-2/6">Sum Rate</th>
+				<th class="p-4 w-2/6">13th Month</th>
+				<th class="p-4 w-2/6">Gov. Deduction</th>
 				<th class="p-4 w-2/6"></th>
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
 		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full" style="height: 65vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr><tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">0</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		</tbody>
