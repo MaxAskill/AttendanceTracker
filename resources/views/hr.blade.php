@@ -688,7 +688,7 @@
                 </form>
             </div>
         </div>
-    </div> 
+    </div> <!--end modal-->
     <!-- Javascript Code -->
     <script>
         var navmenu = document.getElementById('navmenu');
