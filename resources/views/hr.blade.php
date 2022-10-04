@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <scrip		<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link href="/dist/output.css" rel="stylesheet"> -->
 </head>
@@ -68,86 +67,10 @@
         <!-- component -->
 <div class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-<!-- This is an example component -->
-<div class="row-start-1 row-span-1 flex">
-<h1 class="text-gray-800 text-4xl font-bold px">Employee List</h1>
-    <!-- Modal toggle -->
-    <button class="bgcolor font-themecolor hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" type="button" data-modal-toggle="authentication-modal">
-    Add New
-    </button>
-
-    <!-- Main modal -->
-    <div id="authentication-modal" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                <div class="flex justify-end p-2">
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
-                    </button>
-                </div>
-                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Sign up to our platform</h3>
-                    <div>
-                        <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company ID</label>
-						
-                        <input type="text" name="companyID" id="companyID" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Company ID" required="">
-                    </div>
-					<div>
-                        <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">First Name</label>
-                        <input type="text" name="fName" id="fName" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="First Name" required="">
-                    </div>
-					<div>
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Middle Name</label>
-                        <input type="text" name="mName" id="mName" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Middle Name" required="">
-                    </div>
-					<div>
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Last Name</label>
-                        <input type="text" name="lName" id="lName" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Last Name" required="">
-                    </div>
-					<div>
-                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Job Position</label>
-                        <input type="text" name="jobPosition" id="jobPosition" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Job Position" required="">
-                    </div>
-					<div>
-                        <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Contact No.</label>
-                        <input type="text" name="cNumber" maxlength="11" id="cNumber" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Contact Number" required="">
-                    </div>
-					<div>
-                        <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
-                        <input type="email" name="email" id="email" onkeyup="ValidateEmail()" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Email (Eg. name@email.com)" required="">
-						<span id="lblError" style="color: red"></span>
-					</div>
-					<div>
-                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
-                        <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
-                    </div>
-                    <!-- <div>
-                        <label for="password" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Your password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
-                    </div> -->
-                    <!-- <div class="flex justify-between">
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="remember" aria-describedby="remember" type="checkbox" class="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                            </div>
-                            <div class="text-sm ml-3">
-                            <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                            </div>
-                        </div>
-                        <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                    </div> -->
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Account</button>
-                    <!-- <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                    </div> -->
-                </form>
-            </div>
+        <div class="row-start-1 row-span-1 flex">
+            <h1 class="text-gray-800 text-4xl font-bold px">Employee List</h1>
+            <button class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none">Add New</button>
         </div>
-    </div> 
-
-    
-</div>
 		<div class="row-start-2 row-span-1 flex">
 			
   <div class="relative group mt-2">
@@ -511,25 +434,6 @@
 			<div class="row-start-1 row-span-1 flex">
 				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
 
-<<<<<<< HEAD
-=======
-        </div>
-		<div class="row-start-2 row-span-1 flex items-center">
-		<div class="xl:w-96 xl:h-46">
-					<input type="search"
-					class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl"
-					id="exampleSearch"
-					placeholder="Search"
-					/>
-				</div>
-			<span class="text-white ml-5 h-10 mb-3"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
-		</div>
-		<div class="row-start-2 row-span-2">
-			<div class="flex  float-right">
-				<button class="text-white px-1 py-1 border-2 border-white mt-2 mr-3 rounded-lg" data-modal-toggle="file-ot">File Overtime</button>
->>>>>>> 610c871b63929309d416a673725f784b40b806ca
 			</div>
 			<div class="row-start-2 row-span-1 flex items-center">
 				<div class="xl:w-96 xl:h-46">
@@ -677,44 +581,7 @@
 	</div><!--end overtime history-->
 
     </main>
-<!-- Main modal -->
-<div id="file-ot" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                <div class="flex justify-end p-2">
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="file-ot">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
-                    </button>
-                </div>
-                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Filing OT</h3>
-                   
-					<div>
-                        <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
-                        <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled>
-                    </div>
-					<div>
-                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">OT Date</label>
-                        <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
-                    </div>
-					<div>
-					<div class="flex justify-center">
-						<div class="mb-3 xl:w-full">
-							<label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">Reason</label>
-									<textarea
-							class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-							id="exampleFormControlTextarea1"
-							rows="8"
-							placeholder="Your messge"></textarea>
-									</div>
-								</div>
-						</div>
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div> 
+
     <!-- Javascript Code -->
     <script>
         var navmenu = document.getElementById('navmenu');
@@ -722,44 +589,8 @@
             navmenu.classList.toggle('hidden');
             navmenu.classList.toggle('w-full');
             navmenu.classList.toggle('h-screen');
-        };
-
-
-		document.getElementById("fName").addEventListener("keypress", isLetter)
-		document.getElementById("mName").addEventListener("keypress", isLetter)
-		document.getElementById("lName").addEventListener("keypress", isLetter)
-		document.getElementById("jobPosition").addEventListener("keypress", isLetter)
-		function isLetter(e) {
-		console.log(e)
-		let char = String.fromCharCode(e.keyCode); // Get the character
-		if (/^[A-Za-z ]+$/.test(char)) return true;
-		// Match with regex
-		else e.preventDefault(); // If not match, don't add to input text
-		};
-
-		document.getElementById("companyID").addEventListener("keypress", isNumber)
-		document.getElementById("cNumber").addEventListener("keypress", isNumber)
-		
-		function isNumber(e) {
-		let char = String.fromCharCode(e.keyCode); // Get the character
-		if (/^[0-9]+$/.test(char)) return true;
-		// Match with regex
-		else e.preventDefault(); // If not match, don't add to input text
-    	};
-
-		function ValidateEmail() {
-        var email = document.getElementById("email").value;
-        var lblError = document.getElementById("lblError");
-        lblError.innerHTML = "";
-        var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-        if (!expr.test(email)) {
-            lblError.innerHTML = "Invalid email address.";
-        	}
-    	}
-
-
-
+        }
     </script>
-	<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+pt>
 	
 
