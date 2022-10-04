@@ -26,7 +26,7 @@
 		</button>
 		</div>
 		<nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block xl:px-10 pb-4 md:pb-0 items-center justify-between">
-			<img src="img\Login-image.png"
+			<img src="img\profilepic.png"
 					class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
 					alt="Sample image"
 					/>

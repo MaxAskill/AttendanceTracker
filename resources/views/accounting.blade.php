@@ -186,10 +186,11 @@
 	<table class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto" >
 		<thead class="bg-gray-100 flex text-gray w-full ">
 			<tr class="flex w-full">
-				<th class="p-4 w-2/6">Name</th>
-				<th class="p-4 w-2/6">Email</th>
-				<th class="p-4 w-2/6">ID Number</th>
-				<th class="p-4 w-2/6">Contact Number</th>
+				<th class="p-4 w-2/6">Store ID</th>
+				<th class="p-4 w-2/6">Store Name</th>
+				<th class="p-4 w-2/6">Basic Rate</th>
+				<th class="p-4 w-2/6">Rate per Hour</th>
+				<th class="p-4 w-2/6">Rate per Min</th>
 				<th class="p-4 w-2/6">Branch</th>
 				<th class="p-4 w-2/6">Chain</th>
 				<th class="p-4 w-2/6">Attendance</th>

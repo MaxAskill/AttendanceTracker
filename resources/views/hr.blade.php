@@ -193,6 +193,7 @@
 				<th class="p-4 w-2/6">Branch</th>
 				<th class="p-4 w-2/6">Chain</th>
 				<th class="p-4 w-2/6">Attendance</th>
+				<th class="p-4 w-2/6"></th>
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
