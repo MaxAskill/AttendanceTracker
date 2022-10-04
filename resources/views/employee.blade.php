@@ -117,7 +117,7 @@
 					<h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
 					<h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
 					<div class="grid place-content-center">
-					<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2" onClick="time_in()" onClick="realtimeClock()" id="button-start">Check In<button>
+					<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2" id="button-start">Check In<button>
 					<button class="border-4 rounded-2xl text-xl bordercolor font-pantone py-2 px-2 my-2 hidden" id="button-stop" onClick="hideButton()">Check Out<button>
 					</div>
 					<table class="table-fixed w-full content-center text-left text-gray-700 border-separate border-spacing-2">

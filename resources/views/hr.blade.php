@@ -134,7 +134,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -143,7 +143,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -152,7 +152,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -161,7 +161,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -170,7 +170,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -179,7 +179,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -188,7 +188,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -197,7 +197,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -206,7 +206,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -215,7 +215,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -224,7 +224,7 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-2/6">Maria Clara</td>
@@ -233,18 +233,18 @@
 			<td class="p-4 w-2/6">123</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></td>
+			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">VIEW</button></a></td>
 		</tr>
 		</tbody>
 	</table>
     </div>
 </div> <!--end employee list-->
 
-<div class="grid ">
+<div class="grid"  id="attendanceSummary">
 
 </div>
 
-<div class="flex flex-row xl:w-5/6 xl:mx-40 xl:my-8 bgprofile rounded-lg justify-center">
+<div class="flex flex-row xl:w-5/6 xl:mx-40 xl:my-12 bgprofile rounded-lg justify-center">
   <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
   <img
           src="img\Login-image.png"
@@ -252,7 +252,7 @@
           alt="Sample image"
         />
   </div>
-  <div class="basis-1/2 py-8 px-8">
+  <div class="basis-1/2 py-8 px-8" >
 	<h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
 		<ul class="py-3">
 			<li class="text-lg text-gray-800"><span class="font-bold">Name:</span> Maria Clara</li>
@@ -266,7 +266,7 @@
 </div>
 
 
-<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 rounded-lg mb-5">
+<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 rounded-lg mb-5" >
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
@@ -282,7 +282,7 @@
 		</div> -->
 		<div class="row-start-2 row-span-2">
 			<div class="flex  float-right">
-				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button>
+				<a href="#overtimeHistory"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button></a>
 				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">Print</button>
 			</div>
         </div>
@@ -429,10 +429,10 @@
     </div>
 </div><!--end attendance summary-->
 
-	<div class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5">
-		<div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-			<div class="row-start-1 row-span-1 flex">
-				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
+<div class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5" id = "overtimeHistory">
+    <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+        <div class="row-start-1 row-span-1 flex">
+            <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
 
 			</div>
 			<div class="row-start-2 row-span-1 flex items-center">
