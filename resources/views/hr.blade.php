@@ -48,7 +48,7 @@
                 <li class="my-3 ml-20">
 					<div>
                     	<a class="text-white" href="/">
-							<button class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded  focus:outline-none">Log Out</button></a>
+							<button class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Log Out</button></a>
 					</div>
 				</li>
             </ul>
