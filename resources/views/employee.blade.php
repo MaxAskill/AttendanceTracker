@@ -74,7 +74,7 @@
 							<h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
 						</div>
 						<div class="row-start-1  col-span-3 flex items-center ">
-						<a href='#attendanceSummary'><button class="border-2 border-solid bordercolor rounded-2xl px-2 py-2 font-themecolor ml-16">View More </button></a>
+						<a href='#attendanceSummary'><button class="border-2 border-solid bordercolor rounded-2xl px-2 py-2 font-themecolor ml-16" onClick="hideShow()">View More </button></a>
 						</div>
 						
 						<div class="text-center py-2 text-gray-700">
@@ -110,7 +110,7 @@
 					<div class="bg-white rounded-lg px2 py-5 text-center text-white space-x-4">
 						<h1 class="text-gray-700 text-4xl font-bold">FILING OT</h1>
 						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">File OT<button>
-						<a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none">History<button></a>
+						<a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" onClick="showOT()">History<button></a>
 					</div>
 				</div>
 				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-5 text-center text-white overflow-hidden mt-3">
@@ -167,7 +167,7 @@
 						</div> -->
 						<div class="row-start-2 row-span-2">
 							<div class="flex  float-right">
-								<a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button></a>
+								<a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" onClick="showOT()">OT History</button></a>
 								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">Print</button>
 							</div>
 						</div>
@@ -314,7 +314,7 @@
 				</div><!--tABLE GRID END-->
 			</div><!--2nd Grid-->
 
-<div class="grid bgcolor overflow-auto rounded-lg mb-5 drop-shadow-md hide-show" id="attendanceSummary" >
+<div class="grid bgcolor overflow-auto rounded-lg mb-5 drop-shadow-md hide-show" id="attendanceSummary" style="display: none">
 <a href="bottom"></a>
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
@@ -326,7 +326,7 @@
 		</div>
 		<div class="row-start-2 row-span-2">
 			<div class="flex  float-right">
-				<a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">OT History</button></a>
+				<a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" onClick="showOT()">OT History</button></a>
 				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none">Print</button>
 			</div>
         </div>
@@ -478,7 +478,7 @@
     </div>
 </div><!--end attendance summary-->
 
-<div class="grid bgcolor overflow-auto rounded-lg drop-shadow-md" id="history">
+<div class="grid bgcolor overflow-auto rounded-lg drop-shadow-md" id="history" style="display:none">
 <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
 			<div class="row-start-1 row-span-1 flex">
 				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
@@ -717,19 +717,25 @@
 </html>
 
 <script>
-// function hideShow() {
-//   var x = document.getElementById("attendanceSummary");
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
+function hideShow() {
+  var x = document.getElementById("attendanceSummary");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 
-//   document.body.scrollBottom= 0;
-//   document.documentElement.scrollBottom = 0;
-// }
+}
 
+function showOT() {
+  var x = document.getElementById("history");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 
+}
 function hideButton() {
   var x = document.getElementById("button-start");
   
