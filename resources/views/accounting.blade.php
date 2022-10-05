@@ -169,7 +169,8 @@
 				<td class="p-4 w-2/6">P46.25</td>
 				<td class="p-4 w-2/6">P0.77</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0002</td>
@@ -181,7 +182,8 @@
 				<td class="p-4 w-2/6">P46.63</td>
 				<td class="p-4 w-2/6">P0.78</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0003</td>
@@ -193,7 +195,8 @@
 				<td class="p-4 w-2/6">P50.13</td>
 				<td class="p-4 w-2/6">P0.84</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0004</td>
@@ -205,7 +208,8 @@
 				<td class="p-4 w-2/6">P54.38</td>
 				<td class="p-4 w-2/6">P0.91</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0005</td>
@@ -217,7 +221,8 @@
 				<td class="p-4 w-2/6">P56.25</td>
 				<td class="p-4 w-2/6">P0.94</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0006</td>
@@ -229,7 +234,8 @@
 				<td class="p-4 w-2/6">P71.25</td>
 				<td class="p-4 w-2/6">P1.19</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0007</td>
@@ -241,7 +247,8 @@
 				<td class="p-4 w-2/6">P46.63</td>
 				<td class="p-4 w-2/6">P0.78</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0008</td>
@@ -253,7 +260,8 @@
 				<td class="p-4 w-2/6">P46.63</td>
 				<td class="p-4 w-2/6">P0.78</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0009</td>
@@ -265,7 +273,8 @@
 				<td class="p-4 w-2/6">P71.25</td>
 				<td class="p-4 w-2/6">P1.19</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0010</td>
@@ -277,7 +286,8 @@
 				<td class="p-4 w-2/6">P46.63</td>
 				<td class="p-4 w-2/6">P0.78</td>
 				<td class="p-4 w-2/6">P0.00</td>
-				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></a></td>
+				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button>
+				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
 		</tbody>
 	</table>
