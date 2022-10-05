@@ -691,108 +691,139 @@
                 </div>
                 <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8"  action="#">
                     <h3 class="text-2xl font-medium text-gray-900 dark:text-white">Employee Salary</h3>
-					<div class= "grid grid-cols-5 gap-2">
+					<div class= "grid grid-cols-4 gap-2">
                     <div class="col-start-1 col-span-1">
                         <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">ID Number</label>
-                        <input type="text" name="companyID" id="companyID" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="0000-0001" required="" value="0000-0001">
+                        <input type="text" name="companyID" id="companyID" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="0000-0001" required="" value="0000-0001" disabled>
                     </div>
 					<div class="col-start-2 col-span-1">
                         <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Payroll Number</label>
-                        <input type="text" name="lName" id="lName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="340" required="" value="340">
+                        <input type="text" name="lName" id="lName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="340" required="" value="340" disabled>
                     </div>
 					<div class="col-start-3 col-span-1">
                         <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
-                        <input @input="capitalizeFName"  type="text" name="fName" id="fName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Ibarra Crisostomo" required="" value="Ibarra Crisostomo">
+                        <input @input="capitalizeFName"  type="text" name="fName" id="fName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Ibarra Crisostomo" required="" value="Ibarra Crisostomo" disabled>
                     </div>
 					<div class="col-start-4 col-span-1">
                         <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Cut-Off Date</label>
-                        <input type="text" name="mName" id="mName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="9" required="" value="September 19, 2021">
+                        <input type="text" name="mName" id="mName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="9" required="" value="September 19, 2021" disabled>
                     </div>
-					<div class="col-start-5 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">No. of Days</label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="4">
-						</div>
+					
 					</div>
-
+					<div class="grid grid-cols-3 gap-2">
+					<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">No. of Days</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="4" disabled>
+					</div>
+					<div class="col-start-2 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Store Assignment</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="SM URDANETA" disabled>
+					</div>
+					<div class="col-start-3 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">13th Month Pay</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="113.33" disabled>
+					</div>
+					</div>
 					<div class="w-full">
 						<label for="jobPosition" class="text-xl font-medium text-gray-900 dark:text-white">Earnings</label>
 					</div>
 
-					<div class = "grid grid-cols-2 gap-2">
-						<div class = "col-start-1 col-span-1">
-						<label for="jobPosition" class="text-xl font-medium text-gray-900 block mb-2 dark:text-gray-300">Rate</label>
-						</div>
-						<div class = "col-start-2 col-span-1">
-						<label for="jobPosition" class="text-xl font-medium text-gray-900 block mb-2 dark:text-gray-300">Pay</label>
-						</div>
-					</div>
-					<div class="grid grid-cols-2 gap-1">
+					<div class="grid grid-cols-6 gap-1">
 						<div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="340">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic Rate</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="340" disabled>
 						</div>
 						<div class="col-start-2 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="1360">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA Rate</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
 						</div>
-						<div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						<div class="col-start-3 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA Rate</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
 						</div>
-						<!-- <div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Hour</label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="42.50">
-						</div> -->
-						<div class="col-start-2 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						<div class="col-start-4 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Hour </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
 						</div>
-						
-						<div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						<div class="col-start-5 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Minute </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
 						</div>
-						<!-- <div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Min</label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Min" required="" value="0.71">
-						</div> -->
-						<div class="col-start-2 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						<div class="col-start-6 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total Rate</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="340" disabled>
 						</div>
-
-						<div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="340">
 						</div>
-						<div class="col-start-2 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total </label>
-							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="1360">
-						</div>
-						
-						
-						
+						<div class = "grid grid-cols-6 gap-2">
+							<div class="col-start-1 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="1360" disabled>
+							</div>
+							
+							<div class="col-start-2 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
+							</div>
+							
+							<div class="col-start-3 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
+							</div>
+							<div class="col-start-4 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Overtime Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
+							</div>
+							<div class="col-start-5 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Holiday Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00" disabled>
+							</div>
+			
+							<div class="col-start-6 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="1360" disabled>
+							</div>					
 						</div>
 					<div class="col-start-1 col-end-7 w-full">
 						<label for="jobPosition" class="text-xl font-medium text-gray-900 dark:text-white">Deduction</label>
 					</div>
-					<div class="grid grid-cols-4 gap-1">
-					<div class="col-start-1 col-span-1">
-                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
-                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="260">
-                    </div>
-					<div class="col-start-2 col-span-1">
-                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
-                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="150.32">
-                    </div>
-					<div class="col-start-3 col-span-1">
-                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
-                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="50.00">
-                    </div>
-					<div class="col-start-4 col-span-1">
-                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total</label>
-                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="460.32">
-                    </div>
+					<div class="grid grid-cols-5 gap-1">
+						<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="260" disabled>
+						</div>
+						<div class="col-start-2 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="150.32" disabled>
+						</div>
+						<div class="col-start-3 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="50.00" disabled>
+						</div>
+						<div class="col-start-4 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="50.00" disabled>
+						</div>
+						<div class="col-start-5 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="460.32" disabled>
+						</div>
+					</div>
+					<div class="col-start-1 col-end-7 w-full">
+						<label for="jobPosition" class="text-xl font-medium text-gray-900 dark:text-white">NET PAY</label>
+					</div>
+					<div class="grid grid-cols-3 gap-2">
+						<div class="col-start-1 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Gross Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="1360" disabled>
+							</div>
+							<div class="col-start-2 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total Deduction</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="460.32" disabled>
+							</div>
+							<div class="col-start-3 col-span-1">
+								<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Net Pay</label>
+								<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="899.68" disabled>
+							</div>
 					</div>
                     <!-- <button type="submit" class="col-start-1 col-end-7 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
 				</form>
