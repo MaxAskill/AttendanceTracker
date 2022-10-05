@@ -43,7 +43,7 @@
 						</div>
 						
 						<a href="/" class="flex items-center justify-center">
-							<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 mt-28 font-bold font-themecolor focus:outline-none">Log Out</button></a>
+							<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 mt-26 font-bold font-themecolor focus:outline-none">Log Out</button></a>
 					</div>
 		</nav>
 	</sidebar>
@@ -167,6 +167,7 @@
 						</div> -->
 						<div class="row-start-2 row-span-2">
 							<div class="flex  float-right">
+								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="print">Upload</button>
 								<a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" onClick="showOT()">OT History</button></a>
 								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="print">Print</button>
 							</div>

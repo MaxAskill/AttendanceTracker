@@ -231,7 +231,10 @@
 				<th class="p-4 w-2/6">Name</th>
 				<th class="p-4 w-2/6">Branch</th>
 				<th class="p-4 w-2/6">Chain</th>
+				<th class="p-4 w-2/6 ">Status</th>
+				<th class="p-4 w-2/6 ">Remaining Days</th>
 				<th class="p-4 w-2/6 ">Attendance</th>
+				<th class="p-4 w-2/6 "></th>
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
@@ -239,110 +242,283 @@
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
 			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">Crisostomo Ibarra</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Onboarding</td>
+			<td class="p-4 w-2/6 ">5 days left</td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
-			
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0002</td>
+			<td class="p-4 w-2/6">Mark Anthony Luis</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Active</td>
+			<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button></td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0003</td>
+			<td class="p-4 w-2/6">Cardo Dalisay</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Active</td>
+			<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button></td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0004</td>
+			<td class="p-4 w-2/6">Juan Carlo</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Active</td>
+			<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button></td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0005</td>
+			<td class="p-4 w-2/6">James Reid</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Active</td>
+			<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button></td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0006</td>
+			<td class="p-4 w-2/6">Kathrin Bernardo</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Active</td>
+			<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button></td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0007</td>
+			<td class="p-4 w-2/6">Ysabella Prado</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Pending Resignation</td>
+			<td class="p-4 w-2/6 ">25 days left</td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0008</td>
+			<td class="p-4 w-2/6">James Pedo</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Pending Resignation</td>
+			<td class="p-4 w-2/6 ">13 days left</td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
+			<td class="p-4 w-2/6">0000-0009</td>
+			<td class="p-4 w-2/6">Robert Mandato</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
+			<td class="p-4 w-2/6">Pending Resignation</td>
+			<td class="p-4 w-2/6 ">25 days left</td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
-			<td class="p-4 w-2/6">0000-0001</td>
-			<td class="p-4 w-2/6">Maria Clara</td>
-			<td class="p-4 w-2/6">SM Bicutan</td>
-			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
+			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Edit</button></td>
 		</tr>
 		</tbody>
 	</table>
     </div>
 </div> <!--end employee list-->
 
+<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" >
+    <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+        <div class="row-start-1 col-span-1 flex">
+            <h1 class="text-white text-4xl font-bold px">Employee Salary</h1>
+        </div>
+		
+		<div class="row-start-1 col-span-1 flex">
+		<div class="mb-3 xl:w-full">
+					<input type="search"
+					class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl"
+					id="exampleSearch"
+					placeholder="Search"
+					/>
+				</div>
+		</div>
+    </div>
+    <div>
+	<table class="text-center w-full bg-white rounded-lg hover:table-fixed " >
+	<thead class="bg-gray-100 flex text-gray w-full pr-5">
+			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+				<th class="p-4 w-2/6">ID Number</th>
+				<th class="p-4 w-2/6">Name</th>
+				<th class="p-4 w-2/6">Cut-Off Date</th>
+				<th class="p-4 w-2/6">No. of Days</th>
+				<th class="p-4 w-2/6">Daily Rate</th>
+				<th class="p-4 w-2/6">Sum Rate</th>
+				<th class="p-4 w-2/6">13th Month</th>
+				<th class="p-4 w-2/6">Gov. Deduction</th>
+				<th class="p-4 w-2/6"></th>
+			</tr>
+		</thead>
+    <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
+		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full" style="height: 70vh;">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">0000-0001</td>
+			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
+			<td class="py-4 w-2/6">09 hrs 20 mins</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6">--</td>
+			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">View</button></td>
+		</tr>
+		</tbody>
+	</table>
+    </div>
+</div><!--end employee salary-->
+
 <div class="grid xl:py-12"  id="attendanceSummary" style="display: none">
 <div class="flex flex-row xl:w-5/6 xl:mx-40 xl:mb-12 bgprofile rounded-lg justify-center">
   <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
   <img
-          src="img\Login-image.png"
+          src="img\profilepic.png"
           class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
           alt="Sample image"
         />
@@ -369,6 +545,21 @@
 		<div class="row-start-2 row-span-1 flex">
 		<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
 			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+			<button id="dropdownDefault" data-dropdown-toggle="dropdown" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none ml-5 mt-2 text-center inline-flex items-center" type="button">Duration<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+				<!-- Dropdown menu -->
+				<div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+					<ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Weekly</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Monthly</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Annually</a>
+					</li>
+					</ul>
+				</div>
 		</div>
         
 		<!-- <div class="row-start-2 row-span-1 flex bg-green-900 floar">
@@ -377,6 +568,7 @@
 		</div> -->
 		<div class="row-start-2 row-span-2">
 			<div class="flex  float-right">
+				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="print">Upload</button>
 				<a href="#overtimeHistory"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" onClick="showOT()">OT History</button></a>
 				<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="print">Print</button>
 			</div>
@@ -1002,6 +1194,127 @@
     <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
 		<svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
 	</button>
+
+	<!-- Main modal -->
+    <div id="edit-employee" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="flex justify-end p-2">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="edit-employee">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8"  action="#">
+                    <h3 class="text-2xl font-medium text-gray-900 dark:text-white">Employee Salary</h3>
+					<div class= "grid grid-cols-5 gap-2">
+                    <div class="col-start-1 col-span-1">
+                        <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">ID Number</label>
+                        <input type="text" name="companyID" id="companyID" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="0000-0001" required="" value="0000-0001">
+                    </div>
+					<div class="col-start-2 col-span-1">
+                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Payroll Number</label>
+                        <input type="text" name="lName" id="lName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="340" required="" value="340">
+                    </div>
+					<div class="col-start-3 col-span-1">
+                        <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
+                        <input @input="capitalizeFName"  type="text" name="fName" id="fName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Ibarra Crisostomo" required="" value="Ibarra Crisostomo">
+                    </div>
+					<div class="col-start-4 col-span-1">
+                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Cut-Off Date</label>
+                        <input type="text" name="mName" id="mName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="9" required="" value="September 19, 2021">
+                    </div>
+					<div class="col-start-5 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">No. of Days</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="4">
+						</div>
+					</div>
+
+					<div class="w-full">
+						<label for="jobPosition" class="text-xl font-medium text-gray-900 dark:text-white">Earnings</label>
+					</div>
+
+					<div class = "grid grid-cols-2 gap-2">
+						<div class = "col-start-1 col-span-1">
+						<label for="jobPosition" class="text-xl font-medium text-gray-900 block mb-2 dark:text-gray-300">Rate</label>
+						</div>
+						<div class = "col-start-2 col-span-1">
+						<label for="jobPosition" class="text-xl font-medium text-gray-900 block mb-2 dark:text-gray-300">Pay</label>
+						</div>
+					</div>
+					<div class="grid grid-cols-2 gap-1">
+						<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="340">
+						</div>
+						<div class="col-start-2 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="1360">
+						</div>
+						<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						</div>
+						<!-- <div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Hour</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="42.50">
+						</div> -->
+						<div class="col-start-2 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						</div>
+						
+						<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						</div>
+						<!-- <div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Min</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Min" required="" value="0.71">
+						</div> -->
+						<div class="col-start-2 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="0.00">
+						</div>
+
+						<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="340">
+						</div>
+						<div class="col-start-2 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total </label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="1360">
+						</div>
+						
+						
+						
+						</div>
+					<div class="col-start-1 col-end-7 w-full">
+						<label for="jobPosition" class="text-xl font-medium text-gray-900 dark:text-white">Deduction</label>
+					</div>
+					<div class="grid grid-cols-4 gap-1">
+					<div class="col-start-1 col-span-1">
+                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
+                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Basic Rate" required="" value="260">
+                    </div>
+					<div class="col-start-2 col-span-1">
+                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
+                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="150.32">
+                    </div>
+					<div class="col-start-3 col-span-1">
+                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
+                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="50.00">
+                    </div>
+					<div class="col-start-4 col-span-1">
+                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total</label>
+                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Per Hour" required="" value="460.32">
+                    </div>
+					</div>
+                    <!-- <button type="submit" class="col-start-1 col-end-7 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+				</form>
+            </div>
+        </div>
+    </div> 
 
 	<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
 	
