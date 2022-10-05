@@ -82,43 +82,93 @@
                     </button>
                 </div>
                 <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Sign up to our platform</h3>
-                    <div>
-                        <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company ID</label>
-
-                        <input type="text" name="companyID" id="companyID" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Company ID" required="">
-                    </div>
-					<div>
-                        <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">First Name</label>
-                        <input @input="capitalizeFName"  type="text" name="fName" id="fName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="First Name" required="">
-                    </div>
-					<div>
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Middle Name</label>
-                        <input type="text" name="mName" id="mName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Middle Name" required="">
-                    </div>
-					<div>
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Last Name</label>
-                        <input type="text" name="lName" id="lName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Last Name" required="">
-                    </div>
-					<div>
-                        <label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Job Position</label>
-                        <input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Job Position" required="">
-                    </div>
-					<div>
-                        <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Contact No.</label>
-                        <input type="text" name="cNumber" maxlength="11" id="cNumber" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Contact Number" required="">
-                    </div>
-					<div>
-                        <label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
-                        <input type="email" name="email" id="email" onkeyup="ValidateEmail()" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Email (Eg. name@email.com)" required="">
-						<span id="lblError" style="color: red"></span>
+					<div id="personalInfo" style="display: block">
+						<h3 class="text-xl font-medium text-gray-900 dark:text-white">Personal Info</h3>
+						<div class="grid grid-cols-4 gap-2">
+						<div class="col-start-1 col-span-1">
+							<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company ID</label>
+							<input type="text" name="companyID" id="companyID" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Company ID" required="">
+						</div>
+						<div class="col-start-2 col-span-1">
+							<label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">First Name</label>
+							<input @input="capitalizeFName"  type="text" name="fName" id="fName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="First Name" required="">
+						</div>
+						<div class="col-start-3 col-span-1">
+							<label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Middle Name</label>
+							<input type="text" name="mName" id="mName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Middle Name" required="">
+						</div>
+						<div class="col-start-4 col-span-1">
+							<label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Last Name</label>
+							<input type="text" name="lName" id="lName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Last Name" required="">
+						</div>
+						</div>
+						<div class="grid grid-cols-2 gap-2">
+						<div class="col-start-1 col-span-1">
+							<label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
+							<input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
+						</div>
+							
+						<div class="col-start-2 col-span-1">
+							<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Contact No.</label>
+							<input type="text" name="cNumber" maxlength="11" id="cNumber" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Contact Number" required="">
+						</div>
+						</div>
+						<div class="grid grid-cols-2 gap-2">
+						<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Job Position</label>
+							<input type="text" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Job Position" required="">
+						</div>
+						<div class="col-start-2">
+							<label for="email" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
+							<input type="email" name="email" id="email" onkeyup="ValidateEmail()" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Email (Eg. name@email.com)" required="">
+							<span id="lblError" style="color: red"></span>
+						</div>
+						</div>
+						<button type="button" onClick="nextPage()" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Next</button>
 					</div>
-					<div>
-                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
-                        <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
-                    </div>
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Account</button>
-                </form>
+					<div id="companyInfo" style="display: none">
+						<h3 class="text-xl font-medium text-gray-900 dark:text-white">Company Info</h3>
+						<div class="grid grid-cols-4 gap-2">
+						<div class="col-start-1 col-span-1">
+							<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company</label>
+							<input type="text" name="companyID" id="companyID" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Company" required="">
+						</div>
+						<div class="col-start-2 col-span-1">
+							<label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Brand</label>
+							<input @input="capitalizeFName"  type="text" name="fName" id="fName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Brand" required="">
+						</div>
+						<div class="col-start-3 col-span-1">
+							<label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+							<input type="text" name="mName" id="mName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Chain" required="">
+						</div>
+						<div class="col-start-4 col-span-1">
+							<label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Store Assignment</label>
+							<input type="text" name="lName" id="lName" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Store Assignment" required="">
+						</div>
+						</div>
+						<div class="grid grid-cols-2 gap-2">
+						<div class="col-start-1 col-span-1">
+							<label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">RAS</label>
+							<input type="text" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="RAS" required="">
+						</div>
+							
+						<div class="col-start-2 col-span-1">
+							<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HR</label>
+							<input type="text" name="cNumber" maxlength="11" id="cNumber" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="HR" required="">
+						</div>
+						</div>
+						<div class="grid grid-cols-2 gap-2">
+						<div class="col-start-1 col-span-1">
+							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Started</label>
+							<input type="date" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Date Started" required="">
+						</div>
+						<button type="button" onClick="back()" class="col-start-1 col-span-1 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Back</button>
+						<button type="submit" class="col-start-2 col-span-1 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Account</button>
+						
+						</div>
+						
+					</div>
+				</form>
             </div>
         </div>
     </div> 
@@ -830,6 +880,34 @@
 				x.style.display = "block";
 				}
 			}
+		function nextPage() {
+			var x = document.getElementById("personalInfo");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+				showCompany();
+			}
+		function showCompany(){
+			var x = document.getElementById("companyInfo");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				}
+			}
+		function back(){
+			var x = document.getElementById("personalInfo");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				}
+				console.log("back to personal info");
+				hideCompany();
+			}
+		function hideCompany(){
+			var x = document.getElementById("companyInfo");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+		}
+		
 
 		
     </script>
