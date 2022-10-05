@@ -69,9 +69,7 @@
     <div class="grid grid-rows-1 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
-			<div class="row-start-1 row-span-1 flex" id = "printshow" style="display: none">
-			<button  class="bgcolor text-white hover:bg-white xl:ml-10 h-12 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" >Print</button>
-			</div>
+			
 			<!-- Modal toggle -->
             <button class="bgcolor text-white hover:bg-white xl:ml-10 h-12 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" data-modal-toggle="authentication-modal">Add New</button>
     <!-- Main modal -->
@@ -214,13 +212,14 @@
 					</ul>
 				</div>
 			</div>
-				<div class="mb-3 xl:w-full ml-5">
+				<div class="mb-3 xl:w-full ml-5 flex">
 					<input type="search"
 					class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
 						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl"
 					id="exampleSearch"
 					placeholder="Search"
 					/>
+					<button  class="bgcolor text-white hover:bg-white xl:ml-10 h-12 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" >Print</button>
 				</div>
 			</div>
         </div>

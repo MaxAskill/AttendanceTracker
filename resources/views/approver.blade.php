@@ -641,6 +641,173 @@
             </div>
         </div>
     </div>
+
+    <!-- Main modal -->
+<div id="print" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+        <div class="relative xl:w-2/3 sm:w-full xl:px-4 h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="bgcolor rounded-lg shadow relative dark:bg-gray-700">
+                <div class="flex justify-end p-2">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="print">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                    </button>
+                </div>
+                
+					<div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full bgcolor rounded-t-lg">
+						<div class="row-start-1 row-span-1 flex">
+							<h1 class="text-white text-4xl font-bold px">Daily Time Record</h1>
+						</div>
+						<div class="row-start-2 row-span-1 flex">
+						<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
+							<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+						</div>
+						<div class="row-start-2 row-span-2">
+							<div class="flex  float-right">
+								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="print">Print</button>
+							</div>
+						</div>
+					</div>
+						<div class="row-start-2 row-span-5 col-span-2">
+							<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed " >
+								<thead class="bg-gray-100 flex text-gray w-full">
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<th class="p-4 w-2/6">Date</th>
+										<th class="p-4 w-2/6">A.M. In</th>
+										<th class="p-4 w-2/6">A.M. Out</th>
+										<th class="p-4 w-2/6">P.M. IN</th>
+										<th class="p-4 w-2/6">COFFEE IN</th>
+										<th class="p-4 w-2/6">COFEE OUT</th>
+										<th class="p-4 w-2/6">P.M. OUT</th>
+										<th class="p-4 w-2/6">DURATION</th>
+									</tr>
+								</thead>
+								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 55vh;">
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 16, 2021</td>
+										<td class="py-4 w-2/6">09 : 34 am</td>
+										<td class="py-4 w-2/6">--</td>
+										<td class="py-4 w-2/6">--</td>
+										<td class="py-4 w-2/6">--</td>
+										<td class="py-4 w-2/6">--</td>
+										<td class="py-4 w-2/6">--</td>
+										<td class="py-4 w-2/6">--</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 15, 2021</td>
+										<td class="py-4 w-2/6">09 : 25 am</td>
+										<td class="py-4 w-2/6">01 : 47 am</td>
+										<td class="py-4 w-2/6">02 : 46 am</td>
+										<td class="py-4 w-2/6">05 : 10 pm</td>
+										<td class="py-4 w-2/6">05 : 35 pm</td>
+										<td class="py-4 w-2/6">06 : 34 pm</td>
+										<td class="py-4 w-2/6">09 hrs 09 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 14, 2021</td>
+										<td class="py-4 w-2/6">09 : 28 am</td>
+										<td class="py-4 w-2/6">02 : 07 am</td>
+										<td class="py-4 w-2/6">03 : 05 am</td>
+										<td class="py-4 w-2/6">05 : 14 pm</td>
+										<td class="py-4 w-2/6">05 : 41 pm</td>
+										<td class="py-4 w-2/6">06 : 38 pm</td>
+										<td class="py-4 w-2/6">09 hrs 10 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 13, 2021</td>
+										<td class="py-4 w-2/6">12 : 15 am</td>
+										<td class="py-4 w-2/6">02 : 04 am</td>
+										<td class="py-4 w-2/6">03 : 01 am</td>
+										<td class="py-4 w-2/6">05 : 35 pm</td>
+										<td class="py-4 w-2/6">06 : 03 pm</td>
+										<td class="py-4 w-2/6">09 : 15 pm</td>
+										<td class="py-4 w-2/6">9 hrs 00 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 11, 2021</td>
+										<td class="py-4 w-2/6">09 : 26 am</td>
+										<td class="py-4 w-2/6">01 : 29 am</td>
+										<td class="py-4 w-2/6">02 : 28 am</td>
+										<td class="py-4 w-2/6">05 : 00 pm</td>
+										<td class="py-4 w-2/6">05 : 26 pm</td>
+										<td class="py-4 w-2/6">06 : 34 pm</td>
+										<td class="py-4 w-2/6">09 hrs 08 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 10, 2021</td>
+										<td class="py-4 w-2/6">09 : 26 am</td>
+										<td class="py-4 w-2/6">01 : 33 am</td>
+										<td class="py-4 w-2/6">02 : 29 am</td>
+										<td class="py-4 w-2/6">05 : 03 pm</td>
+										<td class="py-4 w-2/6">05 : 32 pm</td>
+										<td class="py-4 w-2/6">06 : 34 pm</td>
+										<td class="py-4 w-2/6">09 hrs 08 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 09, 2021</td>
+										<td class="py-4 w-2/6">09 : 19 am</td>
+										<td class="py-4 w-2/6">02 : 31 am</td>
+										<td class="py-4 w-2/6">02 : 29 am</td>
+										<td class="py-4 w-2/6">05 : 05 pm</td>
+										<td class="py-4 w-2/6">05 : 33 pm</td>
+										<td class="py-4 w-2/6">06 : 34 pm</td>
+										<td class="py-4 w-2/6">09 hrs 15 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 07, 2021</td>
+										<td class="py-4 w-2/6">09 : 24 am</td>
+										<td class="py-4 w-2/6">01 : 36 am</td>
+										<td class="py-4 w-2/6">02 : 35 am</td>
+										<td class="py-4 w-2/6">05 : 10 pm</td>
+										<td class="py-4 w-2/6">05 : 35 pm</td>
+										<td class="py-4 w-2/6">06 : 38 pm</td>
+										<td class="py-4 w-2/6">09 hrs 14 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 06, 2021</td>
+										<td class="py-4 w-2/6">11 : 49 am</td>
+										<td class="py-4 w-2/6">02 : 06 am</td>
+										<td class="py-4 w-2/6">02 : 58 am</td>
+										<td class="py-4 w-2/6">06 : 07 pm</td>
+										<td class="py-4 w-2/6">06 : 20 pm</td>
+										<td class="py-4 w-2/6">09 : 02 pm</td>
+										<td class="py-4 w-2/6">09 hrs 13 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 04, 2021</td>
+										<td class="py-4 w-2/6">09 : 27 am</td>
+										<td class="py-4 w-2/6">01 : 32 am</td>
+										<td class="py-4 w-2/6">02 : 29 am</td>
+										<td class="py-4 w-2/6">05 : 10 pm</td>
+										<td class="py-4 w-2/6">05 : 35 pm</td>
+										<td class="py-4 w-2/6">06 : 39 pm</td>
+										<td class="py-4 w-2/6">09 hrs 12 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 03, 2021</td>
+										<td class="py-4 w-2/6">09 : 51 am</td>
+										<td class="py-4 w-2/6">01 : 44 am</td>
+										<td class="py-4 w-2/6">02 : 42 am</td>
+										<td class="py-4 w-2/6">05 : 15 pm</td>
+										<td class="py-4 w-2/6">05 : 44 pm</td>
+										<td class="py-4 w-2/6">06 : 39 pm</td>
+										<td class="py-4 w-2/6">9 hrs 12 mins</td>
+									</tr>
+									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+										<td class="py-4 w-2/6">September 02, 2021</td>
+										<td class="py-4 w-2/6">09 : 51 am</td>
+										<td class="py-4 w-2/6">02 : 02 am</td>
+										<td class="py-4 w-2/6">02 : 55 am</td>
+										<td class="py-4 w-2/6">05 : 10 pm</td>
+										<td class="py-4 w-2/6">05 : 39 pm</td>
+										<td class="py-4 w-2/6">07 : 09 pm</td>
+										<td class="py-4 w-2/6">09 hrs 18 mins</td>
+									</tr>
+								</tbody>
+							</table> <!--Table div end-->
+            </div>
+        </div>
+    </div>
+</div><!--END MASTER LIST PRINT MODAL-->
     
     <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
 		<svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
