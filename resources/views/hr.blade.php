@@ -125,7 +125,7 @@
 							<span id="lblError" style="color: red"></span>
 						</div>
 						</div>
-						<button type="button" onClick="nextPage()" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Next</button>
+						<button type="button" onClick="nextPage()" class="w-full text-white mt-5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Next</button>
 					</div>
 					<div id="companyInfo" style="display: none">
 						<h3 class="text-xl font-medium text-gray-900 dark:text-white">Company Info</h3>
@@ -163,8 +163,8 @@
 							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Started</label>
 							<input type="date" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Date Started" required="">
 						</div>
-						<button type="button" onClick="back()" class="col-start-1 col-span-1 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Back</button>
-						<button type="submit" class="col-start-2 col-span-1 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Account</button>
+						<button type="button" onClick="back()" class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Back</button>
+						<button type="submit" class="col-start-2 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Add Account</button>
 						
 						</div>
 						
@@ -526,16 +526,38 @@
           alt="Sample image"
         />
   </div>
-  <div class="basis-1/2 py-8 px-8" >
+  <div class="basis-1/3 py-8 px-8" >
 	<h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
-		<ul class="py-3">
-			<li class="text-lg text-gray-800"><span class="font-bold">Name:</span> Maria Clara</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">ID No. :</span> 0000-0001</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Contact No. :</span> 09123456789</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Email :</span> fn.lastname@email.com</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Department :</span> SM Bicutan</li>
-			<li class="text-lg text-gray-800"><span class="font-bold">Chain : </span> SM Department Store</li>
-		</ul>
+	<div class="basis-1/3 py-5">
+	<div class="grid auto-rows-max grid-cols-2">
+			<div><label class="font-bold">Company ID :</label></div>
+			<div><label>0000-0001</label></div>
+			<div><label class="font-bold">Name :</label></div>
+			<div><label>Crisostomo Ibarra</label></div>
+			<div><label class="font-bold">Birthday :</label></div>
+			<div><label>December 14, 1989</label></div>
+			<div><label class="font-bold">Contact No :</label></div>
+			<div><label>09123456789</label></div>
+			<div><label class="font-bold">Email :</label></div>
+			<div><label>crisostomo.ibarra@barbizonfashion.com</label></div>
+			<div><label class="font-bold">Job Position :</label></div>
+			<div><label>NBFI Sales</label></div>
+			<div><label class="font-bold">Company :</label></div>
+			<div><label>NBFI</label></div>
+			<div><label class="font-bold">Brand :</label></div>
+			<div><label>Barbizon</label></div>
+			<div><label class="font-bold">Branch :</label></div>
+			<div><label>RDS Bacolod</label></div>
+			<div><label class="font-bold">Chain :</label></div>
+			<div><label>RDS</label></div>
+			<div><label class="font-bold">RAS :</label></div>
+			<div><label>Ms. Revelyn Loyola</label></div>
+			<div><label class="font-bold">HR :</label></div>
+			<div><label>Helena Loyola</label></div>
+			<div><label class="font-bold">Date Started :</label></div>
+			<div><label>October 21, 2006</label></div>
+		</div>
+	</div>
   </div>
 </div>
 
@@ -588,7 +610,6 @@
 				<th class="p-4 w-2/6">Undertime</th>
 				<th class="p-4 w-2/6">Overtime</th>
 				<th class="p-4 w-2/6">Hours Rendered</th>
-				<th class="p-4 w-2/6"></th>
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
@@ -601,118 +622,106 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr><tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
+			<td class="py-4 w-2/6">1 hr 05 min</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">07 : 34 am</td>
 			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">1</td>
+			<td class="py-4 w-2/6">30 mins</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">0</td>
 			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">+</button></td>
 		</tr>
 		</tbody>
-		<tfoot class="bg-gray-100 flex text-gray w-full pr-5">
+		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<th class="p-4 px-1 w-2/6">Date</th>
 				<th class="p-4 px-1 w-2/6">--</th>
 				<th class="p-4 px-1 w-2/6">--</th>
-				<th class="p-4 px-1 w-2/6">1</th>
+				<th class="p-4 px-1 w-2/6">30 mins</th>
 				<th class="p-4 px-1 w-2/6">0</th>
-				<th class="p-4 px-1 w-2/6">1 hrs 5 mins</th>
+				<th class="p-4 px-1 w-2/6">1 hrs 05 mins</th>
 				<th class="p-4 px-1 w-2/6">81 hrs 45 mins</th>
-				<th class="p-4 px-1 w-2/6"></th>
 			</tr>
 		</tfoot>
 	</table>
@@ -1404,7 +1413,7 @@
 							<span id="lblError" style="color: red"></span>
 						</div>
 						</div>
-						<button type="button" onClick="nextPageEdit()" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Next</button>
+						<button type="button" onClick="nextPageEdit()" class="w-full mt-5 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Next</button>
 					</div>
 					<div id="companyInfoEdit" style="display: none">
 						<h3 class="text-xl font-medium text-gray-900 dark:text-white">Company Info</h3>
@@ -1442,8 +1451,8 @@
 							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Started</label>
 							<input type="date" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Date Started" required="" >
 						</div>
-						<button type="button" onClick="backEdit()" class="col-start-1 col-span-1 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Back</button>
-						<button type="submit" class="col-start-2 col-span-1 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Account</button>
+						<button type="button" onClick="backEdit()" class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Back</button>
+						<button type="submit" class="col-start-2 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Edit Account</button>
 						
 						</div>
 						
