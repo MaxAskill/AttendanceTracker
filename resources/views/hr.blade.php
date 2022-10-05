@@ -69,6 +69,9 @@
     <div class="grid grid-rows-1 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
+			<div class="row-start-1 row-span-1 flex" id = "printshow" style="display: none">
+			<button  class="bgcolor text-white hover:bg-white xl:ml-10 h-12 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" >Print</button>
+			</div>
 			<!-- Modal toggle -->
             <button class="bgcolor text-white hover:bg-white xl:ml-10 h-12 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" data-modal-toggle="authentication-modal">Add New</button>
     <!-- Main modal -->
@@ -226,7 +229,7 @@
 	<table class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto" >
 		<thead class="bg-gray-100 flex text-gray w-full pr-5">
 			<tr class="flex w-full">
-				<th class="p-4 w-1/6"><button type="button">Select All</button></th>
+				<th class="p-4 w-1/6"><button type="button" id="btn" onClick="showprint()">Select All</button></th>
 				<th class="p-4 w-2/6">ID Number</th>
 				<th class="p-4 w-2/6">Name</th>
 				<th class="p-4 w-2/6">Branch</th>
@@ -237,7 +240,7 @@
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
 		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 68vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -246,7 +249,7 @@
 			
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -254,7 +257,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -262,7 +265,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"> </td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -270,7 +273,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -278,7 +281,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -286,7 +289,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -294,7 +297,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -302,7 +305,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -310,7 +313,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -318,7 +321,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -326,7 +329,7 @@
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox"></input></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Maria Clara</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -1092,7 +1095,34 @@
 				x.style.display = "none";
 				}
 		}
+		function showPrint(){
+			var x = document.getElementById("printshow");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				}
+				console.log("show Print")
+		}
 		
+		function check(checked = true){
+			const checkboxes = document.querySelectorAll('input[name="employee"]');
+			checkboxes.forEach((checkbox) =>{
+				checkbox.checked = checked;
+			});
+		}
 
+		function checkAll(){
+			check();
+			this.onclick = uncheckAll;
+			console.log("select all")
+			showPrint();
+		}
+
+		function uncheckAll(){
+			check(false);
+			this.onclick = checkAll;
+		}
+
+		const btn = document.querySelector('#btn');
+		btn.onclick = checkAll;
 		
     </script>
