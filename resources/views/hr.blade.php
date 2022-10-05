@@ -259,8 +259,8 @@
 			<td class="p-4 w-2/6">Mark Anthony Luis</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
 			<td class="p-4 w-2/6">SM Department Store</td>
-			<td class="p-4 w-2/6">Active</td>
-			<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button></td>
+			<td class="p-4 w-2/6" >Active</td>
+			<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="resign()" id="resignBtn" style="display: none">Resign</button><label style="display: none" id="resignLbl"> 30 days left</span></td>
 			<td class="p-4 w-2/6"><a href="#attendanceSummary"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" onClick="showAttendance()">VIEW</button></a></td>
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
