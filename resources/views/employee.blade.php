@@ -79,11 +79,11 @@
 						
 						<div class="text-center py-2 text-gray-700">
 							<h1 class="text-lg font-bold">Late</h1>
-							<h2 class="text-3xl">0 Day/s</h2>
+							<h2 class="text-3xl">0 mins</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
 							<h1 class="text-lg font-bold">Undertime</h1>
-							<h2 class="text-3xl">0 Day/s</h2>
+							<h2 class="text-3xl">0 mins</h2>
 						</div>
 						<div class="text-center py-2 text-gray-700">
 							<h1 class="text-lg font-bold">Overtime</h1>
@@ -324,6 +324,21 @@
 		<div class="row-start-2 row-span-1 flex">
 		<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
 			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+				<button id="dropdownDefault" data-dropdown-toggle="dropdown" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none ml-5 mt-2 text-center inline-flex items-center" type="button">Duration<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+				<!-- Dropdown menu -->
+				<div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+					<ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Weekly</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Monthly</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Annually</a>
+					</li>
+					</ul>
+				</div>
 		</div>
 		<div class="row-start-2 row-span-2">
 			<div class="flex  float-right">

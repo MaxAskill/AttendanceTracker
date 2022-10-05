@@ -29,13 +29,13 @@
 
                 <li class="justify-center xl:relative group">
 					<button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 border-transparent  focus:outline-none">
-          			<img src="img\Login-image.png"
+          			<img src="img\profilepic.png"
 					class="w-12 rounded-full border-white border-2 "
 					alt="Sample image" />
 					</button>
 					<div class="absolute hidden xl:w-80 rounded-full group-hover:block">
 						<div class="flex-none w-full text-left px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
-						<div class="content-center flex items-center justify-center mb-5"><img src="img\Login-image.png" class="w-2/3 rounded-full border-white border-2 object-center" alt="Sample image" /></div>
+						<div class="content-center flex items-center justify-center mb-5"><img src="img\profilepic.png" class="w-2/3 rounded-full border-white border-2 object-center" alt="Sample image" /></div>
 							<p><span class="font-bold">ID NO. : </span><br>0000-0001</p>
 							<p><span class="font-bold">CONTACT NUMBER : </span><br>09123456789</p>
 							<p><span class="font-bold">EMAIL : </span><br>crisostomo.ibarra@barbizonfashion.com</p>
@@ -66,11 +66,11 @@
     <main>
         <!-- component -->
 <div class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto">
-    <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+    <div class="grid grid-rows-1 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
 			<!-- Modal toggle -->
-            <button class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" data-modal-toggle="authentication-modal">Add New</button>
+            <button class="bgcolor text-white hover:bg-white xl:ml-10 h-12 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none" data-modal-toggle="authentication-modal">Add New</button>
     <!-- Main modal -->
     <div id="authentication-modal" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
         <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
@@ -123,37 +123,45 @@
         </div>
     </div> 
         </div>
-		<div class="row-start-2 row-span-1 flex">
-			
-  <div class="relative group mt-2">
-      <button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none">
-          <span>Branch</span>
-      </button>
-      <div class="absolute hidden w-56 bg-white bordercolor group-hover:block">
-          <div class="px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
-		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Bicutan</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Sucat</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-2">Makati Robinsons</a>
-          </div>
-      </div>
-  </div>  
-  <div class="relative group mt-2 ml-5">
-      <button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none">
-          <span>Chain</span>
-      </button>
-      <div class="absolute hidden w-56 bg-white bordercolor group-hover:block">
-          <div class="px-2 pt-2 pb-4 bg-white bg-white shadow-lg grid bordercolor rounded-lg">
-		  		<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-0">SM Department Store</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-1">SM Appliances</a>
-				<a href="#" class="block px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem" tabindex="-1" id="menu-item-2">Makati Robinsons</a>
-          </div>
-      </div>
-  </div>  
 
-        </div>
-        <div class="row-start-1 row-span-2">
-			<div class="flex float-right">
-				<div class="mb-3 xl:w-96">
+        <div class="row-start-1 row-span-1">
+			<div class="flex">
+			<div>
+				<button id="branchdp" data-dropdown-toggle="branchdropdown" class="flex flex-row items-center h-12 px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none" type="button">Branch<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+				<!-- Dropdown menu -->
+				<div id="branchdropdown" class="hidden z-10 w-auto bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+					<ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="branchdp">
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Finds Finds Las Pinas</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Robinsons Las Pinas</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Waltermart Makati</a>
+					</li>
+					</ul>
+				</div>
+			</div>
+				
+			<div>
+				<button id="chaindp" data-dropdown-toggle="chaindropdown" class="flex flex-row items-center h-12 px-2 py-2  ml-5 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none" type="button">Chain<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+				<!-- Dropdown menu -->
+				<div id="chaindropdown" class="hidden z-10 w-auto bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+					<ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="chaindp">
+						<li>
+							<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Vista Mall Las Pinas, Finds Finds Department Store</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Robinsons Place Las Pinas Department Store</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Waltermart Makati Department Store</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+				<div class="mb-3 xl:w-full ml-5">
 					<input type="search"
 					class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
 						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl"
