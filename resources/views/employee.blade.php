@@ -35,39 +35,38 @@
 			<div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
 				<ul class="space-y-2">
 					<li>
-						<a href="#" onClick="showDailyTimeRecord()" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-						<!-- <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg> -->
+						<a href="#" onClick="showDailyTimeRecord()" @click="open = !open" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 						<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900  dark:group-hover:text-white" viewBox="0 0 512 512"><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
 						<span class="flex-1 ml-3 whitespace-nowrap" >Home</span>
 						</a>
 					</li>
 					<li>
-						<a href="#" onClick="showAttendanceSummary()" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-						<!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> -->
+						<a href="#" onClick="showAttendanceSummary()" @click="open = !open" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 						<svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48" y="80" width="416" height="384" rx="48"/><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" stroke-linecap="round" d="M128 48v32M384 48v32"/><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48"/></svg>
 						<span class="flex-1 ml-3 whitespace-nowrap" >Attendance Summary</span>
 						</a>
 					</li>
 					
 					<li>
-						<a href="#" onClick="showOT()" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-						<!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg> -->
+						<a href="#" onClick="showOT()" @click="open = !open" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 						<svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><path d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
 						<span class="flex-1 ml-3 whitespace-nowrap">Overtime History</span>
-						<!-- <span class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-900 dark:text-blue-200">3</span> -->
 						</a>
 					</li>
 					<li>
 						<a href="#" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-						<!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg> -->
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><title>Salary History</title><path d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg> -->
 						<svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><rect x="48" y="144" width="416" height="288" rx="48" ry="48" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M411.36 144v-30A50 50 0 00352 64.9L88.64 109.85A50 50 0 0048 159v49" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
 						<span class="flex-1 ml-3 whitespace-nowrap">Salary History</span>
 						</a>
 					</li>
 					<li>
+						<a href="#" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+						<svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><title>Person</title><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
+						<span class="flex-1 ml-3 whitespace-nowrap">Profile</span>
+						</a>
+					</li>
+					<li>
 						<a href="/" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-						<!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg> -->
 						<svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><path d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
 					</svg><span class="flex-1 ml-3 whitespace-nowrap">Log Out</span>
 						</a>
@@ -78,25 +77,33 @@
 	</sidebar>
 	</div>
 
-	<content class="xl:w-10/12 sm:w-full px-10">
+	<content class="xl:w-10/12 sm:w-full px-10 mt-5">
 		<div id = "dailyTimeRecord" style="display:block">
-			<div class="grid md:grid-flow-row grid-rows-2 grid-cols-4 ">
-				<div class="row-start-1 row-span-1 pt-2 drop-shadow-md">
+			<div class="grid md:grid-flow-row auto-rows-auto grid-cols-4 gap-4">
+				<div class="row-start-1 row-span-1 drop-shadow-md">
 					<div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Worked Hour Today</h1>
 						<!-- <div class="countdown font-mono text-2xl" id="tens"></div> -->
 						<p><span id="hours" class="countdown font-mono text-2xl"> 00 : 00 : 00 : 00  </span></p>
 					</div>
 				</div>
-				<div class="row-start-2 row-span-1 pt-3 drop-shadow-md">
-					<div class="bg-green-500 rounded-lg  py-5 text-center text-white">
+				<div class="row-start-2 row-span-1 drop-shadow-md">
+					<div class="bg-green-500 rounded-lg py-5 text-center text-white">
 						<h1 class="font-bold">Timed In Today</h1>
 						<span class="countdown font-mono text-2xl" id="timedIn">
 						00 : 00 : 00
 						</span>
 					</div>
 				</div>
-				<div class="row-start-1 row-span-2 col-span-3 pt-2 pl-5 drop-shadow-md">
+				<div class="row-start-3 row-span-1 drop-shadow-md">
+					<div class="bgpantone rounded-lg py-5 text-center text-white">
+						<h1 class="font-bold">Estimated Time Out</h1>
+						<span class="countdown font-mono text-2xl" id = "time_out">
+						00 : 00 : 00
+						</span>
+					</div>
+				</div>
+				<div class="row-start-1 row-span-2 col-span-3 drop-shadow-md">
 					<div class="flex h-full bg-white rounded-lg px-2 py-2 grid md:grid-flow-row grid-rows-2 grid-cols-4">
 						<div class="row-start-1 col-span-1 text-center pl-5">
 							<h1 class="text-6xl font-bold text-gray-700">Summary</h1>
@@ -124,25 +131,14 @@
 						</div>
 					</div>
 				</div>
-			</div><!--1st Grid-->
-
-			<div class="grid md:grid-flow-row grid-row-6 grid-cols-4 pt-3 drop-shadow-md">
-				<div class="row-start-1 row-span-1 pt-1">
-					<div class="bg-red-500  rounded-lg px-2 py-5 text-white text-center">
-						<h1 class="font-bold">Estimated Time Out</h1>
-						<span class="countdown font-mono text-2xl" id = "time_out">
-							00 : 00 : 00
-						</span>
-					</div>
-				</div>
-				<div class="row-start-2 row-span-1">
-					<div class="bg-white rounded-lg py-3 text-center text-white space-x-4">
+				<div class="row-start-4 row-span-1">
+					<div class="bg-white rounded-lg py-2 text-center text-white space-x-4">
 						<h1 class="text-gray-700 text-2xl font-bold">FILE UNSOCIAL HOURS</h1>
-						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">FILE<button>
+						<button class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-4 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">FILE<button>
 						<!-- <a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" onClick="showOT()">History<button></a> -->
 					</div>
 				</div>
-				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-10 pt-3 text-center text-white overflow-hidden">
+				<div class="row-start-5 row-span-4 bg-white drop-shadow-md rounded-2xl px-10 pt-5 text-center text-white overflow-hidden">
 					<h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
 					<h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
 					<div class="grid place-content-center">
@@ -180,13 +176,12 @@
 						</tr>
 					</table>
 				</div><!--Card CHECK IN-->
-
-				<div class="row-start-1 row-span-6 col-span-3 pl-5 pt-1 drop-shadow-md">
-					<div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full bgcolor rounded-t-lg">
+				<div class="row-start-3 row-span-6 col-span-3 pt-5 bgcolor drop-shadow-md rounded-xl">
+					<div class="grid grid-rows-2 grid-flow-col  sm:px-5 sm:w-full rounded-t-lg">
 						<div class="row-start-1 row-span-1 flex">
 							<h1 class="text-white text-4xl font-bold px">Daily Time Record</h1>
 						</div>
-						<div class="row-start-2 row-span-1 flex">
+						<div class="row-start-2 row-span-1 flex pb-2">
 							<div date-rangepicker class="flex items-center">
 								<span class="mx-4 text-white"> Sort By:</span>
 								<div class="relative">
@@ -207,13 +202,12 @@
 						<div class="row-start-2 row-span-2">
 							<div class="flex  float-right">
 								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="print">Upload</button>
-								<!-- <a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" onClick="showOT()">OT History</button></a> -->
 								<button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" data-modal-toggle="print">Print</button>
 							</div>
 						</div>
 					</div>
 						<div class="row-start-2 row-span-5 col-span-2">
-							<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed pr-5" >
+							<table class="text-center w-full bg-white text-center hover:table-fixed pr-5" >
 								<thead class="bg-gray-100 flex text-gray w-full">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<th class="p-4 w-2/6">Date</th>
@@ -226,7 +220,7 @@
 										<th class="p-4 w-2/6">DURATION</th>
 									</tr>
 								</thead>
-								<tbody class="bg-grey-light flex flex-col w-full " style="height: 53vh;">
+								<tbody class="bg-grey-light flex flex-col w-full" style="height: 50vh;">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 16, 2021</td>
 										<td class="py-4 w-2/6">09 : 34 am</td>
@@ -245,7 +239,7 @@
 										<td class="py-4 w-2/6">05 : 10 pm</td>
 										<td class="py-4 w-2/6">05 : 35 pm</td>
 										<td class="py-4 w-2/6">06 : 34 pm</td>
-										<td class="py-4 w-2/6">09 hrs 09 mins</td>
+										<td class="py-4 w-2/6">08 hrs 09 mins</td>
 									</tr>
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 14, 2021</td>
@@ -255,7 +249,7 @@
 										<td class="py-4 w-2/6">05 : 14 pm</td>
 										<td class="py-4 w-2/6">05 : 41 pm</td>
 										<td class="py-4 w-2/6">06 : 38 pm</td>
-										<td class="py-4 w-2/6">09 hrs 10 mins</td>
+										<td class="py-4 w-2/6">08 hrs 10 mins</td>
 									</tr>
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 13, 2021</td>
@@ -265,7 +259,7 @@
 										<td class="py-4 w-2/6">05 : 35 pm</td>
 										<td class="py-4 w-2/6">06 : 03 pm</td>
 										<td class="py-4 w-2/6">09 : 15 pm</td>
-										<td class="py-4 w-2/6">9 hrs 00 mins</td>
+										<td class="py-4 w-2/6">08 hrs 00 mins</td>
 									</tr>
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 11, 2021</td>
@@ -275,7 +269,7 @@
 										<td class="py-4 w-2/6">05 : 00 pm</td>
 										<td class="py-4 w-2/6">05 : 26 pm</td>
 										<td class="py-4 w-2/6">06 : 34 pm</td>
-										<td class="py-4 w-2/6">09 hrs 08 mins</td>
+										<td class="py-4 w-2/6">08 hrs 08 mins</td>
 									</tr>
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 10, 2021</td>
@@ -285,68 +279,8 @@
 										<td class="py-4 w-2/6">05 : 03 pm</td>
 										<td class="py-4 w-2/6">05 : 32 pm</td>
 										<td class="py-4 w-2/6">06 : 34 pm</td>
-										<td class="py-4 w-2/6">09 hrs 08 mins</td>
+										<td class="py-4 w-2/6">08 hrs 08 mins</td>
 									</tr>
-									<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-										<td class="py-4 w-2/6">September 09, 2021</td>
-										<td class="py-4 w-2/6">09 : 19 am</td>
-										<td class="py-4 w-2/6">02 : 31 am</td>
-										<td class="py-4 w-2/6">02 : 29 am</td>
-										<td class="py-4 w-2/6">05 : 05 pm</td>
-										<td class="py-4 w-2/6">05 : 33 pm</td>
-										<td class="py-4 w-2/6">06 : 34 pm</td>
-										<td class="py-4 w-2/6">09 hrs 15 mins</td>
-									</tr>
-									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-										<td class="py-4 w-2/6">September 07, 2021</td>
-										<td class="py-4 w-2/6">09 : 24 am</td>
-										<td class="py-4 w-2/6">01 : 36 am</td>
-										<td class="py-4 w-2/6">02 : 35 am</td>
-										<td class="py-4 w-2/6">05 : 10 pm</td>
-										<td class="py-4 w-2/6">05 : 35 pm</td>
-										<td class="py-4 w-2/6">06 : 38 pm</td>
-										<td class="py-4 w-2/6">09 hrs 14 mins</td>
-									</tr>
-									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-										<td class="py-4 w-2/6">September 06, 2021</td>
-										<td class="py-4 w-2/6">11 : 49 am</td>
-										<td class="py-4 w-2/6">02 : 06 am</td>
-										<td class="py-4 w-2/6">02 : 58 am</td>
-										<td class="py-4 w-2/6">06 : 07 pm</td>
-										<td class="py-4 w-2/6">06 : 20 pm</td>
-										<td class="py-4 w-2/6">09 : 02 pm</td>
-										<td class="py-4 w-2/6">09 hrs 13 mins</td>
-									</tr>
-									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-										<td class="py-4 w-2/6">September 04, 2021</td>
-										<td class="py-4 w-2/6">09 : 27 am</td>
-										<td class="py-4 w-2/6">01 : 32 am</td>
-										<td class="py-4 w-2/6">02 : 29 am</td>
-										<td class="py-4 w-2/6">05 : 10 pm</td>
-										<td class="py-4 w-2/6">05 : 35 pm</td>
-										<td class="py-4 w-2/6">06 : 39 pm</td>
-										<td class="py-4 w-2/6">09 hrs 12 mins</td>
-									</tr>
-									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-										<td class="py-4 w-2/6">September 03, 2021</td>
-										<td class="py-4 w-2/6">09 : 51 am</td>
-										<td class="py-4 w-2/6">01 : 44 am</td>
-										<td class="py-4 w-2/6">02 : 42 am</td>
-										<td class="py-4 w-2/6">05 : 15 pm</td>
-										<td class="py-4 w-2/6">05 : 44 pm</td>
-										<td class="py-4 w-2/6">06 : 39 pm</td>
-										<td class="py-4 w-2/6">9 hrs 12 mins</td>
-									</tr>
-									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-										<td class="py-4 w-2/6">September 02, 2021</td>
-										<td class="py-4 w-2/6">09 : 51 am</td>
-										<td class="py-4 w-2/6">02 : 02 am</td>
-										<td class="py-4 w-2/6">02 : 55 am</td>
-										<td class="py-4 w-2/6">05 : 10 pm</td>
-										<td class="py-4 w-2/6">05 : 39 pm</td>
-										<td class="py-4 w-2/6">07 : 09 pm</td>
-										<td class="py-4 w-2/6">09 hrs 18 mins</td>
-									</tr> -->
 								</tbody>
 							</table> <!--Table div end-->
 							<div class="grid justify-center items-center mb-3 bg-white">
@@ -376,14 +310,13 @@
 									</ul>
 									</nav>
 									</div>
-
 						</div><!--Daily Time Record end-->
 					</div>
 					
 				</div><!--tABLE GRID END-->
-			</div><!--2nd Grid-->
+			</div>
 </div>
-<div class="grid bg-transparent overflow-auto rounded-lg drop-shadow-md hide-show py-5 " id="attendanceSummary" style="display: none">
+<div class="grid bg-transparent overflow-auto rounded-lg drop-shadow-md hide-show " id="attendanceSummary" style="display: none">
 <a href="bottom"></a>
     <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
@@ -430,7 +363,7 @@
 				<th class="p-4 w-2/6">Hours Rendered</th>
 			</tr>
 		</thead>
-		<tbody class="bg-grey-light flex flex-col w-full " style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col w-full " style="height: 68vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 16, 2021</td>
 				<td class="py-4 w-2/6">09 : 25 am</td>
@@ -447,7 +380,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 09 mins</td>
+				<td class="py-4 w-2/6">08 hrs 09 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 14, 2021</td>
@@ -456,7 +389,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 10 mins</td>
+				<td class="py-4 w-2/6">08 hrs 10 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 13, 2021</td>
@@ -465,7 +398,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 00 mins</td>
+				<td class="py-4 w-2/6">08 hrs 00 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 11, 2021</td>
@@ -474,7 +407,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 08 mins</td>
+				<td class="py-4 w-2/6">08 hrs 08 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 10, 2021</td>
@@ -483,7 +416,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 08 mins</td>
+				<td class="py-4 w-2/6">08 hrs 08 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 09, 2021</td>
@@ -492,7 +425,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 15 mins</td>
+				<td class="py-4 w-2/6">08 hrs 15 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 07, 2021</td>
@@ -501,7 +434,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 14 mins</td>
+				<td class="py-4 w-2/6">08 hrs 14 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 06, 2021</td>
@@ -510,7 +443,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 13 mins</td>
+				<td class="py-4 w-2/6">08 hrs 13 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 04, 2021</td>
@@ -519,7 +452,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 12 mins</td>
+				<td class="py-4 w-2/6">08 hrs 12 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 03, 2021</td>
@@ -528,7 +461,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 12 mins</td>
+				<td class="py-4 w-2/6">08 hrs 12 mins</td>
 			</tr>
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 02, 2021</td>
@@ -537,17 +470,8 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 12 mins</td>
+				<td class="py-4 w-2/6">08 hrs 12 mins</td>
 			</tr>
-			<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-				<td class="py-4 w-2/6">September 01, 2021</td>
-				<td class="py-4 w-2/6">09 : 51 am</td>
-				<td class="py-4 w-2/6">07 : 39 pm</td>
-				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">0</td>
-				<td class="py-4 w-2/6">09 hrs 12 mins</td>
-			</tr> -->
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -591,7 +515,7 @@
     </div>
 </div><!--end attendance summary-->
 
-<div class="grid bg-transparent overflow-hidden drop-shadow-md py-5 " id="history" style="display:none">
+<div class="grid bg-transparent overflow-hidden drop-shadow-md " id="history" style="display:none">
 <div class="grid bgcolor  rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
 			<div class="row-start-1 row-span-1 flex">
 				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
@@ -632,8 +556,8 @@
 	<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed " >
 	<thead class="bg-gray-100 flex text-gray w-full pr-5">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-				<th class="p-4 w-2/6">Overtime Date</th>
 				<th class="p-4 w-2/6">Date Applied</th>
+				<th class="p-4 w-2/6">Target Date</th>
 				<th class="p-4 w-2/6">Overtime In</th>
 				<th class="p-4 w-2/6">Overtime Out</th>
 				<th class="p-4 w-2/6">Total OT Hours</th>
@@ -642,10 +566,10 @@
 				<th class="p-4 w-2/6">Status</th>
 			</tr>
 		</thead>
-		<tbody class="bg-grey-light flex flex-col w-full" style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col w-full" style="height: 68vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">September 21, 2021</td>
+			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">09 : 05 am</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
@@ -654,8 +578,8 @@
 			<td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 18, 2021</td>
 			<td class="py-4 w-2/6">September 16, 2021</td>
+			<td class="py-4 w-2/6">September 18, 2021</td>
 			<td class="py-4 w-2/6">06 : 05 pm</td>
 			<td class="py-4 w-2/6">08 : 05 pm</td>
 			<td class="py-4 w-2/6">02 hrs 00 mins</td>
@@ -664,8 +588,8 @@
 			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 17, 2021</td>
 			<td class="py-4 w-2/6">September 14, 2021</td>
+			<td class="py-4 w-2/6">September 17, 2021</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
@@ -674,8 +598,8 @@
 			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 15, 2021</td>
 			<td class="py-4 w-2/6">September 25, 2021</td>
+			<td class="py-4 w-2/6">September 15, 2021</td>
 			<td class="py-4 w-2/6">06 : 05 pm</td>
 			<td class="py-4 w-2/6">08 : 05 pm</td>
 			<td class="py-4 w-2/6">02 hrs 00 mins</td>
@@ -684,8 +608,8 @@
 			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<td class="py-4 w-2/6">September 15, 2021</td>
 			<td class="py-4 w-2/6">September 11, 2021</td>
-			<td class="py-4 w-2/6">September 15, 2021</td>
 			<td class="py-4 w-2/6">06 : 05 pm</td>
 			<td class="py-4 w-2/6">08 : 05 pm</td>
 			<td class="py-4 w-2/6">02 hrs 00 mins</td>
@@ -694,8 +618,8 @@
 			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 08, 2021</td>
 			<td class="py-4 w-2/6">September 14, 2021</td>
+			<td class="py-4 w-2/6">September 08, 2021</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
@@ -703,86 +627,6 @@
 			<td class="py-4 w-2/6">September 18, 2021</td>
 			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 05, 2021</td>
-			<td class="py-4 w-2/6">September 17, 2021</td>
-			<td class="py-4 w-2/6">06 : 05 pm</td>
-			<td class="py-4 w-2/6">08 : 05 pm</td>
-			<td class="py-4 w-2/6">02 hrs 00 mins</td>
-			<td class="py-4 w-2/6">Maria D. Clara</td>
-			<td class="py-4 w-2/6">September 13, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">September 03, 2021</td>
-			<td class="py-4 w-2/6">September 01, 2021</td>
-			<td class="py-4 w-2/6">06 : 05 pm</td>
-			<td class="py-4 w-2/6">08 : 05 pm</td>
-			<td class="py-4 w-2/6">02 hrs 00 mins</td>
-			<td class="py-4 w-2/6">Padre Damaso</td>
-			<td class="py-4 w-2/6">September 02, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">August 27, 2021</td>
-			<td class="py-4 w-2/6">August 16, 2021</td>
-			<td class="py-4 w-2/6">06 : 05 pm</td>
-			<td class="py-4 w-2/6">08 : 05 pm</td>
-			<td class="py-4 w-2/6">02 hrs 00 mins</td>
-			<td class="py-4 w-2/6">Padre Damaso</td>
-			<td class="py-4 w-2/6">September 18, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">August 18, 2021</td>
-			<td class="py-4 w-2/6">August 16, 2021</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">Padre Damaso</td>
-			<td class="py-4 w-2/6">August 16, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">August 18, 2021</td>
-			<td class="py-4 w-2/6">August 16, 2021</td>
-			<td class="py-4 w-2/6">06 : 05 pm</td>
-			<td class="py-4 w-2/6">08 : 05 pm</td>
-			<td class="py-4 w-2/6">02 hrs 00 mins</td>
-			<td class="py-4 w-2/6">Maria D. Clara</td>
-			<td class="py-4 w-2/6">August 16, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">August 13, 2021</td>
-			<td class="py-4 w-2/6">August 09, 2021</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">Padre Damaso</td>
-			<td class="py-4 w-2/6">August 11, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-		</tr>
-		<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">August 11, 2021</td>
-			<td class="py-4 w-2/6">August 09, 2021</td>
-			<td class="py-4 w-2/6">6 : 05 pm</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">02 hrs 00 mins</td>
-			<td class="py-4 w-2/6">Maria D. Clara</td>
-			<td class="py-4 w-2/6">August 09, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">August 09, 2021</td>
-			<td class="py-4 w-2/6">August 09, 2021</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">--</td>
-			<td class="py-4 w-2/6">Padre Damaso</td>
-			<td class="py-4 w-2/6">August 10, 2021</td>
-			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-		</tr> -->
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -849,7 +693,7 @@
                         <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                     </div>
                     <div>
-                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Overtime Date: September 22, 2022</label>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target Date: September 22, 2022</label>
                         <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                     </div>
 					<div>
@@ -1062,16 +906,16 @@
     </div> 
  <!-- Main modal -->
  <div id="authentication-modal" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+        <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
             <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-black">
                 <div class="flex justify-end p-2">
                     <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
                     </button>
                 </div>
                 <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Filing Unsocial Hours</h3>
+                    <h3 class="text-2xl font-medium text-center text-gray-900 dark:text-white font-extrabold">Filing Unsocial Hours</h3>
                    
 					<div>
                         <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
@@ -1100,7 +944,7 @@
 									</div>
 								</div>
 						</div>
-                    <button type="submit" class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+                    <button type="submit" class="w-full text-white bg-black hover:bg-white hover:text-black border-2 hover:border-black focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
                 </form>
             </div>
         </div>
