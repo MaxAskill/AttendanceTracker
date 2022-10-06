@@ -391,28 +391,6 @@
 			<td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
 			<td class="py-4 w-2/6">September 20, 2021</td>
         </tr>
-        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">Maria M. Clara</td>
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">September 21, 2021</td>
-			<td class="py-4 w-2/6 ">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-            <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-ot">VIEW</button></th>
-			<td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
-			<td class="py-4 w-2/6">September 20, 2021</td>
-        </tr> -->
-        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">Maria M. Clara</td>
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">September 21, 2021</td>
-			<td class="py-4 w-2/6 ">07 : 34 am</td>
-			<td class="py-4 w-2/6">8 : 05 pm</td>
-			<td class="py-4 w-2/6">9 hrs 5 mins</td>
-            <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-ot">VIEW</button></th>
-			<td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
-			<td class="py-4 w-2/6">September 20, 2021</td>
-        </tr> -->
 	</table>
 	<div class="grid justify-center items-center mb-3 bg-white">
 	<nav aria-label="Page navigation example w-full">
@@ -586,24 +564,6 @@
 			<td class="py-4 w-2/6">September 20, 2021</td>
             <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="denied-ot">VIEW</button></th>
         </tr>
-        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">Maria M. Clara</td>
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">September 21, 2021</td>
-            <th class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-ot">VIEW</button></th>
-			<td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
-			<td class="py-4 w-2/6">September 20, 2021</td>
-            <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="denied-ot">VIEW</button></th>
-        </tr> -->
-        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="py-4 w-2/6">Maria M. Clara</td>
-			<td class="py-4 w-2/6">September 19, 2021</td>
-			<td class="py-4 w-2/6">September 21, 2021</td>
-            <th class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-ot">VIEW</button></th>
-			<td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
-			<td class="py-4 w-2/6">September 20, 2021</td>
-            <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="denied-ot">VIEW</button></th>
-        </tr> -->
 	</table>
 	<div class="grid justify-center items-center mb-3 bg-white">
 	<nav aria-label="Page navigation example w-full">
@@ -663,7 +623,7 @@
 					<div>
                         <div class="flex justify-center">
                             <div class="mb-3 xl:w-full">
-                                <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700">Reason</label>
+                                <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
                                         <textarea
                                 class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-pantone rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                 id="exampleFormControlTextarea1"
