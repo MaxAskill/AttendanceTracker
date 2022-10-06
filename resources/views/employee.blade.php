@@ -416,20 +416,21 @@
         </div>
     </div>
     <div>
-	<table class="text-center w-full bg-white rounded-lg hover:table-fixed " >
+	<table id="attendanceSummary" class="text-center w-full bg-white rounded-lg hover:table-fixed " >
 	<thead class="bg-gray-100 flex text-gray w-full">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-				<th class="p-4 w-2/6">Date</th>
-				<th class="p-4 w-2/6">Time In</th>
-				<th class="p-4 w-2/6">Time Out</th>
-				<th class="p-4 w-2/6">Late</th>
-				<th class="p-4 w-2/6">Undertime</th>
-				<th class="p-4 w-2/6">Overtime</th>
-				<th class="p-4 w-2/6">Hours Rendered</th>
+				<th class="p-4 w-2/6" data-sort="Date">Date</th>
+				<th class="p-4 w-2/6" data-sort="TimeIn">Time In</th>
+				<th class="p-4 w-2/6" data-sort="TimeOut">Time Out</th>
+				<th class="p-4 w-2/6" data-sort="Late">Late</th>
+				<th class="p-4 w-2/6" data-sort="Undertime">Undertime</th>
+				<th class="p-4 w-2/6" data-sort="Overtime">Overtime</th>
+				<th class="p-4 w-2/6" data-sort="HoursRendered">Hours Rendered</th>
 			</tr>
 		</thead>
 		<tbody class="bg-grey-light flex flex-col w-full " style="height: 68vh;">
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100"><td colspan="8" class="py-4 w-2/6"><i>Loading...</i></td></tr>
+		<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 16, 2021</td>
 				<td class="py-4 w-2/6">09 : 25 am</td>
 				<td class="py-4 w-2/6">--</td>
@@ -536,7 +537,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">08 hrs 12 mins</td>
-			</tr>
+			</tr> -->
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -552,7 +553,9 @@
 	</table>
 	<div class="grid justify-center items-center mb-3 bg-white">
 		<nav aria-label="Page navigation example w-full">
-			<ul class="inline-flex -space-x-px">
+		<button id="prevButtonAttendanceSummary" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</button> 
+		<button id="nextButtonAttendanceSummary" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</button> 
+			<!-- <ul class="inline-flex -space-x-px">
 				<li>
 				<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
 				</li>
@@ -574,7 +577,7 @@
 				<li>
 				<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
 				</li>
-			</ul>
+			</ul> -->
 			</nav>
 		</div>
     </div>
@@ -706,7 +709,7 @@
 			</tr>
 		</tfoot>
 	</table>
-	<div class="grid justify-center items-center mb-3 bg-white">
+	<!-- <div class="grid justify-center items-center mb-3 bg-white">
 	<nav aria-label="Page navigation example w-full">
 		<ul class="inline-flex -space-x-px">
 			<li>
@@ -732,7 +735,7 @@
 			</li>
 		</ul>
 		</nav>
-		</div>
+		</div> -->
     </div>
  </div><!--end attendance summary  -->
 
@@ -1423,7 +1426,7 @@ let sortAsc = false;
 const pageSize = 6;
 let curPage = 1;
 
-resp = [{"Date": "September 15, 2021", 
+respDTR = [{"Date": "September 15, 2021", 
 	"AM" : "09 : 25 am", 
 	"LBIn" : "01 : 47 am", 
 	"LBOut" : "02 : 46 am",
@@ -1528,8 +1531,8 @@ async function init() {
   // get the cats
 //   let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
 //   data = await resp.json();
-  console.log(resp);
-  data = resp;
+  console.log(respDTR);
+  data = respDTR;
   renderTable();
   
   // listen for sort clicks
@@ -1539,6 +1542,24 @@ async function init() {
   
   document.querySelector('#nextButton').addEventListener('click', nextPage, false);
   document.querySelector('#prevButton').addEventListener('click', previousPage, false);
+
+    
+  // Select the table (well, tbody)
+  tableAttendanceSummary = document.querySelector('#attendanceSummary tbody');
+  // get the cats
+//   let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+//   data = await resp.json();
+  console.log(respAttendanceSummary);
+  dataAttendanceSummary = respAttendanceSummary;
+  renderTableAttendanceSummary();
+  
+  // listen for sort clicks
+  document.querySelectorAll('#attendanceSummary thead tr th').forEach(t => {
+     t.addEventListener('click', sortAttendanceSummary, false);
+  });
+  
+  document.querySelector('#nextButtonAttendanceSummary').addEventListener('click', nextPageAttendanceSummary, false);
+  document.querySelector('#prevButtonAttendanceSummary').addEventListener('click', previousPageAttendanceSummary, false);
 }
 
 function renderTable() {
@@ -1584,5 +1605,143 @@ function previousPage() {
 function nextPage() {
   if((curPage * pageSize) < data.length) curPage++;
   renderTable();
+}
+
+//Attendance Summary
+
+let dataAttendanceSummary, table1AttendanceSummary, sortColAttendanceSummary;
+let sortAscAttendanceSummary = false;
+const pageSizeAttendanceSummary = 10;
+let curPageAttendanceSummary = 1;
+
+respAttendanceSummary = [{"Date": "September 16, 2021", 
+	"TimeIn" : "09 : 25 am", 
+	"TimeOut" : "--", 
+	"Late" : "--",
+	"Undertime" : "--",
+	"Overtime" : "--",
+	"HoursRendered" : "--"},
+	{"Date": "September 15, 2021", 
+	"TimeIn" : "09 : 25 am", 
+	"TimeOut" : "06 : 34 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 09 mins"},
+	{"Date": "September 14, 2021", 
+	"TimeIn" : "09 : 28 am", 
+	"TimeOut" : "06 : 38 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 10 mins"},
+	{"Date": "September 13, 2021", 
+	"TimeIn" : "12 : 15 am", 
+	"TimeOut" : "09 : 15 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 00 mins"},
+	{"Date": "September 11, 2021", 
+	"TimeIn" : "09 : 26 am", 
+	"TimeOut" : "06 : 34 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 08 mins"},
+	{"Date": "September 10, 2021", 
+	"TimeIn" : "09 : 26 am", 
+	"TimeOut" : "06 : 34 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 08 mins"},
+	{"Date": "September 09, 2021", 
+	"TimeIn" : "09 : 19 am", 
+	"TimeOut" : "06 : 34 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 15 mins"},
+	{"Date": "September 07, 2021", 
+	"TimeIn" : "09 : 24 am", 
+	"TimeOut" : "06 : 38 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 14 mins"},
+	{"Date": "September 06, 2021", 
+	"TimeIn" : "11 : 49 am", 
+	"TimeOut" : "09 : 02 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 13 mins"},
+	{"Date": "September 04, 2021", 
+	"TimeIn" : "09 : 27 am", 
+	"TimeOut" : "06 : 39 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 12 mins"},
+	{"Date": "September 03, 2021", 
+	"TimeIn" : "09 : 27 am", 
+	"TimeOut" : "06 : 39 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 12 mins"},
+	{"Date": "September 02, 2021", 
+	"TimeIn" : "09 : 51 am", 
+	"TimeOut" : "07 : 39 pm", 
+	"Late" : "0",
+	"Undertime" : "0",
+	"Overtime" : "0",
+	"HoursRendered" : "08 hrs 12 mins"}
+]
+
+
+function renderTableAttendanceSummary() {
+  // create html
+  let result = '';
+  dataAttendanceSummary.filter((row, index) => {
+        let start = (curPageAttendanceSummary-1)*pageSizeAttendanceSummary;
+        let end =curPageAttendanceSummary*pageSizeAttendanceSummary;
+        if(index >= start && index < end) return true;
+  }).forEach(c => {
+     result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.Date}</td>
+     <td class="py-4 w-2/6">${c.TimeIn}</td>
+     <td class="py-4 w-2/6">${c.TimeOut}</td>
+     <td class="py-4 w-2/6">${c.Late}</td>
+	 <td class="py-4 w-2/6">${c.Undertime}</td>
+	 <td class="py-4 w-2/6">${c.Overtime}</td>
+	 <td class="py-4 w-2/6">${c.HoursRendered}</td>
+     </tr>`;
+  });
+  tableAttendanceSummary.innerHTML = result;
+}
+
+function sortAttendanceSummary(e) {
+  let thisSort = e.target.dataset.sortAttendanceSummary;
+  if(sortColAttendanceSummary === thisSort) sortAscAttendanceSummary = !sortAscAttendanceSummary;
+  sortColAttendanceSummary = thisSort;
+  console.log('sort dir is ', sortAscAttendanceSummary);
+  dataAttendanceSummary.sortAttendanceSummary((a, b) => {
+    if(a[sortColAttendanceSummary] < b[sortColAttendanceSummary]) return sortAscAttendanceSummary?1:-1;
+    if(a[sortColAttendanceSummary] > b[sortColAttendanceSummary]) return sortAscAttendanceSummary?-1:1;
+    return 0;
+  });
+  renderTableAttendanceSummary();
+}
+
+function previousPageAttendanceSummary() {
+  if(curPageAttendanceSummary > 1) curPageAttendanceSummary--;
+  renderTableAttendanceSummary();
+}
+
+function nextPageAttendanceSummary() {
+  if((curPageAttendanceSummary * pageSizeAttendanceSummary) < dataAttendanceSummary.length) curPageAttendanceSummary++;
+  renderTableAttendanceSummary();
 }
 </script>
