@@ -97,7 +97,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full " style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col w-full " style="height: 70vh;">
             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                 <td class="py-4  w-2/6">Maria M. Clara</td>
                 <td class="py-4 w-2/6 xl:ml-5 px-2">September 21, 2022</td>
@@ -178,7 +178,7 @@
                 <td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Approve</button>
                 <button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="deny-ot">Deny</button></td>
             </tr>
-            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                 <td class="py-4  w-2/6">Maria M. Clara</td>
                 <td class="py-4 w-2/6 xl:ml-5 px-2">September 21, 2022</td>
                 <td class="py-4 px-2 w-2/6">September 22, 2022</td>
@@ -193,16 +193,43 @@
                 <td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white xl:ml-10 font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-ot">VIEW</button></td>
                 <td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none">Approve</button>
                 <button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="deny-ot">Deny</button></td>
-            </tr>           
+            </tr>            -->
 		</tbody>
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
 </div><!--end attendance summary-->
 
 <div id="approved" class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5" style="display: none"><!--Start Approved Overtime Application-->
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
-            <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
+            <h1 class="text-white text-4xl font-bold px">Approved Overtime History</h1>
 
         </div>
 		<div class="row-start-2 row-span-1 flex items-center">
@@ -214,8 +241,27 @@
 					placeholder="Search"
 					/>
 				</div>
-			<span class="text-white ml-5 h-10 mb-3"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+				<div class="row-start-2 row-span-1 flex">
+						<span class="text-white mt-2 ml-2"> Sort By:</span>
+						<div date-rangepicker class="flex items-center pl-5">
+							<div class="relative">
+								
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+
+									<svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								
+								<input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
+							</div>
+							<span class="mx-4 text-gray-500">to</span>
+							<div class="relative">
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
+							</div>
+							</div>
+						</div>
 		</div>
     </div>
     <div>
@@ -234,7 +280,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full text-center" style="height: 65vh;">
+		<tbody class="bg-grey-light flex flex-col w-full text-center" style="height: 65vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">Maria M. Clara</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
@@ -345,7 +391,7 @@
 			<td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
 			<td class="py-4 w-2/6">September 20, 2021</td>
         </tr>
-        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">Maria M. Clara</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">September 21, 2021</td>
@@ -355,8 +401,8 @@
             <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-ot">VIEW</button></th>
 			<td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
 			<td class="py-4 w-2/6">September 20, 2021</td>
-        </tr>
-        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+        </tr> -->
+        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">Maria M. Clara</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">September 21, 2021</td>
@@ -366,8 +412,35 @@
             <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-ot">VIEW</button></th>
 			<td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
 			<td class="py-4 w-2/6">September 20, 2021</td>
-        </tr>
+        </tr> -->
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
 </div><!--end overtime history-->
 
@@ -386,8 +459,27 @@
 					placeholder="Search"
 					/>
 				</div>
-			<span class="text-white ml-5 h-10 mb-3"> Sort By: <input type="date" class="bg-white font-pantone px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-			<input type="date" class="bg-white font-pantone px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+				<div class="row-start-2 row-span-1 flex">
+						<span class="text-white mt-2 ml-2"> Sort By:</span>
+						<div date-rangepicker class="flex items-center pl-5">
+							<div class="relative">
+								
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+
+									<svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								
+								<input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
+							</div>
+							<span class="mx-4 text-gray-500">to</span>
+							<div class="relative">
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
+							</div>
+							</div>
+						</div>
 		</div>
     </div>
     <div>
@@ -403,7 +495,7 @@
 				<th class="py-4 w-1/6">Remarks</th>
 			</tr>
 		</thead>
-		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full text-center" style="height: 65vh;">
+		<tbody class="bg-grey-light flex flex-col  w-full text-center" style="height: 65vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">Maria M. Clara</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
@@ -494,7 +586,7 @@
 			<td class="py-4 w-2/6">September 20, 2021</td>
             <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="denied-ot">VIEW</button></th>
         </tr>
-        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">Maria M. Clara</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">September 21, 2021</td>
@@ -502,8 +594,8 @@
 			<td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
 			<td class="py-4 w-2/6">September 20, 2021</td>
             <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="denied-ot">VIEW</button></th>
-        </tr>
-        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+        </tr> -->
+        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">Maria M. Clara</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">September 21, 2021</td>
@@ -511,8 +603,35 @@
 			<td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
 			<td class="py-4 w-2/6">September 20, 2021</td>
             <th class="py-4 w-1/6"><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="denied-ot">VIEW</button></th>
-        </tr>
+        </tr> -->
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
 </div><!--end overtime history-->
     </main>
