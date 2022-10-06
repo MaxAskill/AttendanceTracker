@@ -29,7 +29,7 @@
             />
           </div>
           <div class="row-start-2 flex justify-center">
-            <form class="bgcolor rounded-3xl mt-10 w-2/4">
+            <form id="form" class="bgcolor rounded-3xl mt-10 w-2/4">
               <div class="flex justify-center">
                 <p class="text-lg mb-0 mr-4 px-8 pt-8 lg:text-3xl text-white font-bold">LOG IN</p>
               </div>
@@ -38,7 +38,7 @@
                 <input
                   type="text"
                   class="form-control block w-full px-4 py-2 text-base font-normal text-white placeholder-white bg-transparent bg-clip-padding rounded-3xl border-2 border-white rounded transition ease-in-out m-0 focus:text-white focus:outline-none"
-                  id="exampleFormControlInput2"
+                  id="username"
                   placeholder="Email Address"
                 />
               </div>
@@ -47,16 +47,15 @@
                 <input
                   type="password"
                   class="form-control block w-full px-4 py-2 xl:text-base sm:text-base font-normal text-white placeholder-white bg-transparent bg-clip-padding rounded-3xl border-2 border-white rounded transition ease-in-out m-0 focus:text-white focus:outline-none"
-                  id="exampleFormControlInput2"
+                  id="password"
                   placeholder="Password"
                 />
               </div>
 
               <div class="text-center justify-center pb-4">
-                <a href="{{URL('hr')}}"><button
-                  type="button"
-                  class="inline-block px-7 py-3 bg-white font-themecolor font-medium text-sm leading-snug uppercase font-bold rounded-3xl shadow-md hover:bg-transparent hover:text-white hover:shadow-lg focus:bg-white focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring focus:ring-gray-100 active:shadow-lg transition duration-150 ease-in-out">
-                  Login</button></a>
+                <button
+                  type="submit"
+                 class="inline-block px-7 py-3 bg-white font-themecolor font-medium text-sm leading-snug uppercase font-bold rounded-3xl shadow-md hover:bg-transparent hover:text-white hover:shadow-lg focus:bg-white focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring focus:ring-gray-100 active:shadow-lg transition duration-150 ease-in-out">Login</button>
               </div>
 
               <div class="flex justify-center items-center mb-6 pb-4 pb-4">
@@ -93,7 +92,7 @@
             <input
               type="text"
               class="form-control block w-full px-4 py-2 text-base font-normal text-white placeholder-white bg-transparent bg-clip-padding rounded-3xl border-2 border-white rounded transition ease-in-out m-0 focus:text-white focus:outline-none"
-              id="exampleFormControlInput2"
+              id="username"
               placeholder="Email Address"
             />
           </div> -->
@@ -102,16 +101,17 @@
             <input
               type="password"
               class="form-control block w-full px-4 py-2 xl:text-base sm:text-base font-normal text-white placeholder-white bg-transparent bg-clip-padding rounded-3xl border-2 border-white rounded transition ease-in-out m-0 focus:text-white focus:outline-none"
-              id="exampleFormControlInput2"
+              id="password"
               placeholder="Password"
             />
           </div>
 
           <div class="text-center justify-center pb-4">
-            <a href="{{URL('hr')}}"><button
+            <!-- <a href="{{URL('hr')}}"><button
               type="button"
               class="inline-block px-7 py-3 bg-white font-themecolor font-medium text-sm leading-snug uppercase font-bold rounded-3xl shadow-md hover:bg-transparent hover:text-white hover:shadow-lg focus:bg-white focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring focus:ring-gray-100 active:shadow-lg transition duration-150 ease-in-out">
-              Login</button></a>
+              Login</button></a> -->
+              <!-- <button type="submit" class="inline-block px-7 py-3 bg-white font-themecolor font-medium text-sm leading-snug uppercase font-bold rounded-3xl shadow-md hover:bg-transparent hover:text-white hover:shadow-lg focus:bg-white focus:text-green-700 focus:shadow-lg focus:outline-none focus:ring focus:ring-gray-100 active:shadow-lg transition duration-150 ease-in-out">Login</button>
           </div>
 
           <div class="flex justify-center items-center mb-6 pb-4 pb-4">
@@ -120,10 +120,43 @@
         </form>
       </div>
     </div>
-  </div> -->
+  </div> --> -->
 
 
 </section>
 
     </body>
 </html>
+
+<script>
+document.getElementById("form").addEventListener("submit", auth);
+
+function auth(event) {
+     event.preventDefault();
+
+     var username = document.getElementById("username").value;
+     var password = document.getElementById("password").value;
+     console.log(username);
+
+     if (username === "employee@gmail.com" && password === "user") {
+          window.location.replace("{{URL('employee')}}");
+     }  
+     else if (username === "hr@gmail.com" && password === "user") {
+          window.location.replace("{{URL('hr')}}");
+     }  
+     else if (username === "accounting@gmail.com" && password === "user") {
+          console.log("Accounting")
+          window.location.replace("{{URL('accounting')}}");
+     }  
+     else if (username === "approver@gmail.com" && password === "user") {
+          window.location.replace("{{URL('approver')}}");
+     }  
+     
+    //  if (username === "" && password === "") {
+    //       alert("Please enter information");
+    //  } else{
+    //      alert("Please enter valid information");
+    //      return;
+    //  }
+}
+</script>

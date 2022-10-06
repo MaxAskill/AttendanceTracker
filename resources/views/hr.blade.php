@@ -16,7 +16,7 @@
     <header class="w-full h-20 bgcolor drop-shadow-lg sticky top-0 top-overflow-visible">
         <div class="container h-full  flex justify-between items-center">
             <!-- Logo Here -->
-            <a class="text-white xl:text-4xl xl:ml-80 font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
+            <a class="text-white xl:text-4xl xl:ml-32 font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
 
             <!-- Menu links here -->
             <ul id="navmenu" class="hidden fixed top-0 right-0  bg-gray-800 z-50
@@ -26,7 +26,10 @@
                     <a href="javascript:void(0)" class="text-right text-white text-4xl"
                         onclick="toggleMenu()">&times;</a>
                 </li>
-
+				<li>
+					<button onClick="showEmployeeList()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Employee Master List</button>
+					<button onClick="showEmployeeSalary()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Employee Salary</button>
+				</li>
                 <li class="justify-center xl:relative group">
 					<button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 border-transparent  focus:outline-none">
           			<img src="img\profilepic.png"
@@ -45,6 +48,7 @@
 						</div>
 					</div>
                 </li>
+
                 <li class="my-3 ml-20">
 					<div>
                     	<a class="text-white" href="/">
@@ -65,7 +69,7 @@
 
     <main>
         <!-- component -->
-<div class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto">
+<div id="employeeMasterList" class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-hidden" style="display: block">
     <div class="grid grid-rows-1 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
@@ -104,10 +108,13 @@
 						</div>
 						</div>
 						<div class="grid grid-cols-2 gap-2">
-						<div class="col-start-1 col-span-1">
-							<label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
-							<input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
-						</div>
+							<div class="relative col-start-1 col-span-1">
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
+								<input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select your birthdate">
+								</div>
 							
 						<div class="col-start-2 col-span-1">
 							<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Contact No.</label>
@@ -159,9 +166,12 @@
 						</div>
 						</div>
 						<div class="grid grid-cols-2 gap-2">
-						<div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Started</label>
-							<input type="date" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Date Started" required="">
+						<div class="relative col-start-1 col-span-1">
+						<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Started</label>
+								<input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
 						</div>
 						<button type="button" onClick="back()" class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Back</button>
 						<button type="submit" class="col-start-2 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Add Account</button>
@@ -225,7 +235,7 @@
         </div>
     </div>
     <div>
-	<table class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto" >
+	<table class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-hidden" >
 		<thead class="bg-gray-100 flex text-gray w-full pr-5">
 			<tr class="flex w-full">
 				<th class="p-4 w-1/6"><button type="button" id="btn" onClick="showprint()">Select All</button></th>
@@ -240,9 +250,9 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 68vh;">
+		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full" style="height: 68vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0001</td>
 			<td class="p-4 w-2/6">Crisostomo Ibarra</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -253,7 +263,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-		<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+		<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 
 			<td class="p-4 w-2/6">0000-0002</td>
 			<td class="p-4 w-2/6">Mark Anthony Luis</td>
@@ -265,7 +275,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0003</td>
 			<td class="p-4 w-2/6">Cardo Dalisay</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -276,7 +286,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-		<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+		<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0004</td>
 			<td class="p-4 w-2/6">Juan Carlo</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -287,7 +297,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0005</td>
 			<td class="p-4 w-2/6">James Reid</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -298,7 +308,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0006</td>
 			<td class="p-4 w-2/6">Kathrin Bernardo</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -309,7 +319,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0007</td>
 			<td class="p-4 w-2/6">Ysabella Prado</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -320,7 +330,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0008</td>
 			<td class="p-4 w-2/6">James Pedo</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -331,7 +341,7 @@
 			<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button></td>
 		</tr>
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"></td>
+			<td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></td>
 			<td class="p-4 w-2/6">0000-0009</td>
 			<td class="p-4 w-2/6">Robert Mandato</td>
 			<td class="p-4 w-2/6">SM Bicutan</td>
@@ -343,10 +353,38 @@
 		</tr>
 		</tbody>
 	</table>
+	<div class="grid justify-center items-center mb-5">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
+
 </div> <!--end employee list-->
 
-<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" >
+<div id="employeeSalary" class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" style="display: none">
     <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 col-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Employee Salary</h1>
@@ -379,7 +417,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full" style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col w-full" style="height: 70vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">0000-0001</td>
 			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
@@ -490,7 +528,7 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-employee">View</button></td>
 		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+		<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">0000-0001</td>
 			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
@@ -500,8 +538,8 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-employee">View</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+		</tr> -->
+		<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">0000-0001</td>
 			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
@@ -511,10 +549,38 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-employee">View</button></td>
-		</tr>
+		</tr> -->
 		</tbody>
 	</table>
-    </div>
+	
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
+	</div>
 </div><!--end employee salary-->
 
 <div class="grid xl:py-12"  id="attendanceSummary" style="display: none">
@@ -562,7 +628,7 @@
 </div>
 
 
-<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 rounded-lg mb-5" >
+<div class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5" >
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
@@ -1392,9 +1458,12 @@
 						</div>
 						</div>
 						<div class="grid grid-cols-2 gap-2">
-						<div class="col-start-1 col-span-1">
-							<label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
-							<input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
+						<div class="relative col-start-1 col-span-1">
+							<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+								<svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+							</div>
+							<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
+							<input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select your birthdate" value="9/19/1999">
 						</div>
 							
 						<div class="col-start-2 col-span-1">
@@ -1447,9 +1516,12 @@
 						</div>
 						</div>
 						<div class="grid grid-cols-2 gap-2">
-						<div class="col-start-1 col-span-1">
-							<label for="jobPosition" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date Started</label>
-							<input type="date" name="jobPosition" id="jobPosition" class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Date Started" required="" >
+						<div class="relative col-start-1 col-span-1">
+							<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+								<svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+							</div>
+							<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date-Started</label>
+							<input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date" value="9/19/2022">
 						</div>
 						<button type="button" onClick="backEdit()" class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Back</button>
 						<button type="submit" class="col-start-2 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Edit Account</button>
@@ -1462,11 +1534,43 @@
         </div>
     </div> 
 	<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
-	
+	<script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
 	</body>
 	</html>
 
 	<script>
+
+
+		document.getElementById("fName").addEventListener("keypress", isLetter)
+		document.getElementById("mName").addEventListener("keypress", isLetter)
+		document.getElementById("lName").addEventListener("keypress", isLetter)
+		document.getElementById("jobPosition").addEventListener("keypress", isLetter)
+		function isLetter(e) {
+		console.log(e)
+		let char = String.fromCharCode(e.keyCode); // Get the character
+		if (/^[A-Za-z ]+$/.test(char)) return true;
+		// Match with regex
+		else e.preventDefault(); // If not match, don't add to input text
+		};
+		document.getElementById("companyID").addEventListener("keypress", isNumber)
+		document.getElementById("cNumber").addEventListener("keypress", isNumber)
+		
+		function isNumber(e) {
+		let char = String.fromCharCode(e.keyCode); // Get the character
+		if (/^[0-9]+$/.test(char)) return true;
+		// Match with regex
+		else e.preventDefault(); // If not match, don't add to input text
+    	};
+		function ValidateEmail() {
+        var email = document.getElementById("email").value;
+        var lblError = document.getElementById("lblError");
+        lblError.innerHTML = "";
+        var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        if (!expr.test(email)) {
+            lblError.innerHTML = "Invalid email address.";
+        	}
+    	}
+
         var navmenu = document.getElementById('navmenu');
         function toggleMenu() {
             navmenu.classList.toggle('hidden');
@@ -1523,6 +1627,39 @@
 				x.style.display = "block";
 				}
 			}
+
+		function showEmployeeList() {
+			var x = document.getElementById("employeeMasterList");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} 	
+			hideEmployeeSalary();
+
+		}
+
+		function showEmployeeSalary() {
+			var x = document.getElementById("employeeSalary");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				console.log("hide employee list")
+				}
+				
+				hideEmployeeList();
+			}
+
+		function hideEmployeeList(){
+			var x = document.getElementById("employeeMasterList");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+		}
+		function hideEmployeeSalary(){
+			var x = document.getElementById("employeeSalary");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				}
+		}
+
 		function nextPage() {
 			var x = document.getElementById("personalInfo");
 			if (x.style.display === "block") {
@@ -1609,4 +1746,5 @@
 		const btn = document.querySelector('#btn');
 		btn.onclick = checkAll;
 		
+
     </script>
