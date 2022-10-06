@@ -601,6 +601,21 @@ body{
   display: none;
 }
 
+.employesidebar{
+  color: #00A3AD
+}
+
+.employesidebar:hover{
+  color: #00A3AD;
+  font-weight: bold;
+}
+.employesvg{
+  color: black;
+}
+.employesvg:hover {
+  fill: red;
+}
+
 /* #clock{
   width: 100%;
   position: absolute;
