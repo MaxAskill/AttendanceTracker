@@ -22,13 +22,14 @@
             <ul id="navmenu" class="hidden fixed top-0 right-0  bg-gray-800 z-50
                 md:relative md:flex md:p-0 md:bg-transparent md:flex-row md:space-x-6">
 
-                <li class="md:hidden z-90 fixed top-4 right-6">
+                <li class="md:hidden z-90 fixed">
                     <a href="javascript:void(0)" class="text-right text-white text-4xl"
                         onclick="toggleMenu()">&times;</a>
                 </li>
-
-				<li>
+				<li class="my-3 ml-20">
 					<button onClick="showPending()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Pending </button>
+				</li>
+				<li>
 					<button onClick="showApproved()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Approve</button>
 					<button onClick="showDenied()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Denied</button>
 				</li>

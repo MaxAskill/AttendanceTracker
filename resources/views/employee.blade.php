@@ -15,11 +15,11 @@
 <body class="xl:flex">
     <!-- component -->
 	<div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-2/12">
-	<sidebar @click.away="open = false" class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0  overflow-hidden" x-data="{ open: false }">
+	<sidebar @click.away="open = false" class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0  top-overflow-visible" x-data="{ open: false }">
 		<div class="flex-shrink-0 px-8 py-4 flex flex-row">
-			<button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-			<img src="img\logo.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
+			<img src="img\logo.png" class="w-full"
 				alt="Sample image"/>
+			<button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
 				<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
 				<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
 				<path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -31,23 +31,6 @@
 				<img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
 				alt="Sample image"/>
 			</div>
-			<!-- <img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
-			alt="Sample image"/>
-					<h1 class="text-center text-2xl break-words font-bold xl:mt-9 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">CRISOSTOMO IBARRA</h1>
-					<h1 class="text-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">NBFI Sales</h1>
-					<div class="basis-1 px-5 grid">
-						<div class="flex-none w-full text-left xl:mt-20 tracking-wide leading-loose">
-							<p><span class="font-bold">ID NO. : </span><br>0000-0001</p>
-							<p><span class="font-bold">CONTACT NUMBER : </span><br>09123456789</p>
-							<p><span class="font-bold">EMAIL : </span><br>crisostomo.ibarra@barbizonfashion.com</p>
-							<p><span class="font-bold">BRANCH : </span><br>SM Bicutan</p>
-							<p><span class="font-bold">CHAIN : </span><br>SM Department Store</p>
-							<p><span class="font-bold">BIRTHDAY : </span><br>January 12, 1995</p>
-						</div>
-						
-						<a href="/" class="flex items-center justify-center">
-							<button class="border-xl bordercolor border-4 rounded-xl px-2 py-1 mt-24 font-bold font-themecolor focus:outline-none">Log Out</button></a>
-					</div> -->
 					
 			<div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
 				<ul class="space-y-2">

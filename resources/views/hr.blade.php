@@ -26,11 +26,11 @@
                     <a href="javascript:void(0)" class="text-right text-white text-4xl"
                         onclick="toggleMenu()">&times;</a>
                 </li>
-				<li>
+				<!-- <li>
 					<button onClick="showEmployeeList()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Employee Master List</button>
 					<button onClick="showEmployeeSalary()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Employee Salary</button>
-				</li>
-                <li class="justify-center xl:relative group">
+				</li> -->
+                <!-- <li class="justify-center xl:relative group">
 					<button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 border-transparent  focus:outline-none">
           			<img src="img\profilepic.png"
 					class="w-12 rounded-full border-white border-2 "
@@ -47,14 +47,14 @@
 							<p><span class="font-bold">BIRTHDAY : </span><br>January 12, 1995</p>
 						</div>
 					</div>
-                </li>
+                </li> -->
 
-                <li class="my-3 ml-20">
+                <!-- <li class="my-3 ml-20">
 					<div>
                     	<a class="text-white" href="/">
 							<button class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Log Out</button></a>
 					</div>
-				</li>
+				</li> -->
             </ul>
 
             <!-- This is used to open the menu on mobile devices -->
