@@ -142,7 +142,7 @@
 				</div>
 			</div><!--1st Grid-->
 
-			<div class="grid md:grid-flow-row grid-row-6 grid-cols-4 pt-2 pb-5 drop-shadow-md">
+			<div class="grid md:grid-flow-row grid-row-6 grid-cols-4 pt-3 drop-shadow-md">
 				<div class="row-start-1 row-span-1 pt-1">
 					<div class="bg-red-500  rounded-lg px-2 py-5 text-white text-center">
 						<h1 class="font-bold">Estimated Time Out</h1>
@@ -152,13 +152,13 @@
 					</div>
 				</div>
 				<div class="row-start-2 row-span-1">
-					<div class="bg-white rounded-lg py-5 text-center text-white space-x-4">
+					<div class="bg-white rounded-lg py-3 text-center text-white space-x-4">
 						<h1 class="text-gray-700 text-2xl font-bold">FILE UNSOCIAL HOURS</h1>
 						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">FILE<button>
 						<!-- <a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" onClick="showOT()">History<button></a> -->
 					</div>
 				</div>
-				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-10 py-5 text-center text-white overflow-hidden">
+				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-10 pt-3 text-center text-white overflow-hidden">
 					<h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
 					<h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
 					<div class="grid place-content-center">
@@ -203,24 +203,21 @@
 							<h1 class="text-white text-4xl font-bold px">Daily Time Record</h1>
 						</div>
 						<div class="row-start-2 row-span-1 flex">
-						<span class="text-white"> Sort By:</span>
-						<div date-rangepicker class="flex items-center pl-5">
-							<div class="relative">
-								
-								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-
-									<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+							<div date-rangepicker class="flex items-center">
+								<span class="mx-4 text-white"> Sort By:</span>
+								<div class="relative">
+									<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+										<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+									</div>
+									<input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
 								</div>
-								
-								<input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
-							</div>
-							<span class="mx-4 text-white">to</span>
-							<div class="relative">
-								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-									<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								<span class="mx-4 text-white">to</span>
+								<div class="relative">
+									<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+										<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+									</div>
+									<input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
 								</div>
-								<input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
-							</div>
 							</div>
 						</div>
 						<div class="row-start-2 row-span-2">
@@ -232,20 +229,20 @@
 						</div>
 					</div>
 						<div class="row-start-2 row-span-5 col-span-2">
-							<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed " >
+							<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed pr-5" >
 								<thead class="bg-gray-100 flex text-gray w-full">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<th class="p-4 w-2/6">Date</th>
 										<th class="p-4 w-2/6">A.M. In</th>
-										<th class="p-4 w-2/6">Lunch Break In</th>
-										<th class="p-4 w-2/6">Lunch Break Out</th>
+										<th class="p-4 w-2/6">LB In</th>
+										<th class="p-4 w-2/6">LB Out</th>
 										<th class="p-4 w-2/6">CB In</th>
 										<th class="p-4 w-2/6">CB Out</th>
 										<th class="p-4 w-2/6">P.M. OUT</th>
 										<th class="p-4 w-2/6">DURATION</th>
 									</tr>
 								</thead>
-								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 53vh;">
+								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 55vh;">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 16, 2021</td>
 										<td class="py-4 w-2/6">09 : 34 am</td>
