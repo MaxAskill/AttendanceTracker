@@ -16,7 +16,7 @@
     <header class="w-full h-20 bgcolor drop-shadow-lg sticky top-0 top-overflow-visible">
         <div class="container h-full  flex justify-between items-center">
             <!-- Logo Here -->
-            <a class="text-white xl:text-4xl xl:ml-80 font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
+            <a class="text-white xl:text-4xl xl:ml-32 font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
 
             <!-- Menu links here -->
             <ul id="navmenu" class="hidden fixed top-0 right-0  bg-gray-800 z-50
@@ -26,6 +26,11 @@
                     <a href="javascript:void(0)" class="text-right text-white text-4xl"
                         onclick="toggleMenu()">&times;</a>
                 </li>
+				<li>
+					<button onClick="showSalaryMaintenance()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Salary Maintenance </button>
+					<button onClick="showDeductionMaintenance()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Deduction Maintenance</button>
+					<button onClick="showEmployeeSalary()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Employee Salary</button>
+				</li>
 
                 <li class="justify-center xl:relative group">
 					<button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 border-transparent  focus:outline-none">
@@ -65,7 +70,7 @@
 
     <main>
         <!-- component -->
-<div class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto">
+<div id="salaryMaintenance" class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto" style="display: block">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Salary Maintenance</h1>
@@ -298,7 +303,7 @@
     </div>
 </div> <!--end salary maintenance-->
 
-<div class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto">
+<div id="deductionMaintenance" class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto" style="display: none">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Deduction Maintenance</h1>
@@ -502,7 +507,7 @@
     </div>
 </div> <!--end deduction maintenance-->
 
-<div class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" >
+<div id="employeeSalary" class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" style="display: none">
     <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 col-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Employee Salary</h1>
@@ -974,5 +979,54 @@
 		function backToTop() {
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
+		}
+
+		function showSalaryMaintenance() {
+			var x = document.getElementById("salaryMaintenance");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} 	
+			hideDeductionMaintenance();
+			hideEmployeeSalary();
+
+		}
+
+		function showDeductionMaintenance() {
+			var x = document.getElementById("deductionMaintenance");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				}
+				
+				hideSalaryMaintenance();
+				hideEmployeeSalary();
+			}
+		function showEmployeeSalary() {
+			var x = document.getElementById("employeeSalary");
+			if (x.style.display === "none") {
+				console.log("show employee salary");
+				x.style.display = "block";
+				}
+				
+				hideSalaryMaintenance();
+				hideDeductionMaintenance()
+			}
+
+		function hideSalaryMaintenance(){
+			var x = document.getElementById("salaryMaintenance");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+		}
+		function hideDeductionMaintenance(){
+			var x = document.getElementById("deductionMaintenance");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+		}
+		function hideEmployeeSalary(){
+			var x = document.getElementById("employeeSalary");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
 		}
     </script>

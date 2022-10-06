@@ -109,7 +109,7 @@
 					<div class="bg-white rounded-lg py-5 text-center text-white space-x-4">
 						<h1 class="text-gray-700 text-4xl font-bold">FILING OT</h1>
 						<button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" data-modal-toggle="authentication-modal">File OT<button>
-						<a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" onClick="showOT()">History<button></a>
+						<!-- <a href="#history"><button class="border-2 rounded-2xl text-xl bordercolor font-themecolor py-1 px-2 mt-1 hover:bg-gray-100 focus:outline-none" onClick="showOT()">History<button></a> -->
 					</div>
 				</div>
 				<div class="row-start-3 row-span-4 bg-white drop-shadow-md rounded-2xl px-3 py-2 text-center text-white overflow-hidden">
@@ -157,8 +157,25 @@
 							<h1 class="text-white text-4xl font-bold px">Daily Time Record</h1>
 						</div>
 						<div class="row-start-2 row-span-1 flex">
-						<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-							<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+						<span class="text-white mt-2"> Sort By:</span>
+						<div date-rangepicker class="flex items-center pl-5">
+							<div class="relative">
+								
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+
+									<svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								
+								<input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
+							</div>
+							<span class="mx-4 text-gray-500">to</span>
+							<div class="relative">
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
+							</div>
+							</div>
 						</div>
 						<div class="row-start-2 row-span-2">
 							<div class="flex  float-right">
@@ -931,9 +948,16 @@
                         <label for="text" class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
                         <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled>
                     </div>
+					<div class="relative ">
+						<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target OT Date</label>
+								<input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+						</div>
 					<div>
-                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">OT Date</label>
-                        <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required="">
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Duration</label>
+                        <input type="text" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="(E.g 2hrs. and 30 mins)" required="">
                     </div>
 					<div>
 					<div class="flex justify-center">
@@ -1125,6 +1149,7 @@
 	</button>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 	<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+	<script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
 	<script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
@@ -1281,7 +1306,7 @@ function time_in(){
 	document.getElementById('timedIn').innerHTML = 
 		hours + " : " + minutes + " : "+ seconds + " " + amPm;
 
-	hours = parseInt(hours) + 8 ;
+	hours = parseInt(hours) + 9 ;
 	
 	var amPm = (hours <= 12 ) ? "AM" : "PM";
 

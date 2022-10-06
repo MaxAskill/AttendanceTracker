@@ -16,7 +16,7 @@
 <header class="w-full h-20 bgcolor drop-shadow-lg sticky top-0 top-overflow-visible">
         <div class="container h-full  flex justify-between items-center">
             <!-- Logo Here -->
-            <a class="text-white xl:text-4xl xl:ml-80 font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
+            <a class="text-white xl:text-4xl xl:ml-32 font-bold" href="#">BARBIZON EVERYDAY GROUP OF COMPANIES</a>
 
             <!-- Menu links here -->
             <ul id="navmenu" class="hidden fixed top-0 right-0  bg-gray-800 z-50
@@ -26,6 +26,12 @@
                     <a href="javascript:void(0)" class="text-right text-white text-4xl"
                         onclick="toggleMenu()">&times;</a>
                 </li>
+
+				<li>
+					<button onClick="showPending()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Pending </button>
+					<button onClick="showApproved()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Approve</button>
+					<button onClick="showDenied()" class="bg-transparent hover:bg-white text-white font-semibold hover:text-teal-700 hover:text-opacity-50 py-2 px-4 border-2 border-white hover:border-transparent rounded focus:outline-none">Denied</button>
+				</li>
 
                 <li class="justify-center xl:relative group">
 					<button class="flex flex-row items-center px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 border-transparent  focus:outline-none">
@@ -63,7 +69,7 @@
     </header>
 
     <main>
-<div class="grid bg-orange-500 overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5 mt-5">
+<div id="pending" class="grid bg-orange-500 overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5 mt-5" style="display: block">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Pending Overtime Application</h1>
@@ -193,7 +199,7 @@
     </div>
 </div><!--end attendance summary-->
 
-<div class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5"><!--Start Approved Overtime Application-->
+<div id="approved" class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5" style="display: none"><!--Start Approved Overtime Application-->
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
@@ -365,7 +371,7 @@
     </div>
 </div><!--end overtime history-->
 
-<div class="grid bgpantone overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5"><!--Start Approved Overtime Application-->
+<div id="denied" class="grid bgpantone overflow-hidden xl:w-5/6 xl:mx-40 rounded-lg mb-5" style="display: none"><!--Start Approved Overtime Application-->
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Denied Overtime Application</h1>
@@ -850,6 +856,56 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
         }
+
+		
+		function showPending() {
+			var x = document.getElementById("pending");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} 	
+			hideApproved();
+			hideDenied();
+
+		}
+
+		function showApproved() {
+			var x = document.getElementById("approved");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				}
+				
+				hidePending();
+				hideDenied();
+			}
+		function showDenied() {
+			var x = document.getElementById("denied");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				}
+
+				hidePending();
+				hideApproved()
+			}
+
+		function hidePending(){
+			var x = document.getElementById("pending");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+		}
+		function hideApproved(){
+			var x = document.getElementById("approved");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+		}
+		function hideDenied(){
+			var x = document.getElementById("denied");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				}
+		}
+
         
     </script>
 
