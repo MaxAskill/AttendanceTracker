@@ -70,7 +70,7 @@
 
     <main>
         <!-- component -->
-<div id="salaryMaintenance" class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto" style="display: block">
+<div id="salaryMaintenance" class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-hidden" style="display: none">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Salary Maintenance</h1>
@@ -167,7 +167,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 65vh;">
+		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full" style="height: 65vh;">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0001</td>
 				<td class="p-4 w-2/6">NCR</td>
@@ -246,7 +246,7 @@
 				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button>
 				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
-			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0007</td>
 				<td class="p-4 w-2/6">NCR</td>
 				<td class="p-4 w-2/6">Manila</td>
@@ -271,8 +271,8 @@
 				<td class="p-4 w-2/6">P0.00</td>
 				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button>
 				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
-			</tr>
-			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			</tr> -->
+			<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">BRANCH-0009</td>
 				<td class="p-4 w-2/6">NCR</td>
 				<td class="p-4 w-2/6">Muntinlupa City</td>
@@ -297,13 +297,40 @@
 				<td class="p-4 w-2/6">P0.00</td>
 				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button>
 				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
-			</tr>
+			</tr> -->
 		</tbody>
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
 </div> <!--end salary maintenance-->
 
-<div id="deductionMaintenance" class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-auto" style="display: none">
+<div id="deductionMaintenance" class="grid bg-white mt-5 xl:w-5/6 xl:mx-40 sm:w-full rounded-lg overflow-hidden" style="display: none">
     <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 row-span-1 flex">
             <h1 class="text-gray-800 text-4xl font-bold px">Deduction Maintenance</h1>
@@ -381,7 +408,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left overflow-y-scroll w-full" style="height: 65vh;">
+		<tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full" style="height: 65vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">SALARY-0001</td>
 				<td class="p-4 w-2/6">P20,000.00 and below</td>
@@ -482,7 +509,7 @@
 				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-deduction">Edit</button>
 				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
 			</tr>
-			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="p-4 w-2/6">SALARY-0011</td>
 				<td class="p-4 w-2/6">P20,001.00 - P25,000.00</td>
 				<td class="p-4 w-1/6">P387.50</td>
@@ -501,13 +528,40 @@
 				<td class="p-4 w-1/6">P437.82</td>
 				<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-deduction">Edit</button>
 				<button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Delete</button></td>
-			</tr>
+			</tr> -->
 		</tbody>
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
 </div> <!--end deduction maintenance-->
 
-<div id="employeeSalary" class="grid bgcolor overflow-auto xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" style="display: none">
+<div id="employeeSalary" class="grid bgcolor overflow-hidden xl:w-5/6 xl:mx-40 xl:my-12 rounded-lg mb-5" style="display: block">
     <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
         <div class="row-start-1 col-span-1 flex">
             <h1 class="text-white text-4xl font-bold px">Employee Salary</h1>
@@ -540,7 +594,7 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full" style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col w-full" style="height: 70vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">0000-0001</td>
 			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
@@ -651,7 +705,7 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-employee">View</button></td>
 		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+		<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">0000-0001</td>
 			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
@@ -661,8 +715,8 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-employee">View</button></td>
-		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+		</tr> -->
+		<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">0000-0001</td>
 			<td class="py-4 w-2/6">Ibarra Crisostomo</td>
 			<td class="py-4 w-2/6">September 19, 2021</td>
@@ -672,9 +726,36 @@
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6">--</td>
 			<td class="py-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-employee">View</button></td>
-		</tr>
+		</tr> -->
 		</tbody>
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
 </div><!--end employee salary-->
 
