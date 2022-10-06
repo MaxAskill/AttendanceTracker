@@ -414,6 +414,7 @@
 							</table> <!--Table div end-->
 						</div><!--Daily Time Record end-->
 					</div>
+					
 				</div><!--tABLE GRID END-->
 			</div><!--2nd Grid-->
 
