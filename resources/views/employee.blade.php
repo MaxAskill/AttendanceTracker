@@ -35,17 +35,17 @@
 			<div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
 				<ul class="space-y-2">
 					<li>
-						<a href="#" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+						<a href="#" onClick="showDailyTimeRecord()" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 						<!-- <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg> -->
 						<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900  dark:group-hover:text-white" viewBox="0 0 512 512"><path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-						<span class="flex-1 ml-3 whitespace-nowrap">Home</span>
+						<span class="flex-1 ml-3 whitespace-nowrap" >Home</span>
 						</a>
 					</li>
 					<li>
-						<a href="#" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+						<a href="#" onClick="showAttendanceSummary()" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 						<!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> -->
 						<svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48" y="80" width="416" height="384" rx="48"/><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" stroke-linecap="round" d="M128 48v32M384 48v32"/><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48"/></svg>
-						<span class="flex-1 ml-3 whitespace-nowrap">Attendance Summary</span>
+						<span class="flex-1 ml-3 whitespace-nowrap" >Attendance Summary</span>
 						</a>
 					</li>
 					
@@ -53,7 +53,7 @@
 						<a href="#" onClick="showOT()" class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 						<!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg> -->
 						<svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" viewBox="0 0 512 512"><path d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-						<span class="flex-1 ml-3 whitespace-nowrap">Overetime History</span>
+						<span class="flex-1 ml-3 whitespace-nowrap">Overtime History</span>
 						<!-- <span class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-900 dark:text-blue-200">3</span> -->
 						</a>
 					</li>
@@ -79,6 +79,7 @@
 	</div>
 
 	<content class="xl:w-10/12 sm:w-full px-10">
+		<div id = "dailyTimeRecord" style="display:block">
 			<div class="grid md:grid-flow-row grid-rows-2 grid-cols-4 ">
 				<div class="row-start-1 row-span-1 pt-2 drop-shadow-md">
 					<div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
@@ -102,7 +103,7 @@
 							<h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
 						</div>
 						<div class="row-start-1  col-span-3 flex items-center ">
-						<a href='#attendanceSummary'><button class="border-2 border-solid bordercolor rounded-2xl px-2 py-2 font-themecolor ml-16" onClick="hideShow()">View More </button></a>
+						<!-- <a href='#attendanceSummary'><button class="border-2 border-solid bordercolor rounded-2xl px-2 py-2 font-themecolor ml-16" onClick="hideShow()">View More </button></a> -->
 						</div>
 						
 						<div class="text-center py-2 text-gray-700">
@@ -225,7 +226,7 @@
 										<th class="p-4 w-2/6">DURATION</th>
 									</tr>
 								</thead>
-								<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 55vh;">
+								<tbody class="bg-grey-light flex flex-col w-full " style="height: 53vh;">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 16, 2021</td>
 										<td class="py-4 w-2/6">09 : 34 am</td>
@@ -286,7 +287,7 @@
 										<td class="py-4 w-2/6">06 : 34 pm</td>
 										<td class="py-4 w-2/6">09 hrs 08 mins</td>
 									</tr>
-									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+									<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 09, 2021</td>
 										<td class="py-4 w-2/6">09 : 19 am</td>
 										<td class="py-4 w-2/6">02 : 31 am</td>
@@ -345,14 +346,43 @@
 										<td class="py-4 w-2/6">05 : 39 pm</td>
 										<td class="py-4 w-2/6">07 : 09 pm</td>
 										<td class="py-4 w-2/6">09 hrs 18 mins</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table> <!--Table div end-->
+							<div class="grid justify-center items-center mb-3 bg-white">
+								<nav aria-label="Page navigation example w-full">
+									<ul class="inline-flex -space-x-px">
+										<li>
+										<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+										</li>
+										<li>
+										<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+										</li>
+										<li>
+										<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+										</li>
+										<li>
+										<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+										</li>
+										<li>
+										<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+										</li>
+										<li>
+										<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+										</li>
+										<li>
+										<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+										</li>
+									</ul>
+									</nav>
+									</div>
+
 						</div><!--Daily Time Record end-->
 					</div>
+					
 				</div><!--tABLE GRID END-->
 			</div><!--2nd Grid-->
-
+</div>
 <div class="grid bg-transparent overflow-auto rounded-lg drop-shadow-md hide-show py-5 " id="attendanceSummary" style="display: none">
 <a href="bottom"></a>
     <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
@@ -360,23 +390,25 @@
             <h1 class="text-white text-4xl font-bold">Attendance Summary</h1>
         </div>
 		<div class="row-start-2 row-span-1 flex">
-		<span class="text-white"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-			<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
-				<button id="dropdownDefault" data-dropdown-toggle="dropdown" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none ml-5 mt-2 text-center inline-flex items-center" type="button">Duration<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-				<!-- Dropdown menu -->
-				<div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
-					<ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-					<li>
-						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Weekly</a>
-					</li>
-					<li>
-						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Monthly</a>
-					</li>
-					<li>
-						<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Annually</a>
-					</li>
-					</ul>
-				</div>
+					<span class="text-white"> Sort By:</span>
+						<div date-rangepicker class="flex items-center pl-5">
+							<div class="relative">
+								
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+
+									<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								
+								<input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
+							</div>
+							<span class="mx-4 text-white">to</span>
+							<div class="relative">
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
+							</div>
+							</div>
 		</div>
 		<div class="row-start-2 row-span-2">
 			<div class="flex  float-right">
@@ -398,7 +430,7 @@
 				<th class="p-4 w-2/6">Hours Rendered</th>
 			</tr>
 		</thead>
-		<tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col w-full " style="height: 70vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 16, 2021</td>
 				<td class="py-4 w-2/6">09 : 25 am</td>
@@ -507,7 +539,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">09 hrs 12 mins</td>
 			</tr>
-			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+			<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 				<td class="py-4 w-2/6">September 01, 2021</td>
 				<td class="py-4 w-2/6">09 : 51 am</td>
 				<td class="py-4 w-2/6">07 : 39 pm</td>
@@ -515,7 +547,7 @@
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">0</td>
 				<td class="py-4 w-2/6">09 hrs 12 mins</td>
-			</tr>
+			</tr> -->
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -529,10 +561,37 @@
 			</tr>
 		</tfoot>
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+		<nav aria-label="Page navigation example w-full">
+			<ul class="inline-flex -space-x-px">
+				<li>
+				<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+				</li>
+				<li>
+				<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+				</li>
+				<li>
+				<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+				</li>
+				<li>
+				<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+				</li>
+				<li>
+				<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+				</li>
+				<li>
+				<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+				</li>
+				<li>
+				<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+				</li>
+			</ul>
+			</nav>
+		</div>
     </div>
 </div><!--end attendance summary-->
 
-<div class="grid bg-transparent overflow-auto drop-shadow-md py-5 " id="history" style="display:none">
+<div class="grid bg-transparent overflow-hidden drop-shadow-md py-5 " id="history" style="display:none">
 <div class="grid bgcolor  rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
 			<div class="row-start-1 row-span-1 flex">
 				<h1 class="text-white text-4xl font-bold px">Overtime History</h1>
@@ -543,8 +602,25 @@
 					<input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
 						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch" placeholder="Search"/>
 				</div>
-				<span class="text-white ml-5 h-10 mb-3"> Sort By: <input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> to
-				<input type="date" class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input> </span>
+				<span class="text-white ml-2"> Sort By:</span>
+						<div date-rangepicker class="flex items-center pl-5">
+							<div class="relative">
+								
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+
+									<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								
+								<input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
+							</div>
+							<span class="mx-4 text-white">to</span>
+							<div class="relative">
+								<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+								</div>
+								<input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
+							</div>
+							</div>
 			</div>
 			<div class="row-start-2 row-span-2">
 				<div class="flex  float-right">
@@ -566,7 +642,7 @@
 				<th class="p-4 w-2/6">Status</th>
 			</tr>
 		</thead>
-		<tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 70vh;">
+		<tbody class="bg-grey-light flex flex-col w-full" style="height: 70vh;">
 		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">September 19, 2021</td>
 			<td class="py-4 w-2/6">September 21, 2021</td>
@@ -687,7 +763,7 @@
 			<td class="py-4 w-2/6">August 11, 2021</td>
 			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
 		</tr>
-		<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+		<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 			<td class="py-4 w-2/6">August 11, 2021</td>
 			<td class="py-4 w-2/6">August 09, 2021</td>
 			<td class="py-4 w-2/6">6 : 05 pm</td>
@@ -706,7 +782,7 @@
 			<td class="py-4 w-2/6">Padre Damaso</td>
 			<td class="py-4 w-2/6">August 10, 2021</td>
 			<td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-		</tr>
+		</tr> -->
 		</tbody>
 		<tfoot class="bg-gray-100 flex text-gray w-full pr-4">
 			<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -721,6 +797,33 @@
 			</tr>
 		</tfoot>
 	</table>
+	<div class="grid justify-center items-center mb-3 bg-white">
+	<nav aria-label="Page navigation example w-full">
+		<ul class="inline-flex -space-x-px">
+			<li>
+			<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+			</li>
+			<li>
+			<a href="#" aria-current="page" class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+			</li>
+			<li>
+			<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+			</li>
+		</ul>
+		</nav>
+		</div>
     </div>
  </div><!--end attendance summary  -->
 
@@ -1165,6 +1268,7 @@
 									</tr>
 								</tbody>
 							</table> <!--Table div end-->
+							
             </div>
         </div>
     </div>
@@ -1181,19 +1285,44 @@
 </html>
 
 <script>
-function hideShow() {
+function showAttendanceSummary() {
   var x = document.getElementById("attendanceSummary");
-  if (x.style.display === "none") {
     x.style.display = "block";
-  }
+ 	hideDailyTimeRecord();
+	hideOT();
+}
+
+function hideDailyTimeRecord() {
+  var x = document.getElementById("dailyTimeRecord");
+  x.style.display = "none";
+  
+
+}
+
+function showDailyTimeRecord() {
+  var x = document.getElementById("dailyTimeRecord");
+  x.style.display = "block";
+  
+  hideAttendanceSummary();
+  hideOT();
+}
+
+function hideAttendanceSummary() {
+  var x = document.getElementById("attendanceSummary");
+  x.style.display = "none";
 
 }
 
 function showOT() {
   var x = document.getElementById("history");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
+  x.style.display = "block";
+  hideAttendanceSummary();
+  hideDailyTimeRecord();
+}
+
+function hideOT() {
+  var x = document.getElementById("history");
+  x.style.display = "none";
 
 }
 function hideButton() {
