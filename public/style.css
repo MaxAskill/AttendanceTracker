@@ -609,12 +609,6 @@ body{
   color: #00A3AD;
   font-weight: bold;
 }
-.employesvg{
-  color: black;
-}
-.employesvg:hover {
-  fill: red;
-}
 
 /* #clock{
   width: 100%;
