@@ -8,7 +8,9 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    	<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/css/uikit.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/js/uikit.min.js"></script>
     <!-- <link href="/dist/output.css" rel="stylesheet"> -->
 </head>
 
@@ -230,21 +232,22 @@
 						</div>
 					</div>
 						<div class="row-start-2 row-span-5 col-span-2">
-							<table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed pr-5" >
+							<table id="timeRecord" class="text-center w-full bg-white text-center rounded-lg hover:table-fixed pr-5" >
 								<thead class="bg-gray-100 flex text-gray w-full">
 									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-										<th class="p-4 w-2/6">Date</th>
-										<th class="p-4 w-2/6">A.M. In</th>
-										<th class="p-4 w-2/6">LB In</th>
-										<th class="p-4 w-2/6">LB Out</th>
-										<th class="p-4 w-2/6">CB In</th>
-										<th class="p-4 w-2/6">CB Out</th>
-										<th class="p-4 w-2/6">P.M. OUT</th>
-										<th class="p-4 w-2/6">DURATION</th>
+										<th class="p-4 w-2/6" data-sort="Date">Date</th>
+										<th class="p-4 w-2/6" data-sort="AM">A.M. In</th>
+										<th class="p-4 w-2/6" data-sort="LBIn">LB In</th>
+										<th class="p-4 w-2/6" data-sort="LBOut">LB Out</th>
+										<th class="p-4 w-2/6" data-sort="CBIn">CB In</th>
+										<th class="p-4 w-2/6" data-sort="CBOut">CB Out</th>
+										<th class="p-4 w-2/6" data-sort="PM">P.M. OUT</th>
+										<th class="p-4 w-2/6" data-sort="Duration">DURATION</th>
 									</tr>
 								</thead>
 								<tbody class="bg-grey-light flex flex-col w-full " style="height: 53vh;">
-									<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+								<tr class="flex w-full even:bg-gray-100 odd:bg-white-100"><td colspan="8" class="py-4 w-2/6"><i>Loading...</i></td></tr>
+									<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 16, 2021</td>
 										<td class="py-4 w-2/6">09 : 34 am</td>
 										<td class="py-4 w-2/6">--</td>
@@ -303,7 +306,7 @@
 										<td class="py-4 w-2/6">05 : 32 pm</td>
 										<td class="py-4 w-2/6">06 : 34 pm</td>
 										<td class="py-4 w-2/6">09 hrs 08 mins</td>
-									</tr>
+									</tr> -->
 									<!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
 										<td class="py-4 w-2/6">September 09, 2021</td>
 										<td class="py-4 w-2/6">09 : 19 am</td>
@@ -368,7 +371,9 @@
 							</table> <!--Table div end-->
 							<div class="grid justify-center items-center mb-3 bg-white">
 								<nav aria-label="Page navigation example w-full">
-									<ul class="inline-flex -space-x-px">
+									<button id="prevButton" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</button> 
+									<button id="nextButton" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</button> 
+									<!-- <ul class="inline-flex -space-x-px">
 										<li>
 										<a href="#" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
 										</li>
@@ -390,7 +395,7 @@
 										<li>
 										<a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
 										</li>
-									</ul>
+									</ul> -->
 									</nav>
 									</div>
 
@@ -1522,5 +1527,175 @@ function backToTop() {
 //   if (x.style.display === "block") {
 //     x.style.display = "none";
 //   }
+}
+
+document.addEventListener('DOMContentLoaded', init, false);
+
+let data, table, sortCol;
+let sortAsc = false;
+const pageSize = 6;
+let curPage = 1;
+
+resp = [{"Date": "September 15, 2021", 
+	"AM" : "09 : 25 am", 
+	"LBIn" : "01 : 47 am", 
+	"LBOut" : "02 : 46 am",
+	"CBIn" : "05 : 10 pm",
+	"CBOut" : "05 : 35 pm",
+	"PM" : "06 : 34 pm",
+	"Duration" : "09 hrs 09 mins"},
+{"Date" : "September 14, 2021",
+	"AM" : "09 : 28 am",
+	"LBIn" : "02 : 07 am",
+	"LBOut" : "03 : 05 am",
+	"CBIn" : "05 : 14 pm",
+	"CBOut" : "05 : 41 pm",
+	"PM" : "06 : 38 pm",
+	"Duration" : "09 hrs 10 mins"},
+{"Date" : "September 14, 2021",
+	"AM" : "09 : 28 am",
+	"LBIn" : "02 : 07 am",
+	"LBOut" : "03 : 05 am",
+	"CBIn" : "05 : 14 pm",
+	"CBOut" : "05 : 41 pm",
+	"PM" : "06 : 38 pm",
+	"Duration" : "09 hrs 10 mins"},
+{"Date" : "September 13, 2021",
+	"AM" : "12 : 15 am",
+	"LBIn" : "02 : 04 am",
+	"LBOut" : "03 : 01 am",
+	"CBIn" : "05 : 35 pm",
+	"CBOut" : "06 : 03 pm",
+	"PM" : "09 : 15 pm",
+	"Duration" : "9 hrs 00 mins"},
+{"Date" : "September 11, 2021",
+	"AM" : "09 : 26 am",
+	"LBIn" : "01 : 29 am",
+	"LBOut" : "02 : 28 am",
+	"CBIn" : "05 : 00 pm",
+	"CBOut" : "05 : 26 pm",
+	"PM" : "06 : 34 pm",
+	"Duration" : "09 hrs 08 mins"},	
+{"Date" : "September 10, 2021",
+	"AM" : "09 : 26 am",
+	"LBIn" : "01 : 33 am",
+	"LBOut" : "02 : 29 am",
+	"CBIn" : "05 : 03 pm",
+	"CBOut" : "05 : 32 pm",
+	"PM" : "06 : 34 pm",
+	"Duration" : "09 hrs 08 mins"},
+{"Date" : "September 09, 2021",
+	"AM" : "09 : 19 am",
+	"LBIn" : "02 : 31 am",
+	"LBOut" : "02 : 29 am",
+	"CBIn" : "05 : 05 pm",
+	"CBOut" : "05 : 33 pm",
+	"PM" : "06 : 34 pm",
+	"Duration" : "09 hrs 15 mins"},
+{"Date" : "September 07, 2021",
+	"AM" : "09 : 24 am",
+	"LBIn" : "01 : 36 am",
+	"LBOut" : "02 : 35 am",
+	"CBIn" : "05 : 10 pm",
+	"CBOut" : "05 : 35 pm",
+	"PM" : "06 : 38 pm",
+	"Duration" : "09 hrs 14 mins"},
+{"Date" : "September 06, 2021",
+	"AM" : "11 : 49 am",
+	"LBIn" : "02 : 06 am",
+	"LBOut" : "02 : 58 am",
+	"CBIn" : "06 : 07 pm",
+	"CBOut" : "06 : 20 pm",
+	"PM" : "09 : 02 pm",
+	"Duration" : "09 hrs 13 mins"},
+{"Date" : "September 04, 2021",
+	"AM" : "09 : 27 am",
+	"LBIn" : "01 : 32 am",
+	"LBOut" : "02 : 29 am",
+	"CBIn" : "05 : 10 pm",
+	"CBOut" : "05 : 35 pm",
+	"PM" : "06 : 39 pm",
+	"Duration" : "09 hrs 12 mins"},
+{"Date" : "September 03, 2021",
+	"AM" : "09 : 51 am",
+	"LBIn" : "01 : 44 am",
+	"LBOut" : "02 : 42 am",
+	"CBIn" : "05 : 15 pm",
+	"CBOut" : "05 : 44 pm",
+	"PM" : "06 : 39 pm",
+	"Duration" : "9 hrs 12 mins"},
+{"Date" : "September 02, 2021",
+	"AM" : "09 : 51 am",
+	"LBIn" : "02 : 02 am",
+	"LBOut" : "02 : 55 am",
+	"CBIn" : "05 : 10 pm",
+	"CBOut" : "05 : 39 pm",
+	"PM" : "07 : 09 pm",
+	"Duration" : "09 hrs 18 mins"},
+]
+
+async function init() {
+  
+  // Select the table (well, tbody)
+  table = document.querySelector('#timeRecord tbody');
+  // get the cats
+//   let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+//   data = await resp.json();
+  console.log(resp);
+  data = resp;
+  renderTable();
+  
+  // listen for sort clicks
+  document.querySelectorAll('#timeRecord thead tr th').forEach(t => {
+     t.addEventListener('click', sort, false);
+  });
+  
+  document.querySelector('#nextButton').addEventListener('click', nextPage, false);
+  document.querySelector('#prevButton').addEventListener('click', previousPage, false);
+}
+
+function renderTable() {
+  // create html
+  let result = '';
+  data.filter((row, index) => {
+        let start = (curPage-1)*pageSize;
+        let end =curPage*pageSize;
+        if(index >= start && index < end) return true;
+  }).forEach(c => {
+     result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.Date}</td>
+     <td class="py-4 w-2/6">${c.AM}</td>
+     <td class="py-4 w-2/6">${c.LBIn}</td>
+     <td class="py-4 w-2/6">${c.LBOut}</td>
+	 <td class="py-4 w-2/6">${c.CBIn}</td>
+	 <td class="py-4 w-2/6">${c.CBOut}</td>
+	 <td class="py-4 w-2/6">${c.PM}</td>
+	 <td class="py-4 w-2/6">${c.Duration}</td>
+     </tr>`;
+  });
+  table.innerHTML = result;
+}
+
+function sort(e) {
+  let thisSort = e.target.dataset.sort;
+  if(sortCol === thisSort) sortAsc = !sortAsc;
+  sortCol = thisSort;
+  console.log('sort dir is ', sortAsc);
+  data.sort((a, b) => {
+    if(a[sortCol] < b[sortCol]) return sortAsc?1:-1;
+    if(a[sortCol] > b[sortCol]) return sortAsc?-1:1;
+    return 0;
+  });
+  renderTable();
+}
+
+function previousPage() {
+  if(curPage > 1) curPage--;
+  renderTable();
+}
+
+function nextPage() {
+  if((curPage * pageSize) < data.length) curPage++;
+  renderTable();
 }
 </script>
