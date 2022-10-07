@@ -37,4 +37,8 @@ Route::get('/accounting', function () {
     return view('accounting');
 });
 
+Route::get('/reports', function () {
+    return view('reports');
+});
+
 
