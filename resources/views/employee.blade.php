@@ -161,7 +161,7 @@
                 </div>
                 <div class="row-start-1 row-span-2 col-span-4 drop-shadow-md">
                     <div
-                        class="flex h-full bg-white rounded-lg px-2 py-2 grid md:grid-flow-row grid-rows-2 grid-cols-4">
+                        class="flex h-full bg-white rounded-lg px-2 py-2 mr-5 grid md:grid-flow-row grid-rows-2 grid-cols-4">
                         <div class="row-start-1 col-span-4 text-center pl-5">
                             <h1 class="text-6xl font-bold text-gray-700">Summary</h1>
                             <h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
