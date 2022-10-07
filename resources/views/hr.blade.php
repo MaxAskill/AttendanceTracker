@@ -347,39 +347,6 @@
                         <div>
                             <button id="branchdp" data-dropdown-toggle="branchdropdown"
                                 class="flex flex-row items-center h-12 px-2 py-2 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none"
-                                type="button">Branch<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg></button>
-                            <!-- Dropdown menu -->
-                            <div id="branchdropdown"
-                                class="hidden z-10 w-auto bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
-                                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
-                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
-                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="branchdp">
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Finds
-                                            Finds Las Pinas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Robinsons
-                                            Las Pinas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Waltermart
-                                            Makati</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div>
-                            <button id="chaindp" data-dropdown-toggle="chaindropdown"
-                                class="flex flex-row items-center h-12 px-2 py-2  ml-5 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none"
                                 type="button">Chain<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -394,17 +361,48 @@
                                     <li>
                                         <a href="#"
                                             class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Vista
-                                            Mall Las Pinas, Finds Finds Department Store</a>
+                                            Mall Las Pinas</a>
                                     </li>
                                     <li>
                                         <a href="#"
                                             class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Robinsons
-                                            Place Las Pinas Department Store</a>
+                                            Las Pinas</a>
                                     </li>
                                     <li>
                                         <a href="#"
                                             class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Waltermart
-                                            Makati Department Store</a>
+                                            Makati</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+
+                        <div>
+                            <button id="chaindp" data-dropdown-toggle="chaindropdown"
+                                class="flex flex-row items-center h-12 px-2 py-2  ml-5 bg-transparent font-themecolor font-bold rounded-lg border-2 bordercolor  focus:outline-none"
+                                type="button">Branch<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="branchdropdown"
+                                class="hidden z-10 w-auto bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+                                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="branchdp">
+                                    <li>
+                                        <a href="#"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Vista Mall Department Store</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Robinsons Department Store</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Waltermart Department Store</a>
                                     </li>
                                 </ul>
                             </div>
@@ -445,11 +443,16 @@
                             </td>
                             <td class="p-4 w-2/6">0000-0001</td>
                             <td class="p-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Pending Resignation</td>
-                            <td class="p-4 w-2/6 ">5 days left</td>
+                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
+                            <td class="p-4 w-2/6">Active</td>
+                            <td class="p-4 w-2/6 "><button
+                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
+                            </td>
                             <td class="p-4 w-2/6"><button
+                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="view-employee">View</button>
+                                    <button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
                         </tr>
@@ -457,16 +460,18 @@
                             <td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             </td>
-
                             <td class="p-4 w-2/6">0000-0002</td>
-                            <td class="p-4 w-2/6">Mark Anthony Luis</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
+                            <td class="p-4 w-2/6">Maria Clara</td>
+                            <td class="p-4 w-2/6">Fisher Mall Malabon</td>
+                            <td class="p-4 w-2/6">Fisher Mall Department Store</td>
                             <td class="p-4 w-2/6">Active</td>
                             <td class="p-4 w-2/6 "><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
                             </td>
                             <td class="p-4 w-2/6"><button
+                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="view-employee">View</button>
+                                    <button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
                         </tr>
@@ -475,14 +480,15 @@
                                     class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             </td>
                             <td class="p-4 w-2/6">0000-0003</td>
-                            <td class="p-4 w-2/6">Cardo Dalisay</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Active</td>
-                            <td class="p-4 w-2/6 "><button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
-                            </td>
+                            <td class="p-4 w-2/6">Doña Victorina</td>
+                            <td class="p-4 w-2/6">Waltermart Makati</td>
+                            <td class="p-4 w-2/6">Waltermart Department Store</td>
+                            <td class="p-4 w-2/6">Pending Resignation</td>
+                            <td class="p-4 w-2/6 ">13 days left</td>
                             <td class="p-4 w-2/6"><button
+                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="view-employee">View</button>
+                                    <button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
                         </tr>
@@ -491,88 +497,15 @@
                                     class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             </td>
                             <td class="p-4 w-2/6">0000-0004</td>
-                            <td class="p-4 w-2/6">Juan Carlo</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Active</td>
-                            <td class="p-4 w-2/6 "><button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
-                            </td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-employee">Edit</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            </td>
-                            <td class="p-4 w-2/6">0000-0005</td>
-                            <td class="p-4 w-2/6">James Reid</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Active</td>
-                            <td class="p-4 w-2/6 "><button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
-                            </td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-employee">Edit</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            </td>
-                            <td class="p-4 w-2/6">0000-0006</td>
-                            <td class="p-4 w-2/6">Kathrin Bernardo</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Active</td>
-                            <td class="p-4 w-2/6 "><button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
-                            </td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-employee">Edit</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            </td>
-                            <td class="p-4 w-2/6">0000-0007</td>
-                            <td class="p-4 w-2/6">Ysabella Prado</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
+                            <td class="p-4 w-2/6">Don Anastacio</td>
+                            <td class="p-4 w-2/6">Robinsons Las Pinas</td>
+                            <td class="p-4 w-2/6">Robinsons Department Store</td>
                             <td class="p-4 w-2/6">Pending Resignation</td>
                             <td class="p-4 w-2/6 ">25 days left</td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-employee">Edit</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            </td>
-                            <td class="p-4 w-2/6">0000-0008</td>
-                            <td class="p-4 w-2/6">James Pedo</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Pending Resignation</td>
-                            <td class="p-4 w-2/6 ">13 days left</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-employee">Edit</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-1/6"><input type="checkbox" name="employee" onClick="showPrint()"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            </td>
-                            <td class="p-4 w-2/6">0000-0009</td>
-                            <td class="p-4 w-2/6">Robert Mandato</td>
-                            <td class="p-4 w-2/6">SM Bicutan</td>
-                            <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Pending Resignation</td>
-                            <td class="p-4 w-2/6 ">25 days left</td>
-                            <td class="p-4 w-2/6"><button
+                                    data-modal-toggle="view-employee">View</button>
+                                    <button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
                         </tr>
@@ -633,16 +566,16 @@
             </div>
             <div>
                 <table class="text-center w-full bg-white hover:table-fixed ">
-                    <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                    <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <th class="p-4 w-2/6">ID Number</th>
                             <th class="p-4 w-2/6">Name</th>
                             <th class="p-4 w-2/6">Cut-Off Date</th>
                             <th class="p-4 w-2/6">No. of Days</th>
-                            <th class="p-4 w-2/6">Daily Rate</th>
-                            <th class="p-4 w-2/6">Sum Rate</th>
-                            <th class="p-4 w-2/6">13th Month</th>
-                            <th class="p-4 w-2/6">Gov. Deduction</th>
+                            <th class="p-4 w-2/6">Basic Rate</th>
+                            <th class="p-4 w-2/6">Total Pay</th>
+                            <th class="p-4 w-2/6">Additional Pay</th>
+                            <th class="p-4 w-2/6">Total Deduction</th>
                             <th class="p-4 w-2/6"></th>
                         </tr>
                     </thead>
@@ -651,131 +584,27 @@
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <td class="py-4 w-2/6">0000-0001</td>
                             <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">October 06, 2021</td>
+                            <td class="py-4 w-2/6">4</td>
+                            <td class="py-4 w-2/6">P370.00</td>
+                            <td class="py-4 w-2/6">P1,480.00</td>
+                            <td class="py-4 w-2/6">0.00</td>
+                            <td class="py-4 w-2/6">P352.82</td>
                             <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="view-employee">View</button></td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">0000-0002</td>
+                            <td class="py-4 w-2/6">Maria Clara</td>
+                            <td class="py-4 w-2/6">October 06, 2021</td>
+                            <td class="py-4 w-2/6">10</td>
+                            <td class="py-4 w-2/6">P435.00</td>
+                            <td class="py-4 w-2/6">P4,350.00</td>
+                            <td class="py-4 w-2/6">0.00</td>
+                            <td class="py-4 w-2/6">P387.50</td>
                             <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-employee">View</button></td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 hrs 20 mins</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="view-employee">View</button></td>
                         </tr>
                     </tbody>
@@ -891,6 +720,7 @@
                                 <th class="p-4 w-2/6">Undertime</th>
                                 <th class="p-4 w-2/6">Overtime</th>
                                 <th class="p-4 w-2/6">Hours Rendered</th>
+                                <th class="p-4 w-2/6">Record</th>
                             </tr>
                         </thead>
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
@@ -904,6 +734,9 @@
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
+                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualAttendance()">View</button></a></td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">Maria Clara</td>
@@ -1054,7 +887,6 @@
                                 <th class="p-4 w-2/6">Undertime</th>
                                 <th class="p-4 w-2/6">Overtime</th>
                                 <th class="p-4 w-2/6">Hours Rendered</th>
-                                <th class="p-4 w-2/6 ">Attendance</th>
                             </tr>
                         </thead>
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
@@ -1174,7 +1006,7 @@
                 </div>
             </div>
         </div>
-        <!--end individual attendance summary-->
+        <!--end Employee's Attendance-->
 
         <div class="grid bgcolor overflow-hidden rounded-lg mb-10 " id="OTSummary" style="display:none">
 
@@ -1311,7 +1143,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 16, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                             <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
@@ -1427,7 +1259,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 15, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1436,7 +1268,7 @@
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 15, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                         </tr>
@@ -1445,7 +1277,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 25, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1454,7 +1286,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 16, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1463,7 +1295,7 @@
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 18, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                         </tr>
@@ -1472,7 +1304,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 13, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1481,7 +1313,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 02, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1490,7 +1322,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 18, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1498,8 +1330,7 @@
                             <td class="py-4 w-2/6">August 18, 2021</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">August 16, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                         </tr>
@@ -1508,7 +1339,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">August 16, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1517,7 +1348,7 @@
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">August 11, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                         </tr>
@@ -1526,7 +1357,7 @@
                             <td class="py-4 w-2/6">6 : 05 pm</td>
                             <td class="py-4 w-2/6">8 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">August 09, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -1535,7 +1366,7 @@
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">August 10, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                         </tr>
@@ -1687,7 +1518,7 @@
                 </div>
                 <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
                     <h3
-                        class="text-xl font-medium text-center font-pantone text-gray-900 dark:text-white font-extrabold">
+                        class="text-xl font-medium text-center font-pantone dark:text-white font-extrabold">
                         OVERTIME REQUEST DENIED!</h3>
 
                     <div>
@@ -1956,7 +1787,7 @@
                     <div class="grid grid-cols-4 gap-2">
                         <div class="col-start-1 col-span-1">
                             <label for="number"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">ID
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Payroll
                                 Number</label>
                             <input type="text" name="companyID" id="companyID"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1964,7 +1795,7 @@
                         </div>
                         <div class="col-start-2 col-span-1">
                             <label for="text"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Payroll
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">ID
                                 Number</label>
                             <input type="text" name="lName" id="lName"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1983,34 +1814,39 @@
                                 Date</label>
                             <input type="text" name="mName" id="mName"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="9" required="" value="September 19, 2021" disabled>
+                                placeholder="9" required="" value="October 06, 2021" disabled>
                         </div>
 
                     </div>
                     <div class="grid grid-cols-3 gap-2">
                         <div class="col-start-1 col-span-1">
                             <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">No. of
-                                Days</label>
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">No. of Days</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                 placeholder="Basic Rate" required="" value="4" disabled>
                         </div>
                         <div class="col-start-2 col-span-1">
                             <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Store
-                                Assignment</label>
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="SM URDANETA" disabled>
+                                placeholder="Basic Rate" required="" value="Finds Finds Las Pinas" disabled>
                         </div>
                         <div class="col-start-3 col-span-1">
+						<label for="jobPosition"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+                            <input type="text" name="jobPosition" id="jobPosition"
+                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="Basic Rate" required="" value="Vista Mall Department Store" disabled>
+                        </div>
+						<div class="col-start-4 col-span-1">
                             <label for="jobPosition"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">13th Month
                                 Pay</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="113.33" disabled>
+                                placeholder="Basic Rate" required="" value="0.00" disabled>
                         </div>
                     </div>
                     <div class="w-full">
@@ -2025,7 +1861,7 @@
                                 Rate</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="340" disabled>
+                                placeholder="Basic Rate" required="" value="370.00" disabled>
                         </div>
                         <div class="col-start-2 col-span-1">
                             <label for="jobPosition"
@@ -2048,7 +1884,7 @@
                             </label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
+                                placeholder="Per Hour" required="" value="46.25" disabled>
                         </div>
                         <div class="col-start-5 col-span-1">
                             <label for="jobPosition"
@@ -2056,7 +1892,7 @@
                             </label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
+                                placeholder="Per Hour" required="" value="0.77" disabled>
                         </div>
                         <div class="col-start-6 col-span-1">
                             <label for="jobPosition"
@@ -2064,7 +1900,7 @@
                                 Rate</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="340" disabled>
+                                placeholder="Per Hour" required="" value="370.00" disabled>
                         </div>
                     </div>
                     <div class="grid grid-cols-6 gap-2">
@@ -2074,7 +1910,7 @@
                                 Pay</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="1360" disabled>
+                                placeholder="Per Hour" required="" value="1,480.00" disabled>
                         </div>
 
                         <div class="col-start-2 col-span-1">
@@ -2115,7 +1951,7 @@
                                 Pay</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="1360" disabled>
+                                placeholder="Per Hour" required="" value="1,480.00" disabled>
                         </div>
                     </div>
                     <div class="col-start-1 col-end-7 w-full">
@@ -2146,7 +1982,7 @@
                         </div>
                         <div class="col-start-4 col-span-1">
                             <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Others</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                 placeholder="Per Hour" required="" value="50.00" disabled>
@@ -2166,11 +2002,11 @@
                     <div class="grid grid-cols-3 gap-2">
                         <div class="col-start-1 col-span-1">
                             <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Gross
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
                                 Pay</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="1360" disabled>
+                                placeholder="Basic Rate" required="" value="1,480.00" disabled>
                         </div>
                         <div class="col-start-2 col-span-1">
                             <label for="jobPosition"
@@ -2182,10 +2018,10 @@
                         </div>
                         <div class="col-start-3 col-span-1">
                             <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Net Pay</label>
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Salary</label>
                             <input type="text" name="jobPosition" id="jobPosition"
                                 class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="899.68" disabled>
+                                placeholder="Per Hour" required="" value="1,019.68" disabled>
                         </div>
                     </div>
                     <!-- <button type="submit" class="col-start-1 col-end-7 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
@@ -2194,6 +2030,189 @@
         </div>
     </div>
     <!--end view employee salary-->
+
+    <!-- Main modal -->
+    <div id="view-employee" aria-hidden="true"
+        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="flex justify-end p-2">
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                        data-modal-toggle="view-employee">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                    <div id="personalInfoEdit" style="display: block">
+                        <h3 class="text-xl font-medium text-gray-900 dark:text-white">Personal Info</h3>
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="number"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company
+                                    ID</label>
+                                <input type="text" name="companyID" id="companyID"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Company ID" required="" value="0000-0001">
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="text"
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">First
+                                    Name</label>
+                                <input @input="capitalizeFName" type="text" name="fName" id="fName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="First Name" required="" value="Crisostomo">
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="text"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Middle
+                                    Name</label>
+                                <input type="text" name="mName" id="mName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Middle Name" required="" value="Simon">
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="text"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Last
+                                    Name</label>
+                                <input type="text" name="lName" id="lName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Last Name" required="" value="Ibarra">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="relative col-start-1 col-span-1">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <label for="number"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
+                                <input datepicker type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select your birthdate" value="9/19/1999">
+                            </div>
+
+                            <div class="col-start-2 col-span-1">
+                                <label for="number"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Contact
+                                    No.</label>
+                                <input type="text" name="cNumber" maxlength="11" id="cNumber"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Contact Number" required="" value="09405554125">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Job
+                                    Position</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Job Position" required="" value="Junior Software Engineer">
+                            </div>
+                            <div class="col-start-2">
+                                <label for="email"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
+                                <input type="email" name="email" id="email" onkeyup="ValidateEmail()"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Email (Eg. name@email.com)" required=""
+                                    value="crisostomo.ibarra@barbizonfashion.com">
+                                <span id="lblError" style="color: red"></span>
+                            </div>
+                        </div>
+                        <button type="button" onClick="nextPageEdit()"
+                            class="w-full mt-5 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Next</button>
+                    </div>
+                    <div id="companyInfoEdit" style="display: none">
+                        <h3 class="text-xl font-medium text-gray-900 dark:text-white">Company Info</h3>
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="number"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company</label>
+                                <input type="text" name="companyID" id="companyID"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Company" required="" value="Cotton Mountain Corporation">
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="text"
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Brand</label>
+                                <input @input="capitalizeFName" type="text" name="fName" id="fName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Brand" required="" value="At Home">
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="text"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+                                <input type="text" name="mName" id="mName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Chain" required="" value="ALL HOME">
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="text"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Store
+                                    Assignment</label>
+                                <input type="text" name="lName" id="lName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Store Assignment" required="" value="ALL HOME ILOILO">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">RAS</label>
+                                <input type="text" name="birthdate" id="birthdate"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="RAS" required="" value="MS. RAQUEL REYES">
+                            </div>
+
+                            <div class="col-start-2 col-span-1">
+                                <label for="number"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HR</label>
+                                <input type="text" name="cNumber" maxlength="11" id="cNumber"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="HR" required="" value="MS. EMMA GACCION">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="relative col-start-1 col-span-1">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <label for="number"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date-Started</label>
+                                <input datepicker type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date" value="9/19/2022">
+                            </div>
+                            <button type="button" onClick="backEdit()"
+                                class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Back</button>
+                            <button type="submit"
+                                class="col-start-2 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 focus:outline-none">Edit
+                                Account</button>
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--end view employee profile-->
 
     <!-- Main modal -->
     <div id="edit-employee" aria-hidden="true"

@@ -292,7 +292,7 @@
                     </div>
                     <div class="row-start-2 row-span-5 col-span-2">
                         <table id="timeRecord"
-                            class="text-center w-full bg-white text-center rounded-lg hover:table-fixed pr-5">
+                            class="text-center w-full bg-white text-center  hover:table-fixed pr-5">
                             <thead class="bg-gray-100 flex text-gray w-full">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <th class="p-4 w-2/6" data-sort="Date">Date</th>
@@ -414,7 +414,7 @@
                         </tr>
                     </tfoot>
                 </table>
-                <div class="grid justify-center items-center mb-3 bg-white">
+                <div class="grid justify-center items-center mb-3 bg-white rounded-b-lg">
                     <nav aria-label="Page navigation example w-full">
                         <button id="prevButtonAttendanceSummary"
                             class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</button>
@@ -498,7 +498,7 @@
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <td class="py-4 w-2/6">September 21, 2021</td>
                             <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 : 05 am</td>
+                            <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
@@ -511,7 +511,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 15, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -521,7 +521,7 @@
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 15, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                         </tr>
@@ -531,7 +531,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 25, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -541,7 +541,7 @@
                             <td class="py-4 w-2/6">06 : 05 pm</td>
                             <td class="py-4 w-2/6">08 : 05 pm</td>
                             <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 16, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                         </tr>
@@ -551,7 +551,7 @@
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
                             <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
                             <td class="py-4 w-2/6">September 18, 2021</td>
                             <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                         </tr>
@@ -562,7 +562,7 @@
                             <th class="p-4 w-2/6">--</th>
                             <th class="p-4 w-2/6">--</th>
                             <th class="p-4 w-2/6">--</th>
-                            <th class="p-4 w-2/6">16 hrs 00 hrs</th>
+                            <th class="p-4 w-2/6">06 hrs 00 mins</th>
                             <th class="p-4 w-2/6">--</th>
                             <th class="p-4 w-2/6">--</th>
                             <th class="p-4 w-2/6">--</th>
@@ -958,7 +958,7 @@
                         </div>
                     </div>
                     <div class="row-start-2 row-span-5 col-span-2">
-                        <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
+                        <table class="text-center w-full bg-white text-center hover:table-fixed ">
                             <thead class="bg-gray-100 flex text-gray w-full">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <th class="p-4 w-2/6">Date</th>
@@ -971,7 +971,7 @@
                                     <th class="p-4 w-2/6">Duration</th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 55vh;">
+                            <tbody class="bg-grey-light flex flex-col  overflow-y-scroll w-full " style="height: 73vh;">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <td class="py-4 w-2/6">September 16, 2021</td>
                                     <td class="py-4 w-2/6">09 : 34 am</td>
