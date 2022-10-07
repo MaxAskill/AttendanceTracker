@@ -78,11 +78,12 @@
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                                     viewBox="0 0 512 512">
-                                    <title>Ban</title>
-                                    <circle cx="256" cy="256" r="208" fill="none" stroke="currentColor"
-                                        stroke-miterlimit="10" stroke-width="32" />
-                                    <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"
-                                        d="M108.92 108.92l294.16 294.16" />
+                                    <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                        x="48" y="80" width="416" height="384" rx="48" />
+                                    <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                        stroke-linecap="round" d="M128 48v32M384 48v32" />
+                                    <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                        d="M464 160H48" />
                                 </svg>
                                 <span class="flex-1 ml-3 whitespace-nowrap">Attendance Summary</span>
                             </a>
@@ -432,7 +433,6 @@
                             <th class="p-4 w-2/6">Chain</th>
                             <th class="p-4 w-2/6 ">Status</th>
                             <th class="p-4 w-2/6 ">Remaining Days</th>
-                            <th class="p-4 w-2/6 ">Attendance</th>
                             <th class="p-4 w-2/6 "></th>
                         </tr>
                     </thead>
@@ -447,11 +447,8 @@
                             <td class="p-4 w-2/6">Crisostomo Ibarra</td>
                             <td class="p-4 w-2/6">SM Bicutan</td>
                             <td class="p-4 w-2/6">SM Department Store</td>
-                            <td class="p-4 w-2/6">Onboarding</td>
+                            <td class="p-4 w-2/6">Pending Resignation</td>
                             <td class="p-4 w-2/6 ">5 days left</td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -467,12 +464,8 @@
                             <td class="p-4 w-2/6">SM Department Store</td>
                             <td class="p-4 w-2/6">Active</td>
                             <td class="p-4 w-2/6 "><button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    onClick="resign()" id="resignBtn" style="display: none">Resign</button><label
-                                    style="display: none" id="resignLbl"> 30 days left</span></td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
+                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
+                            </td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -489,9 +482,6 @@
                             <td class="p-4 w-2/6 "><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
                             </td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -508,9 +498,6 @@
                             <td class="p-4 w-2/6 "><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
                             </td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -527,9 +514,6 @@
                             <td class="p-4 w-2/6 "><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
                             </td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -546,9 +530,6 @@
                             <td class="p-4 w-2/6 "><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none">Resign</button>
                             </td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -563,9 +544,6 @@
                             <td class="p-4 w-2/6">SM Department Store</td>
                             <td class="p-4 w-2/6">Pending Resignation</td>
                             <td class="p-4 w-2/6 ">25 days left</td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -580,9 +558,6 @@
                             <td class="p-4 w-2/6">SM Department Store</td>
                             <td class="p-4 w-2/6">Pending Resignation</td>
                             <td class="p-4 w-2/6 ">13 days left</td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -597,9 +572,6 @@
                             <td class="p-4 w-2/6">SM Department Store</td>
                             <td class="p-4 w-2/6">Pending Resignation</td>
                             <td class="p-4 w-2/6 ">25 days left</td>
-                            <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        onClick="showindividualAttendance()">VIEW</button></a></td>
                             <td class="p-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="edit-employee">Edit</button></td>
@@ -847,6 +819,137 @@
         </div>
         <!--end employee salary-->
 
+        <div class="grid mb-5" id="attendanceSummary" style="display: none">
+            <div class="grid bgcolor overflow-hidden rounded-lg">
+                <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+                    <div class="row-start-1 row-span-1 flex">
+                        <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
+                    </div>
+                    <div class="row-start-2 row-span-1 flex items-center">
+                        <div class="xl:w-96 xl:h-46">
+                            <input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
+                                placeholder="Search" />
+                        </div>
+                        <span class="text-white ml-2"> Sort By:</span>
+                        <div date-rangepicker class="flex items-center pl-5">
+                            <div class="relative">
+
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+
+                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+
+                                <input name="start" type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date start">
+                            </div>
+                            <span class="mx-4 text-white">to</span>
+                            <div class="relative">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input name="end" type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date end">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-start-2 row-span-2">
+                        <div class="flex  float-right">
+                            <button
+                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                data-modal-toggle="print">Upload File</button>
+                            <!-- <a href="#individualovertimeHistory"><button
+                                    class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                    onClick="showindividualOT()">OT History</button></a> -->
+                            <button
+                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                data-modal-toggle="print">Print</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <table class="text-center w-full bg-white rounded-lg hover:table-fixed ">
+                        <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <th class="p-4 w-2/6">Name</th>
+                                <th class="p-4 w-2/6">Date</th>
+                                <th class="p-4 w-2/6">Time In</th>
+                                <th class="p-4 w-2/6">Time Out</th>
+                                <th class="p-4 w-2/6">Late</th>
+                                <th class="p-4 w-2/6">Undertime</th>
+                                <th class="p-4 w-2/6">Overtime</th>
+                                <th class="p-4 w-2/6">Hours Rendered</th>
+                            </tr>
+                        </thead>
+                        <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
+                        <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height:73vh;">
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                                <td class="py-4 w-2/6">September 19, 2021</td>
+                                <td class="py-4 w-2/6">08 : 34 am</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">Maria Clara</td>
+                                <td class="py-4 w-2/6">September 19, 2021</td>
+                                <td class="py-4 w-2/6">09 : 00 am</td>
+                                <td class="py-4 w-2/6">02 : 07 am</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
+                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualAttendance()">View</button></a></td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">Doña Victorina</td>
+                                <td class="py-4 w-2/6">September 19, 2021</td>
+                                <td class="py-4 w-2/6">09 : 00 am</td>
+                                <td class="py-4 w-2/6">02 : 07 am</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
+                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualAttendance()">View</button></a></td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">Don Anastacio</td>
+                                <td class="py-4 w-2/6">September 19, 2021</td>
+                                <td class="py-4 w-2/6">08 : 28 am</td>
+                                <td class="py-4 w-2/6">02 : 07 am</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">--</td>
+                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
+                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualAttendance()">View</button></a></td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--end attendance summary-->
+
         <div class="grid xl:pt-12 mb-5" id="individualattendanceSummary" style="display: none">
             <div class="flex flex-row xl:mb-12 bgprofile rounded-lg justify-center">
                 <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
@@ -892,7 +995,7 @@
             <div class="grid bgcolor overflow-hidden rounded-lg">
                 <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                     <div class="row-start-1 row-span-1 flex">
-                        <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
+                        <h1 class="text-white text-4xl font-bold px">Employee's Attendance</h1>
                     </div>
                     <div class="row-start-2 row-span-1 flex">
                         <span class="text-white"> Sort By: <input type="date"
@@ -934,9 +1037,6 @@
                             <button
                                 class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
                                 data-modal-toggle="print">Upload</button>
-                            <a href="#individualovertimeHistory"><button
-                                    class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                    onClick="showindividualOT()">OT History</button></a>
                             <button
                                 class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
                                 data-modal-toggle="print">Print</button>
@@ -954,6 +1054,7 @@
                                 <th class="p-4 w-2/6">Undertime</th>
                                 <th class="p-4 w-2/6">Overtime</th>
                                 <th class="p-4 w-2/6">Hours Rendered</th>
+                                <th class="p-4 w-2/6 ">Attendance</th>
                             </tr>
                         </thead>
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
@@ -1075,10 +1176,213 @@
         </div>
         <!--end individual attendance summary-->
 
-        <div class="grid bgcolor overflow-hidden rounded-lg mb-5" id="individualovertimeHistory" style="display:none">
-            <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+        <div class="grid bgcolor overflow-hidden rounded-lg mb-10 " id="OTSummary" style="display:none">
+
+            <div class="grid bg-transparent  grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                 <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
+                    <h1 class="text-white text-4xl font-bold px">Overtime Summary</h1>
+
+                </div>
+                <div class="row-start-2 row-span-1 flex items-center">
+                    <div class="xl:w-96 xl:h-46">
+                        <input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
+                            placeholder="Search" />
+                    </div>
+                    <span class="text-white ml-2"> Sort By:</span>
+                    <div date-rangepicker class="flex items-center pl-5">
+                        <div class="relative">
+
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+
+                                <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+
+                            <input name="start" type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Select date start">
+                        </div>
+                        <span class="mx-4 text-white">to</span>
+                        <div class="relative">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <input name="end" type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Select date end">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row-start-2 row-span-2">
+                    <div class="flex  float-right">
+                        <button
+                            class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                            data-modal-toggle="authentication-modal">File Overtime</button>
+                    </div>
+                </div> -->
+            </div>
+            <div>
+                <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
+                    <thead class="bg-gray-100 flex text-gray w-full">
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <th class="py-4 w-2/6">Name</th>
+                            <th class="py-4 w-2/6">Date Applied</th>
+                            <th class="py-4 w-2/6">Target Overtime Date</th>
+                            <th class="py-4 w-1/6">Overtime In</th>
+                            <th class="py-4 w-1/6">Overtime Out</th>
+                            <th class="py-4 w-2/6">Total OT Hours</th>
+                            <th class="py-4 w-2/6">Approved By</th>
+                            <th class="py-4 w-2/6">Approval Date</th>
+                            <th class="py-4 w-2/6">Status</th>
+                            <th class="py-4 w-2/6">Overtime History</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-grey-light flex flex-col w-full" style="height: 73vh;">
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                            <td class="py-4 w-2/6">September 21, 2021</td>
+                            <td class="py-4 w-2/6">September 19, 2021</td>
+                            <td class="py-4 w-2/6">09 : 05 am</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
+                            <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualOT()">View</button></a></td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">Maria Clara</td>
+                            <td class="py-4 w-2/6">September 16, 2021</td>
+                            <td class="py-4 w-2/6">September 18, 2021</td>
+                            <td class="py-4 w-2/6">06 : 05 pm</td>
+                            <td class="py-4 w-2/6">08 : 05 pm</td>
+                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
+                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+                            <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualOT()">View</button></a></td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                            <td class="py-4 w-2/6">September 14, 2021</td>
+                            <td class="py-4 w-2/6">September 17, 2021</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+                            <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualOT()">View</button></a></td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">Maria Clara</td>
+                            <td class="py-4 w-2/6">September 25, 2021</td>
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6">06 : 05 pm</td>
+                            <td class="py-4 w-2/6">08 : 05 pm</td>
+                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
+                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">September 25, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+                            <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualOT()">View</button></a></td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6">September 11, 2021</td>
+                            <td class="py-4 w-2/6">06 : 05 pm</td>
+                            <td class="py-4 w-2/6">08 : 05 pm</td>
+                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
+                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">September 16, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+                            <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualOT()">View</button></a></td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                            <td class="py-4 w-2/6">September 14, 2021</td>
+                            <td class="py-4 w-2/6">September 08, 2021</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">Capitan Tiago</td>
+                            <td class="py-4 w-2/6">September 18, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+                            <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
+                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                            onClick="showindividualOT()">View</button></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--end overtime history  -->
+
+        <div class="grid xl:pt-12 mb-5" id="individualovertimeHistory" style="display:none">
+            <div class="flex flex-row xl:mb-12 bgprofile rounded-lg justify-center">
+                <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
+                    <img src="img\profilepic.png"
+                        class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
+                        alt="Sample image" />
+                </div>
+                <div class="basis-1/3 py-8 px-8">
+                    <h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
+                            <div class="basis-1/3 py-5">
+                                <div class="grid auto-rows-max grid-cols-2">
+                                    <div><label class="font-bold">Company ID :</label></div>
+                                    <div><label>0000-0001</label></div>
+                                    <div><label class="font-bold">Name :</label></div>
+                                    <div><label>Crisostomo Ibarra</label></div>
+                                    <div><label class="font-bold">Birthday :</label></div>
+                                    <div><label>December 14, 1989</label></div>
+                                    <div><label class="font-bold">Contact No :</label></div>
+                                    <div><label>09123456789</label></div>
+                                    <div><label class="font-bold">Email :</label></div>
+                                    <div><label>crisostomo.ibarra@barbizonfashion.com</label></div>
+                                    <div><label class="font-bold">Job Position :</label></div>
+                                    <div><label>NBFI Sales</label></div>
+                                    <div><label class="font-bold">Company :</label></div>
+                                    <div><label>NBFI</label></div>
+                                    <div><label class="font-bold">Brand :</label></div>
+                                    <div><label>Barbizon</label></div>
+                                    <div><label class="font-bold">Branch :</label></div>
+                                    <div><label>RDS Bacolod</label></div>
+                                    <div><label class="font-bold">Chain :</label></div>
+                                    <div><label>RDS</label></div>
+                                    <div><label class="font-bold">RAS :</label></div>
+                                    <div><label>Ms. Revelyn Loyola</label></div>
+                                    <div><label class="font-bold">HR :</label></div>
+                                    <div><label>Helena Loyola</label></div>
+                                    <div><label class="font-bold">Date Started :</label></div>
+                                    <div><label>October 21, 2006</label></div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            <div
+                class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-lg">
+                <div class="row-start-1 row-span-1 flex">
+                    <h1 class="text-white text-4xl font-bold px">Employee's Overtime History</h1>
 
                 </div>
                 <div class="row-start-2 row-span-1 flex items-center">
@@ -1094,17 +1398,10 @@
                             class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input>
                     </span>
                 </div>
-                <!-- <div class="row-start-2 row-span-2">
-                    <div class="flex  float-right">
-                        <button
-                            class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                            data-modal-toggle="file-ot">File Overtime</button>
-                    </div>
-                </div> -->
             </div>
             <div>
                 <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
-                    <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                    <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <th class="p-4 w-2/6">Target Overtime Date</th>
                             <th class="p-4 w-2/6">Time In</th>
@@ -1258,250 +1555,6 @@
             </div>
         </div>
         <!--end individual overtime history-->
-
-        <div class="grid mb-5" id="attendanceSummary" style="display: none">
-            <div class="grid bgcolor overflow-hidden rounded-lg">
-                <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                    <div class="row-start-1 row-span-1 flex">
-                        <h1 class="text-white text-4xl font-bold px">Attendance Summary</h1>
-                    </div>
-                    <div class="row-start-2 row-span-1 flex">
-                        <span class="text-white"> Sort By: <input type="date"
-                                class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input>
-                            to
-                            <input type="date"
-                                class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none mt-2"></input>
-                        </span>
-                        <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                            class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none ml-5 mt-2 text-center inline-flex items-center"
-                            type="button">Duration<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdown"
-                            class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
-                            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
-                            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
-                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                                <li>
-                                    <a href="#"
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Weekly</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Monthly</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Annually</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- <div class="row-start-2 row-span-1 flex bg-green-900 floar">
-						<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">OT History</button>
-						<button class="text-white px-1 py-1 border-2 border-white mt-2 rounded-lg">Print</button>
-						</div> -->
-                    <div class="row-start-2 row-span-2">
-                        <div class="flex  float-right">
-                            <button
-                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                data-modal-toggle="print">Upload</button>
-                            <!-- <a href="#individualovertimeHistory"><button
-                                    class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                    onClick="showindividualOT()">OT History</button></a> -->
-                            <button
-                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                data-modal-toggle="print">Print</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <table class="text-center w-full bg-white rounded-lg hover:table-fixed ">
-                        <thead class="bg-gray-100 flex text-gray w-full pr-5">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <th class="p-4 w-2/6">Name</th>
-                                <th class="p-4 w-2/6">Date</th>
-                                <th class="p-4 w-2/6">Time In</th>
-                                <th class="p-4 w-2/6">Time Out</th>
-                                <th class="p-4 w-2/6">Late</th>
-                                <th class="p-4 w-2/6">Undertime</th>
-                                <th class="p-4 w-2/6">Overtime</th>
-                                <th class="p-4 w-2/6">Hours Rendered</th>
-                            </tr>
-                        </thead>
-                        <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                        <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height:73vh;">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">07 : 34 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Dona Victorina</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">09 : 28 am</td>
-                                <td class="py-4 w-2/6">02 : 07 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
-                            </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!--end attendance summary-->
-
-        <div class="grid bg-transparent overflow-hidden drop-shadow-md " id="OTSummary" style="display:none">
-            <div class="grid bgcolor  rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-white text-4xl font-bold px">Overtime Summary</h1>
-
-                </div>
-                <div class="row-start-2 row-span-1 flex items-center">
-                    <div class="xl:w-96 xl:h-46">
-                        <input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
-                            placeholder="Search" />
-                    </div>
-                    <span class="text-white ml-2"> Sort By:</span>
-                    <div date-rangepicker class="flex items-center pl-5">
-                        <div class="relative">
-
-                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-
-                                <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-
-                            <input name="start" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select date start">
-                        </div>
-                        <span class="mx-4 text-white">to</span>
-                        <div class="relative">
-                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <input name="end" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select date end">
-                        </div>
-                    </div>
-                </div>
-                <div class="row-start-2 row-span-2">
-                    <div class="flex  float-right">
-                        <button
-                            class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                            data-modal-toggle="authentication-modal">File Overtime</button>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
-                    <thead class="bg-gray-100 flex text-gray w-full">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="p-4 w-2/6">Name</th>
-                            <th class="p-4 w-2/6">Date Applied</th>
-                            <th class="p-4 w-2/6">Target Overtime Date</th>
-                            <th class="p-4 w-2/6">Overtime In</th>
-                            <th class="p-4 w-2/6">Overtime Out</th>
-                            <th class="p-4 w-2/6">Total OT Hours</th>
-                            <th class="p-4 w-2/6">Approved By</th>
-                            <th class="p-4 w-2/6">Approval Date</th>
-                            <th class="p-4 w-2/6">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-grey-light flex flex-col w-full" style="height: 68vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 21, 2021</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 : 05 am</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Maria Clara</td>
-                            <td class="py-4 w-2/6">September 16, 2021</td>
-                            <td class="py-4 w-2/6">September 18, 2021</td>
-                            <td class="py-4 w-2/6">06 : 05 pm</td>
-                            <td class="py-4 w-2/6">08 : 05 pm</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 14, 2021</td>
-                            <td class="py-4 w-2/6">September 17, 2021</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Capitan Tiago</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Maria Clara</td>
-                            <td class="py-4 w-2/6">September 25, 2021</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6">06 : 05 pm</td>
-                            <td class="py-4 w-2/6">08 : 05 pm</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
-                            <td class="py-4 w-2/6">September 25, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6">September 11, 2021</td>
-                            <td class="py-4 w-2/6">06 : 05 pm</td>
-                            <td class="py-4 w-2/6">08 : 05 pm</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
-                            <td class="py-4 w-2/6">September 16, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 14, 2021</td>
-                            <td class="py-4 w-2/6">September 08, 2021</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Capitan Tiago</td>
-                            <td class="py-4 w-2/6">September 18, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!--end overtime history  -->
 
     </content>
 
