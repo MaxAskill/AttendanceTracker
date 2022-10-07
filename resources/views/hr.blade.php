@@ -879,7 +879,7 @@
                             <div class="flex  float-right">
                                 <button
                                     class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                    data-modal-toggle="print">Upload File</button>
+                                    data-modal-toggle="upload-file">Upload File</button>
                                 <!-- <a href="#individualovertimeHistory"><button
                                     class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
                                     onClick="showindividualOT()">OT History</button></a> -->
