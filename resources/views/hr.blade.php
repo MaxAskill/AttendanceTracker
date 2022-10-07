@@ -426,13 +426,13 @@
                                     placeholder="Search" />
                                 <button
                                     class="bgcolor text-white hover:bg-white xl:ml-10 h-12 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none"
-                                    data-modal-toggle="print">Print</button>
+                                    onClick="printDataEmployeeMasterList()">Print</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <table
+                    <table id="employeeMasterListTable"
                         class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-hidden">
                         <thead class="bg-gray-100 flex text-gray w-full pr-5">
                             <tr class="flex w-full">
@@ -721,7 +721,7 @@
                                     onClick="showindividualOT()">OT History</button></a> -->
                                 <button
                                     class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                    data-modal-toggle="print">Print</button>
+                                    onClick="printDataAttendanceSummary()">Print</button>
                             </div>
                         </div>
                     </div>
@@ -3380,5 +3380,23 @@ function performSearch() {
         }
     }
 
+}
+
+function printDataEmployeeMasterList()
+{
+   var divToPrint=document.getElementById("employeeMasterListTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+}
+function printDataAttendanceSummary()
+{
+   var divToPrint=document.getElementById("attendanceSummaryTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+   
 }
 </script>

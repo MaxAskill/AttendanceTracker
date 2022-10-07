@@ -291,7 +291,7 @@
                                         data-modal-toggle="upload-file">Upload</button>
                                     <button
                                         class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                        data-modal-toggle="print">Print</button>
+                                        onClick="printDataTimeRecord()">Print</button>
                                 </div>
                             </div>
                         </div>
@@ -411,7 +411,7 @@
                             <!-- <a href="#history"><button class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none" onClick="showOT()">OT History</button></a> -->
                             <button
                                 class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                data-modal-toggle="printSummary">Print</button>
+                                onClick="printDataAttendanceSummary()">Print</button>
                         </div>
                     </div>
                 </div>
@@ -2096,5 +2096,22 @@ function performSearchOT() {
         }
     }
 
+}
+function printDataTimeRecord()
+{
+   var divToPrint=document.getElementById("timeRecord");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+}
+
+function printDataAttendanceSummary()
+{
+   var divToPrint=document.getElementById("attendanceSummaryTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
 }
 </script>
