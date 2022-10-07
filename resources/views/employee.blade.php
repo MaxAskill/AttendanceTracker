@@ -335,8 +335,13 @@
                 <div class="row-start-1 row-span-1 flex">
                     <h1 class="text-white text-4xl font-bold">Attendance Summary</h1>
                 </div>
-                <div class="row-start-2 row-span-1 flex">
-                    <span class="text-white"> Sort By:</span>
+                <div class="row-start-2 row-span-1 flex items-center">
+                    <div class="xl:w-96 xl:h-46">
+                        <input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
+                            placeholder="Search" />
+                    </div>
+                    <span class="text-white ml-2"> Sort By:</span>
                     <div date-rangepicker class="flex items-center pl-5">
                         <div class="relative">
 
