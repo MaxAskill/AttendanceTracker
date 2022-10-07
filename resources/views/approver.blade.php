@@ -645,7 +645,7 @@
                                 <label for="exampleFormControlTextarea1"
                                     class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
                                 <textarea
-                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-black rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-black rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
                                     id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"></textarea>
                             </div>
                         </div>

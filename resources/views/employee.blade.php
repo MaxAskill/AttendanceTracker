@@ -477,13 +477,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row-start-2 row-span-2">
-                        <div class="flex  float-right">
-                            <button
-                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                data-modal-toggle="authentication-modal">File Overtime</button>
-                        </div>
-                    </div>
                 </div>
                 <div>
                     <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
