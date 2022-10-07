@@ -359,7 +359,7 @@
                 <!--tABLE GRID END-->
             </div>
 
-            <div class="grid bg-transparent overflow-auto rounded-lg drop-shadow-md hide-show " id="attendanceSummary"
+            <div class="grid bg-transparent overflow-hidden rounded-lg drop-shadow-md hide-show " id="attendanceSummary"
                 style="display: none">
                 <a href="bottom"></a>
                 <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
@@ -484,7 +484,7 @@
             <!--end attendance summary-->
 
             <div class="grid bg-transparent overflow-hidden drop-shadow-md " id="history" style="display:none">
-                <div class="grid bgcolor  rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+                <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                     <div class="row-start-1 row-span-1 flex">
                         <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
 
@@ -544,7 +544,7 @@
                                 <th class="p-4 w-2/6" data-sort="Status">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 68vh;">
+                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
                             <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                              <td colspan="8" class="py-4 w-2/6"><i>Loading...</i></td>
                         </tr> -->
@@ -1200,7 +1200,7 @@
             <!-- file upload modal -->
             <div id="upload-file" aria-hidden="true"
                 class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-                <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+                <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
                     <!-- Modal content -->
                     <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
                         <div class="flex justify-end p-2">
@@ -1239,7 +1239,7 @@
 
 
                             <button type="submit"
-                                class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                                class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
                         </form>
                     </div>
                 </div>
