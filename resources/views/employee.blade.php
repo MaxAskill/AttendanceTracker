@@ -292,7 +292,7 @@
                     </div>
                     <div class="row-start-2 row-span-5 col-span-2">
                         <table id="timeRecord"
-                            class="text-center w-full bg-white text-center  hover:table-fixed pr-5">
+                            class="text-center w-full bg-white text-center  hover:table-fixed">
                             <thead class="bg-gray-100 flex text-gray w-full">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <th class="p-4 w-2/6" data-sort="Date">Date</th>
@@ -482,7 +482,7 @@
             </div>
             <div>
                 <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
-                    <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                    <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <th class="p-4 w-2/6">Date Applied</th>
                             <th class="p-4 w-2/6">Target Overtime Date</th>
