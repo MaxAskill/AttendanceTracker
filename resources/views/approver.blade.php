@@ -19,7 +19,7 @@
             class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0  top-overflow-visible"
             x-data="{ open: false }">
             <div class="flex-shrink-0 px-8 py-4 flex flex-row">
-                <img src="img\logo.png" class="w-full" alt="Sample image" />
+                <img src="img\logo.png" class="w-full" alt="Samplgit e image" />
                 <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline"
                     @click="open = !open">
                     <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">

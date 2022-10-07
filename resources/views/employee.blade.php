@@ -1558,7 +1558,7 @@ function nextPage() {
 
 let dataAttendanceSummary, table1AttendanceSummary, sortColAttendanceSummary;
 let sortAscAttendanceSummary = false;
-const pageSizeAttendanceSummary = 10;
+const pageSizeAttendanceSummary = 11;
 let curPageAttendanceSummary = 1;
 
 respAttendanceSummary = [{
