@@ -1425,20 +1425,25 @@
                 </div>
                 <div>
                     <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
-                        <thead class="bg-gray-100 flex text-gray w-full">
+                        <thead class="bg-gray-100 flex text-gray w-full pr-5">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <th class="p-4 w-2/6">Target Overtime Date</th>
-                                <th class="p-4 w-2/6">Time In</th>
-                                <th class="p-4 w-2/6">Time Out</th>
-                                <th class="p-4 w-2/6">Total OT Hours</th>
-                                <th class="p-4 w-2/6">Approved By</th>
-                                <th class="p-4 w-2/6">Approval Date</th>
-                                <th class="p-4 w-2/6">Status</th>
+                                <th class="p-4 w-2/6" data-sort="DateApplied">Date Applied</th>
+                                <th class="p-4 w-2/6" data-sort="TargetOvertimeDate">Target Overtime Date</th>
+                                <th class="p-4 w-2/6" data-sort="Overtime">Overtime In</th>
+                                <th class="p-4 w-2/6" data-sort="OvertimeOut">Overtime Out</th>
+                                <th class="p-4 w-2/6" data-sort="TotalOtHours">Total OT Hours</th>
+                                <th class="p-4 w-2/6" data-sort="ApprovedBy">Approved By</th>
+                                <th class="p-4 w-2/6" data-sort="ApprovalDate">Approval Date</th>
+                                <th class="p-4 w-2/6" data-sort="Status">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 68vh;">
+                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                             <td colspan="8" class="py-4 w-2/6"><i>Loading...</i></td>
+                        </tr> -->
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">September 21, 2021</td>
+                                <td class="py-4 w-2/6">September 19, 2021</td>
                                 <td class="py-4 w-2/6">09 : 05 am</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
@@ -1447,135 +1452,103 @@
                                 <td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">September 16, 2021</td>
                                 <td class="py-4 w-2/6">September 18, 2021</td>
                                 <td class="py-4 w-2/6">06 : 05 pm</td>
                                 <td class="py-4 w-2/6">08 : 05 pm</td>
                                 <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Maria D. Clara</td>
                                 <td class="py-4 w-2/6">September 15, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">September 14, 2021</td>
                                 <td class="py-4 w-2/6">September 17, 2021</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Maria D. Clara</td>
                                 <td class="py-4 w-2/6">September 15, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">September 25, 2021</td>
                                 <td class="py-4 w-2/6">September 15, 2021</td>
                                 <td class="py-4 w-2/6">06 : 05 pm</td>
                                 <td class="py-4 w-2/6">08 : 05 pm</td>
                                 <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Padre Damaso</td>
                                 <td class="py-4 w-2/6">September 25, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">September 15, 2021</td>
                                 <td class="py-4 w-2/6">September 11, 2021</td>
                                 <td class="py-4 w-2/6">06 : 05 pm</td>
                                 <td class="py-4 w-2/6">08 : 05 pm</td>
                                 <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Maria D. Clara</td>
                                 <td class="py-4 w-2/6">September 16, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="py-4 w-2/6">September 14, 2021</td>
                                 <td class="py-4 w-2/6">September 08, 2021</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Maria D. Clara</td>
                                 <td class="py-4 w-2/6">September 18, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                             </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 05, 2021</td>
-                                <td class="py-4 w-2/6">06 : 05 pm</td>
-                                <td class="py-4 w-2/6">08 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">September 13, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 03, 2021</td>
-                                <td class="py-4 w-2/6">06 : 05 pm</td>
-                                <td class="py-4 w-2/6">08 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">September 02, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">August 27, 2021</td>
-                                <td class="py-4 w-2/6">06 : 05 pm</td>
-                                <td class="py-4 w-2/6">08 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">September 18, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">August 18, 2021</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">August 16, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">August 18, 2021</td>
-                                <td class="py-4 w-2/6">06 : 05 pm</td>
-                                <td class="py-4 w-2/6">08 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">August 16, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">August 13, 2021</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">August 11, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                            </tr>
-                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">August 11, 2021</td>
-                                <td class="py-4 w-2/6">6 : 05 pm</td>
-                                <td class="py-4 w-2/6">8 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">August 09, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr> -->
-                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">August 09, 2021</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
-                                <td class="py-4 w-2/6">August 10, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                            </tr> -->
                         </tbody>
                         <tfoot class="bg-gray-100 flex text-gray w-full pr-4">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <th class="p-4 w-2/6">TOTAL</th>
                                 <th class="p-4 w-2/6">--</th>
                                 <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">16 hrs 00 hrs</th>
+                                <th class="p-4 w-2/6">--</th>
+                                <th class="p-4 w-2/6">6 hrs 00 hrs</th>
                                 <th class="p-4 w-2/6">--</th>
                                 <th class="p-4 w-2/6">--</th>
                                 <th class="p-4 w-2/6">--</th>
                             </tr>
                         </tfoot>
                     </table>
+                    <div class="grid justify-center items-center mb-3 bg-white">
+                        <nav aria-label="Page navigation example w-full">
+                            <ul class="inline-flex -space-x-px">
+                                <li>
+                                    <a href="#" id="prevButtonOvertimeHistory"
+                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page"
+                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="nextButtonOvertimeHistory"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
             <!--end individual overtime history-->

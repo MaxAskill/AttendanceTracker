@@ -615,7 +615,7 @@
                                 <th class="p-4 w-2/6">--</th>
                                 <th class="p-4 w-2/6">--</th>
                                 <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">16 hrs 00 hrs</th>
+                                <th class="p-4 w-2/6">6 hrs 00 hrs</th>
                                 <th class="p-4 w-2/6">--</th>
                                 <th class="p-4 w-2/6">--</th>
                                 <th class="p-4 w-2/6">--</th>
