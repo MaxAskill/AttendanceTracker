@@ -1584,8 +1584,7 @@
                             alt="Sample image" />
                     </div>
                     <div class="row-start-1 col-span-1">
-                        <label for="text"
-                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
                             ID</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1629,8 +1628,7 @@
                             placeholder="Select your birthdate" value="12/14/1989" disabled>
                     </div>
                     <div class="row-start-2 col-span-1">
-                        <label for="text"
-                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Contact
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Contact
                             No.</label>
                         <input type="number" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1651,8 +1649,8 @@
                             placeholder="Job Position" required="" value="NBFI Sales" disabled>
                     </div>
                     <div class="row-start-3 col-span-3">
-                        <label for="text"
-                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company Name</label>
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                            Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Company Name" required="" value="NBFI" disabled>
@@ -1701,8 +1699,8 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </div>
-                        <label for="number"
-                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Date Started</label>
+                        <label for="number" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Date
+                            Started</label>
                         <input datepicker type="text"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="Select your birthdate" value="10/21/2006" disabled>
@@ -2761,7 +2759,7 @@
                             </svg>
                             <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                 Are you really sure?
-                                </h3>
+                            </h3>
                             <button data-modal-toggle="resign-modal" type="button"
                                 class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                                 Yes, I am sure
@@ -2814,8 +2812,6 @@
                                 <input id="dropzone-file" type="file" class="hidden">
                             </label>
                         </div>
-
-
                         <button type="submit"
                             class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
                     </form>
