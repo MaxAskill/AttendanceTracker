@@ -1246,7 +1246,7 @@
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 15, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                                 <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
@@ -1274,7 +1274,7 @@
                                 <td class="py-4 w-2/6">06 : 05 pm</td>
                                 <td class="py-4 w-2/6">08 : 05 pm</td>
                                 <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 16, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                                 <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
@@ -1288,7 +1288,7 @@
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Capitan Tiago</td>
+                                <td class="py-4 w-2/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 18, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                                 <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button

@@ -359,7 +359,7 @@
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Maria D. Clara</td>
+                                <td class="py-4 w-3/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 16, 2021</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -370,7 +370,7 @@
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Padre Damaso</td>
+                                <td class="py-4 w-3/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 15, 2021</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -381,7 +381,7 @@
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Padre Damaso</td>
+                                <td class="py-4 w-3/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 07, 2021</td>
                             </tr>
 
@@ -495,7 +495,7 @@
                                 <th class="py-4 w-2/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-2/6">Maria D. Clara</td>
+                                <td class="py-4 w-2/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 15, 2021</td>
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
@@ -508,7 +508,7 @@
                                 <th class="py-4 w-2/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-2/6">Maria D. Clara</td>
+                                <td class="py-4 w-2/6">Kapitan Tiago</td>
                                 <td class="py-4 w-2/6">September 10, 2021</td>
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
