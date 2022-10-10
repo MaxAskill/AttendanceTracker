@@ -140,7 +140,7 @@
                             <div class="row-start-1 col-span-1 inset-x-0 bottom-0 "><span
                                     class="text-white font-bold align-middle hover:align-top text-xl">No. of
                                     Application:
-                                    <label class="text-4xl">5<label></span></div>
+                                    <label class="text-4xl">1<label></span></div>
                             <div class="row-start-1 col-span-1"><input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid transition ease-in-out
 								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
                                     placeholder="Search" /></div>
@@ -162,9 +162,9 @@
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
                         <tbody class="bg-grey-light flex flex-col w-full " style="height: 72vh;">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 21, 2022</td>
-                                <td class="py-4 w-2/6">September 22, 2022</td>
+                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                                <td class="py-4 w-2/6">September 21, 2021</td>
+                                <td class="py-4 w-2/6">September 19, 2021</td>
                                 <td class="py-4 w-2/6">2 hrs 20 mins</td>
                                 <td class="py-4 w-2/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
@@ -178,7 +178,7 @@
                                         data-modal-toggle="deny-ot">Deny</button>
                                 </td>
                             </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">Maria M. Clara</td>
                                 <td class="py-4 w-2/6">September 21, 2022</td>
                                 <td class="py-4 w-2/6">September 22, 2022</td>
@@ -245,7 +245,7 @@
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="deny-ot">Deny</button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                     <div class="grid justify-center items-center mb-3 bg-white">
@@ -352,60 +352,39 @@
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
                         <tbody class="bg-grey-light flex flex-col w-full text-center" style="height: 73vh;">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <td class="py-4 w-2/6">2 hrs 5 mins</td>
+                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                                <td class="py-4 w-2/6">September 16, 2021</td>
+                                <td class="py-4 w-2/6">September 18, 2021</td>
+                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
+                                <td class="py-4 w-3/6">Maria D. Clara</td>
+                                <td class="py-4 w-2/6">September 16, 2021</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <td class="py-4 w-2/6">2 hrs 5 mins</td>
+                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                                <td class="py-4 w-2/6">September 14, 2021</td>
+                                <td class="py-4 w-2/6">September 15, 2021</td>
+                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
+                                <td class="py-4 w-3/6">Padre Damaso</td>
+                                <td class="py-4 w-2/6">September 15, 2021</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <td class="py-4 w-2/6">2 hrs 5 mins</td>
+                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                                <td class="py-4 w-2/6">September 07, 2021</td>
+                                <td class="py-4 w-2/6">September 08, 2021</td>
+                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
+                                <td class="py-4 w-3/6">Padre Damaso</td>
+                                <td class="py-4 w-2/6">September 07, 2021</td>
                             </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <td class="py-4 w-2/6">2 hrs 5 mins</td>
-                                <th class="py-4 w-1/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <td class="py-4 w-2/6">2 hrs 5 mins</td>
-                                <th class="py-4 w-1/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
-                            </tr>
+
                     </table>
                     <div class="grid justify-center items-center mb-3 bg-white">
                         <nav aria-label="Page navigation example w-full">
@@ -510,70 +489,32 @@
                         </thead>
                         <tbody class="bg-grey-light flex flex-col  w-full text-center" style="height: 73vh;">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
+                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                                <td class="py-4 w-2/6">September 14, 2021</td>
+                                <td class="py-4 w-2/6">September 17, 2021</td>
                                 <th class="py-4 w-2/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
+                                <td class="py-4 w-2/6">Maria D. Clara</td>
+                                <td class="py-4 w-2/6">September 15, 2021</td>
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="denied-ot"> VIEW</button></th>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
+                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
+                                <td class="py-4 w-2/6">September 08, 2021</td>
+                                <td class="py-4 w-2/6">September 14, 2021</td>
                                 <th class="py-4 w-2/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
+                                <td class="py-4 w-2/6">Maria D. Clara</td>
+                                <td class="py-4 w-2/6">September 10, 2021</td>
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="denied-ot">VIEW</button></th>
+                                        data-modal-toggle="denied-ot"> VIEW</button></th>
                             </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <th class="py-4 w-2/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
-                                <th class="py-4 w-1/6"><button
-                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="denied-ot">VIEW</button></th>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <th class="py-4 w-2/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
-                                <th class="py-4 w-1/6"><button
-                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="denied-ot">VIEW</button></th>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <th class="py-4 w-2/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-2/6">Ms. Dianne L. Manlangit</td>
-                                <td class="py-4 w-2/6">September 20, 2021</td>
-                                <th class="py-4 w-1/6"><button
-                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="denied-ot">VIEW</button></th>
-                            </tr>
+
                     </table>
                     <div class="grid justify-center items-center mb-3 bg-white">
                         <nav aria-label="Page navigation example w-full">
@@ -817,7 +758,7 @@
                         <div>
                             <label for="text"
                                 class="capitalized font-medium text-gray-900 block dark:text-gray-300">Applicant Name:
-                                <span class="font-normal">Maria M. Clara</span></label>
+                                <span class="font-normal">Crisostomo Ibarra</span></label>
                             <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
                         </div>
                         <div>
@@ -935,18 +876,18 @@
                         <div>
                             <label for="text"
                                 class="capitalized font-medium text-gray-900 block dark:text-gray-300">Applicant Name:
-                                <span class="font-normal">Maria M. Clara</span></label>
+                                <span class="font-normal">Crisostomo Ibarra</span></label>
                             <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
                         </div>
                         <div>
                             <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Date Applied:
-                                <span class="font-normal">September 21, 2022</span></label>
+                                <span class="font-normal">September 21, 2021</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
                             <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
                                 Overtime Date:
-                                <span class="font-normal">September 22, 2022</span></label>
+                                <span class="font-normal">September 22, 2021</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>

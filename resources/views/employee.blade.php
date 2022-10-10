@@ -734,14 +734,14 @@
                             Position</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Job Position" required="" value="NBFI Sales" disabled>
+                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales" disabled>
                     </div>
                     <div class="row-start-3 col-span-3">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Company Name" required="" value="NBFI" disabled>
+                            placeholder="Company Name" required="" value="BARBIZON FASHION GROUP OF COMPANIES" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
@@ -1387,7 +1387,7 @@
         </content>
         <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
             class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
-            id="btn-back-to-top">
+            id="btn-back-to-top" onClick="backToTop()">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path fill="currentColor"
@@ -1604,12 +1604,13 @@ function time_in() {
 
     hours = parseInt(hours) + 9;
 
-    var amPm = (hours <= 12) ? "AM" : "PM";
+    timeAmPm = (hours <= 12 && amPm == PM) ? "AM" : "PM";
 
     hours = (hours > 12) ? hours - 12 : hours;
 
+
     document.getElementById('time_out').innerHTML =
-        hours + " : " + minutes + " : " + seconds + " " + amPm;
+        hours + " : " + minutes + " : " + seconds + " " + timeAmPm;
 }
 
 // Get the button
@@ -1631,7 +1632,7 @@ function scrollFunction() {
     }
 }
 // When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
+// mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
     document.body.scrollTop = 0;
