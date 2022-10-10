@@ -597,7 +597,7 @@
                             </tr>
                         </thead>
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 75vh;">
+                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 73vh;">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">0000-0001</td>
                                 <td class="py-4 w-2/6">Ibarra Crisostomo</td>
@@ -742,7 +742,7 @@
                                 </tr>
                             </thead>
                             <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                            <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height:73vh;">
+                            <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 70vh">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <td colspan="9" class="py-4 w-2/6"><i>Loading...</i></td>
                                 </tr>
@@ -976,7 +976,7 @@
                                 </tr>
                             </thead>
                             <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                            <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 70vh;">
+                            <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 68vh;">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <td class="py-4 w-2/6">September 19, 2021</td>
                                     <td class="py-4 w-2/6">07 : 34 am</td>
@@ -1089,7 +1089,7 @@
                                 </tr>
                             </tfoot>
                         </table>
-                        <div class="grid justify-center items-center mb-5">
+                        <div class="grid justify-center items-center mb-3 bg-white">
                             <nav aria-label="Page navigation example w-full">
                                 <ul class="inline-flex -space-x-px">
                                     <li>
@@ -1199,7 +1199,7 @@
                                 <th class="py-4 w-2/6">Overtime History</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 73vh;">
+                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 67vh;">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">Crisostomo Ibarra</td>
                                 <td class="py-4 w-2/6">September 21, 2021</td>
@@ -1286,7 +1286,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="grid justify-center items-center mb-5">
+                    <div class="grid justify-center items-center mb-3 bg-white">
                         <nav aria-label="Page navigation example w-full">
                             <ul class="inline-flex -space-x-px">
                                 <li>
@@ -1322,7 +1322,7 @@
                     </div>
                 </div>
             </div>
-            <!--end overtime history  -->
+            <!--end overtime summary  -->
 
             <div class="grid xl:pt-12 mb-5" id="individualovertimeHistory" style="display:none">
                 <div class="flex flex-row xl:mb-12 bgprofile rounded-lg justify-center">
@@ -1425,7 +1425,7 @@
                                 <th class="p-4 w-2/6">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 70vh;">
+                        <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 68vh;">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">September 21, 2021</td>
                                 <td class="py-4 w-2/6">09 : 05 am</td>
@@ -1569,42 +1569,42 @@
             </div>
             <!--end individual overtime history-->
 
-            <div class="grid bgcolor overflow-hidden rounded-lg mb-10 " id="profile" style="display:none">
+            <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
-                <div class="grid bg-transparent  grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+                <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
                     <div class="row-start-1 row-span-1 flex">
                         <h1 class="text-white text-4xl font-bold px">Profile Information</h1>
                     </div>
                 </div>
                 <div class="grid grid-rows-5 grid-cols-6 gap-4">
                     <div class="row-start-1 row-span-2 col-span-2 justify-center flex items-center">
-                        <img src="img\profilepic.png" class="w-1/4 rounded-full bordercolor bordercolor border-4 "
+                        <img src="img\profilepic.png" class="w-2/6 rounded-full bordercolor bordercolor border-4 "
                             alt="Sample image" />
                     </div>
                     <div class="row-start-1 col-span-1">
                         <label for="text"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
                             ID</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Company ID" required="" value="0000-0001" disabled>
                     </div>
                     <div class="row-start-1 col-span-1">
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">First
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">First
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="First Name" required="" value="Crisostomo" disabled>
                     </div>
                     <div class="row-start-1 col-span-1">
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Middle
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Middle
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Middle Name" required="" value="Simon" disabled>
                     </div>
                     <div class="row-start-1 col-span-1">
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Last
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Last
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1621,14 +1621,14 @@
                             </svg>
                         </div>
                         <label for="number"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Birthdate</label>
                         <input datepicker type="text"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="Select your birthdate" value="12/14/1989" disabled>
                     </div>
                     <div class="row-start-2 col-span-1">
                         <label for="text"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Contact
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Contact
                             No.</label>
                         <input type="number" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1636,13 +1636,13 @@
                     </div>
                     <div class="row-start-2 col-span-2">
                         <label for="text"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Email</label>
                         <input type="email" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
                     </div>
                     <div class="row-start-3 col-span-3">
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Job
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Job
                             Position</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1650,27 +1650,27 @@
                     </div>
                     <div class="row-start-3 col-span-3">
                         <label for="text"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company Name</label>
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Company Name" required="" value="NBFI" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Chain Name" required="" value="RDS" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
-                        <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Brand
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1678,14 +1678,14 @@
                     </div>
                     <div class="row-start-5 col-span-2">
                         <label for="text"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">RAS</label>
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
                     </div>
                     <div class="row-start-5 col-span-2">
                         <label for="text"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HR</label>
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="HR Name" required="" value="Helena Loyola" disabled>
@@ -1700,7 +1700,7 @@
                             </svg>
                         </div>
                         <label for="number"
-                            class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Birthdate</label>
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Date Started</label>
                         <input datepicker type="text"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="Select your birthdate" value="10/21/2006" disabled>
