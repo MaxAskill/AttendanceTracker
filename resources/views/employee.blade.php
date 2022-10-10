@@ -1604,7 +1604,7 @@ function time_in() {
 
     hours = parseInt(hours) + 9;
 
-    timeAmPm = (hours <= 12 && amPm == "PM") ? "AM" : "PM";
+    timeAmPm = (hours <= 12 && amPm == "PM") ? "PM" : "AM";
 
     hours = (hours > 12) ? hours - 12 : hours;
 
