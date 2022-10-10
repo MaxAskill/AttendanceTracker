@@ -742,7 +742,7 @@
                                 </tr>
                             </thead>
                             <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                            <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 70vh">
+                            <tbody class="bg-grey-light flex flex-col w-full" style="height: 70vh">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <td colspan="9" class="py-4 w-2/6"><i>Loading...</i></td>
                                 </tr>
@@ -976,7 +976,7 @@
                                 </tr>
                             </thead>
                             <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                            <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 68vh;">
+                            <tbody class="bg-grey-light flex flex-col w-full" style="height: 68vh;">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <td class="py-4 w-2/6">September 19, 2021</td>
                                     <td class="py-4 w-2/6">07 : 34 am</td>
@@ -1425,7 +1425,7 @@
                                 <th class="p-4 w-2/6">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 68vh;">
+                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 68vh;">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">September 21, 2021</td>
                                 <td class="py-4 w-2/6">09 : 05 am</td>
@@ -1534,7 +1534,7 @@
                                 <td class="py-4 w-2/6">August 11, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                             </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">August 11, 2021</td>
                                 <td class="py-4 w-2/6">6 : 05 pm</td>
                                 <td class="py-4 w-2/6">8 : 05 pm</td>
@@ -1542,8 +1542,8 @@
                                 <td class="py-4 w-2/6">Capitan Tiago</td>
                                 <td class="py-4 w-2/6">August 09, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            </tr> -->
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="py-4 w-2/6">August 09, 2021</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
@@ -1551,7 +1551,7 @@
                                 <td class="py-4 w-2/6">Capitan Tiago</td>
                                 <td class="py-4 w-2/6">August 10, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                         <tfoot class="bg-gray-100 flex text-gray w-full pr-4">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -1942,7 +1942,7 @@
                                 </tr>
                             </thead>
                             <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                            <tbody class="bg-grey-light flex flex-col overflow-y-scroll w-full" style="height: 63vh;">
+                            <tbody class="bg-grey-light flex flex-col w-full" style="height: 63vh;">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <td class="py-4 w-2/6">September 19, 2021</td>
                                     <td class="py-4 w-2/6">07 : 34 am</td>
