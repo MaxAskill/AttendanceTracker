@@ -888,7 +888,7 @@
                             <h1 class="text-white text-4xl font-bold px">Employee's Attendance</h1>
                         </div>
                         <div class="row-start-2 row-span-1 flex">
-                            <span class="text-white ml-2"> Sort By:</span>
+                            <span class="text-white ml-2 mt-2"> Sort By:</span>
                             <div date-rangepicker class="flex items-center pl-5">
                                 <div class="relative">
 
@@ -922,7 +922,7 @@
                                 </div>
                             </div>
                             <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                                class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none ml-5 mt-2 text-center inline-flex items-center"
+                                class="bg-white font-themecolor px-3 py-1 rounded-lg border-2 border-white focus:outline-none ml-5 text-center inline-flex items-center"
                                 type="button">Duration<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -957,12 +957,13 @@
                                     data-modal-toggle="upload-file">Upload</button>
                                 <button
                                     class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                    data-modal-toggle="print">Print</button>
+                                    onClick="printDataEmployeeAttendance()">Print</button>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <table class="text-center w-full bg-white rounded-lg hover:table-fixed ">
+                        <table class="text-center w-full bg-white rounded-lg hover:table-fixed "
+                            id="employeeAttendance">
                             <thead class="bg-gray-100 flex text-gray w-full pr-5">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <th class="p-4 w-2/6">Date</th>
@@ -1088,6 +1089,40 @@
                                 </tr>
                             </tfoot>
                         </table>
+                        <div class="grid justify-center items-center mb-5">
+                            <nav aria-label="Page navigation example w-full">
+                                <ul class="inline-flex -space-x-px">
+                                    <li>
+                                        <a href="#"
+                                            class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-current="page"
+                                            class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1291,7 +1326,7 @@
 
             <div class="grid xl:pt-12 mb-5" id="individualovertimeHistory" style="display:none">
                 <div class="flex flex-row xl:mb-12 bgprofile rounded-lg justify-center">
-                    <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
+                    <div class="w-full py-8 px-8 flex flex-row justify-center place-items-center">
                         <img src="img\profilepic.png"
                             class="w-56 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
                             alt="Sample image" />
@@ -2217,7 +2252,7 @@
                                         ID</label>
                                     <input type="text" name="companyID" id="companyID"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                        placeholder="Company ID" required="" value="0000-0001">
+                                        placeholder="Company ID" required="" value="0000-0001" disabled>
                                 </div>
                                 <div class="col-start-2 col-span-1">
                                     <label for="text"
@@ -2461,7 +2496,7 @@
                                         Position</label>
                                     <input type="text" name="jobPosition" id="jobPosition"
                                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                        placeholder="Job Position" required="" value="Junior Software Engineer">
+                                        placeholder="Job Position" required="" value="NBFI Sales">
                                 </div>
                                 <div class="col-start-2">
                                     <label for="email"
@@ -3382,21 +3417,29 @@ function performSearch() {
 
 }
 
-function printDataEmployeeMasterList()
-{
-   var divToPrint=document.getElementById("employeeMasterListTable");
-   newWin= window.open("");
-   newWin.document.write(divToPrint.outerHTML);
-   newWin.print();
-   newWin.close();
+function printDataEmployeeMasterList() {
+    var divToPrint = document.getElementById("employeeMasterListTable");
+    newWin = window.open("");
+    newWin.document.write(divToPrint.outerHTML);
+    newWin.print();
+    newWin.close();
 }
-function printDataAttendanceSummary()
-{
-   var divToPrint=document.getElementById("attendanceSummaryTable");
-   newWin= window.open("");
-   newWin.document.write(divToPrint.outerHTML);
-   newWin.print();
-   newWin.close();
-   
+
+function printDataAttendanceSummary() {
+    var divToPrint = document.getElementById("attendanceSummaryTable");
+    newWin = window.open("");
+    newWin.document.write(divToPrint.outerHTML);
+    newWin.print();
+    newWin.close();
+
+}
+
+function printDataEmployeeAttendance() {
+    var divToPrint = document.getElementById("employeeAttendance");
+    newWin = window.open("");
+    newWin.document.write(divToPrint.outerHTML);
+    newWin.print();
+    newWin.close();
+
 }
 </script>

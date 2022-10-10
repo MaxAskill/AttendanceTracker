@@ -53,7 +53,7 @@
                                         <path
                                             d="M233.38 278.63l-79-113a8.13 8.13 0 0111.32-11.32l113 79a32.5 32.5 0 01-37.25 53.26 33.21 33.21 0 01-8.07-7.94z" />
                                     </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Pendin Application</span>
+                                    <span class="flex-1 ml-3 whitespace-nowrap">Pending Application</span>
                                 </a>
                             </li>
                             <li>
@@ -337,7 +337,7 @@
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <th class="py-4 w-2/6">Name</th>
                                 <th class="py-4 w-2/6">Date Applied</th>
-                                <th class="py-4 w-2/6">Overtime Date</th>
+                                <th class="py-4 w-2/6">Target Overtime Date</th>
                                 <th class="py-4 w-2/6">Duration</th>
                                 <th class="py-4 w-1/6">Reason</th>
                                 <th class="py-4 w-3/6">Approved By</th>
@@ -496,7 +496,7 @@
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <th class="py-4 w-2/6">Name</th>
                                 <th class="py-4 w-2/6">Date Applied</th>
-                                <th class="py-4 w-2/6">Overtime Date</th>
+                                <th class="py-4 w-2/6">Target Overtime Date</th>
                                 <th class="py-4 w-2/6">Reason</th>
                                 <th class="py-4 w-2/6">Denied By</th>
                                 <th class="py-4 w-2/6">Denied Date</th>
@@ -642,7 +642,7 @@
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
-                            <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Overtime Date:
+                            <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target Overtime Date:
                                 <span class="font-normal">September 22, 2022</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
@@ -700,7 +700,7 @@
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
-                            <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Overtime Date:
+                            <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target Overtime Date:
                                 <span class="font-normal">September 22, 2022</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
@@ -758,7 +758,7 @@
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
-                            <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Overtime Date:
+                            <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target Overtime Date:
                                 <span class="font-normal">September 22, 2022</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
@@ -793,6 +793,7 @@
     </button>
 
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
 
 </html>
 
