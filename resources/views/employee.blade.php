@@ -191,7 +191,7 @@
                     </div>
                     <div class="row-start-4 row-span-1">
                         <div class="bg-white rounded-lg py-2 text-center text-white space-x-4">
-                            <h1 class="text-gray-700 text-2xl font-bold">FILE UNSOCIAL HOURS</h1>
+                            <h1 class="text-gray-700 text-2xl font-bold">FILE OVERTIME</h1>
                             <button
                                 class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-4 mt-1 hover:bg-gray-100 focus:outline-none"
                                 data-modal-toggle="authentication-modal">FILE<button>
@@ -686,21 +686,20 @@
 
                             <div>
                                 <label for="text"
-                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Applicant
-                                    Name: Maria M. Clara</label>
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Approver Name: Capitan Tiago</label>
                                 <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
                             </div>
                             <div>
                                 <label for="date"
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date
                                     Applied:
-                                    September 21, 2022</label>
+                                    September 14, 2022</label>
                                 <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                             </div>
                             <div>
                                 <label for="date"
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target Date:
-                                    September 22, 2022</label>
+                                    September 17, 2022</label>
                                 <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                             </div>
                             <div>
@@ -961,8 +960,7 @@
                         </div>
                         <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
                             <h3 class="text-2xl font-medium text-center text-gray-900 dark:text-white font-extrabold">
-                                Filing
-                                Unsocial Hours</h3>
+                                Filing Overtime</h3>
 
                             <div>
                                 <label for="text"
