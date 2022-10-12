@@ -730,7 +730,7 @@
                     <div>
                         <table id="attendanceSummaryTable"
                             class="text-center w-full bg-white rounded-lg hover:table-fixed ">
-                            <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                            <thead class="bg-gray-100 flex text-gray w-full">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                     <th class="p-4 w-2/6" data-sort="Name">Name</th>
                                     <th class="p-4 w-2/6" data-sort="Date">Date</th>
@@ -1088,7 +1088,7 @@
                                         <td class="py-4 w-2/6">09 hrs 12 mins</td>
                                     </tr>
                             </tbody>
-                            <tfoot class="bg-gray-100 flex text-gray w-full pr-4">
+                            <tfoot class="bg-gray-100 flex text-gray w-full">
                                 <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <th class="p-4 w-2/6">TOTAL</th>
                                         <th class="p-4 w-2/6">--</th>
@@ -1566,7 +1566,7 @@
                             alt="Sample image" />
                     </div>
                     <div class="row-start-1 col-span-1">
-                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Employee's
                             ID</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1577,21 +1577,21 @@
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="First Name" required="" value="Crisostomo" disabled>
+                            placeholder="First Name" required="" value="Sisa" disabled>
                     </div>
                     <div class="row-start-1 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Middle
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Middle Name" required="" value="Simon" disabled>
+                            placeholder="Middle Name" required="" value="Indio  " disabled>
                     </div>
                     <div class="row-start-1 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Last
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Last Name" required="" value="Ibarra" disabled>
+                            placeholder="Last Name" required="" value="Narcisa" disabled>
                     </div>
 
                     <div class="relative row-start-2 col-span-1">
@@ -1621,35 +1621,35 @@
                             class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Email</label>
                         <input type="email" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
+                            placeholder="Email" required="" value="sisa.narcisa@barbizonfashion.com" disabled>
                     </div>
                     <div class="row-start-3 col-span-3">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Job
                             Position</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Job Position" required="" value="NBFI Sales" disabled>
+                            placeholder="Job Position" required="" value="Human Resource" disabled>
                     </div>
                     <div class="row-start-3 col-span-3">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Company Name" required="" value="NBFI" disabled>
+                            placeholder="Company Name" required="" value="Barbizon Everyday Group of Companies" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                            placeholder="Branch Name" required="" value="Robinson Department Store Bacolod" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Chain Name" required="" value="RDS" disabled>
+                            placeholder="Chain Name" required="" value="Robinson Department Store" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
