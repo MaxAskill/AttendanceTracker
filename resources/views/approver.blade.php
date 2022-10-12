@@ -128,7 +128,7 @@
         </div>
 
         <content class="xl:w-10/12 sm:w-full px-10 mt-5">
-            <div id="pending" class="grid bg-orange-500 overflow-hidden  rounded-lg" style="display: block">
+            <div id="pending" class="grid bg-yellow-400 overflow-hidden  rounded-lg" style="display: block">
                 <!--Start Pending Overtime Application-->
                 <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                     <div class="row-start-1 row-span-1 flex">
@@ -290,7 +290,7 @@
                 <!--Start Approved Overtime Application-->
                 <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                     <div class="row-start-1 row-span-1 flex">
-                        <h1 class="text-white text-4xl font-bold px">Approved Overtime History</h1>
+                        <h1 class="text-white text-4xl font-bold px">Approved Overtime Application</h1>
 
                     </div>
                     <div class="row-start-2 row-span-1 flex items-center">
@@ -359,7 +359,7 @@
                                 <th class="py-4 w-1/6"><button
                                         class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="view-ot">VIEW</button></th>
-                                <td class="py-4 w-3/6">Maria D. Clara</td>
+                                <td class="py-4 w-3/6">Padre Damaso</td>
                                 <td class="py-4 w-2/6">September 16, 2021</td>
                             </tr>
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
@@ -476,7 +476,7 @@
                 </div>
                 <div>
                     <table class="w-full bg-white hover:table-fixed">
-                        <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                        <thead class="bg-gray-100 flex text-gray w-full">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <th class="py-4 w-2/6">Name</th>
                                 <th class="py-4 w-2/6">Date Applied</th>
@@ -578,21 +578,21 @@
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="First Name" required="" value="Crisostomo" disabled>
+                            placeholder="First Name" required="" value="Capitan" disabled>
                     </div>
                     <div class="row-start-1 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Middle
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Middle Name" required="" value="Simon" disabled>
+                            placeholder="Middle Name" required="" value="De Los Santos" disabled>
                     </div>
                     <div class="row-start-1 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Last
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Last Name" required="" value="Ibarra" disabled>
+                            placeholder="Last Name" required="" value="Tiago" disabled>
                     </div>
 
                     <div class="relative row-start-2 col-span-1">
@@ -753,8 +753,8 @@
                         </button>
                     </div>
                     <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                        <h3 class="text-2xl font-medium text-center font-black dark:text-white font-extrabold">OVERTIME
-                            REQUEST DENIED!</h3>
+                        <h3 class="text-2xl font-medium text-center font-black dark:text-white font-extrabold"> DENYING OVERTIME
+                            APPLICATION!</h3>
                         <div>
                             <label for="text"
                                 class="capitalized font-medium text-gray-900 block dark:text-gray-300">Applicant Name:
@@ -763,13 +763,13 @@
                         </div>
                         <div>
                             <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Date Applied:
-                                <span class="font-normal">September 21, 2022</span></label>
+                                <span class="font-normal">September 21, 2021</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
                             <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
                                 Overtime Date:
-                                <span class="font-normal">September 22, 2022</span></label>
+                                <span class="font-normal">September 19, 2021</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
@@ -822,13 +822,13 @@
                         </div>
                         <div>
                             <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Date Applied:
-                                <span class="font-normal">September 21, 2022</span></label>
+                                <span class="font-normal">September 21, 2021</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
                             <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
                                 Overtime Date:
-                                <span class="font-normal">September 22, 2022</span></label>
+                                <span class="font-normal">September 22, 2021</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
@@ -887,7 +887,7 @@
                         <div>
                             <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
                                 Overtime Date:
-                                <span class="font-normal">September 22, 2021</span></label>
+                                <span class="font-normal">September 19, 2021</span></label>
                             <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                         </div>
                         <div>
