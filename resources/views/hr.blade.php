@@ -1406,42 +1406,7 @@
                             </div>
                 </div>
             </div>
-            <div
-                class="flex flex-row xl:mb-12 bgprofile rounded-lg justify-center grid grid-rows-3 grid-flow-col gap-4">
-                <div class="row-start-1 row-span-3 col-span-2">
-                    <img src="img\profilepic.png"
-                        class="w-1/2 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
-                        alt="Sample image" />
-                </div>
-                <div class="row-start-1 col-span-2">
-                    <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company
-                        ID</label>
-                    <input type="text" name="companyID" id="companyID"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company ID" required="" value="0000-0001">
-                </div>
-                <div class="row-start-1 col-span-2">
-                    <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">First
-                        Name</label>
-                    <input type="text" name="companyID" id="companyID"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company ID" required="" value="0000-0001">
-                </div>
-                <div class="row-start-1 col-span-2">
-                    <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Middle
-                        Name</label>
-                    <input type="text" name="companyID" id="companyID"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company ID" required="" value="0000-0001">
-                </div>
-                <div class="row-start-1 col-span-2">
-                    <label for="number" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Last
-                        Name</label>
-                    <input type="text" name="companyID" id="companyID"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company ID" required="" value="0000-0001">
-                </div>
-            </div>
+            
             <div
                 class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-lg">
                 <div class="row-start-1 row-span-1 flex">
