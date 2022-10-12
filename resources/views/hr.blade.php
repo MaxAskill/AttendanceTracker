@@ -761,7 +761,7 @@
                 </div>
                 <div>
                     <table id="attendanceSummaryTable"
-                        class="text-center w-full bg-white rounded-lg hover:table-fixed ">
+                        class="text-center w-full bg-white hover:table-fixed ">
                         <thead class="bg-gray-100 flex text-gray w-full">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <th class="p-4 w-2/6" data-sort="Name">Name</th>
@@ -776,7 +776,7 @@
                             </tr>
                         </thead>
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 70vh">
+                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 73vh">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td colspan="9" class="py-4 w-2/6"><i>Loading...</i></td>
                             </tr>
@@ -875,44 +875,147 @@
         <!--end attendance summary-->
 
         <div class="grid xl:pt-12 mb-5" id="individualattendanceSummary" style="display: none">
-            <div class="flex flex-row xl:mb-12 bgprofile rounded-lg justify-center">
-                <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
-                    <img src="img\profilepic.png"
-                        class="w-1/2 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
-                        alt="Sample image" />
+            <div class="grid bgprofile overflow-hidden rounded-lg py-10 px-10 mb-10">
+                <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
+                    <div class="row-start-1 row-span-1 flex">
+                        <h1 class="text-black text-4xl font-bold px">EMPLOYEE'S PROFILE</h1>
+                    </div>
                 </div>
-                <div class="basis-1/2 py-8 px-8">
-                    <h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
-                            <div class="basis-1/2 py-5">
-                                <div class="grid auto-rows-max grid-cols-2">
-                                    <div><label class="font-bold">Company ID :</label></div>
-                                    <div><label>0000-0001</label></div>
-                                    <div><label class="font-bold">Name :</label></div>
-                                    <div><label>Crisostomo Ibarra</label></div>
-                                    <div><label class="font-bold">Birthday :</label></div>
-                                    <div><label>December 14, 1989</label></div>
-                                    <div><label class="font-bold">Contact No :</label></div>
-                                    <div><label>09123456789</label></div>
-                                    <div><label class="font-bold">Email :</label></div>
-                                    <div><label>crisostomo.ibarra@barbizonfashion.com</label></div>
-                                    <div><label class="font-bold">Job Position :</label></div>
-                                    <div><label>NBFI Sales</label></div>
-                                    <div><label class="font-bold">Company :</label></div>
-                                    <div><label>NBFI</label></div>
-                                    <div><label class="font-bold">Brand :</label></div>
-                                    <div><label>Barbizon</label></div>
-                                    <div><label class="font-bold">Branch :</label></div>
-                                    <div><label>RDS Bacolod</label></div>
-                                    <div><label class="font-bold">Chain :</label></div>
-                                    <div><label>RDS</label></div>
-                                    <div><label class="font-bold">RAS :</label></div>
-                                    <div><label>Ms. Revelyn Loyola</label></div>
-                                    <div><label class="font-bold">HR :</label></div>
-                                    <div><label>Helena Loyola</label></div>
-                                    <div><label class="font-bold">Date Started :</label></div>
-                                    <div><label>October 21, 2006</label></div>
-                                </div>
-                            </div>
+                <div class="grid grid-rows-4 grid-cols-6 gap-4">
+                    <div class="row-start-1 row-span-2 col-span-2 justify-center flex items-center">
+                        <img src="img\profilepic.png" class="w-2/6 rounded-full bordercolor bordercolor border-4 "
+                            alt="Sample image" />
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Employee
+                            No.</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company ID" required="" value="0000-0001" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">First
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="First Name" required="" value="Crisostomo" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Middle
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Middle Name" required="" value="Simon" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Last
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Last Name" required="" value="Ibarra" disabled>
+                    </div>
+
+                    <div class="relative row-start-2 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <label for="number"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Birthdate</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="12/14/1989" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Contact
+                            No.</label>
+                        <input type="number" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Contact No." required="" value="09123456789" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Email</label>
+                        <input type="email" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-2">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Job
+                            Position</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales"
+                            disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Branch
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Chain
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Chain Name" required="" value="RDS" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="NBFI" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Brand
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">RAS</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">HR</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                    </div>
+                    <div class="relative row-start-4 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <label for="number" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Date
+                            Started</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="10/21/2006" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-1">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Status</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Active" disabled>
+                    </div>
                 </div>
             </div>
 
@@ -1169,7 +1272,7 @@
         </div>
         <!--end Employee's Attendance-->
 
-        <div class="grid bgcolor overflow-hidden rounded-lg mb-10 " id="OTSummary" style="display:none">
+        <div class="grid bgcolor overflow-hidden rounded-lg" id="OTSummary" style="display:none">
 
             <div class="grid bg-transparent  grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                 <div class="row-start-1 row-span-1 flex">
@@ -1225,7 +1328,7 @@
                 </div> -->
             </div>
             <div>
-                <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
+                <table class="text-center w-full bg-white text-center hover:table-fixed ">
                     <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <th class="py-4 w-2/6">Name</th>
@@ -1240,7 +1343,7 @@
                             <th class="py-4 w-2/6">Overtime History</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-grey-light flex flex-col w-full" style="height: 67vh;">
+                    <tbody class="bg-grey-light flex flex-col w-full" style="height: 70vh;">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <td class="py-4 w-2/6">Crisostomo Ibarra</td>
                             <td class="py-4 w-2/6">September 21, 2021</td>
@@ -1365,52 +1468,154 @@
         </div>
         <!--end overtime summary  -->
 
-        <div class="grid xl:pt-12 mb-5" id="individualovertimeHistory" style="display:none">
-            <div class="flex flex-row xl:mb-12 bgprofile rounded-lg justify-center">
-                <div class="basis-1/2 py-8 px-8 flex flex-row justify-center place-items-center">
-                    <img src="img\profilepic.png"
-                        class="w-1/2 xl:mx-20 lg:mx-20 rounded-full bordercolor bordercolor border-4 "
-                        alt="Sample image" />
+        <div class="grid xl:pt-12" id="individualovertimeHistory" style="display:none">
+            <div class="grid bgprofile overflow-hidden rounded-lg py-10 px-10 mb-10">
+                <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
+                    <div class="row-start-1 row-span-1 flex">
+                        <h1 class="text-black text-4xl font-bold px">EMPLOYEE'S PROFILE</h1>
+                    </div>
                 </div>
-                <div class="basis-1/2 py-8 px-8">
-                    <h1 class="text-black text-4xl font-bold px">EMPLOYEE PROFILE<h1>
-                            <div class="basis-1/3 py-5">
-                                <div class="grid auto-rows-max grid-cols-2">
-                                    <div><label class="font-bold">Company ID :</label></div>
-                                    <div><label>0000-0001</label></div>
-                                    <div><label class="font-bold">Name :</label></div>
-                                    <div><label>Crisostomo Ibarra</label></div>
-                                    <div><label class="font-bold">Birthday :</label></div>
-                                    <div><label>December 14, 1989</label></div>
-                                    <div><label class="font-bold">Contact No :</label></div>
-                                    <div><label>09123456789</label></div>
-                                    <div><label class="font-bold">Email :</label></div>
-                                    <div><label>crisostomo.ibarra@barbizonfashion.com</label></div>
-                                    <div><label class="font-bold">Job Position :</label></div>
-                                    <div><label>NBFI Sales</label></div>
-                                    <div><label class="font-bold">Company :</label></div>
-                                    <div><label>NBFI</label></div>
-                                    <div><label class="font-bold">Brand :</label></div>
-                                    <div><label>Barbizon</label></div>
-                                    <div><label class="font-bold">Branch :</label></div>
-                                    <div><label>RDS Bacolod</label></div>
-                                    <div><label class="font-bold">Chain :</label></div>
-                                    <div><label>RDS</label></div>
-                                    <div><label class="font-bold">RAS :</label></div>
-                                    <div><label>Ms. Revelyn Loyola</label></div>
-                                    <div><label class="font-bold">HR :</label></div>
-                                    <div><label>Helena Loyola</label></div>
-                                    <div><label class="font-bold">Date Started :</label></div>
-                                    <div><label>October 21, 2006</label></div>
-                                </div>
-                            </div>
+                <div class="grid grid-rows-4 grid-cols-6 gap-4">
+                    <div class="row-start-1 row-span-2 col-span-2 justify-center flex items-center">
+                        <img src="img\profilepic.png" class="w-2/6 rounded-full bordercolor bordercolor border-4 "
+                            alt="Sample image" />
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Employee
+                            No.</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company ID" required="" value="0000-0001" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">First
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="First Name" required="" value="Crisostomo" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Middle
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Middle Name" required="" value="Simon" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Last
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Last Name" required="" value="Ibarra" disabled>
+                    </div>
+
+                    <div class="relative row-start-2 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <label for="number"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Birthdate</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="12/14/1989" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Contact
+                            No.</label>
+                        <input type="number" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Contact No." required="" value="09123456789" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Email</label>
+                        <input type="email" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-2">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Job
+                            Position</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales"
+                            disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Branch
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Chain
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Chain Name" required="" value="RDS" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="NBFI" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Brand
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">RAS</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">HR</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                    </div>
+                    <div class="relative row-start-4 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <label for="number" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Date
+                            Started</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="10/21/2006" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-1">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Status</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Active" disabled>
+                    </div>
                 </div>
             </div>
-            
-            <div
-                class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-lg">
+            <!--end profile  -->
+            <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-t-lg">
                 <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-white text-4xl font-bold px">Employee's Overtime History</h1>
+                    <h1 class="text-white text-4xl font-bold px">Employee's Overtime Application</h1>
 
                 </div>
                 <div class="row-start-2 row-span-1 flex items-center">
@@ -1546,7 +1751,7 @@
                         </tr>
                     </tfoot>
                 </table>
-                <div class="grid justify-center items-center mb-3 bg-white">
+                <div class="grid justify-center items-center mb-5 bgcolor">
                     <nav aria-label="Page navigation example w-full">
                         <ul class="inline-flex -space-x-px">
                             <li>
