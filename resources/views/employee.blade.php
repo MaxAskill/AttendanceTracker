@@ -213,32 +213,32 @@
                         <table
                             class="table-fixed w-full content-center text-left text-gray-700 border-separate border-spacing-2">
                             <tr>
-                                <th>A.M. IN :</th>
+                                <th>AM IN :</th>
                                 <th class="font-medium">08:00 am</th>
                             </tr>
                             <tr>
-                                <th>LB In :</th>
+                                <th>LB IN :</th>
                                 <th class="font-medium">12:00 am</th>
                             </tr>
                             <tr>
-                                <th>LB Out :</th>
+                                <th>LB OUT :</th>
                                 <th class="font-medium">01:00 pm</th>
                             </tr>
                             <tr>
-                                <th>COFFEE IN :</th>
+                                <th>CB IN :</th>
                                 <th class="font-medium">04:00 pm</th>
                             </tr>
                             <tr>
-                                <th>COFFEE OUT :</th>
+                                <th>CB OUT :</th>
                                 <th class="font-medium">04:20 pm</th>
                             </tr>
                             <tr>
-                                <th>P.M. OUT :</th>
+                                <th>PM OUT :</th>
                                 <th class="font-medium">06:30 pm</th>
                             </tr>
                             <tr>
                                 <th>DURATION :</th>
-                                <th class="font-medium">10 hrs 30 mins</th>
+                                <th class="font-medium">9 hrs 30 mins</th>
                             </tr>
                         </table>
                     </div>
@@ -818,7 +818,7 @@
                         </div>
                         <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
                             <h3
-                                class="text-xl font-medium text-center font-pantone text-gray-900 dark:text-white font-extrabold">
+                                class="text-xl font-medium text-center font-pantone dark:text-white font-extrabold">
                                 OVERTIME REQUEST DENIED!</h3>
 
                             <div>
@@ -836,8 +836,8 @@
                             </div>
                             <div>
                                 <label for="date"
-                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target Date:
-                                    September 17, 2022</label>
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Denied Date:
+                                    September 15, 2022</label>
                                 <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                             </div>
                             <div>
@@ -1352,7 +1352,8 @@
                             </button>
                         </div>
                         <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                            <h3 class="text-xl font-medium text-gray-900 dark:text-white">Upload File</h3>
+                            <h1 class="text-2xl font-medium text-gray-900 dark:text-white font-extrabold text-center">PROOF OF ATTENDANCE / OVERTIME</h1>
+                            <h3 class="text-xl font-medium text-gray-900 dark:text-white">Upload file:</h3>
 
                             <div class="flex justify-center items-center w-full">
                                 <label for="dropzone-file"
