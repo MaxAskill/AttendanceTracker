@@ -1246,7 +1246,7 @@
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Kapitan Tiago</td>
+                                <td class="py-4 w-2/6">Capitan Tiago</td>
                                 <td class="py-4 w-2/6">September 15, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                                 <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
@@ -1274,7 +1274,7 @@
                                 <td class="py-4 w-2/6">06 : 05 pm</td>
                                 <td class="py-4 w-2/6">08 : 05 pm</td>
                                 <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Kapitan Tiago</td>
+                                <td class="py-4 w-2/6">Capitan Tiago</td>
                                 <td class="py-4 w-2/6">September 16, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
                                 <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
@@ -1288,7 +1288,7 @@
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
                                 <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Kapitan Tiago</td>
+                                <td class="py-4 w-2/6">Capitan Tiago</td>
                                 <td class="py-4 w-2/6">September 18, 2021</td>
                                 <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
                                 <td class="py-4 w-2/6"><a href="#individualovertimeHistory"><button
@@ -2804,7 +2804,7 @@
 
         <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
             class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
-            id="btn-back-to-top" onClick="backToTop()">
+            id="btn-back-to-top">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path fill="currentColor"
@@ -2878,7 +2878,7 @@ function scrollFunction() {
     }
 }
 // When the user clicks on the button, scroll to the top of the document
-// mybutton.addEventListener("click", backToTop);
+mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
     document.body.scrollTop = 0;

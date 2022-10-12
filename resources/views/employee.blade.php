@@ -201,7 +201,7 @@
                     <div
                         class="row-start-5 row-span-4 bg-white drop-shadow-md rounded-2xl px-10 pt-5 text-center text-white overflow-hidden">
                         <h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
-                        <h1 class="text-gray-700 text-xl font-bold">SEPTEMBER 21, 2022</h1>
+                        <span id="month" class="text-gray-700 text-xl font-bold"></span><span id="date"></span><span id="year"></span>
                         <div class="grid place-content-center">
                             <button
                                 class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 my-2 focus:outline-none"
@@ -217,11 +217,11 @@
                                 <th class="font-medium">08:00 am</th>
                             </tr>
                             <tr>
-                                <th>A.M. OUT :</th>
+                                <th>LB In :</th>
                                 <th class="font-medium">12:00 am</th>
                             </tr>
                             <tr>
-                                <th>P.M. IN :</th>
+                                <th>LB Out :</th>
                                 <th class="font-medium">01:00 pm</th>
                             </tr>
                             <tr>
