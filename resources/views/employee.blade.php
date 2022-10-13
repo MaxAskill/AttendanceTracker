@@ -34,7 +34,8 @@
                     </svg>
                 </button>
             </div>
-            <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block float-right items-center justify-between">
+            <nav :class="{'block': open, 'hidden': !open}"
+                class="flex-grow md:block float-right items-center justify-between">
                 <div class="flex justify-center md:unhidden hidden">
                     <img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
                         alt="Sample image" />
@@ -161,7 +162,7 @@
                             data-modal-toggle="authentication-modal">FILE<button>
                     </div>
 
-                    <div class="bg-white rounded-2xl px-10 py-10 text-center text-white overflow-hidden">
+                    <div class="bg-white rounded-2xl px-10 py-20 text-center text-white overflow-hidden">
                         <h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
                         <h1 class="text-gray-700 text-xl font-bold py-2">SEPTEMBER 21, 2022</h1>
                         <div class="grid place-content-center py-5">
@@ -399,7 +400,7 @@
                                 data-modal-toggle="upload-file">Upload</button>
                             <button
                                 class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                onClick="printDataTimeRecord()">Print</button>
+                                onClick="printDataAttendanceSummary()">Print</button>
                         </div>
                     </div>
                 </div>
@@ -412,13 +413,17 @@
                             <thead
                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                    <th scope="col" class="py-3 px-6" data-sort="Date">Date</th>
-                                    <th scope="col" class="py-3 px-6" data-sort="TimeIn">Time In</th>
-                                    <th scope="col" class="py-3 px-6" data-sort="TimeOut">Time Out</th>
-                                    <th scope="col" class="py-3 px-6" data-sort="Late">Late</th>
-                                    <th scope="col" class="py-3 px-6" data-sort="Undertime">Undertime</th>
-                                    <th scope="col" class="py-3 px-6" data-sort="Overtime">Overtime</th>
-                                    <th scope="col" class="py-3 px-6" data-sort="HoursRendered">Hours Rendered</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Date">Date</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Time In</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeOut">Time Out
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Late">Late</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">Undertime
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Overtime">Overtime
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="HoursRendered">Hours
+                                        Rendered</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -427,13 +432,13 @@
                             <tfoot
                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                    <th scope="col" class="py-3 px-6">TOTAL</th>
-                                    <th scope="col" class="py-3 px-6">--</th>
-                                    <th scope="col" class="py-3 px-6">--</th>
-                                    <th scope="col" class="py-3 px-6">--</th>
-                                    <th scope="col" class="py-3 px-6">--</th>
-                                    <th scope="col" class="py-3 px-6">--</th>
-                                    <th scope="col" class="py-3 px-6">110 hrs 08 hrs</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">110 hrs 08 hrs</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -475,7 +480,213 @@
                     </div>
                 </div>
             </div>
-        </div><!--END ATTENDANCE SUMMARY-->
+        </div>
+        <!--END ATTENDANCE SUMMARY-->
+
+        <div class="hide-show  px-5" id="history" style="display: none">
+            <div class="py-2 bgcolor drop-shadow-md rounded-xl">
+                <div class="grid md:grid-rows-2 md:grid-flow-col grid-cols-1 sm:px-5 sm:w-full md:mb-0 mb-2">
+                    <div class="md:row-start-1 row-span-1 md:flex">
+                        <h1 class="text-white md:text-4xl text-2xl font-bold mx-4">Overtime History</h1>
+                    </div>
+                    <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
+                        <input type="text" class="md:w-2/12 w-full form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchBox"
+                            placeholder="Search" />
+                        <div date-rangepicker class="md:flex items-center">
+                            <span class="md:mx-4 text-white"> Sort By:</span>
+                            <div class="relative">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input name="start" type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date start">
+                            </div>
+                            <span class="md:mx-4 text-white">to</span>
+                            <div class="relative">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input name="end" type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date end">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-start-2 row-span-5 col-span-2">
+
+                    <div class="overflow-x-auto relative  sm:rounded-lg">
+                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                            <thead
+                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Target
+                                        Overtime Date</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Date">Date Applied
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeOut">Overtime In
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Late">Overtime Out
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">Total OT
+                                        Hours</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">Approved
+                                        By</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Overtime">Approval
+                                        Date</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="HoursRendered">Status
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 21, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 19, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold text-orange-500">Pending</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 16, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 17, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 14, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-pantone"
+                                        data-modal-toggle="denied-ot">Denied</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 11, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 16, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 08, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 14, 20211</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-pantone"
+                                        data-modal-toggle="denied-ot">Denied</td>
+                                </tr>
+                            </tbody>
+                            <tfoot
+                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                    <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
+                        <nav aria-label="Page navigation example w-full">
+                            <ul class="inline-flex -space-x-px">
+                                <li>
+                                    <span href="#" id="prevButtonAttendanceSummary"
+                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</span>
+                                </li>
+                                <li>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</span>
+                                </li>
+                                <li>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</span>
+                                </li>
+                                <li>
+                                    <span href="#" aria-current="page"
+                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</span>
+                                </li>
+                                <li>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</span>
+                                </li>
+                                <li>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</span>
+                                </li>
+                                <li>
+                                    <span href="#" id="nextButtonAttendanceSummary"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END ATTENDANCE SUMMARY-->
 
         <div class="grid bg-transparent overflow-hidden drop-shadow-md " id="history" style="display:none">
             <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
@@ -539,59 +750,6 @@
                         </tr>
                     </thead>
                     <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
-                        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                             <td colspan="8" class="py-4 w-2/6"><i>Loading...</i></td>
-                        </tr> -->
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">September 21, 2021</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">09 : 05 am</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">September 16, 2021</td>
-                            <td class="py-4 w-2/6">September 18, 2021</td>
-                            <td class="py-4 w-2/6">06 : 05 pm</td>
-                            <td class="py-4 w-2/6">08 : 05 pm</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">September 14, 2021</td>
-                            <td class="py-4 w-2/6">September 17, 2021</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">September 25, 2021</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6">06 : 05 pm</td>
-                            <td class="py-4 w-2/6">08 : 05 pm</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Padre Damaso</td>
-                            <td class="py-4 w-2/6">September 25, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6">September 11, 2021</td>
-                            <td class="py-4 w-2/6">06 : 05 pm</td>
-                            <td class="py-4 w-2/6">08 : 05 pm</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
-                            <td class="py-4 w-2/6">September 16, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                        </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <td class="py-4 w-2/6">September 14, 2021</td>
                             <td class="py-4 w-2/6">September 08, 2021</td>
@@ -653,6 +811,7 @@
             </div>
         </div>
         <!--end overtime history  -->
+
         <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
             <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
@@ -795,6 +954,7 @@
             </div>
         </div>
         <!--end profile  -->
+
         <!-- Main modal -->
         <div id="denied-ot" aria-hidden="true"
             class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
@@ -977,6 +1137,7 @@
 
 
     </content>
+
     <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
         class="md:visible invisible inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
         id="btn-back-to-top">
@@ -1848,16 +2009,20 @@ function performSearchOT() {
 
 function printDataTimeRecord() {
     var divToPrint = document.getElementById("timeRecord");
-    newWin = window.open("");
+    newWin = window.open("", "", "width=1200,height=900");
     newWin.document.write(divToPrint.outerHTML);
+    newWin.document.close();
+    newWin.focus();
     newWin.print();
     newWin.close();
 }
 
 function printDataAttendanceSummary() {
     var divToPrint = document.getElementById("attendanceSummaryTable");
-    newWin = window.open("");
+    newWin = window.open("", "", "width=1200,height=900");
     newWin.document.write(divToPrint.outerHTML);
+    newWin.document.close();
+    newWin.focus();
     newWin.print();
     newWin.close();
 }
