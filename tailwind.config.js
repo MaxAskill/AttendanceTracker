@@ -1,7 +1,9 @@
 module.exports = {
-  content: ["./resources/**/*.blad.php}",
-  "./resources/**/*.js}",
-  "./resources/**/*.vue}"],
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
   theme: {
     extend: {
       colors: {

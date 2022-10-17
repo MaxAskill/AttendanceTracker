@@ -43,8 +43,8 @@ Route::get('/reports', function () {
     return view('reports');
 });
 
-Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
+// Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
 
-Route::post('/employee/send', [SendOTRequestEmailController::class, 'send']);
+// Route::post('/employee/send', [SendOTRequestEmailController::class, 'send']);
 
 

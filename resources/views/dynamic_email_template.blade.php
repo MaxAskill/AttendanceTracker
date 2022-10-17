@@ -1,3 +1,2 @@
-<p>Welcome {{ $data['name']}}!</p>
-<p>Hello World! {{$data['message']}}</p>
+<p>Hello World! {{$data['body']}}</p>
 <p>Mabuhay!</p>

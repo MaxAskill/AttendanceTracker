@@ -1,0 +1,56 @@
+body{
+    background-color: #C2FEFF;
+  }
+  
+  .bgcolor{
+    background-color: #00A3AD;
+  }
+  
+  .font-themecolor{
+    color: #00A3AD;
+  }
+  
+  .bgprofile{
+    background-color: #99EAED;
+  }
+  
+  
+  .bordercolor{
+    border-color: #00A3AD;
+  }
+  
+  .font-pantone{
+    color: #AA0061;
+  }
+  
+  .bordercolor{
+    border-color: #00A3AD;
+  }
+  
+  .border-pantone{
+    border-color: #AA0061;
+  }
+  .textarea {
+    max-width: 100%;
+  }
+  .hide-show{
+    display: block
+  }
+  
+  .bgpantone{
+    background-color: #AA0061;
+  }
+  
+  #btn-back-to-top {
+    position: fixed;
+    display: none;
+  }
+  
+  .employesidebar{
+    color: #00A3AD
+  }
+  
+  .employesidebar:hover{
+    color: #00A3AD;
+    font-weight: bold;
+  }
