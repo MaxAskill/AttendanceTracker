@@ -1138,6 +1138,96 @@
 
     </content>
 
+    <!-- <footer>
+        <div class="w-full md:w-96 md:max-w-full mx-auto">
+            <div class="p-6 border border-gray-300 sm:rounded-md">
+                @if(count($errors) > 0)
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alertt">x</button>
+                    <ul>
+                        @foreach($errors->all as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alertt">x</button>
+                    <ul>
+                        @foreach($errors->all as $error)
+                        <li>{{ $$message }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @if($message = Session::get('success'))
+
+                @endif
+                <form method="post" action="{{ url('employee/send')}}">
+                    {{csrf_field()}}
+                    <label class="block mb-6">
+                        <span class="text-gray-700">Your name</span>
+                        <input type="text" name="name" class="
+            block
+            w-full
+            mt-1
+            border-gray-300
+            rounded-md
+            shadow-sm
+            focus:border-indigo-300
+            focus:ring
+            focus:ring-indigo-200
+            focus:ring-opacity-50
+          " placeholder="Joe Bloggs" />
+                    </label>
+                    <label class="block mb-6">
+                        <span class="text-gray-700">Email address</span>
+                        <input name="email" type="email" class="
+            block
+            w-full
+            mt-1
+            border-gray-300
+            rounded-md
+            shadow-sm
+            focus:border-indigo-300
+            focus:ring
+            focus:ring-indigo-200
+            focus:ring-opacity-50
+          " placeholder="joe.bloggs@example.com" required />
+                    </label>
+                    <label class="block mb-6">
+                        <span class="text-gray-700">Message</span>
+                        <textarea name="message" class="
+            block
+            w-full
+            mt-1
+            border-gray-300
+            rounded-md
+            shadow-sm
+            focus:border-indigo-300
+            focus:ring
+            focus:ring-indigo-200
+            focus:ring-opacity-50
+          " rows="3" placeholder="Tell us what you're thinking about..."></textarea>
+                    </label>
+                    <div class="mb-6">
+                        <input type="submit" class="
+            h-10
+            px-5
+            text-indigo-100
+            bg-indigo-700
+            rounded-lg
+            transition-colors
+            duration-150
+            focus:shadow-outline
+            hover:bg-indigo-800
+          " name="send" value="Send"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </footer> -->
+
     <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
         class="md:visible invisible inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
         id="btn-back-to-top">

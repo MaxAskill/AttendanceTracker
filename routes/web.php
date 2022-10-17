@@ -10,6 +10,8 @@ use App\Http\Controllers\salaryController;
 use App\Http\Controllers\timeController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\SendOTRequestEmailController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,5 +59,8 @@ Route::resource('employee', employeeController::class);
 // Route::get('/', [EmployeeController::class, 'index']);
 Route::get('/', [employeeController::class, 'index']);
 Route::get('/getUsers', [employeeController::class, 'getUsers']);
+Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
+
+Route::post('/employee/send', [SendOTRequestEmailController::class, 'send']);
 
 
