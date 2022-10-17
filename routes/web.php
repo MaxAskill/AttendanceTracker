@@ -47,4 +47,8 @@ Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
 
 Route::post('/employee/send', [SendOTRequestEmailController::class, 'send']);
 
+Route::get('/approver', [SendOTRequestEmailController::class, 'indexdenied']);
+
+Route::post('/approver/denied', [SendOTRequestEmailController::class, 'denied']);
+
 

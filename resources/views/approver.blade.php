@@ -190,74 +190,6 @@
                                     data-modal-toggle="deny-ot">Deny</button>
                             </td>
                         </tr>
-                        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 21, 2022</td>
-                                <td class="py-4 w-2/6">September 22, 2022</td>
-                                <td class="py-4 w-2/6">2 hrs 20 mins</td>
-                                <td class="py-4 w-2/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></td>
-                                <td class="py-4 w-2/6">
-                                    <button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="approved-modal">Approve</button>
-                                    <button
-                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="deny-ot">Deny</button>
-                                </td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 21, 2022</td>
-                                <td class="py-4 w-2/6">September 22, 2022</td>
-                                <td class="py-4 w-2/6">2 hrs 20 mins</td>
-                                <td class="py-4 w-2/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></td>
-                                <td class="py-4 w-2/6">
-                                    <button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" 
-                                        data-modal-toggle="approved-modal">Approve</button>
-                                    <button
-                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="deny-ot">Deny</button>
-                                </td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 21, 2022</td>
-                                <td class="py-4 w-2/6">September 22, 2022</td>
-                                <td class="py-4 w-2/6">2 hrs 20 mins</td>
-                                <td class="py-4 w-2/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></td>
-                                <td class="py-4 w-2/6">
-                                    <button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" 
-                                        data-modal-toggle="approved-modal">Approve</button>
-                                    <button
-                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="deny-ot">Deny</button>
-                                </td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria M. Clara</td>
-                                <td class="py-4 w-2/6">September 21, 2022</td>
-                                <td class="py-4 w-2/6">September 22, 2022</td>
-                                <td class="py-4 w-2/6">2 hrs 20 mins</td>
-                                <td class="py-4 w-2/6"><button
-                                        class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="view-ot">VIEW</button></td>
-                                <td class="py-4 w-2/6">
-                                    <button
-                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="approved-modal">Approve</button>
-                                    <button
-                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                        data-modal-toggle="deny-ot">Deny</button>
-                                </td>
-                            </tr> -->
                     </tbody>
                 </table>
                 <div class="grid justify-center items-center mb-3 bg-white">
@@ -758,38 +690,71 @@
                         </svg>
                     </button>
                 </div>
-                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                @if(count($errors) >0)
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                @if($message = Session::get('success'))
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>{{$message}}</strong>
+                @endif
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" method="post"
+                    action="{{ url('approver/denied') }}">
+                    {{ csrf_field() }}
+
                     <h3 class="text-2xl font-medium text-center font-black dark:text-white font-extrabold"> DENYING
-                        OVERTIME
-                        APPLICATION!</h3>
+                        OVERTIME APPLICATION!</h3>
                     <div>
                         <label for="text"
                             class="capitalized font-medium text-gray-900 block dark:text-gray-300">Applicant Name:
                             <span class="font-normal">Crisostomo Ibarra</span></label>
-                        <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                        <input type="text" name="applicantname" id="applicantname"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            value="Crisostomo Ibarra" required="" readonly>
+                        <input type="text" name="approvername" id="approvername"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            value="Capitan Tiago" required="" readonly>
                     </div>
                     <div>
                         <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Date Applied:
                             <span class="font-normal">September 21, 2021</span></label>
-                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                        <input type="text" name="dateapplied" id="dateapplied"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            value="09/21/2021" required="" readonly>
                     </div>
                     <div>
                         <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
                             Overtime Date:
                             <span class="font-normal">September 19, 2021</span></label>
-                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                        <input type="text" name="otdate" id="otdate"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            value="09/19/2021" required="" readonly>
+                        <input type="text" name="status" id="status"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            value="denied" required="" readonly>
+                            <input type="email" name="email" id="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="fname.lname@gmail.com" required="" id="email" value="rolandalavera@gmail.com" readonly>
                     </div>
                     <div>
-                        <div class="flex justify-center">
-                            <div class="mb-3 xl:w-full">
-                                <label for="exampleFormControlTextarea1"
-                                    class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
-                                <textarea
-                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-black rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
-                                    id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"></textarea>
+                            <div class="flex justify-center">
+                                <div class="mb-3 xl:w-full">
+                                    <label for="exampleFormControlTextarea1"
+                                        class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
+                                    <textarea
+                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                        id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
+                                        name="otdeniedreason" id="otdeniedreason"></textarea>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <button type="submit"
                         class="w-full text-white bg-black hover:bg-white hover:text-black border-2 hover:border-black focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                 </form>

@@ -10,6 +10,8 @@ use App\Mail\SendMail;
 
 class SendOTRequestEmailController extends Controller
 {
+    
+
     function index(){
         return view('employee');
     }
@@ -35,6 +37,35 @@ class SendOTRequestEmailController extends Controller
 
         Mail::to($request->email)->send(new SendMail($data));
         return back()->with('success', 'Your Application was send!');
+
+    }
+
+    function indexdenied(){
+        return view('approver');
+    }
+
+    function denied(Request $request){
+        $this->validate($request, [
+            'applicantname'  =>  'required',
+            'approvername' => 'required',
+            'dateapplied' => 'required',
+            'status' => 'required',
+            'email'   =>  'required|email',
+            // 'exampleFormControlTextarea1'   =>  'required'
+        ]);
+
+        $data = array(
+            'applicantname'  =>  $request->applicantname,
+            'approvername' => $request->approvername,
+            'dateapplied' => $request->dateapplied,
+            'otdate' =>  $request->otdate,
+            'status' => $request->status,
+            'email'   =>  $request->email,
+            'otdeniedreason'   =>  $request->otdeniedreason
+        );
+
+        Mail::to($request->email)->send(new SendMail($data));
+        return back()->with('success', 'You denied an application!');
 
     }
  

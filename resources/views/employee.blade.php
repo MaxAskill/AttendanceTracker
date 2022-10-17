@@ -1047,7 +1047,7 @@
                         <button type="button" class="close" data-dismiss="alert">x</button>
                         <ul>
                             @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
+                            <li>{{ $error }}</li>
                             @endforeach
                         </ul>
                     </div>
@@ -1057,8 +1057,9 @@
                     <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong>{{$message}}</strong>
                     @endif
-                    
-                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" method="post" action="{{ url('employee/send') }}">
+
+                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" method="post"
+                        action="{{ url('employee/send') }}">
                         {{ csrf_field() }}
                         <h3 class="text-2xl font-medium text-center text-gray-900 dark:text-white font-extrabold">
                             Filing Overtime</h3>
@@ -1091,23 +1092,21 @@
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Duration</label>
                             <input type="text" name="otduration" id="otduration"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="(E.g 2hrs. and 30 minsearchBoxs)" required="" 
-                                id="otduration">
+                                placeholder="(E.g 2hrs. and 30 minsearchBoxs)" required="" id="otduration">
                         </div>
                         <div>
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
                             <input type="email" name="email" id="email"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="fname.lname@gmail.com" required=""
-                                id="email">
+                                placeholder="fname.lname@gmail.com" required="" id="email">
                         </div>
                         <div>
                             <label for="text"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Status</label>
                             <input type="text" name="status" id="status"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                 value="pending" required="">
+                                value="pending" required="" readonly>
                         </div>
                         <div>
                             <div class="flex justify-center">

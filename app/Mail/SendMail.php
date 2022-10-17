@@ -30,7 +30,7 @@ class SendMail extends Mailable
      */
     function pending(){
         return $this->from('sample.404.test@gmail.com')->subject('Overtime Application!')
-        ->view('dynamic_email_template')->with('data', $this->data);
+        ->view('pendingapplication')->with('data', $this->data);
     }
 
     function approved(){
@@ -40,7 +40,7 @@ class SendMail extends Mailable
 
     function denied(){
         return $this->from('sample.404.test@gmail.com')->subject('Your Overtime Application Denied!')
-        ->view('dynamic_email_template')->with('data', $this->data);
+        ->view('deniedapplication')->with('data', $this->data);
     }
 
     public function build()
