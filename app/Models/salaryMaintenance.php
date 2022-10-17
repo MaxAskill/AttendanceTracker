@@ -11,9 +11,16 @@ class salaryMaintenance extends Model
     protected $table = 'salarymaintenance';
     protected $primaryKey = 'salaryID';
     public $timestamps = false;
-    // protected $fillable = [
-    //     'email',
-    //     'course',
-    //     'educationLevel',
-    // ];
+    protected $fillable = [
+        'salaryID',
+        'branchID',
+        'region',
+        'municipalitycity',
+        'chain',
+        'branch',
+        'basicRate',
+        'perHour',
+        'perMin',
+        'COLA'
+    ];
 }

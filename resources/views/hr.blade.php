@@ -3252,7 +3252,7 @@
                         "<td class='p-4 w-2/6'>" + firstName + " " + lastName + "</td>" +
                         "<td class='p-4 w-2/6'>" + branch + "</td>" +
                         "<td class='p-4 w-2/6'>" + chain + "</td>" +
-                        "<td class='p-4 w-2/6'>" + status + "</td>" +
+                        "<td class='p-4 w-2/6'> Active </td>" +
                         '<td class="p-4 w-2/6 "><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="resign-modal">Resign</button></td>'+
                         '<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="view-employee">View</button><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-employee">Edit</button> </td>'+
                         "</tr>";

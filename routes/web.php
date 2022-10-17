@@ -52,12 +52,12 @@ Route::get('/reports', function () {
 });
 
 Route::resource('employee', employeeController::class);
-
+Route::post('salaryMaintenance', [salaryController::class, 'store']);
+Route::get('/getSalaryMaintenance', [salaryController::class, 'getSalaryMaintenance']);
 // Route::get('employee', [employeeController::class, 'index']);
 
 
 // Route::get('/', [EmployeeController::class, 'index']);
-Route::get('/', [employeeController::class, 'index']);
 Route::get('/getUsers', [employeeController::class, 'getUsers']);
 Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
 

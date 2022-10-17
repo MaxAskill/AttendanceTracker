@@ -41,31 +41,32 @@ class employeeController extends Controller
 
     public function store(Request $request){
 
-        $input = $request->all();
-        userInformation::create($input);
+        // $input = $request->all();
+        // userInformation::create($input);
+        // return redirect('hr')->with('flash_message', 'Employee added');
+
+        $user = new userInformation();
+        $user->userID = $request->userID;
+        $user->firstName = $request->firstName;
+        $user->middleName = $request->middleName;
+        $user->lastName = $request->lastName;
+        $user->jobPosition = $request->jobPosition;
+        $user->contactNo = $request->contactNo;
+        $user->email = $request->email;
+        $user->birthdate = $request->birthdate;
+        $user->schedule = $request->schedule;
+        $user->storeAssignment = $request->storeAssignment;
+        $user->brand = $request->brand;
+        $user->company = $request->company;
+        $user->chain = $request->chain;
+        $user->RAS = $request->RAS;
+        $user->HR = $request->HR;
+        $user->dateStarted = $request->dateStarted;
+        $user->status = "Active";
+        $user->size = $request->size;
+
+        $user->save();
         return redirect('hr')->with('flash_message', 'Employee added');
-
-        // $user = new userInformation();
-        // $user->userID = $request->userID;
-        // $user->firsName = $request->firstName;
-        // $user->middleName = $request->middleName;
-        // $user->lastName = $request->lastName;
-        // $user->jobPosition = $request->jobPosition;
-        // $user->contactNo = $request->contactNo;
-        // $user->email = $request->email;
-        // $user->birthdate = $request->birthdate;
-        // $user->schedule = $request->schedule;
-        // $user->storeAssignment = $request->storeAssignment;
-        // $user->brand = $request->brand;
-        // $user->company = $request->company;
-        // $user->chain = $request->chain;
-        // $user->RAS = $request->RAS;
-        // $user->HR = $request->HR;
-        // $user->dateStarted = $request->dateStarted;
-        // $user->status = $request->status;
-        // $user->size = $request->size;
-
-        // $user->save();
     }
 
     public function show($id){

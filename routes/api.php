@@ -43,6 +43,6 @@ Route::post('Branch', [branchController::class, 'Branch']);
 Route::post('Deduction', [deductionController::class, 'Deduction']);
 Route::post('Payroll', [employeePayrollController::class, 'Payroll']);
 Route::post('Overtime', [overtimeController::class, 'Overtime']);
-Route::post('Salary', [salaryController::class, 'Salary']);
+Route::post('salaryMaintenance', [salaryController::class, 'store']);
 Route::post('Time', [timeController::class, 'Time']);
 
