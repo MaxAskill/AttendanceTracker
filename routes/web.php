@@ -1,5 +1,13 @@
 <?php
 
+
+use App\Http\Controllers\branchController;
+use App\Http\Controllers\deductionController;
+use App\Http\Controllers\employeeController;
+use App\Http\Controllers\employeePayrollController;
+use App\Http\Controllers\overtimeController;
+use App\Http\Controllers\salaryController;
+use App\Http\Controllers\timeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,5 +48,14 @@ Route::get('/accounting', function () {
 Route::get('/reports', function () {
     return view('reports');
 });
+
+Route::resource('employee', employeeController::class);
+
+// Route::get('employee', [employeeController::class, 'index']);
+
+
+// Route::get('/', [EmployeeController::class, 'index']);
+Route::get('/', [employeeController::class, 'index']);
+Route::get('/getUsers', [employeeController::class, 'getUsers']);
 
 
