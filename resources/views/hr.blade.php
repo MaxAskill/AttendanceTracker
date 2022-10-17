@@ -466,7 +466,7 @@
             <div>
                 <table id="employeeMasterListTable"
                     class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-hidden">
-                    <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                    <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full">
                             <th class="p-4 w-1/6"><button type="button" id="btn" onClick="showprint()">Select
                                     All</button></th>

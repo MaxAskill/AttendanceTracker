@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\SendOTRequestEmailController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,5 +42,9 @@ Route::get('/accounting', function () {
 Route::get('/reports', function () {
     return view('reports');
 });
+
+Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
+
+Route::post('/employee/send', [SendOTRequestEmailController::class, 'send']);
 
 
