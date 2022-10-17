@@ -162,9 +162,17 @@
                             data-modal-toggle="authentication-modal">FILE<button>
                     </div>
 
-                    <div class="bg-white rounded-2xl px-10 py-20 text-center text-white overflow-hidden">
+                    <div class="bg-white rounded-2xl px-10 py-14 text-center text-white overflow-hidden">
                         <h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
-                        <h1 class="text-gray-700 text-xl font-bold py-2">SEPTEMBER 21, 2022</h1>
+                        <h1 class="text-gray-700 text-xl font-bold py-2 mb-2">SEPTEMBER 21, 2022</h1>
+                        <select id="timeschedule"
+                            class="w-2/3 inline-flex items-center bg-gray-50 border-2 border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option hidden selected>Time Schedule</option>
+                            <option value="09:30">09:30 am - 06:00 pm</option>
+                            <option value="09:00">09:00 am - 05:00 pm</option>
+                            <option value="08:00">08:00 am - 04:00 pm</option>
+                            <option value="11:00">11:00 am - 09:00 pm</option>
+                        </select>
                         <div class="grid place-content-center py-5">
                             <button
                                 class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 focus:outline-none"
@@ -1033,7 +1041,25 @@
                             </svg>
                         </button>
                     </div>
-                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+
+                    @if(count($errors) >0)
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">x</button>
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
+                    @if($message = Session::get('success'))
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>{{$message}}</strong>
+                    @endif
+                    
+                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" method="post" action="{{ url('employee/send') }}">
+                        {{ csrf_field() }}
                         <h3 class="text-2xl font-medium text-center text-gray-900 dark:text-white font-extrabold">
                             Filing Overtime</h3>
 
@@ -1042,7 +1068,7 @@
                                 class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
                             <input type="text" name="name" id="name"
                                 class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="FirstName MiddleInitial LastName" required="" disabled>
+                                placeholder="FirstName MiddleInitial LastName" required="">
                         </div>
                         <div class="relative ">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -1058,14 +1084,30 @@
                                 Date</label>
                             <input datepicker type="text"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select date">
+                                placeholder="Select date" name="otdate" id="otdate">
                         </div>
                         <div>
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Duration</label>
-                            <input type="text" name="birthdate" id="birthdate"
+                            <input type="text" name="otduration" id="otduration"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="(E.g 2hrs. and 30 minsearchBoxs)" required="">
+                                placeholder="(E.g 2hrs. and 30 minsearchBoxs)" required="" 
+                                id="otduration">
+                        </div>
+                        <div>
+                            <label for="date"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
+                            <input type="email" name="email" id="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="fname.lname@gmail.com" required=""
+                                id="email">
+                        </div>
+                        <div>
+                            <label for="text"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Status</label>
+                            <input type="text" name="status" id="status"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                 value="pending" required="">
                         </div>
                         <div>
                             <div class="flex justify-center">
@@ -1074,12 +1116,14 @@
                                         class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
                                     <textarea
                                         class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                        id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"></textarea>
+                                        id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
+                                        name="otreason" id="otreason"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit"
-                            class="w-full text-white bg-black hover:bg-white hover:text-black border-2 hover:border-black focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+                        <input type="submit"
+                            class="w-full text-white bg-black hover:bg-white hover:text-black border-2 hover:border-black focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                            name="send" value="Send" />
                     </form>
                 </div>
             </div>
