@@ -1210,14 +1210,13 @@
 
         <!-- edit-store modal -->
         <div id="edit-store" aria-hidden="true" role="dialog"
-            class="modal hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-            <div class="modal-dialog relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+            class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="modal-dialog relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto ">
                 <!-- Modal content -->
-                <div class="modal-content bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="relative top-72 mx-96 border w-full shadow-lg rounded-md bg-white ">
                     <div class="flex justify-end p-2">
-                        <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                            data-modal-toggle="edit-store">
+                        <button type="button" id="close-store" onClick="closeStore()"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -1311,15 +1310,14 @@
         <!--end edit-store modal-->
 
         <!-- delete-store modal -->
-        <div id="delete-store" aria-hidden="true"
-            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">
-            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        <div id="delete-store" aria-hidden="true" role="dialog"
+            class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto left-96">
                 <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div class="relative top-72 left-96 right-0 border w-full shadow-lg rounded-md bg-white ">
                     <div class="flex justify-end p-2">
-                        <button type="button"
-                            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                            data-modal-toggle="delete-store">
+                        <button type="button" onClick="closeDeleteStore()"
+                            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -1337,11 +1335,11 @@
                         </svg>
                         <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to
                             delete this Salary Record?</h3>
-                        <button data-modal-toggle="popup-modal" type="button"
+                        <button onClick="closeDeleteStore()" type="button"
                             class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                             Yes, I'm sure
                         </button>
-                        <button data-modal-toggle="popup-modal" type="button"
+                        <button onClick="closeDeleteStore()" type="button"
                             class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
                             cancel</button>
                     </div>
@@ -1352,14 +1350,13 @@
 
         <!-- edit-deduction modal -->
         <div id="edit-deduction" aria-hidden="true"
-            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-            <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+            class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto left-96">
                 <!-- Modal content -->
-                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="relative top-72 left-96 right-0 border w-full shadow-lg rounded-md bg-white">
                     <div class="flex justify-end p-2">
-                        <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                            data-modal-toggle="edit-deduction">
+                        <button type="button" onClick="closeDeduction()"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -1429,14 +1426,13 @@
         <!--end edit-store modal-->
 
         <div id="delete-deduction" aria-hidden="true"
-            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">
-            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+            class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto left-96">
                 <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div class="relative top-72 left-96 right-0 border w-full shadow-lg rounded-md bg-white">
                     <div class="flex justify-end p-2">
-                        <button type="button"
-                            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                            data-modal-toggle="delete-deduction">
+                        <button type="button" onClick="closeDeleteDeduction()"
+                            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -1455,11 +1451,11 @@
                             <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want
                                 to
                                 delete this Deduction of Salary?</h3>
-                            <button data-modal-toggle="popup-modal" type="button"
+                            <button onClick="closeDeleteDeduction()" type="button"
                                 class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                                 Yes, I'm sure
                             </button>
-                            <button data-modal-toggle="popup-modal" type="button"
+                            <button onClick="closeDeleteDeduction()" type="button"
                                 class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
                                 cancel</button>
                         </div>
@@ -1548,12 +1544,12 @@
                         "<td class='p-4 w-2/6'>" + region + "</td>" +
                         "<td class='p-4 w-2/6'>" + municipalitycity + "</td>" +
                         "<td class='p-4 w-2/6'>" + chain + "</td>" +
-                        "<td class='p-4 w-2/6'>" + "P" + branch + "</td>" +
+                        "<td class='p-4 w-2/6'>" + branch + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + basicRate + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + perHour + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + perMin + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + COLA + "</td>" +
-                        '<td class="p-4 w-2/6"><button id="editSalary"class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>' +
+                        '<td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>' +
                         "</tr>";
 
                     $("#salaryMaintenanceTable tbody").append(tr_str);
@@ -1566,11 +1562,47 @@
                 $("#salaryMaintenanceTable tbody").append(tr_str);
             }
         }
-        $(document).ready(function() {
-            $("#editSalary").click(function() {
-                $("#edit-store").modal();
-            });
-        });
+
+        let modal = document.getElementById('edit-store');
+
+        function editSalary() {
+            modal.style.display = "block";
+        }
+
+        function closeStore() {
+            modal.style.display = "none";
+        }
+
+        let modalStore = document.getElementById('delete-store');
+
+        function deleteSalary() {
+            modalStore.style.display = "block";
+        }
+
+        function closeDeleteStore() {
+            modalStore.style.display = "none";
+        }
+
+        let modalDeduction = document.getElementById('edit-deduction');
+
+        function editDeduction() {
+            modalDeduction.style.display = "block";
+        }
+
+        function closeDeduction() {
+            modalDeduction.style.display = "none";
+        }
+
+        let modalDeleteDeduction = document.getElementById('delete-deduction');
+
+        function deleteDeduction() {
+            modalDeleteDeduction.style.display = "block";
+        }
+
+        function closeDeleteDeduction() {
+            modalDeleteDeduction.style.display = "none";
+        }
+
 
         $(document).ready(function() {
 
@@ -1647,7 +1679,7 @@
                         "<td class='p-4 w-2/6'>" + "P" + HMDF + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + total + "</td>" +
                         "<td class='p-4 w-2/6'>" +
-                        '<button class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-deduction">Edit</button><button class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-deduction">Delete</button>' +
+                        '<button onClick="editDeduction()" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-deduction">Edit</button><button onClick="deleteDeduction()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-deduction">Delete</button>' +
                         "</td>" +
                         "</tr>";
 
@@ -1668,6 +1700,10 @@
 
 <!-- Javascript Code -->
 <script>
+// function editSalary(){
+//     console.log("Edit salary");
+//     $("#edit-store").modal();
+// }
 var navmenu = document.getElementById('navmenu');
 
 function toggleMenu() {
