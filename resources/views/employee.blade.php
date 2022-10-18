@@ -1447,12 +1447,13 @@ function time_in() {
 
     hours = parseInt(hours) + 9;
 
-    var amPm = (hours <= 12) ? "AM" : "PM";
+    timeAmPm = (hours <= 12 && amPm == "PM") ? "PM" : "AM";
 
     hours = (hours > 12) ? hours - 12 : hours;
 
+
     document.getElementById('time_out').innerHTML =
-        hours + " : " + minutes + " : " + seconds + " " + amPm;
+        hours + " : " + minutes + " : " + seconds + " " + timeAmPm;
 }
 
 // Get the button
@@ -1474,7 +1475,7 @@ function scrollFunction() {
     }
 }
 // When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
+// mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
     document.body.scrollTop = 0;

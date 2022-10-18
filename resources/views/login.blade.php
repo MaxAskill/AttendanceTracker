@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>BARBIZON EVERYDAY</title>
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
@@ -136,12 +136,15 @@ function auth(event) {
     } else if (username === "approver@gmail.com" && password === "user") {
         window.location.replace("{{URL('approver')}}");
     }
+    else{
+      alert("Please enter valid information");
+         return;
+    }
 
     //  if (username === "" && password === "") {
     //       alert("Please enter information");
     //  } else{
-    //      alert("Please enter valid information");
-    //      return;
+    //     
     //  }
 }
 </script>
