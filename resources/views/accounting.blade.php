@@ -75,7 +75,8 @@
                                             fill="none" stroke="currentColor" stroke-linejoin="round"
                                             stroke-width="32" />
                                     </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap" id="but_fetchall">Salary Maintenance</span>
+                                    <span class="flex-1 ml-3 whitespace-nowrap" id="but_fetchall">Salary
+                                        Maintenance</span>
                                 </a>
                             </li>
                             <li>
@@ -92,7 +93,8 @@
                                         <path fill="none" stroke="currentColor" stroke-linecap="round"
                                             stroke-linejoin="round" stroke-width="32" d="M336 256H176" />
                                     </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Deduction Maintenance</span>
+                                    <span class="flex-1 ml-3 whitespace-nowrap" id="fetchDeductionMaintenance">Deduction
+                                        Maintenance</span>
                                 </a>
                             </li>
 
@@ -377,6 +379,7 @@
                         </thead>
                         <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                             style="height: 73vh;">
+
                             <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="p-4 w-2/6">BRANCH-0001</td>
                                 <td class="p-4 w-2/6">NCR</td>
@@ -552,7 +555,10 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8"
+                                        action="{{ url('deductionMaintenance') }}" method="POST"
+                                        enctype="multipart/form-data">
+                                        @csrf
                                         <h3 class="text-xl font-medium text-gray-900 dark:text-white">Add Deduction
                                             Maintenance</h3>
 
@@ -561,48 +567,48 @@
                                                 <label for="text"
                                                     class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
                                                     ID</label>
-                                                <input type="text" name="name" id="name"
-                                                    class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="BRANCH-0001" required="" value="Branch ID">
+                                                <input type="text" name="branchID" id="branchID"
+                                                    class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Branch ID" required="" value="">
                                             </div>
                                             <div class="col-start-2 col-span-1">
-                                                <label for="date"
+                                                <label for="text"
                                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
                                                     Salary</label>
-                                                <input type="text" name="birthdate" id="birthdate"
-                                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="NCR" required="" value="Range Salary">
+                                                <input type="text" name="rangeSalary" id="rangeSalary"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Range Salary" required="" value="">
                                             </div>
                                         </div>
 
                                         <div class="grid grid-cols-4 gap-2">
                                             <div class="col-start-1 col-span-1">
-                                                <label for="date"
+                                                <label for="text"
                                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
-                                                <input type="text" name="birthdate" id="birthdate"
-                                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="P370.00" required="" value="SSS">
+                                                <input type="text" name="SSS" id="SSS"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="SSS" required="" value="">
                                             </div>
                                             <div class="col-start-2 col-span-1">
-                                                <label for="date"
+                                                <label for="text"
                                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
-                                                <input type="text" name="birthdate" id="birthdate"
-                                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="P46.25" required="" value="PHIC">
+                                                <input type="text" name="PHIC" id="PHIC"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="PHIC" required="" value="">
                                             </div>
                                             <div class="col-start-3 col-span-1">
-                                                <label for="date"
+                                                <label for="text"
                                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
-                                                <input type="text" name="birthdate" id="birthdate"
-                                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="P0.77" required="" value="HMDF">
+                                                <input type="text" name="HMDF" id="HMDF"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="HMDF" required="" value="">
                                             </div>
                                             <div class="col-start-4 col-span-1">
-                                                <label for="date"
+                                                <label for="text"
                                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">TOTAL</label>
-                                                <input type="text" name="birthdate" id="birthdate"
-                                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="P0.00" required="" value="TOTAL">
+                                                <input type="text" name="total" id="total"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Total" required="" value="">
                                             </div>
                                         </div>
 
@@ -625,11 +631,11 @@
                     </div>
                 </div>
                 <div>
-                    <table
+                    <table id="deductionMaintenanceTable"
                         class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
                         <thead class="bg-gray-100 flex text-gray w-full">
                             <tr class="flex w-full">
-                                <th class="p-4 w-2/6">Salary ID</th>
+                                <th class="p-4 w-2/6">Deduction ID</th>
                                 <th class="p-4 w-2/6">Branch ID</th>
                                 <th class="p-4 w-2/6">Range Salary</th>
                                 <th class="p-4 w-1/6">SSS</th>
@@ -642,7 +648,7 @@
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
                         <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                             style="height: 73vh;">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="p-4 w-2/6">SALARY-0001</td>
                                 <td class="p-4 w-2/6">BRANCH-0001</td>
                                 <td class="p-4 w-2/6">P20,000.00 and below</td>
@@ -737,7 +743,7 @@
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="delete-deduction">Delete</button>
                                 </td>
-                            </tr>
+                            </tr> -->
 
                         </tbody>
                     </table>
@@ -1203,11 +1209,11 @@
         <!-- end view-employee modal -->
 
         <!-- edit-store modal -->
-        <div id="edit-store" aria-hidden="true"
-            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-            <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+        <div id="edit-store" aria-hidden="true" role="dialog"
+            class="modal hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+            <div class="modal-dialog relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
                 <!-- Modal content -->
-                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                <div class="modal-content bg-white rounded-lg shadow relative dark:bg-gray-700">
                     <div class="flex justify-end p-2">
                         <button type="button"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
@@ -1469,6 +1475,7 @@
 
         <script type='text/javascript'>
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        var $salary = [];
         $(document).ready(function() {
 
             // Fetch all records
@@ -1480,11 +1487,12 @@
                     type: 'get',
                     dataType: 'json',
                     success: function(response) {
-
+                        // $salary = [response];
                         createRows(response);
 
                     }
                 });
+                // console.log($salary);
             });
 
             // Search by userid
@@ -1545,7 +1553,7 @@
                         "<td class='p-4 w-2/6'>" + "P" + perHour + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + perMin + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + COLA + "</td>" +
-                        '<td class="p-4 w-2/6"><button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>' +
+                        '<td class="p-4 w-2/6"><button id="editSalary"class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>' +
                         "</tr>";
 
                     $("#salaryMaintenanceTable tbody").append(tr_str);
@@ -1556,6 +1564,101 @@
                     "</tr>";
 
                 $("#salaryMaintenanceTable tbody").append(tr_str);
+            }
+        }
+        $(document).ready(function() {
+            $("#editSalary").click(function() {
+                $("#edit-store").modal();
+            });
+        });
+
+        $(document).ready(function() {
+
+            // Fetch all records
+            $('#fetchDeductionMaintenance').click(function() {
+
+                // AJAX GET request
+                $.ajax({
+                    url: 'getDeductionMaintenance',
+                    type: 'get',
+                    dataType: 'json',
+                    success: function(response) {
+
+                        createRowsDeduction(response);
+
+                    }
+
+                });
+                console.log("fetch deduction maintenance");
+            });
+
+            // Search by userid
+            $('#but_search').click(function() {
+                var userid = Number($('#search').val().trim());
+
+                if (userid > 0) {
+
+                    // AJAX POST request
+                    $.ajax({
+                        url: 'getUserbyid',
+                        type: 'post',
+                        data: {
+                            _token: CSRF_TOKEN,
+                            userid: userid
+                        },
+                        dataType: 'json',
+                        success: function(response) {
+
+                            createRows(response);
+
+                        }
+                    });
+                }
+
+            });
+
+        });
+
+        // Create table rows
+        function createRowsDeduction(response) {
+            console.log(response);
+            var len = 0;
+            $('#deductionMaintenanceTable tbody').empty(); // Empty <tbody>
+            if (response['data'] != null) {
+                len = response['data'].length;
+            }
+
+            if (len > 0) {
+                for (var i = 0; i < len; i++) {
+                    var deductionID = response['data'][i].deductionID;
+                    var branchID = response['data'][i].branchID;
+                    var rangeSalary = response['data'][i].rangeSalary;
+                    var SSS = response['data'][i].SSS;
+                    var PHIC = response['data'][i].PHIC;
+                    var HMDF = response['data'][i].HMDF;
+                    var total = response['data'][i].total;
+
+                    var tr_str = "<tr class='flex w-full even:bg-gray-100 odd:bg-white-100'>" +
+                        "<td class='p-4 w-2/6'>" + deductionID + "</td>" +
+                        "<td class='p-4 w-2/6'>" + branchID + "</td>" +
+                        "<td class='p-4 w-2/6'>" + rangeSalary + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + SSS + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + PHIC + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + HMDF + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + total + "</td>" +
+                        "<td class='p-4 w-2/6'>" +
+                        '<button class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-deduction">Edit</button><button class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-deduction">Delete</button>' +
+                        "</td>" +
+                        "</tr>";
+
+                    $("#deductionMaintenanceTable tbody").append(tr_str);
+                }
+            } else {
+                var tr_str = "<tr>" +
+                    "<td align='center' colspan='4'>No record found.</td>" +
+                    "</tr>";
+
+                $("#deductionMaintenanceTable tbody").append(tr_str);
             }
         }
         </script>

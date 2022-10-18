@@ -11,9 +11,13 @@ class deductionMaintenance extends Model
     protected $table = 'deductionmaintenance';
     protected $primaryKey = 'deductionID';
     public $timestamps = false;
-    // protected $fillable = [
-    //     'email',
-    //     'course',
-    //     'educationLevel',
-    // ];
+    protected $fillable = [
+        'deductionID',
+        'branchID',
+        'rangeSalary',
+        'SSS',
+        'PHIC',
+        'HMDF',
+        'total'
+    ];
 }

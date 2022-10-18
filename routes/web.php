@@ -53,7 +53,9 @@ Route::get('/reports', function () {
 
 Route::resource('employee', employeeController::class);
 Route::post('salaryMaintenance', [salaryController::class, 'store']);
+Route::post('deductionMaintenance', [deductionController::class, 'store']);
 Route::get('/getSalaryMaintenance', [salaryController::class, 'getSalaryMaintenance']);
+Route::get('/getDeductionMaintenance', [deductionController::class, 'getDeductionMaintenance']);
 // Route::get('employee', [employeeController::class, 'index']);
 
 
