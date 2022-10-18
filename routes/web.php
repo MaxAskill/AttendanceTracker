@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\SendOTRequestEmailController;
+use App\Http\Controllers\SendOvertimeEmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,9 +43,9 @@ Route::get('/reports', function () {
     return view('reports');
 });
 
-Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
-Route::post('/employee/send', [SendOTRequestEmailController::class, 'send']);
-Route::get('/approver', [SendOTRequestEmailController::class, 'indexdenied']);
-Route::post('/approver/denied', [SendOTRequestEmailController::class, 'denied']);
+Route::get('/employee', [SendOvertimeEmailController::class, 'index']);
+Route::post('/employee/send', [SendOvertimeEmailController::class, 'send']);
+Route::get('/approver', [SendOvertimeEmailController::class, 'indexdenied']);
+Route::post('/approver/denied', [SendOvertimeEmailController::class, 'denied']);
 
 

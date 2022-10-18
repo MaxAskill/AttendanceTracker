@@ -168,7 +168,7 @@
                             <td class="py-4 w-2/6">October 06, 2021</td>
                             <td class="py-4 w-2/6">4</td>
                             <td class="py-4 w-2/6">P370.00</td>
-                            <td class="py-4 w-2/6">P5,093.66</td>
+                            <td class="py-4 w-2/6">P1,480.00</td>
                             <td class="py-4 w-2/6">0.00</td>
                             <td class="py-4 w-2/6">P352.82</td>
                             <td class="py-4 w-2/6"><button
@@ -255,45 +255,71 @@
                                     </button>
                                 </div>
                                 <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Add Salary
-                                        Maintenance
-                                    </h3>
+                                    <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Add
+                                        Salary</h3>
                                     <div class="grid grid-cols-5 gap-2">
                                         <div class="col-start-1 col-span-1">
                                             <label for="text"
-                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Salary
                                                 ID</label>
                                             <input type="text" name="name" id="name"
-                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Branch ID" required="">
+                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
+                                                placeholder="Salary ID" required="" readonly>
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Region" required="">
+                                            <select name="Region" id="Region"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Region</option>
+                                                <option value="09:00">NCR</option>
+                                                <option value="09:30">Region 1</option>
+                                                <option value="10:00">Region 2</option>
+                                                <option value="10:30">Region 3</option>
+                                                <option value="11:00">Region 4</option>
+                                                <option value="11:30">Region 5</option>
+                                            </select>
                                         </div>
                                         <div class="col-start-3 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Municipality/City" required="">
+                                            <select name="starttime" id="starttime"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Municipality/City</option>
+                                                <option value="09:00">Las Pinas City</option>
+                                                <option value="09:30">Makati City</option>
+                                                <option value="10:00">Malabon City</option>
+                                                <option value="10:30">Mandaluyong City</option>
+                                            </select>
                                         </div>
                                         <div class="col-start-4 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Chain" required="">
+                                            <select name="Chain" id="Chain"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Chain</option>
+                                                <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
+                                                <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
+                                                <option value="Waltermart Makati">Waltermart Makati</option>
+                                                <option value="Fisher Mall Malabon">Fisher Mall Malabon</option>
+                                                <option value="Robinsons Malabon">Robinsons Malabon</option>
+                                            </select>
                                         </div>
                                         <div class="col-start-5 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Branch" required="">
+                                            <select name="Branch" id="Branch"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Branch</option>
+                                                <option value="Vista Mall Department Store">Vista Mall Department Store
+                                                </option>
+                                                <option value="Robinsons Department Store">Robinsons Department Store
+                                                </option>
+                                                <option value="Waltermart Department Store">Waltermart Department Store
+                                                </option>
+                                                <option value="Fisher Mall Department Store">Fisher Mall Department
+                                                    Store</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -304,7 +330,7 @@
                                                 Rate</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Basic Rate" required="">
+                                                placeholder="0.00" required="">
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
@@ -312,7 +338,7 @@
                                                 Hour</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Per Hour" required="">
+                                                placeholder="0.00" required="">
                                         </div>
                                         <div class="col-start-3 col-span-1">
                                             <label for="date"
@@ -320,19 +346,19 @@
                                                 Min</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="Per Min" required="">
+                                                placeholder="0.00" required="">
                                         </div>
                                         <div class="col-start-4 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="COLA" required="">
+                                                placeholder="0.00" required="">
                                         </div>
                                     </div>
 
                                     <button type="submit"
-                                        class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Add</button>
+                                        class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 outline-none">Add</button>
                                 </form>
                             </div>
                         </div>
@@ -354,7 +380,7 @@
                     class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
                     <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full">
-                            <th class="p-4 w-2/6">Branch ID</th>
+                            <th class="p-4 w-2/6">Salary ID</th>
                             <th class="p-4 w-2/6">Region</th>
                             <th class="p-4 w-2/6">Municipality/City</th>
                             <th class="p-4 w-2/6">Chain</th>
@@ -369,7 +395,7 @@
                     <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                         style="height: 73vh;">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0001</td>
+                            <td class="p-4 w-2/6">SALARY-0001</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Las Pinas City</td>
                             <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
@@ -387,7 +413,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0002</td>
+                            <td class="p-4 w-2/6">SALARY-0002</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Las Pinas City</td>
                             <td class="p-4 w-2/6">Robinsons Las Pinas</td>
@@ -405,7 +431,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0003</td>
+                            <td class="p-4 w-2/6">SALARY-0003</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Makati City</td>
                             <td class="p-4 w-2/6">Waltermart Makati</td>
@@ -423,7 +449,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0004</td>
+                            <td class="p-4 w-2/6">SALARY-0004</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Malabon City</td>
                             <td class="p-4 w-2/6">Fisher Mall Malabon</td>
@@ -441,7 +467,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0005</td>
+                            <td class="p-4 w-2/6">SALARY-0005</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Malabon City</td>
                             <td class="p-4 w-2/6">Robinsons Malabon</td>
@@ -459,7 +485,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0006</td>
+                            <td class="p-4 w-2/6">SALARY-0006</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Mandaluyong City</td>
                             <td class="p-4 w-2/6">Robinsons Forum Pioneer</td>
@@ -543,25 +569,87 @@
                                     </button>
                                 </div>
                                 <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Add Deduction
-                                        Maintenance</h3>
+                                    <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Add
+                                        Deduction</h3>
 
                                     <div class="grid grid-cols-2 gap-2">
                                         <div class="col-start-1 col-span-1">
                                             <label for="text"
-                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Deduction
                                                 ID</label>
                                             <input type="text" name="name" id="name"
-                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="BRANCH-0001" required="" value="Branch ID">
+                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
+                                                placeholder="" required="" value="DEDUCTION-0007" readonly>
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
                                                 Salary</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="NCR" required="" value="Range Salary">
+                                            <select name="Chain" id="Chain"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Range Salary</option>
+                                                <option value="Finds Finds Las Pinas">P20,000.00 and below</option>
+                                                <option value="Robinsons Las Pinas">P20,001.00 - P25,000.00</option>
+                                                <option value="Waltermart Makati">P25,001.00 - P27,000.00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-4 gap-2">
+                                        <div class="col-start-1 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
+                                            <select name="Region" id="Region"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Region</option>
+                                                <option value="09:00">NCR</option>
+                                                <option value="09:30">Region 1</option>
+                                                <option value="10:00">Region 2</option>
+                                                <option value="10:30">Region 3</option>
+                                                <option value="11:00">Region 4</option>
+                                                <option value="11:30">Region 5</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-2 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
+                                            <select name="starttime" id="starttime"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Municipality/City</option>
+                                                <option value="09:00">Las Pinas City</option>
+                                                <option value="09:30">Makati City</option>
+                                                <option value="10:00">Malabon City</option>
+                                                <option value="10:30">Mandaluyong City</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-3 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+                                            <select name="Chain" id="Chain"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Chain</option>
+                                                <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
+                                                <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
+                                                <option value="Waltermart Makati">Waltermart Makati</option>
+                                                <option value="Fisher Mall Malabon">Fisher Mall Malabon</option>
+                                                <option value="Robinsons Malabon">Robinsons Malabon</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-4 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
+                                            <select name="Branch" id="Branch"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Branch</option>
+                                                <option value="Vista Mall Department Store">Vista Mall Department Store
+                                                </option>
+                                                <option value="Robinsons Department Store">Robinsons Department Store
+                                                </option>
+                                                <option value="Waltermart Department Store">Waltermart Department Store
+                                                </option>
+                                                <option value="Fisher Mall Department Store">Fisher Mall Department
+                                                    Store</option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -571,33 +659,33 @@
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P370.00" required="" value="SSS">
+                                                placeholder="P370.00" required="" value="0.00">
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P46.25" required="" value="PHIC">
+                                                placeholder="P46.25" required="" value="0.00">
                                         </div>
                                         <div class="col-start-3 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P0.77" required="" value="HMDF">
+                                                placeholder="P0.77" required="" value="0.00">
                                         </div>
                                         <div class="col-start-4 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">TOTAL</label>
                                             <input type="text" name="birthdate" id="birthdate"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P0.00" required="" value="TOTAL">
+                                                placeholder="P0.00" required="" value="0.00">
                                         </div>
                                     </div>
 
                                     <button type="submit"
-                                        class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Add</button>
+                                        class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 outline-none">Add</button>
                                 </form>
                             </div>
                         </div>
@@ -619,8 +707,11 @@
                     class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
                     <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full">
-                            <th class="p-4 w-2/6">Salary ID</th>
-                            <th class="p-4 w-2/6">Branch ID</th>
+                            <th class="p-4 w-2/6">Deduction ID</th>
+                            <th class="p-4 w-2/6">Region</th>
+                            <th class="p-4 w-2/6">Municipality/City</th>
+                            <th class="p-4 w-2/6">Chain</th>
+                            <th class="p-4 w-2/6">Branch</th>
                             <th class="p-4 w-2/6">Range Salary</th>
                             <th class="p-4 w-1/6">SSS</th>
                             <th class="p-4 w-1/6">PHIC</th>
@@ -633,11 +724,14 @@
                     <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                         style="height: 73vh;">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0001</td>
-                            <td class="p-4 w-2/6">BRANCH-0001</td>
+                            <td class="p-4 w-2/6">DEDUCTION-0001</td>
+                            <td class="p-4 w-2/6">NCR</td>
+                            <td class="p-4 w-2/6">Las Pinas City</td>
+                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
                             <td class="p-4 w-2/6">P20,000.00 and below</td>
                             <td class="p-4 w-1/6">P302.50</td>
-                            <td class="p-4 w-1/6">P00.32</td>
+                            <td class="p-4 w-1/6">P0.32</td>
                             <td class="p-4 w-1/6">P50.00</td>
                             <td class="p-4 w-1/6">P352.82</td>
                             <td class="p-4 w-2/6"><button
@@ -649,11 +743,14 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0002</td>
-                            <td class="p-4 w-2/6">BRANCH-0001</td>
+                            <td class="p-4 w-2/6">DEDUCTION-0002</td>
+                            <td class="p-4 w-2/6">NCR</td>
+                            <td class="p-4 w-2/6">Las Pinas City</td>
+                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
                             <td class="p-4 w-2/6">P20,001.00 - P25,000.00</td>
                             <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P00.32</td>
+                            <td class="p-4 w-1/6">P0.32</td>
                             <td class="p-4 w-1/6">P50.00</td>
                             <td class="p-4 w-1/6">P437.82</td>
                             <td class="p-4 w-2/6"><button
@@ -665,11 +762,14 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0003</td>
-                            <td class="p-4 w-2/6">BRANCH-0001</td>
+                            <td class="p-4 w-2/6">DEDUCTION-0003</td>
+                            <td class="p-4 w-2/6">NCR</td>
+                            <td class="p-4 w-2/6">Las Pinas City</td>
+                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
                             <td class="p-4 w-2/6">P25,001.00 - P27,000.00</td>
                             <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P00.32</td>
+                            <td class="p-4 w-1/6">P0.32</td>
                             <td class="p-4 w-1/6">P50.00</td>
                             <td class="p-4 w-1/6">P437.82</td>
                             <td class="p-4 w-2/6"><button
@@ -681,11 +781,14 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0004</td>
-                            <td class="p-4 w-2/6">BRANCH-0002</td>
+                            <td class="p-4 w-2/6">DEDUCTION-0004</td>
+                            <td class="p-4 w-2/6">NCR</td>
+                            <td class="p-4 w-2/6">Las Pinas City</td>
+                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
                             <td class="p-4 w-2/6">P20,000.00 and below</td>
                             <td class="p-4 w-1/6">P302.50</td>
-                            <td class="p-4 w-1/6">P00.32</td>
+                            <td class="p-4 w-1/6">P0.32</td>
                             <td class="p-4 w-1/6">P50.00</td>
                             <td class="p-4 w-1/6">P352.82</td>
                             <td class="p-4 w-2/6"><button
@@ -697,11 +800,14 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0005</td>
-                            <td class="p-4 w-2/6">BRANCH-0002</td>
+                            <td class="p-4 w-2/6">DEDUCTION-0005</td>
+                            <td class="p-4 w-2/6">NCR</td>
+                            <td class="p-4 w-2/6">Las Pinas City</td>
+                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
                             <td class="p-4 w-2/6">P20,001.00 - P25,000.00</td>
                             <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P00.32</td>
+                            <td class="p-4 w-1/6">P0.32</td>
                             <td class="p-4 w-1/6">P50.00</td>
                             <td class="p-4 w-1/6">P437.82</td>
                             <td class="p-4 w-2/6"><button
@@ -713,11 +819,14 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0006</td>
-                            <td class="p-4 w-2/6">BRANCH-0002</td>
+                            <td class="p-4 w-2/6">DEDUCTION-0006</td>
+                            <td class="p-4 w-2/6">NCR</td>
+                            <td class="p-4 w-2/6">Las Pinas City</td>
+                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
                             <td class="p-4 w-2/6">P25,001.00 - P27,000.00</td>
                             <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P00.32</td>
+                            <td class="p-4 w-1/6">P0.32</td>
                             <td class="p-4 w-1/6">P50.00</td>
                             <td class="p-4 w-1/6">P437.82</td>
                             <td class="p-4 w-2/6"><button
@@ -1187,7 +1296,7 @@
     </div>
     <!-- end view-employee modal -->
 
-    <!-- edit-store modal -->
+    <!-- edit salary modal -->
     <div id="edit-store" aria-hidden="true"
         class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
         <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
@@ -1205,7 +1314,8 @@
                     </button>
                 </div>
                 <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">Edit Salary Maintenance</h3>
+                    <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Edit Salary Maintenance
+                    </h3>
 
                     <div class="grid grid-cols-5 gap-2">
                         <div class="col-start-1 col-span-1">
@@ -1219,31 +1329,57 @@
                         <div class="col-start-2 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="NCR" required="" value="NCR">
+                            <select name="Region" id="Region"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                <option hidden selected>NCR</option>
+                                <option value="09:00">NCR</option>
+                                <option value="09:30">Region 1</option>
+                                <option value="10:00">Region 2</option>
+                                <option value="10:30">Region 3</option>
+                                <option value="11:00">Region 4</option>
+                                <option value="11:30">Region 5</option>
+                            </select>
                         </div>
                         <div class="col-start-3 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Las Pinas City" required="" value="Las Pinas City">
+                            <select name="starttime" id="starttime"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                <option hidden selected>Las Pinas City</option>
+                                <option value="09:00">Las Pinas City</option>
+                                <option value="09:30">Makati City</option>
+                                <option value="10:00">Malabon City</option>
+                                <option value="10:30">Mandaluyong City</option>
+                            </select>
                         </div>
                         <div class="col-start-4 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Finds Finds Las Pinas" required="" value="Finds Finds Las Pinas">
+                            <select name="Chain" id="Chain"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                <option hidden selected>Finds Finds Las Pinas</option>
+                                <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
+                                <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
+                                <option value="Waltermart Makati">Waltermart Makati</option>
+                                <option value="Fisher Mall Malabon">Fisher Mall Malabon</option>
+                                <option value="Robinsons Malabon">Robinsons Malabon</option>
+                            </select>
                         </div>
                         <div class="col-start-5 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Vista Mall Las Pinas, Finds Finds Department Store" required=""
-                                value="Vista Mall Las Pinas, Finds Finds Department Store">
+                            <select name="Branch" id="Branch"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                <option hidden selected>Vista Mall Department Store</option>
+                                <option value="Vista Mall Department Store">Vista Mall Department Store
+                                </option>
+                                <option value="Robinsons Department Store">Robinsons Department Store
+                                </option>
+                                <option value="Waltermart Department Store">Waltermart Department Store
+                                </option>
+                                <option value="Fisher Mall Department Store">Fisher Mall Department
+                                    Store</option>
+                            </select>
                         </div>
                     </div>
 
@@ -1286,9 +1422,9 @@
             </div>
         </div>
     </div>
-    <!--end edit-store modal-->
+    <!--end salary modal-->
 
-    <!-- delete-store modal -->
+    <!-- delete salary modal -->
     <div id="delete-store" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">
         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
@@ -1325,7 +1461,7 @@
             </div>
         </div>
     </div>
-    <!--end edit-store modal-->
+    <!--end delete salary modal-->
 
     <!-- edit-deduction modal -->
     <div id="edit-deduction" aria-hidden="true"
@@ -1348,23 +1484,85 @@
                     <h3 class="text-xl font-medium text-gray-900 dark:text-white">Edit Deduction Maintenance</h3>
 
                     <div class="grid grid-cols-2 gap-2">
-                        <div class="col-start-1 col-span-1">
-                            <label for="text"
-                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
-                                ID</label>
-                            <input type="text" name="name" id="name"
-                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="BRANCH-0001" required="" value="BRANCH-0001">
-                        </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
-                                Salary</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="NCR" required="" value="P25,000 and below">
-                        </div>
-                    </div>
+                                        <div class="col-start-1 col-span-1">
+                                            <label for="text"
+                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Deduction
+                                                ID</label>
+                                            <input type="text" name="name" id="name"
+                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
+                                                placeholder="" required="" value="SALARY-0001" readonly>
+                                        </div>
+                                        <div class="col-start-2 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
+                                                Salary</label>
+                                            <select name="Chain" id="Chain"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>P20,000.00 and below</option>
+                                                <option value="Finds Finds Las Pinas">P20,000.00 and below</option>
+                                                <option value="Robinsons Las Pinas">P20,001.00 - P25,000.00</option>
+                                                <option value="Waltermart Makati">P25,001.00 - P27,000.00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-4 gap-2">
+                                        <div class="col-start-1 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
+                                            <select name="Region" id="Region"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>NCR</option>
+                                                <option value="NCR">NCR</option>
+                                                <option value="Region 1">Region 1</option>
+                                                <option value="Region 2">Region 2</option>
+                                                <option value="Region 3">Region 3</option>
+                                                <option value="Region 4">Region 4</option>
+                                                <option value="Region 5">Region 5</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-2 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
+                                            <select name="starttime" id="starttime"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Las Pinas City</option>
+                                                <option value="Las Pinas City">Las Pinas City</option>
+                                                <option value="Makati City">Makati City</option>
+                                                <option value="Malabon City">Malabon City</option>
+                                                <option value="Mandaluyong City">Mandaluyong City</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-3 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+                                            <select name="Chain" id="Chain"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Finds Finds Las Pinas</option>
+                                                <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
+                                                <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
+                                                <option value="Waltermart Makati">Waltermart Makati</option>
+                                                <option value="Fisher Mall Malabon">Fisher Mall Malabon</option>
+                                                <option value="Robinsons Malabon">Robinsons Malabon</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-4 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
+                                            <select name="Branch" id="Branch"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Vista Mall Department Store</option>
+                                                <option value="Vista Mall Department Store">Vista Mall Department Store
+                                                </option>
+                                                <option value="Robinsons Department Store">Robinsons Department Store
+                                                </option>
+                                                <option value="Waltermart Department Store">Waltermart Department Store
+                                                </option>
+                                                <option value="Fisher Mall Department Store">Fisher Mall Department
+                                                    Store</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
                     <div class="grid grid-cols-4 gap-2">
                         <div class="col-start-1 col-span-1">
@@ -1379,7 +1577,7 @@
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
                             <input type="text" name="birthdate" id="birthdate"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="P46.25" required="" value="P00.32">
+                                placeholder="P46.25" required="" value="P0.32">
                         </div>
                         <div class="col-start-3 col-span-1">
                             <label for="date"
@@ -1402,7 +1600,7 @@
             </div>
         </div>
     </div>
-    <!--end edit-store modal-->
+    <!--end edit deduction modal-->
 
     <div id="delete-deduction" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">

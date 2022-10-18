@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 // use Mail;
 use App\Mail\SendMail;
 
-class SendOTRequestEmailController extends Controller
+class SendOvertimeEmailController extends Controller
 {
     
 
