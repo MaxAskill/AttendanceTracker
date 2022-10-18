@@ -5,4 +5,4 @@
 <p>Status: {{$data['status']}}</p>
 <p>Reason:<br>{{$data['otreason']}}</p>
 
-<a href="http://127.0.0.1:8000/employee">Click to go to page</a>
+<a href="http://127.0.0.1:8000/">Click to go to page</a>

@@ -36,7 +36,7 @@
             </div>
             <nav :class="{'block': open, 'hidden': !open}"
                 class="flex-grow md:block float-right items-center justify-between">
-                <div class="flex justify-center md:unhidden hidden">
+                <div class="flex justify-center ">
                     <img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
                         alt="Sample image" />
                 </div>
@@ -1101,11 +1101,11 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                 placeholder="fname.lname@gmail.com" required="" id="email">
                         </div>
-                        <div>
+                        <div hidden>
                             <label for="text"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Status</label>
                             <input type="text" name="status" id="status"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                class="bg-gray-50  border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                 value="pending" required="" readonly>
                         </div>
                         <div>

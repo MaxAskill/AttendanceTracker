@@ -29,7 +29,7 @@ class SendMail extends Mailable
      * @return $this
      */
     function pending(){
-        return $this->from('sample.404.test@gmail.com')->subject('Overtime Application!')
+        return $this->from('sample.404.test@gmail.com')->subject('Pending Overtime Application!')
         ->view('pendingapplication')->with('data', $this->data);
     }
 
