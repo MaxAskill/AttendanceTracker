@@ -202,13 +202,13 @@
 
     <content class="xl:w-10/12 sm:w-full px-10 mt-5">
         <div id="Dashboard" class="flex  overflow-hidden rounded-lg mb-5" style="display: block">
-            <div class="grid grid-rows-auto grid-cols-2 gap-5">
+            <div class="grid grid-rows-auto grid-cols-2 gap-5 px-5">
                 <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
                     <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 WORKING LATE OR UNDERERTIME EMPLOYEES 
                     </div>
                     <select name="Date" id="Date"
                         class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                        <option hidden selected>Month</option>
+                        <option hidden selected>October</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -229,7 +229,7 @@
                     </div>
                     <select name="Date" id="Date"
                         class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                        <option hidden selected>Month</option>
+                        <option hidden selected>October</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -249,7 +249,7 @@
                     <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES WITH THE MOST ABSENCES</div>
                     <select name="Date" id="Date"
                         class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                        <option hidden selected>Month</option>
+                        <option hidden selected>October</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -269,7 +269,7 @@
                     <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES WITH A LOT OF OVERTIME</div>
                     <select name="Date" id="Date"
                         class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                        <option hidden selected>Month</option>
+                        <option hidden selected>October</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -1847,8 +1847,7 @@
         <!--end individual overtime history-->
 
         <div class="grid overflow-hidden rounded-lg py-10 px-10" id="reports" style="display:none">
-        <img src="img\underconstruction.png" class="w-1/2 mx-80"
-                        alt="Sample image" />
+            <img src="img\underconstruction.png" class="w-1/2 mx-80" alt="Sample image" />
         </div>
         <!--end reports  -->
 

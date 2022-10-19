@@ -164,13 +164,13 @@
 
     <content class="xl:w-10/12 sm:w-full px-10 mt-5">
         <div id="Dashboard" class="flex  overflow-hidden rounded-lg mb-5" style="display: block">
-            <div class="grid grid-rows-auto grid-cols-2 gap-5 px-32">
+            <div class="grid grid-rows-auto grid-cols-2 gap-5 px-24">
                 <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
                     <div class="text-gray-800 text-2xl font-bold px-5 pt-2">NUMBER OF DENIED APPLICATIONS 
                     </div>
                     <select name="Date" id="Date"
                         class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                        <option hidden selected>Year</option>
+                        <option hidden selected>2022</option>
                         <option value="January">2018</option>
                         <option value="February">2019</option>
                         <option value="March">2020</option>
@@ -184,7 +184,7 @@
                     </div>
                     <select name="Date" id="Date"
                         class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                        <option hidden selected>Year</option>
+                        <option hidden selected>2022</option>
                         <option value="January">2018</option>
                         <option value="February">2019</option>
                         <option value="March">2020</option>
@@ -199,7 +199,7 @@
                     <div class="mx-20">
                         <select name="Date" id="Date"
                             class="mx-20 bg-transparent w-2/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                            <option hidden selected>Month</option>
+                            <option hidden selected>October</option>
                             <option value="January">January</option>
                             <option value="February">February</option>
                             <option value="March">March</option>
@@ -376,7 +376,7 @@
                     <nav aria-label="Page navigation example w-full">
                         <ul class="inline-flex -space-x-px">
                             <li>
-                                <a href="#"
+                                <a href="#" id="approvednextButton"
                                     class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                             </li>
                             <li>
@@ -400,7 +400,7 @@
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="#" id="approvedprevButton"
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                             </li>
                         </ul>
@@ -724,7 +724,7 @@
                 <div class="row-start-2 row-span-1 flex items-center">
                     <div class="xl:w-96 xl:h-46">
                         <input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid transition ease-in-out
-								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
+								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchdenied"
                             placeholder="Search" />
                     </div>
                     <div class="row-start-2 row-span-1 flex">
@@ -746,7 +746,7 @@
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Select date start">
                             </div>
-                            <span class="mx-4 text-gray-500">to</span>
+                            <span class="mx-4 text-white">to</span>
                             <div class="relative">
                                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -765,52 +765,31 @@
                 </div>
             </div>
             <div>
-                <table class="w-full bg-white hover:table-fixed">
-                    <thead class="bg-gray-100 flex text-gray w-full">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="py-5 w-2/6">Name</th>
-                            <th class="py-5 w-2/6">Date Applied</th>
-                            <th class="py-5 w-2/6">Target Overtime Date</th>
-                            <th class="py-5 w-2/6">Reason</th>
-                            <th class="py-5 w-2/6">Denied By</th>
-                            <th class="py-5 w-2/6">Denied Date</th>
-                            <th class="py-5 w-1/6">Remarks</th>
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed" id="deniedTable">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied
+                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TargetOvertimeDate">
+                                Target
+                                Overtime Date</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Reason">Reason</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DeniedBy">Denied By
+                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DeniedDate">Denied Date
+                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Remarks">Remarks</th>
                         </tr>
                     </thead>
-                    <tbody class="text-base bg-grey-light flex flex-col  w-full text-center" style="height: 73vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-5 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-5 w-2/6">September 14, 2021</td>
-                            <td class="py-5 w-2/6">September 17, 2021</td>
-                            <th class="py-5 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></th>
-                            <td class="py-5 w-2/6">Maria D. Clara</td>
-                            <td class="py-5 w-2/6">September 15, 2021</td>
-                            <th class="py-5 w-1/6"><button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="denied-ot"> VIEW</button></th>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-5 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-5 w-2/6">September 08, 2021</td>
-                            <td class="py-5 w-2/6">September 14, 2021</td>
-                            <th class="py-5 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></th>
-                            <td class="py-5 w-2/6">Maria D. Clara</td>
-                            <td class="py-5 w-2/6">September 10, 2021</td>
-                            <th class="py-5 w-1/6"><button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="denied-ot"> VIEW</button></th>
-                        </tr>
-
+                    <tbody>
+                    </tbody>
                 </table>
                 <div class="grid justify-center items-center mb-3 bg-white">
                     <nav aria-label="Page navigation example w-full">
                         <ul class="inline-flex -space-x-px">
                             <li>
-                                <a href="#"
+                                <a href="#"  id="deniednextButton"
                                     class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                             </li>
                             <li>
@@ -834,7 +813,7 @@
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="#" id="deniedprevButton"
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                             </li>
                         </ul>
@@ -1601,6 +1580,88 @@ function performSearch() {
 
 }
 
+
+// declare elements
+const searchBoxApproved = document.getElementById('searchapproved');
+const tableSearchApprovedTable = document.getElementById("approvedTable");
+const trsApproved = tableSearchApprovedTable.tBodies[0].getElementsByTagName("tr");
+
+// add event listener to search box
+searchBoxApproved.addEventListener('keyup', performSearch);
+
+
+function performSearch() {
+
+    // Declare search string 
+    var filter = searchBoxApproved.value.toUpperCase();
+
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsApproved.length; rowI++) {
+
+        // define the row's cells
+        var tds = trsApproved[rowI].getElementsByTagName("td");
+        // hide the row
+        trsApproved[rowI].style.display = "none";
+
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+
+                // show the row
+                trsApproved[rowI].style.display = "";
+
+                // skip to the next row
+                continue;
+
+            }
+        }
+    }
+
+}
+
+
+// declare elements
+const searchBoxDenied = document.getElementById('searchdenied');
+const tableSearchDeniedTable = document.getElementById("deniedTable");
+const trsDenied = tableSearchDeniedTable.tBodies[0].getElementsByTagName("tr");
+
+// add event listener to search box
+searchBoxDenied.addEventListener('keyup', performSearch);
+
+
+function performSearch() {
+
+    // Declare search string 
+    var filter = searchBoxDenied.value.toUpperCase();
+
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsDenied.length; rowI++) {
+
+        // define the row's cells
+        var tds = trsDenied[rowI].getElementsByTagName("td");
+        // hide the row
+        trsDenied[rowI].style.display = "none";
+
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+
+                // show the row
+                trsDenied[rowI].style.display = "";
+
+                // skip to the next row
+                continue;
+
+            }
+        }
+    }
+
+}
+
 respPendingApplication = [{
     "Name": "Crisostomo Ibarra",
     "DateApplied": "September 21, 2021",
@@ -1634,6 +1695,22 @@ respApprovedApplication = [{
     }
 ]
 
+respDeniedApplication = [{
+        "Name": "Crisostomo Ibarra",
+        "DateApplied": "September 16, 2021",
+        "TargetOvertimeDate": "September 18, 2021",
+        "DeniedBy": "Kapitan Tiago",
+        "DeniedDate": "September 15, 2021"
+    },
+    {
+        "Name": "Crisostomo Ibarra",
+        "DateApplied": "September 14, 2021",
+        "TargetOvertimeDate": "September 17, 2021",
+        "DeniedBy": "Kapitan Tiago",
+        "DeniedDate": "September 10, 2021"
+    }
+]
+
 document.addEventListener('DOMContentLoaded', init, false);
 
 let data, table, sortCol;
@@ -1645,6 +1722,11 @@ let approveddata, approvedtable, approvedsortCol;
 let approvedsortAsc = false;
 const approvedpageSize = 3;
 let approvedcurPage = 1;
+
+let denieddata, deniedtable, deniedsortCol;
+let deniedsortAsc = false;
+const deniedpageSize = 3;
+let deniedcurPage = 1;
 
 async function init() {
 
@@ -1665,8 +1747,6 @@ async function init() {
     document.querySelector('#prevButton').addEventListener('click', previousPage, false);
 
 
-
-
     // Select the table (well, tbody)
     approvedtable = document.querySelector('#approvedTable tbody');
     // get the cats
@@ -1682,6 +1762,23 @@ async function init() {
 
     document.querySelector('#approvednextButton').addEventListener('click', approvednextPage, false);
     document.querySelector('#approvedprevButton').addEventListener('click', approvedpreviousPage, false);
+
+
+    // Select the table (well, tbody)
+    deniedtable = document.querySelector('#deniedTable tbody');
+    // get the cats
+    //   let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+    console.log(respApprovedApplication);
+    denieddata = respApprovedApplication;
+    deniedrenderTable();
+
+    // listen for sort clicks
+    document.querySelectorAll('#deniedTable thead tr th').forEach(t => {
+        t.addEventListener('click', sortdenied, false);
+    });
+
+    document.querySelector('#deniednextButton').addEventListener('click', deniednextPage, false);
+    document.querySelector('#deniedprevButton').addEventListener('click', deniedpreviousPage, false);
 }
 
 function renderTable() {
@@ -1781,6 +1878,57 @@ function approvednextPage() {
     if ((approvedcurPage * approvedpageSize) < approveddata.length) approvedcurPage++;
     approvedrenderTable();
 }
+
+
+function deniedrenderTable() {
+    // create html
+    let deniedresult = '';
+    denieddata.filter((row, index) => {
+        let start = (deniedcurPage - 1) * deniedpageSize;
+        let end = deniedcurPage * deniedpageSize;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        deniedresult += `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">${c.Name}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.DateApplied}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.TargetOvertimeDate}</td>
+                            <td class="py-6 px-6 whitespace-nowrap"><button
+                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="view-ot">VIEW</button></td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedBy}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedDate}</td>
+                            <td class="py-5 w-1/6"><button
+                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="denied-ot"> VIEW</button></td>
+                            </tr>`;
+    });
+    deniedtable.innerHTML = deniedresult;
+}
+
+function sortdenied(e) {
+    let thisSort = e.target.dataset.sort;
+    if (deniedsortCol === thisSort) sortAsc = !sortAsc;
+    deniedsortCol = thisSort;
+    console.log('sort dir is ', sortAsc);
+    data.sort((a, b) => {
+        if (a[deniedsortCol] < b[deniedsortCol]) return sortAsc ? 1 : -1;
+        if (a[deniedsortCol] > b[deniedsortCol]) return sortAsc ? -1 : 1;
+        return 0;
+    });
+    deniedrenderTable();
+}
+
+function deniedpreviousPage() {
+    if (deniedcurPage > 1) deniedcurPage--;
+    deniedrenderTable();
+}
+
+function deniednextPage() {
+    if ((deniedcurPage * deniedpageSize) < denieddata.length) deniedcurPage++;
+    deniedrenderTable();
+}
+
+
 const labelsBarChartLateUndertime = [
     "January",
     "February",
@@ -1861,9 +2009,8 @@ const dataBarChartAbsent = {
     datasets: [{
         label: "No. of absent",
         backgroundColor: [
-            "rgb(133, 105, 241)",
-            "rgb(164, 101, 241)",
-            "rgb(101, 143, 241)",
+            "rgb(170,0,97)",
+            "rgb(0,163,173)",
         ],
         borderColor: "hsl(0,0%,100%)",
         data: [10, 4],
