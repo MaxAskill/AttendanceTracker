@@ -19,10 +19,9 @@ use Nexmo\Laravel\Facade\Nexmo;
 class deductionController extends Controller
 {
 
-
     public function getDeductionMaintenance(){
     
-        $deduction = deductionMaintenance::orderby('deductionID','asc')->select('*')->get(); 
+        $deduction = deductionMaintenance::orderby('deductionID','asc')->get(); 
          
         // Fetch all records
         $response['data'] = $deduction;
@@ -37,7 +36,7 @@ class deductionController extends Controller
     function store(Request $request){
 
         $deduction = new deductionMaintenance();
-        $deduction->deductionID = "00005";
+        $deduction->deductionID = "DEDUCTION-0005";
         $deduction->branchID = $request->branchID;
         $deduction->rangeSalary = $request->rangeSalary;
         $deduction->SSS = $request->SSS;
@@ -47,6 +46,10 @@ class deductionController extends Controller
 
         $deduction->save();
         return redirect('accounting')->with('flash_message', 'Deduction added');
+    }
+
+    function primaryKey(){
+
     }
 
 }

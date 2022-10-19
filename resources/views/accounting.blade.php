@@ -64,7 +64,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" onClick="showSalaryMaintenance()" @click="open = !open"
+                                <a href="#" onClick="showSalaryMaintenance()" id="but_fetchall1" @click="open = !open"
                                     class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -75,12 +75,12 @@
                                             fill="none" stroke="currentColor" stroke-linejoin="round"
                                             stroke-width="32" />
                                     </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap" id="but_fetchall">Salary
+                                    <span class="flex-1 ml-3 whitespace-nowrap">Salary
                                         Maintenance</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" onClick="showDeductionMaintenance()" @click="open = !open"
+                                <a href="#" onClick="showDeductionMaintenance()" id="fetchDeductionMaintenance1" @click="open = !open"
                                     class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -93,7 +93,7 @@
                                         <path fill="none" stroke="currentColor" stroke-linecap="round"
                                             stroke-linejoin="round" stroke-width="32" d="M336 256H176" />
                                     </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap" id="fetchDeductionMaintenance">Deduction
+                                    <span class="flex-1 ml-3 whitespace-nowrap">Deduction
                                         Maintenance</span>
                                 </a>
                             </li>
@@ -241,7 +241,7 @@
                     <div class="row-start-1 row-span-1 flex">
                         <h1 class="text-gray-800 text-4xl font-bold px">Salary Maintenance</h1>
                         <!-- Modal toggle -->
-                        <button
+                        <button onClick="generatePrimaryKey()"
                             class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none"
                             data-modal-toggle="authentication-modal">Add New</button>
                         <!-- Main modal -->
@@ -276,7 +276,7 @@
                                                     ID</label>
                                                 <input type="text" name="branchID" id="branchID"
                                                     class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="Branch ID" required="">
+                                                    placeholder="Branch ID" required="" readonly>
                                             </div>
                                             <div class="col-start-2 col-span-1">
                                                 <label for="date"
@@ -354,7 +354,7 @@
                         <div class="flex float-right">
                             <div class="mb-3 xl:w-96">
                                 <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="exampleSearch"
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="searchBox"
                                     placeholder="Search" />
                             </div>
                         </div>
@@ -494,7 +494,7 @@
                         <nav aria-label="Page navigation example w-full">
                             <ul class="inline-flex -space-x-px">
                                 <li>
-                                    <a href="#"
+                                    <a href="#" id="prevButtonSalaryMaintenance"
                                         class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                                 </li>
                                 <li>
@@ -518,7 +518,7 @@
                                         class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="#" id="nextButtonSalaryMaintenance"
                                         class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                                 </li>
                             </ul>
@@ -624,7 +624,7 @@
                         <div class="flex float-right">
                             <div class="mb-3 xl:w-96">
                                 <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="exampleSearch"
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="searchBoxDeduction"
                                     placeholder="Search" />
                             </div>
                         </div>
@@ -638,10 +638,10 @@
                                 <th class="p-4 w-2/6">Deduction ID</th>
                                 <th class="p-4 w-2/6">Branch ID</th>
                                 <th class="p-4 w-2/6">Range Salary</th>
-                                <th class="p-4 w-1/6">SSS</th>
-                                <th class="p-4 w-1/6">PHIC</th>
-                                <th class="p-4 w-1/6">HMDF</th>
-                                <th class="p-4 w-1/6">TOTAL</th>
+                                <th class="p-4 w-2/6">SSS</th>
+                                <th class="p-4 w-2/6">PHIC</th>
+                                <th class="p-4 w-2/6">HMDF</th>
+                                <th class="p-4 w-2/6">TOTAL</th>
                                 <th class="p-4 w-2/6"></th>
                             </tr>
                         </thead>
@@ -751,7 +751,7 @@
                         <nav aria-label="Page navigation example w-full">
                             <ul class="inline-flex -space-x-px">
                                 <li>
-                                    <a href="#"
+                                    <a href="#" id="prevButtonDeductionMaintenance"
                                         class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                                 </li>
                                 <li>
@@ -775,7 +775,7 @@
                                         class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="#" id="nextButtonDeductionMaintenance"
                                         class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                                 </li>
                             </ul>
@@ -1351,9 +1351,9 @@
         <!-- edit-deduction modal -->
         <div id="edit-deduction" aria-hidden="true"
             class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
-            <div class="relative p-4 w-full max-w-md h-full md:h-auto left-96">
+            <div class="modal-dialog relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto ">
                 <!-- Modal content -->
-                <div class="relative top-72 left-96 right-0 border w-full shadow-lg rounded-md bg-white">
+                <div class="relative top-72 left-96 border w-full shadow-lg rounded-md bg-white">
                     <div class="flex justify-end p-2">
                         <button type="button" onClick="closeDeduction()"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
@@ -1471,7 +1471,7 @@
 
         <script type='text/javascript'>
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-        var $salary = [];
+        var primaryKey = "";
         $(document).ready(function() {
 
             // Fetch all records
@@ -1530,6 +1530,7 @@
             if (len > 0) {
                 for (var i = 0; i < len; i++) {
                     var branchID = response['data'][i].branchID;
+                    primaryKey = branchID;
                     var region = response['data'][i].region;
                     var municipalitycity = response['data'][i].municipalitycity;
                     var chain = response['data'][i].chain;
@@ -1561,6 +1562,16 @@
 
                 $("#salaryMaintenanceTable tbody").append(tr_str);
             }
+        }
+        function generatePrimaryKey(){
+
+            console.log(primaryKey);
+            const arr = primaryKey.split("-");
+            arr[1] = "000" + (parseInt(arr[1]) + 1);
+            primaryKey = arr[0] + "-" + arr[1];
+
+            document.getElementById("branchID").value=primaryKey;
+
         }
 
         let modal = document.getElementById('edit-store');
@@ -1651,6 +1662,7 @@
 
         });
 
+        var primaryDeductionID = "";
         // Create table rows
         function createRowsDeduction(response) {
             console.log(response);
@@ -1663,6 +1675,7 @@
             if (len > 0) {
                 for (var i = 0; i < len; i++) {
                     var deductionID = response['data'][i].deductionID;
+                    primaryDeductionID = deductionID;
                     var branchID = response['data'][i].branchID;
                     var rangeSalary = response['data'][i].rangeSalary;
                     var SSS = response['data'][i].SSS;
@@ -1678,9 +1691,7 @@
                         "<td class='p-4 w-2/6'>" + "P" + PHIC + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + HMDF + "</td>" +
                         "<td class='p-4 w-2/6'>" + "P" + total + "</td>" +
-                        "<td class='p-4 w-2/6'>" +
-                        '<button onClick="editDeduction()" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-deduction">Edit</button><button onClick="deleteDeduction()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-deduction">Delete</button>' +
-                        "</td>" +
+                        "<td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>" +
                         "</tr>";
 
                     $("#deductionMaintenanceTable tbody").append(tr_str);
@@ -1692,6 +1703,16 @@
 
                 $("#deductionMaintenanceTable tbody").append(tr_str);
             }
+        }
+
+        function generatePrimaryDeduction(){
+            console.log(primaryDeductionID);
+            const arr = primaryDeductionID.split("-");
+            arr[1] = "000" + (parseInt(arr[1]) + 1);
+            primaryDeductionID = arr[0] + "-" + arr[1];
+
+            document.getElementById("deductionID").value=primaryDeductionID;
+
         }
         </script>
     </body>
@@ -1809,17 +1830,191 @@ function hideEmployeeSalary() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', init, false);
+
+const pageSizeSalaryMaintenance = 10;
+let curPageSalaryMaintenance = 1;
+let tableSalaryMaintenance, dataSalaryMaintenance, sortColSalaryMaintenance;
+let sortAscSalaryMaintenance = false;
+
+const pageSizeDeductionMaintenance = 10;
+let curPageDeductionMaintenance = 1;
+let tableDeductionMaintenance, dataDeductionMaintenance, sortColDeductionMaintenance;
+let sortAscDeductionMaintenance = false;
 async function init() {
+
+    //Salary Maintenance
     $.ajax({
         url: 'getSalaryMaintenance',
         type: 'get',
         dataType: 'json',
         success: function(response) {
 
-            createRows(response);
+            // createRows(response);
+            dataSalaryMaintenance = Object.entries(response);
+            renderTableSalaryMaintenance();
 
         }
     });
     console.log("start initialize");
+    tableSalaryMaintenance = document.querySelector('#salaryMaintenanceTable tbody');
+    document.querySelector('#nextButtonSalaryMaintenance').addEventListener('click', nextPageSalaryMaintenance,
+        false);
+    document.querySelector('#prevButtonSalaryMaintenance').addEventListener('click', previousPageSalaryMaintenance,
+        false);
+
+
+        //Deduction Maintenance
+        $.ajax({
+        url: 'getDeductionMaintenance',
+        type: 'get',
+        dataType: 'json',
+        success: function(response) {
+
+            // createRows(response);
+            dataDeductionMaintenance = Object.entries(response);
+            renderTableDeductionMaintenance();
+
+        }
+    });
+    tableDeductionMaintenance = document.querySelector('#deductionMaintenanceTable tbody');
+    document.querySelector('#nextButtonDeductionMaintenance').addEventListener('click', nextPageDeductionMaintenance,
+        false);
+    document.querySelector('#prevButtonDeductionMaintenance').addEventListener('click', previousPageDeductionMaintenance,
+        false);
 }
+//Salary Maintenance
+function renderTableSalaryMaintenance() {
+    // create html
+
+    // console.log(dataSalaryMaintenance[0][1]);
+    dataSalaryMaintenance = dataSalaryMaintenance[0][1];
+    console.log(dataSalaryMaintenance.length);
+    let result = '';
+    dataSalaryMaintenance.filter((row, index) => {
+        let start = (curPageSalaryMaintenance - 1) * pageSizeSalaryMaintenance;
+        let end = curPageSalaryMaintenance * pageSizeSalaryMaintenance;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${c.region}</td>
+     <td class="py-4 w-2/6">${c.municipalitycity}</td>
+     <td class="py-4 w-2/6">${c.chain}</td>
+     <td class="py-4 w-2/6">${c.branch}</td>
+	 <td class="py-4 w-2/6">${c.basicRate}</td>
+	 <td class="py-4 w-2/6">${c.perHour}</td>
+	 <td class="py-4 w-2/6">${c.perMin}</td>
+     <td class="py-4 w-2/6">${c.COLA}</td>
+     <td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>
+     </tr>`;
+     primaryKey = c.branchID;
+    });
+    tableSalaryMaintenance.innerHTML = result;
+}
+
+function previousPageSalaryMaintenance() {
+    if (curPageSalaryMaintenance > 1) curPageSalaryMaintenance--;
+    renderTableSalaryMaintenance();
+}
+function nextPageSalaryMaintenance() {
+    if ((curPageSalaryMaintenance * pageSizeSalaryMaintenance) < dataSalaryMaintenance.length)
+    curPageSalaryMaintenance++;
+    renderTableSalaryMaintenance();
+}
+
+// declare elements
+const searchBoxSalaryMaintenance = document.getElementById('searchBox');
+const tableSearchSalaryMaintenance = document.getElementById("salaryMaintenanceTable");
+const trsSalaryMaintenance = tableSearchSalaryMaintenance.tBodies[0].getElementsByTagName("tr");
+// add event listener to search box
+searchBoxSalaryMaintenance.addEventListener('keyup', performSearch);
+function performSearch() {
+    // Declare search string 
+    var filter = searchBox.value.toUpperCase();
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsSalaryMaintenance.length; rowI++) {
+        // define the row's cells
+        var tds = trsSalaryMaintenance[rowI].getElementsByTagName("td");
+        // hide the row
+        trsSalaryMaintenance[rowI].style.display = "none";
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trsSalaryMaintenance[rowI].style.display = "";
+                // skip to the next row
+                continue;
+            }
+        }
+    }
+}
+
+
+//Deduction Maintenance
+function renderTableDeductionMaintenance() {
+    // create html
+
+    // console.log(dataSalaryMaintenance[0][1]);
+    dataDeductionMaintenance = dataDeductionMaintenance[0][1];
+    console.log(dataDeductionMaintenance);
+    let result = '';
+    dataDeductionMaintenance.filter((row, index) => {
+        let start = (curPageDeductionMaintenance - 1) * pageSizeDeductionMaintenance;
+        let end = curPageDeductionMaintenance * pageSizeDeductionMaintenance;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.deductionID}</td>
+     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${c.rangeSalary}</td>
+     <td class="py-4 w-2/6">${c.SSS}</td>
+     <td class="py-4 w-2/6">${c.PHIC}</td>
+	 <td class="py-4 w-2/6">${c.HMDF}</td>
+	 <td class="py-4 w-2/6">${c.total}</td>
+     <td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>
+     </tr>`;
+    });
+    tableDeductionMaintenance.innerHTML = result;
+}
+
+function previousPageDeductionMaintenance() {
+    if (curPageDeductionMaintenance > 1) curPageDeductionMaintenance--;
+    renderTableSalaryMaintenance();
+}
+function nextPageDeductionMaintenance() {
+    if ((curPageDeductionMaintenance * pageSizeDeductionMaintenance) < dataDeductionMaintenance.length)
+    curPageDeductionMaintenance++;
+    renderTableDeductionMaintenance();
+}
+
+// declare elements
+const searchBoxDeductionMaintenance = document.getElementById('searchBoxDeduction');
+const tableSearchDeductionMaintenance = document.getElementById("deductionMaintenanceTable");
+const trsDeductionMaintenance = tableSearchDeductionMaintenance.tBodies[0].getElementsByTagName("tr");
+// add event listener to search box
+searchBoxDeductionMaintenance.addEventListener('keyup', performSearchDeduction);
+function performSearchDeduction() {
+    // Declare search string 
+    var filter = searchBoxDeduction.value.toUpperCase();
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsDeductionMaintenance.length; rowI++) {
+        // define the row's cells
+        var tds = trsDeductionMaintenance[rowI].getElementsByTagName("td");
+        // hide the row
+        trsDeductionMaintenance[rowI].style.display = "none";
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trsDeductionMaintenance[rowI].style.display = "";
+                // skip to the next row
+                continue;
+            }
+        }
+    }
+}
+
 </script>
