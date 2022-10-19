@@ -224,12 +224,12 @@
                                 <h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
                             </div>
                             <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                <h1 class="text-lg font-bold">Late</h1>
-                                <h2 class="text-2xl">0 mins</h2>
+                                <h1 class="text-lg font-bold">Late/Undertime</h1>
+                                <h2 class="text-2xl">00 hrs 00 mins</h2>
                             </div>
                             <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                <h1 class="text-lg font-bold">Undertime</h1>
-                                <h2 class="text-2xl">0 mins</h2>
+                                <h1 class="text-lg font-bold">Absent</h1>
+                                <h2 class="text-2xl">0 day/s</h2>
                             </div>
                             <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
                                 <h1 class="text-lg font-bold">Overtime</h1>
@@ -301,7 +301,7 @@
                                 <table id="timeRecord"
                                     class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
                                     <thead
-                                        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                        class="text-ml text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                         <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                                             <th scope="col" class="py-3 px-6" data-sort="Date">Date</th>
                                             <th scope="col" class="py-3 px-6" data-sort="AM">AM In</th>
@@ -417,9 +417,9 @@
 
                     <div class="overflow-x-auto relative  sm:rounded-lg">
                         <table id="attendanceSummaryTable"
-                            class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                            class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
                             <thead
-                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                                     <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Date">Date</th>
                                     <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Time In</th>
@@ -434,11 +434,11 @@
                                         Rendered</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-gray-900">
 
                             </tbody>
                             <tfoot
-                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                                     <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
                                     <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
@@ -537,9 +537,9 @@
                 <div class="row-start-2 row-span-5 col-span-2">
 
                     <div class="overflow-x-auto relative  sm:rounded-lg">
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                        <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
                             <thead
-                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                                     <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Target
                                         Overtime Date</th>
@@ -561,7 +561,7 @@
                             </thead>
                             <tbody>
                                 <tr
-                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" class="text-gray-900">
                                     <td scope="row"
                                         class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         September 21, 2021</td>
@@ -694,131 +694,7 @@
                 </div>
             </div>
         </div>
-        <!--END ATTENDANCE SUMMARY-->
-
-        <div class="grid bg-transparent overflow-hidden drop-shadow-md " id="history" style="display:none">
-            <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
-
-                </div>
-                <div class="row-start-2 row-span-1 flex items-center">
-                    <div class="xl:w-96 xl:h-46">
-                        <input type="text" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchOT"
-                            placeholder="Search" />
-                    </div>
-                    <span class="text-white ml-2"> Sort By:</span>
-                    <div date-rangepicker class="flex items-center pl-5">
-                        <div class="relative">
-
-                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-
-                                <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-
-                            <input name="start" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select date start">
-                        </div>
-                        <span class="mx-4 text-white">to</span>
-                        <div class="relative">
-                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <input name="end" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select date end">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
-                    <thead class="bg-gray-100 flex text-gray w-full pr-5">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="p-4 w-2/6" data-sort="DateApplied">Date Applied</th>
-                            <th class="p-4 w-2/6" data-sort="TargetOvertimeDate">Target Overtime Date</th>
-                            <th class="p-4 w-2/6" data-sort="Overtime">Overtime In</th>
-                            <th class="p-4 w-2/6" data-sort="OvertimeOut">Overtime Out</th>
-                            <th class="p-4 w-2/6" data-sort="TotalOtHours">Total OT Hours</th>
-                            <th class="p-4 w-2/6" data-sort="ApprovedBy">Approved By</th>
-                            <th class="p-4 w-2/6" data-sort="ApprovalDate">Approval Date</th>
-                            <th class="p-4 w-2/6" data-sort="Status">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">September 14, 2021</td>
-                            <td class="py-4 w-2/6">September 08, 2021</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">--</td>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
-                            <td class="py-4 w-2/6">September 18, 2021</td>
-                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="bg-gray-100 flex text-gray w-full pr-4">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="p-4 w-2/6">TOTAL</th>
-                            <th class="p-4 w-2/6">--</th>
-                            <th class="p-4 w-2/6">--</th>
-                            <th class="p-4 w-2/6">--</th>
-                            <th class="p-4 w-2/6">6 hrs 00 hrs</th>
-                            <th class="p-4 w-2/6">--</th>
-                            <th class="p-4 w-2/6">--</th>
-                            <th class="p-4 w-2/6">--</th>
-                        </tr>
-                    </tfoot>
-                </table>
-                <div class="grid justify-center items-center mb-3 bg-white">
-                    <nav aria-label="Page navigation example w-full">
-                        <ul class="inline-flex -space-x-px">
-                            <li>
-                                <a href="#" id="prevButtonOvertimeHistory"
-                                    class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-current="page"
-                                    class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                            </li>
-                            <li>
-                                <a href="#" id="nextButtonOvertimeHistory"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!--end overtime history  -->
+        <!--END overtime history-->
 
         <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
@@ -1181,96 +1057,6 @@
 
     </content>
 
-    <!-- <footer>
-        <div class="w-full md:w-96 md:max-w-full mx-auto">
-            <div class="p-6 border border-gray-300 sm:rounded-md">
-                @if(count($errors) > 0)
-                <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alertt">x</button>
-                    <ul>
-                        @foreach($errors->all as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-                <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alertt">x</button>
-                    <ul>
-                        @foreach($errors->all as $error)
-                        <li>{{ $$message }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @if($message = Session::get('success'))
-
-                @endif
-                <form method="post" action="{{ url('employee/send')}}">
-                    {{csrf_field()}}
-                    <label class="block mb-6">
-                        <span class="text-gray-700">Your name</span>
-                        <input type="text" name="name" class="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " placeholder="Joe Bloggs" />
-                    </label>
-                    <label class="block mb-6">
-                        <span class="text-gray-700">Email address</span>
-                        <input name="email" type="email" class="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " placeholder="joe.bloggs@example.com" required />
-                    </label>
-                    <label class="block mb-6">
-                        <span class="text-gray-700">Message</span>
-                        <textarea name="message" class="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " rows="3" placeholder="Tell us what you're thinking about..."></textarea>
-                    </label>
-                    <div class="mb-6">
-                        <input type="submit" class="
-            h-10
-            px-5
-            text-indigo-100
-            bg-indigo-700
-            rounded-lg
-            transition-colors
-            duration-150
-            focus:shadow-outline
-            hover:bg-indigo-800
-          " name="send" value="Send"/>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </footer> -->
-
     <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
         class="md:visible invisible inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
         id="btn-back-to-top">
@@ -1295,6 +1081,7 @@ function showAttendanceSummary() {
     x.style.display = "block";
     hideDailyTimeRecord();
     hideOT();
+    hideProfile();
 }
 
 function hideDailyTimeRecord() {
@@ -1310,6 +1097,7 @@ function showDailyTimeRecord() {
 
     hideAttendanceSummary();
     hideOT();
+    hideProfile();
 }
 
 function hideAttendanceSummary() {
@@ -1323,6 +1111,7 @@ function showOT() {
     x.style.display = "block";
     hideAttendanceSummary();
     hideDailyTimeRecord();
+    hideProfile();
 }
 
 function hideOT() {
@@ -1895,13 +1684,13 @@ function renderTableAttendanceSummary() {
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-     <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">${c.Date}</td>
-     <td class="py-6 px-6 whitespace-nowrap">${c.TimeIn}</td>
-     <td class="py-6 px-6 whitespace-nowrap">${c.TimeOut}</td>
-     <td class="py-6 px-6 whitespace-nowrap">${c.Late}</td>
-	 <td class="py-6 px-6 whitespace-nowrap">${c.Undertime}</td>
-	 <td class="py-6 px-6 whitespace-nowrap">${c.Overtime}</td>
-	 <td class="py-6 px-6 whitespace-nowrap">${c.HoursRendered}</td>
+     <td scope="row" class="py-5 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">${c.Date}</td>
+     <td class="py-5 px-6 whitespace-nowrap">${c.TimeIn}</td>
+     <td class="py-5 px-6 whitespace-nowrap">${c.TimeOut}</td>
+     <td class="py-5 px-6 whitespace-nowrap">${c.Late}</td>
+	 <td class="py-5 px-6 whitespace-nowrap">${c.Undertime}</td>
+	 <td class="py-5 px-6 whitespace-nowrap">${c.Overtime}</td>
+	 <td class="py-5 px-6 whitespace-nowrap">${c.HoursRendered}</td>
      </tr>`;
     });
     tableAttendanceSummary.innerHTML = result;
@@ -2011,23 +1800,23 @@ function renderTableOvertimeHistory() {
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${c.DateApplied}</td>
-     <td class="py-4 w-2/6">${c.TargetOvertimeDate}</td>
-     <td class="py-4 w-2/6">${c.OvertimeIn}</td>
-     <td class="py-4 w-2/6">${c.OvertimeOut}</td>
-	 <td class="py-4 w-2/6">${c.TotalOtHours}</td>
-	 <td class="py-4 w-2/6">${c.ApprovedBy}</td>
-	 <td class="py-4 w-2/6">${c.ApprovalDate}</td>
-     <td class="py-4 w-2/6 font-bold" data-modal-toggle="denied-ot">${c.Status}</td>`
+     <td class="py-5 w-2/6">${c.DateApplied}</td>
+     <td class="py-5 w-2/6">${c.TargetOvertimeDate}</td>
+     <td class="py-5 w-2/6">${c.OvertimeIn}</td>
+     <td class="py-5 w-2/6">${c.OvertimeOut}</td>
+	 <td class="py-5 w-2/6">${c.TotalOtHours}</td>
+	 <td class="py-5 w-2/6">${c.ApprovedBy}</td>
+	 <td class="py-5 w-2/6">${c.ApprovalDate}</td>
+     <td class="py-5 w-2/6 font-bold" data-modal-toggle="denied-ot">${c.Status}</td>`
 
         if (c.Status == "Approved") {
-            `<td class="py-4 w-2/6 font-bold font-themecolor">${c.Status}</td>`
+            `<td class="py-5 w-2/6 font-bold font-themecolor">${c.Status}</td>`
             console.log("Approved Status");
         } else if (c.Status == "Denied") {
-            `<td class="py-4 w-2/6 font-bold font-pantone">${c.Status}</td>`
+            `<td class="py-5 w-2/6 font-bold font-pantone">${c.Status}</td>`
             console.log("Denied Status");
         } else {
-            `<td class="py-4 w-2/6 font-bold text-orange-500">${c.Status}</td>`
+            `<td class="py-5 w-2/6 font-bold text-orange-500">${c.Status}</td>`
             console.log("Pending Status");
         }
 

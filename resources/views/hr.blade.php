@@ -41,6 +41,29 @@
                 <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
                     <ul class="space-y-2">
                         <li>
+                            <a href="#" onClick="showDashboard()" @click="open = !open"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <title>Grid</title>
+                                    <rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="#" onClick="showEmployeeList()" @click="open = !open"
                                 class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +142,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" onClick="showProfile()"
+                            <a href="#" onClick="showReports()"
                                 class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -178,7 +201,95 @@
     </div>
 
     <content class="xl:w-10/12 sm:w-full px-10 mt-5">
-        <div id="employeeMasterList" class="grid bg-white sm:w-full rounded-lg overflow-hidden" style="display: block">
+        <div id="Dashboard" class="flex  overflow-hidden rounded-lg mb-5" style="display: block">
+            <div class="grid grid-rows-auto grid-cols-2 gap-5">
+                <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 WORKING LATE OR UNDERERTIME EMPLOYEES 
+                    </div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarLateUndertime"></canvas>
+                </div>
+                <div class="start-col-2 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES IN TERMS OF HOURS RENDERED
+                    </div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarHoursRendered"></canvas>
+                </div>
+                <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES WITH THE MOST ABSENCES</div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarAbsent"></canvas>
+                </div>
+                <div class="start-col-2 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES WITH A LOT OF OVERTIME</div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarOvertime"></canvas>
+                </div>
+            </div>
+        </div>
+        <!--end dashboard -->
+
+        <div id="employeeMasterList" class="grid bg-white sm:w-full rounded-lg overflow-hidden" style="display: none">
             <div class="grid grid-rows-1 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                 <div class="row-start-1 row-span-1 flex">
                     <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
@@ -760,8 +871,7 @@
                     </div>
                 </div>
                 <div>
-                    <table id="attendanceSummaryTable"
-                        class="text-center w-full bg-white hover:table-fixed ">
+                    <table id="attendanceSummaryTable" class="text-center w-full bg-white hover:table-fixed ">
                         <thead class="bg-gray-100 flex text-gray w-full">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <th class="p-4 w-2/6" data-sort="Name">Name</th>
@@ -780,58 +890,7 @@
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td colspan="9" class="py-4 w-2/6"><i>Loading...</i></td>
                             </tr>
-                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">08 : 34 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">09 : 00 am</td>
-                                <td class="py-4 w-2/6">02 : 07 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Doña Victorina</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">09 : 00 am</td>
-                                <td class="py-4 w-2/6">02 : 07 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Don Anastacio</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">08 : 28 am</td>
-                                <td class="py-4 w-2/6">02 : 07 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
-                            </tr> -->
+                        </tbody>
                     </table>
                     <div class="grid justify-center items-center mb-3 bg-white">
                         <nav aria-label="Page navigation example w-full">
@@ -1613,7 +1672,8 @@
                 </div>
             </div>
             <!--end profile  -->
-            <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-t-lg">
+            <div
+                class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-t-lg">
                 <div class="row-start-1 row-span-1 flex">
                     <h1 class="text-white text-4xl font-bold px">Employee's Overtime Application</h1>
 
@@ -1674,9 +1734,6 @@
                         </tr>
                     </thead>
                     <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
-                        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                             <td colspan="8" class="py-4 w-2/6"><i>Loading...</i></td>
-                        </tr> -->
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <td class="py-4 w-2/6">September 21, 2021</td>
                             <td class="py-4 w-2/6">September 19, 2021</td>
@@ -1788,6 +1845,12 @@
             </div>
         </div>
         <!--end individual overtime history-->
+
+        <div class="grid overflow-hidden rounded-lg py-10 px-10" id="reports" style="display:none">
+        <img src="img\underconstruction.png" class="w-1/2 mx-80"
+                        alt="Sample image" />
+        </div>
+        <!--end reports  -->
 
         <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
@@ -3142,6 +3205,7 @@
 
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
@@ -3222,6 +3286,25 @@ function backToTop() {
     // 		}
 }
 
+function showDashboard() {
+    var x = document.getElementById("Dashboard");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    }
+    hideProfile();
+    hideEmployeeList();
+    hideEmployeeSalary();
+    hideOTSummary();
+    hideReports();
+}
+
+function hideDashboard() {
+    var x = document.getElementById("Dashboard");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }
+}
+
 function showindividualAttendance() {
     var x = document.getElementById("individualattendanceSummary");
     if (x.style.display === "none") {
@@ -3243,10 +3326,12 @@ function showattendanceSummary() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
+    hideDashboard();
     hideProfile();
     hideEmployeeList();
     hideEmployeeSalary();
     hideOTSummary();
+    hideReports();
 }
 
 function hideattendanceSummary() {
@@ -3275,10 +3360,12 @@ function showOTSummary() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
+    hideDashboard();
     hideProfile();
     hideEmployeeList();
     hideEmployeeSalary();
     hideattendanceSummary();
+    hideReports();
 }
 
 function hideOTSummary() {
@@ -3293,11 +3380,12 @@ function showEmployeeList() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
+    hideDashboard();
     hideProfile();
     hideEmployeeSalary();
     hideattendanceSummary();
     hideOTSummary();
-
+    hideReports();
 }
 
 function showEmployeeSalary() {
@@ -3307,10 +3395,12 @@ function showEmployeeSalary() {
         console.log("hide employee list")
     }
 
+    hideDashboard();
     hideProfile();
     hideEmployeeList();
     hideattendanceSummary();
     hideOTSummary();
+    hideReports();
 }
 
 function hideEmployeeList() {
@@ -3331,16 +3421,38 @@ function hideEmployeeSalary() {
 
 }
 
+function showReports() {
+    var x = document.getElementById("reports");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        console.log("hide profile");
+    }
+    hideDashboard();
+    hideEmployeeList();
+    hideEmployeeSalary();
+    hideattendanceSummary();
+    hideOTSummary();
+}
+
+function hideReports() {
+    var x = document.getElementById("reports");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }
+}
+
 function showProfile() {
     var x = document.getElementById("profile");
     if (x.style.display === "none") {
         x.style.display = "block";
         console.log("hide profile");
     }
+    hideDashboard();
     hideEmployeeList();
     hideEmployeeSalary();
     hideattendanceSummary();
     hideOTSummary();
+    hideReports();
 }
 
 function hideProfile() {
@@ -3955,4 +4067,116 @@ function printDataEmployeeAttendance() {
     newWin.close();
 
 }
+
+const labelsBarChartLateUndertime = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartLateUndertime = {
+    labels: labelsBarChartLateUndertime,
+    datasets: [{
+        label: "Minutes",
+        backgroundColor: "hsl(325.8,100%,33.3%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [160, 123, 110, 75, 73],
+    }, ],
+};
+
+const configBarChartLateUndertime = {
+    type: "bar",
+    data: dataBarChartLateUndertime,
+    options: {},
+};
+
+var chartBarLateUndertime = new Chart(
+    document.getElementById("chartBarLateUndertime"),
+    configBarChartLateUndertime
+);
+
+const labelsBarChartHoursRendered = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartHoursRendered = {
+    labels: labelsBarChartHoursRendered,
+    datasets: [{
+        label: "Minutes",
+        backgroundColor: "hsl(183.5,100%,33.9%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [600, 583, 573, 540, 490],
+    }, ],
+};
+
+const configBarChartHoursRendered = {
+    type: "bar",
+    data: dataBarChartHoursRendered,
+    options: {},
+};
+
+var chartBarHoursRendered = new Chart(
+    document.getElementById("chartBarHoursRendered"),
+    configBarChartHoursRendered
+);
+
+const labelsBarChartAbsent = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartAbsent = {
+    labels: labelsBarChartAbsent,
+    datasets: [{
+        label: "No. of absent",
+        backgroundColor: "hsl(325.8,100%,33.3%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [10, 4, 3, 3, 2],
+    }, ],
+};
+
+const configBarChartAbsent = {
+    type: "bar",
+    data: dataBarChartAbsent,
+    options: {},
+};
+
+var chartBarAbsent = new Chart(
+    document.getElementById("chartBarAbsent"),
+    configBarChartAbsent
+);
+
+const labelsBarChartOvertime = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartOvertime = {
+    labels: labelsBarChartOvertime,
+    datasets: [{
+        label: "Minutes",
+        backgroundColor: "hsl(183.5,100%,33.9%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [110, 96, 78, 65, 60],
+    }, ],
+};
+
+const configBarChartOvertime = {
+    type: "bar",
+    data: dataBarChartOvertime,
+    options: {},
+};
+
+var chartBarOvertime = new Chart(
+    document.getElementById("chartBarOvertime"),
+    configBarChartOvertime
+);
 </script>

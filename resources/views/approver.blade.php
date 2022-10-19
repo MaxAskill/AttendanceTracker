@@ -41,6 +41,29 @@
                 <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
                     <ul class="space-y-2">
                         <li>
+                            <a href="#" onClick="showDashboard()" @click="open = !open"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <title>Grid</title>
+                                    <rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="#" onClick="showPending()" @click="open = !open"
                                 class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +163,64 @@
     </div>
 
     <content class="xl:w-10/12 sm:w-full px-10 mt-5">
-        <div id="pending" class="grid bg-yellow-400 overflow-hidden  rounded-lg" style="display: block">
+        <div id="Dashboard" class="flex  overflow-hidden rounded-lg mb-5" style="display: block">
+            <div class="grid grid-rows-auto grid-cols-2 gap-5 px-32">
+                <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">NUMBER OF DENIED APPLICATIONS 
+                    </div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>Year</option>
+                        <option value="January">2018</option>
+                        <option value="February">2019</option>
+                        <option value="March">2020</option>
+                        <option value="April">2021</option>
+                        <option value="May">2022</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarLateUndertime"></canvas>
+                </div>
+                <div class="start-col-2 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">NUMBER OF APPROVED APPLICATIONS
+                    </div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>Year</option>
+                        <option value="January">2018</option>
+                        <option value="February">2019</option>
+                        <option value="March">2020</option>
+                        <option value="April">2021</option>
+                        <option value="May">2022</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarHoursRendered"></canvas>
+                </div>
+                <div
+                    class="start-col-1 col-span-2  shadow-lg rounded-lg overflow-hidden border-2 border-gray-900 text-center mx-96">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOTAL NUMBER OF APPLICATIONS</div>
+                    <div class="mx-20">
+                        <select name="Date" id="Date"
+                            class="mx-20 bg-transparent w-2/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                            <option hidden selected>Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                        <canvas class="p-5" id="chartBarAbsent"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end dashboard -->
+
+        <div id="pending" class="grid bg-yellow-400 overflow-hidden  rounded-lg" style="display: none">
             <!--Start Pending Overtime Application-->
             <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                 <div class="row-start-1 row-span-1 flex">
@@ -153,50 +233,38 @@
                                 class="text-white font-bold align-middle hover:align-top text-xl">No. of
                                 Application:
                                 <label class="text-4xl">1<label></span></div>
-                        <div class="row-start-1 col-span-1"><input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid transition ease-in-out
-								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
+                        <div class="row-start-1 col-span-1"><input type="text" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid transition ease-in-out
+								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchBox"
                                 placeholder="Search" /></div>
                     </div>
                 </div>
             </div>
             <div>
-                <table class="text-center w-full bg-white text-center hover:table-fixed">
-                    <thead class="bg-gray-100 flex text-gray w-full">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="py-4 w-2/6">Name</th>
-                            <th class="py-4 w-2/6">Date Applied</th>
-                            <th class="py-4 w-2/6">Target Overtime Date</th>
-                            <th class="py-4 w-2/6">Duration</th>
-                            <th class="py-4 w-2/6">Reason</th>
-                            <th class="py-4 w-2/6">Remarks</th>
+                <table id="pendingTable"
+                    class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied
+                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TargetOvertimeDate">
+                                Target
+                                Overtime Date</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Duration">Duration</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Reason">Reason</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Remarks">Remarks</th>
                         </tr>
                     </thead>
-                    <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                    <tbody class="bg-grey-light flex flex-col w-full " style="height: 72vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 21, 2021</td>
-                            <td class="py-4 w-2/6">September 19, 2021</td>
-                            <td class="py-4 w-2/6">2 hrs 20 mins</td>
-                            <td class="py-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></td>
-                            <td class="py-4 w-2/6">
-                                <button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="approved-modal">Approve</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="deny-ot">Deny</button>
-                            </td>
-                        </tr>
+
+                    <tbody>
                     </tbody>
+
                 </table>
                 <div class="grid justify-center items-center mb-3 bg-white">
                     <nav aria-label="Page navigation example w-full">
                         <ul class="inline-flex -space-x-px">
                             <li>
-                                <a href="#"
+                                <a href="#" id="nextButton"
                                     class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                             </li>
                             <li>
@@ -220,7 +288,7 @@
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="#" id="prevButton"
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                             </li>
                         </ul>
@@ -240,7 +308,7 @@
                 <div class="row-start-2 row-span-1 flex items-center">
                     <div class="xl:w-96 xl:h-46">
                         <input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="exampleSearch"
+								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchapproved"
                             placeholder="Search" />
                     </div>
                     <div class="row-start-2 row-span-1 flex">
@@ -281,53 +349,27 @@
                 </div>
             </div>
             <div>
-                <table class="w-full bg-white hover:table-fixed">
-                    <thead class="bg-gray-100 flex text-gray w-full">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="py-4 w-2/6">Name</th>
-                            <th class="py-4 w-2/6">Date Applied</th>
-                            <th class="py-4 w-2/6">Target Overtime Date</th>
-                            <th class="py-4 w-2/6">Duration</th>
-                            <th class="py-4 w-1/6">Reason</th>
-                            <th class="py-4 w-3/6">Approved By</th>
-                            <th class="py-4 w-2/6">Approved Date</th>
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed"
+                    id="approvedTable">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied
+                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TargetOvertimeDate">
+                                Target
+                                Overtime Date</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Duration">Duration</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Reason">Reason</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedBy">Approved By
+                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedDate">Approved
+                                Date
+                            </th>
                         </tr>
                     </thead>
-                    <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                    <tbody class="bg-grey-light flex flex-col w-full text-center" style="height: 73vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 16, 2021</td>
-                            <td class="py-4 w-2/6">September 18, 2021</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <th class="py-4 w-1/6"><button
-                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></th>
-                            <td class="py-4 w-3/6">Kapitan Tiago</td>
-                            <td class="py-4 w-2/6">September 16, 2021</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 14, 2021</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <th class="py-4 w-1/6"><button
-                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></th>
-                            <td class="py-4 w-3/6">Kapitan Tiago</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 07, 2021</td>
-                            <td class="py-4 w-2/6">September 08, 2021</td>
-                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                            <th class="py-4 w-1/6"><button
-                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></th>
-                            <td class="py-4 w-3/6">Kapitan Tiago</td>
-                            <td class="py-4 w-2/6">September 07, 2021</td>
-                        </tr>
+                    <tbody>
+                    </tbody>
 
                 </table>
                 <div class="grid justify-center items-center mb-3 bg-white">
@@ -453,11 +495,14 @@
                                             <select name="Branch" id="Branch"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Branch</option>
-                                                <option value="Vista Mall Department Store">Vista Mall Department Store
+                                                <option value="Vista Mall Department Store">Vista Mall Department
+                                                    Store
                                                 </option>
-                                                <option value="Robinsons Department Store">Robinsons Department Store
+                                                <option value="Robinsons Department Store">Robinsons Department
+                                                    Store
                                                 </option>
-                                                <option value="Waltermart Department Store">Waltermart Department Store
+                                                <option value="Waltermart Department Store">Waltermart Department
+                                                    Store
                                                 </option>
                                                 <option value="Fisher Mall Department Store">Fisher Mall Department
                                                     Store</option>
@@ -723,39 +768,39 @@
                 <table class="w-full bg-white hover:table-fixed">
                     <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="py-4 w-2/6">Name</th>
-                            <th class="py-4 w-2/6">Date Applied</th>
-                            <th class="py-4 w-2/6">Target Overtime Date</th>
-                            <th class="py-4 w-2/6">Reason</th>
-                            <th class="py-4 w-2/6">Denied By</th>
-                            <th class="py-4 w-2/6">Denied Date</th>
-                            <th class="py-4 w-1/6">Remarks</th>
+                            <th class="py-5 w-2/6">Name</th>
+                            <th class="py-5 w-2/6">Date Applied</th>
+                            <th class="py-5 w-2/6">Target Overtime Date</th>
+                            <th class="py-5 w-2/6">Reason</th>
+                            <th class="py-5 w-2/6">Denied By</th>
+                            <th class="py-5 w-2/6">Denied Date</th>
+                            <th class="py-5 w-1/6">Remarks</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-grey-light flex flex-col  w-full text-center" style="height: 73vh;">
+                    <tbody class="text-base bg-grey-light flex flex-col  w-full text-center" style="height: 73vh;">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 14, 2021</td>
-                            <td class="py-4 w-2/6">September 17, 2021</td>
-                            <th class="py-4 w-2/6"><button
+                            <td class="py-5 w-2/6">Crisostomo Ibarra</td>
+                            <td class="py-5 w-2/6">September 14, 2021</td>
+                            <td class="py-5 w-2/6">September 17, 2021</td>
+                            <th class="py-5 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="view-ot">VIEW</button></th>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
-                            <td class="py-4 w-2/6">September 15, 2021</td>
-                            <th class="py-4 w-1/6"><button
+                            <td class="py-5 w-2/6">Maria D. Clara</td>
+                            <td class="py-5 w-2/6">September 15, 2021</td>
+                            <th class="py-5 w-1/6"><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="denied-ot"> VIEW</button></th>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                            <td class="py-4 w-2/6">September 08, 2021</td>
-                            <td class="py-4 w-2/6">September 14, 2021</td>
-                            <th class="py-4 w-2/6"><button
+                            <td class="py-5 w-2/6">Crisostomo Ibarra</td>
+                            <td class="py-5 w-2/6">September 08, 2021</td>
+                            <td class="py-5 w-2/6">September 14, 2021</td>
+                            <th class="py-5 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="view-ot">VIEW</button></th>
-                            <td class="py-4 w-2/6">Maria D. Clara</td>
-                            <td class="py-4 w-2/6">September 10, 2021</td>
-                            <th class="py-4 w-1/6"><button
+                            <td class="py-5 w-2/6">Maria D. Clara</td>
+                            <td class="py-5 w-2/6">September 10, 2021</td>
+                            <th class="py-5 w-1/6"><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="denied-ot"> VIEW</button></th>
                         </tr>
@@ -934,7 +979,9 @@
             </div>
         </div>
         <!--end profile  -->
+
     </content>
+
     <div id="approved-modal" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">
         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
@@ -974,6 +1021,7 @@
         </div>
     </div>
     <!--end approved modal-->
+
     <!-- Deny modal -->
     <div id="deny-ot" aria-hidden="true"
         class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
@@ -1359,6 +1407,7 @@
 
 <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
 <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </html>
 
@@ -1397,14 +1446,27 @@ function backToTop() {
     document.documentElement.scrollTop = 0;
 }
 
+function showDashboard() {
+    var x = document.getElementById("Dashboard");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    }
+    hidePending();
+    hideApproved();
+    hideDenied();
+    hideSchedule();
+    hideProfile();
+}
 
 function showPending() {
     var x = document.getElementById("pending");
     if (x.style.display === "none") {
         x.style.display = "block";
     }
+    hideDashboard();
     hideApproved();
     hideDenied();
+    hideSchedule();
     hideProfile();
 }
 
@@ -1413,7 +1475,7 @@ function showApproved() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
-
+    hideDashboard();
     hidePending();
     hideDenied();
     hideSchedule();
@@ -1425,7 +1487,7 @@ function showDenied() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
-
+    hideDashboard();
     hidePending();
     hideApproved();
     hideSchedule();
@@ -1437,7 +1499,7 @@ function showSchedule() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
-
+    hideDashboard();
     hidePending();
     hideApproved();
     hideDenied();
@@ -1450,10 +1512,18 @@ function showProfile() {
         x.style.display = "block";
         console.log("hide profile");
     }
+    hideDashboard();
     hidePending();
     hideApproved();
     hideDenied();
     hideSchedule();
+}
+
+function hideDashboard() {
+    var x = document.getElementById("Dashboard");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }
 }
 
 function hidePending() {
@@ -1490,4 +1560,324 @@ function hideProfile() {
         x.style.display = "none";
     }
 }
+
+// declare elements
+const searchBox = document.getElementById('searchBox');
+const tableSearchAttendanceSummary = document.getElementById("pendingTable");
+const trs = tableSearchAttendanceSummary.tBodies[0].getElementsByTagName("tr");
+
+// add event listener to search box
+searchBox.addEventListener('keyup', performSearch);
+
+
+function performSearch() {
+
+    // Declare search string 
+    var filter = searchBox.value.toUpperCase();
+
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trs.length; rowI++) {
+
+        // define the row's cells
+        var tds = trs[rowI].getElementsByTagName("td");
+        // hide the row
+        trs[rowI].style.display = "none";
+
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+
+                // show the row
+                trs[rowI].style.display = "";
+
+                // skip to the next row
+                continue;
+
+            }
+        }
+    }
+
+}
+
+respPendingApplication = [{
+    "Name": "Crisostomo Ibarra",
+    "DateApplied": "September 21, 2021",
+    "TargetOvertimeDate": "September 19, 2021",
+    "Duration": "2 hrs 20 mins",
+}, ]
+
+respApprovedApplication = [{
+        "Name": "Crisostomo Ibarra",
+        "DateApplied": "September 16, 2021",
+        "TargetOvertimeDate": "September 18, 2021",
+        "Duration": "2 hrs 00 mins",
+        "ApprovedBy": "Kapitan Tiago",
+        "ApprovedDate": "September 16, 2021"
+    },
+    {
+        "Name": "Crisostomo Ibarra",
+        "DateApplied": "September 14, 2021",
+        "TargetOvertimeDate": "September 15, 2021",
+        "Duration": "2 hrs 00 mins",
+        "ApprovedBy": "Kapitan Tiago",
+        "ApprovedDate": "September 15, 2021"
+    },
+    {
+        "Name": "Crisostomo Ibarra",
+        "DateApplied": "September 07, 2021",
+        "TargetOvertimeDate": "September 08, 2021",
+        "Duration": "2 hrs 00 mins",
+        "ApprovedBy": "Kapitan Tiago",
+        "ApprovedDate": "September 07, 2021"
+    }
+]
+
+document.addEventListener('DOMContentLoaded', init, false);
+
+let data, table, sortCol;
+let sortAsc = false;
+const pageSize = 3;
+let curPage = 1;
+
+let approveddata, approvedtable, approvedsortCol;
+let approvedsortAsc = false;
+const approvedpageSize = 3;
+let approvedcurPage = 1;
+
+async function init() {
+
+    // Select the table (well, tbody)
+    table = document.querySelector('#pendingTable tbody');
+    // get the cats
+    //   let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+    data = respPendingApplication;
+    renderTable();
+
+    // listen for sort clicks
+    document.querySelectorAll('#pendingTable thead tr th').forEach(t => {
+        t.addEventListener('click', sort, false);
+    });
+    console.log(respApprovedApplication);
+
+    document.querySelector('#nextButton').addEventListener('click', nextPage, false);
+    document.querySelector('#prevButton').addEventListener('click', previousPage, false);
+
+
+
+
+    // Select the table (well, tbody)
+    approvedtable = document.querySelector('#approvedTable tbody');
+    // get the cats
+    //   let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
+    console.log(respApprovedApplication);
+    approveddata = respApprovedApplication;
+    approvedrenderTable();
+
+    // listen for sort clicks
+    document.querySelectorAll('#approvedTable thead tr th').forEach(t => {
+        t.addEventListener('click', sortapproved, false);
+    });
+
+    document.querySelector('#approvednextButton').addEventListener('click', approvednextPage, false);
+    document.querySelector('#approvedprevButton').addEventListener('click', approvedpreviousPage, false);
+}
+
+function renderTable() {
+    // create html
+    let result = '';
+    data.filter((row, index) => {
+        let start = (curPage - 1) * pageSize;
+        let end = curPage * pageSize;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">${c.Name}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.DateApplied}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.TargetOvertimeDate}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.Duration}</td>
+                            <td class="py-6 px-6 whitespace-nowrap"><button
+                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="view-ot">VIEW</button></td>
+                            <td class="py-6 px-6 whitespace-nowrap">
+                            <button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="approved-modal">Approve</button>
+                            <button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="deny-ot">Deny</button>
+                            </td>
+                            </tr>`;
+    });
+    table.innerHTML = result;
+}
+
+function sort(e) {
+    let thisSort = e.target.dataset.sort;
+    if (sortCol === thisSort) sortAsc = !sortAsc;
+    sortCol = thisSort;
+    console.log('sort dir is ', sortAsc);
+    data.sort((a, b) => {
+        if (a[sortCol] < b[sortCol]) return sortAsc ? 1 : -1;
+        if (a[sortCol] > b[sortCol]) return sortAsc ? -1 : 1;
+        return 0;
+    });
+    renderTable();
+}
+
+function previousPage() {
+    if (curPage > 1) curPage--;
+    renderTable();
+}
+
+function nextPage() {
+    if ((curPage * pageSize) < data.length) curPage++;
+    renderTable();
+}
+
+
+
+function approvedrenderTable() {
+    // create html
+    let approvedresult = '';
+    approveddata.filter((row, index) => {
+        let start = (approvedcurPage - 1) * approvedpageSize;
+        let end = approvedcurPage * approvedpageSize;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        approvedresult += `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">${c.Name}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.DateApplied}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.TargetOvertimeDate}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.Duration}</td>
+                            <td class="py-6 px-6 whitespace-nowrap"><button
+                                    class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                    data-modal-toggle="view-ot">VIEW</button></td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedBy}</td>
+                            <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedDate}</td>
+                            </tr>`;
+    });
+    approvedtable.innerHTML = approvedresult;
+}
+
+function sortapproved(e) {
+    let thisSort = e.target.dataset.sort;
+    if (approvedsortCol === thisSort) sortAsc = !sortAsc;
+    approvedsortCol = thisSort;
+    console.log('sort dir is ', sortAsc);
+    data.sort((a, b) => {
+        if (a[approvedsortCol] < b[approvedsortCol]) return sortAsc ? 1 : -1;
+        if (a[approvedsortCol] > b[approvedsortCol]) return sortAsc ? -1 : 1;
+        return 0;
+    });
+    approvedrenderTable();
+}
+
+function approvedpreviousPage() {
+    if (approvedcurPage > 1) approvedcurPage--;
+    approvedrenderTable();
+}
+
+function approvednextPage() {
+    if ((approvedcurPage * approvedpageSize) < approveddata.length) approvedcurPage++;
+    approvedrenderTable();
+}
+const labelsBarChartLateUndertime = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+const dataBarChartLateUndertime = {
+    labels: labelsBarChartLateUndertime,
+    datasets: [{
+        label: "No. of Denied Application",
+        backgroundColor: "hsl(325.8,100%,33.3%)",
+        // borderColor: "hsl(0,0%,100%)",
+        data: [15, 45, 35, 75, 73, 67, 89, 23, 53, 54, 60, 71],
+    }, ],
+};
+
+const configBarChartLateUndertime = {
+    type: "line",
+    data: dataBarChartLateUndertime,
+    options: {},
+};
+
+var chartBarLateUndertime = new Chart(
+    document.getElementById("chartBarLateUndertime"),
+    configBarChartLateUndertime
+);
+
+const labelsBarChartHoursRendered = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+
+const dataBarChartHoursRendered = {
+    labels: labelsBarChartHoursRendered,
+    datasets: [{
+        label: "Minutes",
+        backgroundColor: "hsl(183.5,100%,33.9%)",
+        // borderColor: "hsl(0,0%,100%)",
+        data: [600, 583, 573, 540, 490],
+    }, ],
+};
+
+const configBarChartHoursRendered = {
+    type: "bar",
+    data: dataBarChartHoursRendered,
+    options: {},
+};
+
+var chartBarHoursRendered = new Chart(
+    document.getElementById("chartBarHoursRendered"),
+    configBarChartHoursRendered
+);
+
+const labelsBarChartAbsent = [
+    "Denied",
+    "Approved",
+];
+const dataBarChartAbsent = {
+    labels: labelsBarChartAbsent,
+    datasets: [{
+        label: "No. of absent",
+        backgroundColor: [
+            "rgb(133, 105, 241)",
+            "rgb(164, 101, 241)",
+            "rgb(101, 143, 241)",
+        ],
+        borderColor: "hsl(0,0%,100%)",
+        data: [10, 4],
+    }, ],
+};
+
+const configBarChartAbsent = {
+    type: "pie",
+    data: dataBarChartAbsent,
+    options: {},
+};
+
+var chartBarAbsent = new Chart(
+    document.getElementById("chartBarAbsent"),
+    configBarChartAbsent
+);
 </script>
