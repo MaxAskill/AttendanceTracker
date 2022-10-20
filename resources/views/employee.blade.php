@@ -1213,15 +1213,16 @@ buttonStart.onclick = function() {
     time_in();
 
     if (buttonStart.value === "Check In") {
-        buttonStart.value = "LB IN";
-    } else if (buttonStart.value === "LB IN") {
-        buttonStart.value = "LB OUT";
-    } else if (buttonStart.value === "LB OUT") {
-        buttonStart.value = "CB IN";
-    } else if (buttonStart.value === "CB IN") {
-        buttonStart.value = "CB OUT";
-    } else if (buttonStart.value === "CB OUT") {
-        buttonStart.value = "PM OUT";
+        buttonStart.value = "Check Out";
+        document.getElementById("timeschedule").disabled = true;
+    } else if (buttonStart.value === "Check Out") {
+        buttonStart.value = "Check In";
+    } else if (buttonStart.value === "Check In") {
+        buttonStart.value = "Check Out";
+    } else if (buttonStart.value === "Check Out") {
+        buttonStart.value = "Check In";
+    } else if (buttonStart.value === "Check In") {
+        buttonStart.value = "Check Out";
     }
 
     // hideButton();
@@ -1317,12 +1318,13 @@ function time_in() {
     if (ctr == 1) {
 
         document.getElementById('timedIn').innerHTML = rtClock.toLocaleTimeString('PST');
-        document.getElementById('amIn').innerHTML =
-            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        checkInAm =  hours + " : " + minutes + " : " + seconds + " " + amPm;
 
+        document.getElementById('amIn').innerHTML = checkInAm;
+           
         hours = parseInt(hours) + 9;
 
-        timeAmPm = (hours <= 12 && amPm == "PM") ? "PM" : "AM";
+        timeAmPm = (hours <= 12) ? "AM" : "PM";
 
         hours = (hours > 12) ? hours - 12 : hours;
 
@@ -1331,27 +1333,27 @@ function time_in() {
         ctr = ctr + 1;
         console.log("AM In", ctr);
     } else if (ctr == 2) {
-        document.getElementById('lbIn').innerHTML =
-            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        checkOutAm = hours + " : " + minutes + " : " + seconds + " " + amPm;
+        document.getElementById('lbIn').innerHTML = checkOutAm;
         ctr = ctr + 1;
     } else if (ctr == 3) {
-        document.getElementById('lbOut').innerHTML =
-            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        checkInPm =  hours + " : " + minutes + " : " + seconds + " " + amPm;
+        document.getElementById('lbOut').innerHTML = checkInPm;
         ctr = ctr + 1;
     } else if (ctr == 4) {
-        document.getElementById('cbIn').innerHTML =
-            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        coffeeBreakIn = hours + " : " + minutes + " : " + seconds + " " + amPm;
+        document.getElementById('cbIn').innerHTML = coffeeBreakIn;       
         ctr = ctr + 1;
     } else if (ctr == 5) {
-        document.getElementById('cbOut').innerHTML =
-            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        coffeeBreakOut = hours + " : " + minutes + " : " + seconds + " " + amPm;
+        document.getElementById('cbOut').innerHTML = coffeeBreakOut;
         ctr = ctr + 1;
     } else if (ctr == 6) {
-        document.getElementById('pmOut').innerHTML =
-            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        checkOut = hours + " : " + minutes + " : " + seconds + " " + amPm;
+        document.getElementById('pmOut').innerHTML = checkOut
         console.log(chours + " : " + cminutes + " : " + cseconds);
-        document.getElementById('duration').innerHTML =
-            chours + " hours " + cminutes + " mins " + cseconds + " secs";
+        duration =   chours + " hours " + cminutes + " mins " + cseconds + " secs";
+        document.getElementById('duration').innerHTML = duration;
         clearInterval(Interval);
         chours = "00";
         cminutes = "00";

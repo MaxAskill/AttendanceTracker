@@ -7,6 +7,7 @@ use App\Http\Controllers\employeeController;
 use App\Http\Controllers\employeePayrollController;
 use App\Http\Controllers\overtimeController;
 use App\Http\Controllers\salaryController;
+use App\Http\Controllers\scheduleController;
 use App\Http\Controllers\timeController;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +55,10 @@ Route::get('/reports', function () {
 Route::resource('employee', employeeController::class);
 Route::post('salaryMaintenance', [salaryController::class, 'store']);
 Route::post('deductionMaintenance', [deductionController::class, 'store']);
+Route::post('branchMaintenance', [branchController::class, 'store']);
+Route::post('scheduleMaintenance', [scheduleController::class, 'store']);
+Route::get('/getScheduleMaintenance', [scheduleController::class, 'getScheduleMaintenance']);
+Route::get('/getBranchMaintenance', [branchController::class, 'getBranchMaintenance']);
 Route::get('/getSalaryMaintenance', [salaryController::class, 'getSalaryMaintenance']);
 Route::get('/getDeductionMaintenance', [deductionController::class, 'getDeductionMaintenance']);
 // Route::get('employee', [employeeController::class, 'index']);
