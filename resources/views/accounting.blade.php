@@ -1,42 +1,43 @@
 <!doctype html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounting</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accounting</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    </head>
 
-<body class="xl:flex">
-    <!-- component -->
-    <div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-2/12">
-        <sidebar @click.away="open = false"
-            class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0  top-overflow-visible"
-            x-data="{ open: false }">
-            <div class="flex-shrink-0 px-8 py-4 flex flex-row">
-                <img src="img\logo.png" class="w-full" alt="Sample image" />
-                <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-                    @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                        <path x-show="!open" fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                        <path x-show="open" fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block  items-center justify-between">
-                <div class="flex justify-center">
-                    <img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
-                        alt="Sample image" />
+    <body class="xl:flex">
+        <!-- component -->
+        <div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-2/12">
+            <sidebar @click.away="open = false"
+                class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0  top-overflow-visible"
+                x-data="{ open: false }">
+                <div class="flex-shrink-0 px-8 py-4 flex flex-row">
+                    <img src="img\logo.png" class="w-full" alt="Sample image" />
+                    <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                        @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path x-show="!open" fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                            <path x-show="open" fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
                 </div>
+                <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block  items-center justify-between">
+                    <div class="flex justify-center">
+                        <img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
+                            alt="Sample image" />
+                    </div>
 
                 <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
                     <ul class="space-y-2">
@@ -164,8 +165,8 @@
         </sidebar>
     </div>
 
-    <content class="xl:w-10/12 sm:w-full px-10 mt-5">
-        <!-- component -->
+        <content class="xl:w-10/12 sm:w-full px-10 mt-5">
+            <!-- component -->
         <div id="Dashboard" class="flex  overflow-hidden rounded-lg mb-5 py-52" style="display: block">
             <div class="grid grid-cols-2 gap-4">
             <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
@@ -180,15 +181,15 @@
         </div>
         <!--end dashboard salary-->
 
-        <div id="employeeSalary" class="grid bgcolor overflow-hidden rounded-lg mb-5" style="display: none">
-            <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                <div class="row-start-1 col-span-1 flex">
-                    <h1 class="text-white text-4xl font-bold px">Employee Payroll Salary</h1>
-                </div>
+            <div id="employeeSalary" class="grid bgcolor overflow-hidden rounded-lg mb-5" style="display: none">
+                <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+                    <div class="row-start-1 col-span-1 flex">
+                        <h1 class="text-white text-4xl font-bold px">Employee Payroll Salary</h1>
+                    </div>
 
-                <div class="row-start-1 col-span-1 flex">
-                    <div class="mb-3 xl:w-full">
-                        <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+                    <div class="row-start-1 col-span-1 flex">
+                        <div class="mb-3 xl:w-full">
+                            <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
 						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="exampleSearch"
                             placeholder="Search" />
                     </div>
@@ -277,134 +278,112 @@
         </div>
         <!--end employee salary-->
 
-        <div id="salaryMaintenance" class="grid bg-white sm:w-full rounded-lg overflow-hidden" style="display: none">
-            <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-gray-800 text-4xl font-bold px">Salary Maintenance</h1>
-                    <!-- Modal toggle -->
-                    <button
-                        class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none"
-                        data-modal-toggle="authentication-modal">Add New</button>
-                    <!-- Main modal -->
-                    <div id="authentication-modal" aria-hidden="true"
-                        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-                        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
-                            <!-- Modal content -->
-                            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                                <div class="flex justify-end p-2">
-                                    <button type="button"
-                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                        data-modal-toggle="authentication-modal">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                                    <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Add
-                                        Salary</h3>
-                                    <div class="grid grid-cols-5 gap-2">
-                                        <div class="col-start-1 col-span-1">
-                                            <label for="text"
-                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Salary
-                                                ID</label>
-                                            <input type="text" name="name" id="name"
-                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
-                                                value="SALARY-0007" required="" readonly>
-                                        </div>
-                                        <div class="col-start-2 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
-                                            <select name="Region" id="Region"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Region</option>
-                                                <option value="09:00">NCR</option>
-                                                <option value="09:30">Region 1</option>
-                                                <option value="10:00">Region 2</option>
-                                                <option value="10:30">Region 3</option>
-                                                <option value="11:00">Region 4</option>
-                                                <option value="11:30">Region 5</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-start-3 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
-                                            <select name="starttime" id="starttime"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Municipality/City</option>
-                                                <option value="09:00">Las Pinas City</option>
-                                                <option value="09:30">Makati City</option>
-                                                <option value="10:00">Malabon City</option>
-                                                <option value="10:30">Mandaluyong City</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-start-4 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                                            <select name="Chain" id="Chain"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Chain</option>
-                                                <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
-                                                <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
-                                                <option value="Waltermart Makati">Waltermart Makati</option>
-                                                <option value="Fisher Mall Malabon">Fisher Mall Malabon</option>
-                                                <option value="Robinsons Malabon">Robinsons Malabon</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-start-5 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                                            <select name="Branch" id="Branch"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Branch</option>
-                                                <option value="Vista Mall Department Store">Vista Mall Department Store
-                                                </option>
-                                                <option value="Robinsons Department Store">Robinsons Department Store
-                                                </option>
-                                                <option value="Waltermart Department Store">Waltermart Department Store
-                                                </option>
-                                                <option value="Fisher Mall Department Store">Fisher Mall Department
-                                                    Store</option>
-                                            </select>
-                                        </div>
+            <div id="salaryMaintenance" class="grid bg-white sm:w-full rounded-lg overflow-hidden"
+                style="display: none">
+                <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+                    <div class="row-start-1 row-span-1 flex">
+                        <h1 class="text-gray-800 text-4xl font-bold px">Salary Maintenance</h1>
+                        <!-- Modal toggle -->
+                        <button onClick="generatePrimaryKey()"
+                            class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none"
+                            data-modal-toggle="authentication-modal">Add New</button>
+                        <!-- Main modal -->
+                        <div id="authentication-modal" aria-hidden="true"
+                            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+                            <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+                                <!-- Modal content -->
+                                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                                    <div class="flex justify-end p-2">
+                                        <button type="button"
+                                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                                            data-modal-toggle="authentication-modal">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
                                     </div>
+                                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8"
+                                        action="{{ url('salaryMaintenance') }}" method="POST"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <h3 class="text-xl font-medium text-gray-900 dark:text-white">Add Salary
+                                            Maintenance
+                                        </h3>
+                                        <div class="grid grid-cols-5 gap-2">
+                                            <div class="col-start-1 col-span-1">
+                                                <label for="text"
+                                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                                    ID</label>
+                                                <input type="text" name="branchID" id="branchID"
+                                                    class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Branch ID" required="" readonly>
+                                            </div>
+                                            <div class="col-start-2 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
+                                                <input type="text" name="region" id="region"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Region" required="">
+                                            </div>
+                                            <div class="col-start-3 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
+                                                <input type="text" name="municipalitycity" id="municipalitycity"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Municipality/City" required="">
+                                            </div>
+                                            <div class="col-start-4 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+                                                <input type="text" name="chain" id="chain"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Chain" required="">
+                                            </div>
+                                            <div class="col-start-5 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
+                                                <input type="text" name="branch" id="branch"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Branch" required="">
+                                            </div>
+                                        </div>
 
-                                    <div class="grid grid-cols-4 gap-2">
-                                        <div class="col-start-1 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
-                                                Rate</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="0.00" required="">
+                                        <div class="grid grid-cols-4 gap-2">
+                                            <div class="col-start-1 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
+                                                    Rate</label>
+                                                <input type="text" name="basicRate" id="basicRate"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Basic Rate" required="">
+                                            </div>
+                                            <div class="col-start-2 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
+                                                    Hour</label>
+                                                <input type="text" name="perHour" id="perHour"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Per Hour" required="">
+                                            </div>
+                                            <div class="col-start-3 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
+                                                    Min</label>
+                                                <input type="text" name="perMin" id="perMin"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Per Min" required="">
+                                            </div>
+                                            <div class="col-start-4 col-span-1">
+                                                <label for="date"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA</label>
+                                                <input type="text" name="COLA" id="COLA"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="COLA" required="">
+                                            </div>
                                         </div>
-                                        <div class="col-start-2 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
-                                                Hour</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="0.00" required="">
-                                        </div>
-                                        <div class="col-start-3 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
-                                                Min</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="0.00" required="">
-                                        </div>
-                                        <div class="col-start-4 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="0.00" required="">
-                                        </div>
-                                    </div>
 
                                     <button type="submit"
                                         class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 outline-none">Add</button>
@@ -414,324 +393,267 @@
                     </div>
                 </div>
 
-                <div class="row-start-1 row-span-2">
-                    <div class="flex float-right">
-                        <div class="mb-3 xl:w-96">
-                            <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="exampleSearch"
-                                placeholder="Search" />
+                    <div class="row-start-1 row-span-2">
+                        <div class="flex float-right">
+                            <div class="mb-3 xl:w-96">
+                                <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="searchBox"
+                                    placeholder="Search" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <table
-                    class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
-                    <thead class="bg-gray-100 flex text-gray w-full">
-                        <tr class="flex w-full">
-                            <th class="p-4 w-2/6">Salary ID</th>
-                            <th class="p-4 w-2/6">Region</th>
-                            <th class="p-4 w-2/6">Municipality/City</th>
-                            <th class="p-4 w-2/6">Chain</th>
-                            <th class="p-4 w-2/6">Branch</th>
-                            <th class="p-4 w-2/6">Basic Rate</th>
-                            <th class="p-4 w-2/6">Per Hour</th>
-                            <th class="p-4 w-2/6">Per Min</th>
-                            <th class="p-4 w-2/6">COLA</th>
-                            <th class="p-4 w-2/6"></th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
-                        style="height: 73vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0001</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">P370.00</td>
-                            <td class="p-4 w-2/6">P46.25</td>
-                            <td class="p-4 w-2/6">P0.77</td>
-                            <td class="p-4 w-2/6">P0.00</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-store">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-store">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0002</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Robinsons Las Pinas</td>
-                            <td class="p-4 w-2/6">Robinsons Department Store</td>
-                            <td class="p-4 w-2/6">P373.00</td>
-                            <td class="p-4 w-2/6">P46.63</td>
-                            <td class="p-4 w-2/6">P0.78</td>
-                            <td class="p-4 w-2/6">P0.00</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-store">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-store">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0003</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Makati City</td>
-                            <td class="p-4 w-2/6">Waltermart Makati</td>
-                            <td class="p-4 w-2/6">Waltermart Department Store</td>
-                            <td class="p-4 w-2/6">P401.00</td>
-                            <td class="p-4 w-2/6">P50.13</td>
-                            <td class="p-4 w-2/6">P0.84</td>
-                            <td class="p-4 w-2/6">P0.00</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-store">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-store">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0004</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Malabon City</td>
-                            <td class="p-4 w-2/6">Fisher Mall Malabon</td>
-                            <td class="p-4 w-2/6">Fisher Mall Department Store</td>
-                            <td class="p-4 w-2/6">P435.00</td>
-                            <td class="p-4 w-2/6">P54.38</td>
-                            <td class="p-4 w-2/6">P0.91</td>
-                            <td class="p-4 w-2/6">P0.00</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-store">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-store">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0005</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Malabon City</td>
-                            <td class="p-4 w-2/6">Robinsons Malabon</td>
-                            <td class="p-4 w-2/6">Robinsons Department Store</td>
-                            <td class="p-4 w-2/6">P450.00</td>
-                            <td class="p-4 w-2/6">P56.25</td>
-                            <td class="p-4 w-2/6">P0.94</td>
-                            <td class="p-4 w-2/6">P0.00</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-store">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-store">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SALARY-0006</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Mandaluyong City</td>
-                            <td class="p-4 w-2/6">Robinsons Forum Pioneer</td>
-                            <td class="p-4 w-2/6">Robinsons Department Store</td>
-                            <td class="p-4 w-2/6">P570.00</td>
-                            <td class="p-4 w-2/6">P71.25</td>
-                            <td class="p-4 w-2/6">P1.19</td>
-                            <td class="p-4 w-2/6">P0.00</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-store">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-store">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="grid justify-center items-center mb-3 bg-white">
-                    <nav aria-label="Page navigation example w-full">
-                        <ul class="inline-flex -space-x-px">
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-current="page"
-                                    class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div>
+                    <table id="salaryMaintenanceTable"
+                        class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
+                        <thead class="bg-gray-100 flex text-gray w-full">
+                            <tr class="flex w-full">
+                                <th class="p-4 w-2/6">Branch ID</th>
+                                <th class="p-4 w-2/6">Region</th>
+                                <th class="p-4 w-2/6">Municipality/City</th>
+                                <th class="p-4 w-2/6">Chain</th>
+                                <th class="p-4 w-2/6">Branch</th>
+                                <th class="p-4 w-2/6">Basic Rate</th>
+                                <th class="p-4 w-2/6">Per Hour</th>
+                                <th class="p-4 w-2/6">Per Min</th>
+                                <th class="p-4 w-2/6">COLA</th>
+                                <th class="p-4 w-2/6"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
+                            style="height: 73vh;">
+
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0001</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Las Pinas City</td>
+                                <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                                <td class="p-4 w-2/6">Vista Mall Department Store</td>
+                                <td class="p-4 w-2/6">P370.00</td>
+                                <td class="p-4 w-2/6">P46.25</td>
+                                <td class="p-4 w-2/6">P0.77</td>
+                                <td class="p-4 w-2/6">P0.00</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-store">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-store">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0002</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Las Pinas City</td>
+                                <td class="p-4 w-2/6">Robinsons Las Pinas</td>
+                                <td class="p-4 w-2/6">Robinsons Department Store</td>
+                                <td class="p-4 w-2/6">P373.00</td>
+                                <td class="p-4 w-2/6">P46.63</td>
+                                <td class="p-4 w-2/6">P0.78</td>
+                                <td class="p-4 w-2/6">P0.00</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-store">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-store">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0003</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Makati City</td>
+                                <td class="p-4 w-2/6">Waltermart Makati</td>
+                                <td class="p-4 w-2/6">Waltermart Department Store</td>
+                                <td class="p-4 w-2/6">P401.00</td>
+                                <td class="p-4 w-2/6">P50.13</td>
+                                <td class="p-4 w-2/6">P0.84</td>
+                                <td class="p-4 w-2/6">P0.00</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-store">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-store">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0004</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Malabon City</td>
+                                <td class="p-4 w-2/6">Fisher Mall Malabon</td>
+                                <td class="p-4 w-2/6">Fisher Mall Department Store</td>
+                                <td class="p-4 w-2/6">P435.00</td>
+                                <td class="p-4 w-2/6">P54.38</td>
+                                <td class="p-4 w-2/6">P0.91</td>
+                                <td class="p-4 w-2/6">P0.00</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-store">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-store">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0005</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Malabon City</td>
+                                <td class="p-4 w-2/6">Robinsons Malabon</td>
+                                <td class="p-4 w-2/6">Robinsons Department Store</td>
+                                <td class="p-4 w-2/6">P450.00</td>
+                                <td class="p-4 w-2/6">P56.25</td>
+                                <td class="p-4 w-2/6">P0.94</td>
+                                <td class="p-4 w-2/6">P0.00</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-store">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-store">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0006</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Mandaluyong City</td>
+                                <td class="p-4 w-2/6">Robinsons Forum Pioneer</td>
+                                <td class="p-4 w-2/6">Robinsons Department Store</td>
+                                <td class="p-4 w-2/6">P570.00</td>
+                                <td class="p-4 w-2/6">P71.25</td>
+                                <td class="p-4 w-2/6">P1.19</td>
+                                <td class="p-4 w-2/6">P0.00</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-store">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-store">Delete</button>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <div class="grid justify-center items-center mb-3 bg-white">
+                        <nav aria-label="Page navigation example w-full">
+                            <ul class="inline-flex -space-x-px">
+                                <li>
+                                    <a href="#" id="prevButtonSalaryMaintenance"
+                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page"
+                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="nextButtonSalaryMaintenance"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--end salary maintenance-->
+            <!--end salary maintenance-->
 
-        <div id="deductionMaintenance" class="grid bg-white sm:w-full rounded-lg overflow-hidden" style="display: none">
-            <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-gray-800 text-4xl font-bold px">Deduction Maintenance</h1>
-                    <!-- Modal toggle -->
-                    <button
-                        class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none"
-                        data-modal-toggle="add-deduction">Add New</button>
-                    <!-- Main modal -->
-                    <div id="add-deduction" aria-hidden="true"
-                        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-                        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
-                            <!-- Modal content -->
-                            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                                <div class="flex justify-end p-2">
-                                    <button type="button"
-                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                        data-modal-toggle="add-deduction">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                                    <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Add
-                                        Deduction</h3>
-
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <div class="col-start-1 col-span-1">
-                                            <label for="text"
-                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Deduction
-                                                ID</label>
-                                            <input type="text" name="name" id="name"
-                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
-                                                placeholder="" required="" value="DEDUCTION-0007" readonly>
-                                        </div>
-                                        <div class="col-start-2 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
-                                                Salary</label>
-                                            <select name="Chain" id="Chain"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Range Salary</option>
-                                                <option value="Finds Finds Las Pinas">P20,000.00 and below</option>
-                                                <option value="Robinsons Las Pinas">P20,001.00 - P25,000.00</option>
-                                                <option value="Waltermart Makati">P25,001.00 - P27,000.00</option>
-                                            </select>
-                                        </div>
+            <div id="deductionMaintenance" class="grid bg-white sm:w-full rounded-lg overflow-hidden"
+                style="display: none">
+                <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+                    <div class="row-start-1 row-span-1 flex">
+                        <h1 class="text-gray-800 text-4xl font-bold px">Deduction Maintenance</h1>
+                        <!-- Modal toggle -->
+                        <button
+                            class="bgcolor text-white hover:bg-white xl:ml-10 font-themecolor font-semibold hover:text-teal-700 px-2 border-2 bordercolor hover:bordercolor rounded-2xl focus:outline-none"
+                            data-modal-toggle="add-deduction">Add New</button>
+                        <!-- Main modal -->
+                        <div id="add-deduction" aria-hidden="true"
+                            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+                            <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+                                <!-- Modal content -->
+                                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                                    <div class="flex justify-end p-2">
+                                        <button type="button"
+                                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                                            data-modal-toggle="add-deduction">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
                                     </div>
+                                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8"
+                                        action="{{ url('deductionMaintenance') }}" method="POST"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <h3 class="text-xl font-medium text-gray-900 dark:text-white">Add Deduction
+                                            Maintenance</h3>
 
-                                    <div class="grid grid-cols-4 gap-2">
-                                        <div class="col-start-1 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
-                                            <select name="Region" id="Region"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Region</option>
-                                                <option value="09:00">NCR</option>
-                                                <option value="09:30">Region 1</option>
-                                                <option value="10:00">Region 2</option>
-                                                <option value="10:30">Region 3</option>
-                                                <option value="11:00">Region 4</option>
-                                                <option value="11:30">Region 5</option>
-                                            </select>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div class="col-start-1 col-span-1">
+                                                <label for="text"
+                                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                                    ID</label>
+                                                <input type="text" name="branchID" id="branchID"
+                                                    class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Branch ID" required="" value="">
+                                            </div>
+                                            <div class="col-start-2 col-span-1">
+                                                <label for="text"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
+                                                    Salary</label>
+                                                <input type="text" name="rangeSalary" id="rangeSalary"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Range Salary" required="" value="">
+                                            </div>
                                         </div>
-                                        <div class="col-start-2 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
-                                            <select name="starttime" id="starttime"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Municipality/City</option>
-                                                <option value="09:00">Las Pinas City</option>
-                                                <option value="09:30">Makati City</option>
-                                                <option value="10:00">Malabon City</option>
-                                                <option value="10:30">Mandaluyong City</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-start-3 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                                            <select name="Chain" id="Chain"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Chain</option>
-                                                <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
-                                                <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
-                                                <option value="Waltermart Makati">Waltermart Makati</option>
-                                                <option value="Fisher Mall Malabon">Fisher Mall Malabon</option>
-                                                <option value="Robinsons Malabon">Robinsons Malabon</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-start-4 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                                            <select name="Branch" id="Branch"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                                                <option hidden selected>Branch</option>
-                                                <option value="Vista Mall Department Store">Vista Mall Department Store
-                                                </option>
-                                                <option value="Robinsons Department Store">Robinsons Department Store
-                                                </option>
-                                                <option value="Waltermart Department Store">Waltermart Department Store
-                                                </option>
-                                                <option value="Fisher Mall Department Store">Fisher Mall Department
-                                                    Store</option>
-                                            </select>
-                                        </div>
-                                    </div>
 
-                                    <div class="grid grid-cols-4 gap-2">
-                                        <div class="col-start-1 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P370.00" required="" value="0.00">
+                                        <div class="grid grid-cols-4 gap-2">
+                                            <div class="col-start-1 col-span-1">
+                                                <label for="text"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
+                                                <input type="text" name="SSS" id="SSS"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="SSS" required="" value="">
+                                            </div>
+                                            <div class="col-start-2 col-span-1">
+                                                <label for="text"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
+                                                <input type="text" name="PHIC" id="PHIC"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="PHIC" required="" value="">
+                                            </div>
+                                            <div class="col-start-3 col-span-1">
+                                                <label for="text"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
+                                                <input type="text" name="HMDF" id="HMDF"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="HMDF" required="" value="">
+                                            </div>
+                                            <div class="col-start-4 col-span-1">
+                                                <label for="text"
+                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">TOTAL</label>
+                                                <input type="text" name="total" id="total"
+                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                    placeholder="Total" required="" value="">
+                                            </div>
                                         </div>
-                                        <div class="col-start-2 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P46.25" required="" value="0.00">
-                                        </div>
-                                        <div class="col-start-3 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P0.77" required="" value="0.00">
-                                        </div>
-                                        <div class="col-start-4 col-span-1">
-                                            <label for="date"
-                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">TOTAL</label>
-                                            <input type="text" name="birthdate" id="birthdate"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                placeholder="P0.00" required="" value="0.00">
-                                        </div>
-                                    </div>
 
                                     <button type="submit"
                                         class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 outline-none">Add</button>
@@ -741,193 +663,170 @@
                     </div>
                 </div>
 
-                <div class="row-start-1 row-span-2">
-                    <div class="flex float-right">
-                        <div class="mb-3 xl:w-96">
-                            <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="exampleSearch"
-                                placeholder="Search" />
+                    <div class="row-start-1 row-span-2">
+                        <div class="flex float-right">
+                            <div class="mb-3 xl:w-96">
+                                <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="searchBoxDeduction"
+                                    placeholder="Search" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <table
-                    class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
-                    <thead class="bg-gray-100 flex text-gray w-full">
-                        <tr class="flex w-full">
-                            <th class="p-4 w-2/6">Deduction ID</th>
-                            <th class="p-4 w-2/6">Region</th>
-                            <th class="p-4 w-2/6">Municipality/City</th>
-                            <th class="p-4 w-2/6">Chain</th>
-                            <th class="p-4 w-2/6">Branch</th>
-                            <th class="p-4 w-2/6">Range Salary</th>
-                            <th class="p-4 w-1/6">SSS</th>
-                            <th class="p-4 w-1/6">PHIC</th>
-                            <th class="p-4 w-1/6">HMDF</th>
-                            <th class="p-4 w-1/6">TOTAL</th>
-                            <th class="p-4 w-2/6"></th>
-                        </tr>
-                    </thead>
-                    <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                    <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
-                        style="height: 73vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">DEDUCTION-0001</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">P20,000.00 and below</td>
-                            <td class="p-4 w-1/6">P302.50</td>
-                            <td class="p-4 w-1/6">P0.32</td>
-                            <td class="p-4 w-1/6">P50.00</td>
-                            <td class="p-4 w-1/6">P352.82</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-deduction">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-deduction">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">DEDUCTION-0002</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">P20,001.00 - P25,000.00</td>
-                            <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P0.32</td>
-                            <td class="p-4 w-1/6">P50.00</td>
-                            <td class="p-4 w-1/6">P437.82</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-deduction">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-deduction">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">DEDUCTION-0003</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">P25,001.00 - P27,000.00</td>
-                            <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P0.32</td>
-                            <td class="p-4 w-1/6">P50.00</td>
-                            <td class="p-4 w-1/6">P437.82</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-deduction">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-deduction">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">DEDUCTION-0004</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">P20,000.00 and below</td>
-                            <td class="p-4 w-1/6">P302.50</td>
-                            <td class="p-4 w-1/6">P0.32</td>
-                            <td class="p-4 w-1/6">P50.00</td>
-                            <td class="p-4 w-1/6">P352.82</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-deduction">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-deduction">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">DEDUCTION-0005</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">P20,001.00 - P25,000.00</td>
-                            <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P0.32</td>
-                            <td class="p-4 w-1/6">P50.00</td>
-                            <td class="p-4 w-1/6">P437.82</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-deduction">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-deduction">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">DEDUCTION-0006</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">P25,001.00 - P27,000.00</td>
-                            <td class="p-4 w-1/6">P387.50</td>
-                            <td class="p-4 w-1/6">P0.32</td>
-                            <td class="p-4 w-1/6">P50.00</td>
-                            <td class="p-4 w-1/6">P437.82</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-deduction">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-deduction">Delete</button>
-                            </td>
-                        </tr>
+                <div>
+                    <table id="deductionMaintenanceTable"
+                        class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
+                        <thead class="bg-gray-100 flex text-gray w-full">
+                            <tr class="flex w-full">
+                                <th class="p-4 w-2/6">Deduction ID</th>
+                                <th class="p-4 w-2/6">Branch ID</th>
+                                <th class="p-4 w-2/6">Range Salary</th>
+                                <th class="p-4 w-2/6">SSS</th>
+                                <th class="p-4 w-2/6">PHIC</th>
+                                <th class="p-4 w-2/6">HMDF</th>
+                                <th class="p-4 w-2/6">TOTAL</th>
+                                <th class="p-4 w-2/6"></th>
+                            </tr>
+                        </thead>
+                        <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
+                        <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
+                            style="height: 73vh;">
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">SALARY-0001</td>
+                                <td class="p-4 w-2/6">BRANCH-0001</td>
+                                <td class="p-4 w-2/6">P20,000.00 and below</td>
+                                <td class="p-4 w-1/6">P302.50</td>
+                                <td class="p-4 w-1/6">P00.32</td>
+                                <td class="p-4 w-1/6">P50.00</td>
+                                <td class="p-4 w-1/6">P352.82</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-deduction">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-deduction">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">SALARY-0002</td>
+                                <td class="p-4 w-2/6">BRANCH-0001</td>
+                                <td class="p-4 w-2/6">P20,001.00 - P25,000.00</td>
+                                <td class="p-4 w-1/6">P387.50</td>
+                                <td class="p-4 w-1/6">P00.32</td>
+                                <td class="p-4 w-1/6">P50.00</td>
+                                <td class="p-4 w-1/6">P437.82</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-deduction">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-deduction">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">SALARY-0003</td>
+                                <td class="p-4 w-2/6">BRANCH-0001</td>
+                                <td class="p-4 w-2/6">P25,001.00 - P27,000.00</td>
+                                <td class="p-4 w-1/6">P387.50</td>
+                                <td class="p-4 w-1/6">P00.32</td>
+                                <td class="p-4 w-1/6">P50.00</td>
+                                <td class="p-4 w-1/6">P437.82</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-deduction">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-deduction">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">SALARY-0004</td>
+                                <td class="p-4 w-2/6">BRANCH-0002</td>
+                                <td class="p-4 w-2/6">P20,000.00 and below</td>
+                                <td class="p-4 w-1/6">P302.50</td>
+                                <td class="p-4 w-1/6">P00.32</td>
+                                <td class="p-4 w-1/6">P50.00</td>
+                                <td class="p-4 w-1/6">P352.82</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-deduction">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-deduction">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">SALARY-0005</td>
+                                <td class="p-4 w-2/6">BRANCH-0002</td>
+                                <td class="p-4 w-2/6">P20,001.00 - P25,000.00</td>
+                                <td class="p-4 w-1/6">P387.50</td>
+                                <td class="p-4 w-1/6">P00.32</td>
+                                <td class="p-4 w-1/6">P50.00</td>
+                                <td class="p-4 w-1/6">P437.82</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-deduction">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-deduction">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">SALARY-0006</td>
+                                <td class="p-4 w-2/6">BRANCH-0002</td>
+                                <td class="p-4 w-2/6">P25,001.00 - P27,000.00</td>
+                                <td class="p-4 w-1/6">P387.50</td>
+                                <td class="p-4 w-1/6">P00.32</td>
+                                <td class="p-4 w-1/6">P50.00</td>
+                                <td class="p-4 w-1/6">P437.82</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-deduction">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-deduction">Delete</button>
+                                </td>
+                            </tr> -->
 
-                    </tbody>
-                </table>
-                <div class="grid justify-center items-center mb-3 bg-white">
-                    <nav aria-label="Page navigation example w-full">
-                        <ul class="inline-flex -space-x-px">
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-current="page"
-                                    class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                        </tbody>
+                    </table>
+                    <div class="grid justify-center items-center mb-3 bg-white">
+                        <nav aria-label="Page navigation example w-full">
+                            <ul class="inline-flex -space-x-px">
+                                <li>
+                                    <a href="#" id="prevButtonDeductionMaintenance"
+                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page"
+                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="nextButtonDeductionMaintenance"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--end branch maintenance-->
-
-        <div id="branchMaintenance" class="grid bg-white sm:w-full rounded-lg overflow-hidden" style="display: none">
+            <div id="branchMaintenance" class="grid bg-white sm:w-full rounded-lg overflow-hidden" style="display: none">
             <div class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                 <div class="row-start-1 row-span-1 flex">
                     <h1 class="text-gray-800 text-4xl font-bold px">Branch Maintenance</h1>
@@ -1184,446 +1083,450 @@
             </div>
         </div>
         <!--end branch maintenance-->
+            <!--end deduction maintenance-->
+            <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
-        <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
+                <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
+                    <div class="row-start-1 row-span-1 flex">
+                        <h1 class="text-white text-4xl font-bold px">Profile Information</h1>
+                    </div>
+                </div>
+                <div class="grid grid-rows-5 grid-cols-6 gap-4">
+                    <div class="row-start-1 row-span-2 col-span-2 justify-center flex items-center">
+                        <img src="img\profilepic.png" class="w-2/6 rounded-full bordercolor bordercolor border-4 "
+                            alt="Sample image" />
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                            ID</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company ID" required="" value="0000-0001" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">First
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="First Name" required="" value="Padre" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Middle
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Middle Name" required="" value="Bernardo" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Last
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Last Name" required="" value="Salvi" disabled>
+                    </div>
 
-            <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
-                <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-white text-4xl font-bold px">Profile Information</h1>
+                    <div class="relative row-start-2 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <label for="number"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Birthdate</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="12/14/1989" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Contact
+                            No.</label>
+                        <input type="number" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Contact No." required="" value="09123456789" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Email</label>
+                        <input type="email" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-3">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Job
+                            Position</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Job Position" required="" value="NBFI Sales" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-3">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="NBFI" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Chain Name" required="" value="RDS" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                    </div>
+                    <div class="row-start-5 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                    </div>
+                    <div class="row-start-5 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                    </div>
+                    <div class="relative row-start-5 col-span-2">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <label for="number" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Date
+                            Started</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="10/21/2006" disabled>
+                    </div>
+
                 </div>
             </div>
-            <div class="grid grid-rows-5 grid-cols-6 gap-4">
-                <div class="row-start-1 row-span-2 col-span-2 justify-center flex items-center">
-                    <img src="img\profilepic.png" class="w-2/6 rounded-full bordercolor bordercolor border-4 "
-                        alt="Sample image" />
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
-                        ID</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company ID" required="" value="0000-0001" disabled>
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">First
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="First Name" required="" value="Padre" disabled>
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Middle
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Middle Name" required="" value="Bernardo" disabled>
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Last
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Last Name" required="" value="Salvi" disabled>
-                </div>
+            <!--end profile  -->
 
-                <div class="relative row-start-2 col-span-1">
-                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <label for="number"
-                        class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Birthdate</label>
-                    <input datepicker type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Select your birthdate" value="12/14/1989" disabled>
-                </div>
-                <div class="row-start-2 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Contact
-                        No.</label>
-                    <input type="number" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Contact No." required="" value="09123456789" disabled>
-                </div>
-                <div class="row-start-2 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Email</label>
-                    <input type="email" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Email" required="" value="padre.salvi@barbizonfashion.com" disabled>
-                </div>
-                <div class="row-start-3 col-span-3">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Job
-                        Position</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Job Position" required="" value="Accounting Manager" disabled>
-                </div>
-                <div class="row-start-3 col-span-3">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company Name" required="" value="Barbizon Everyday Group of Companies" disabled>
-                </div>
-                <div class="row-start-4 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Branch Name" required="" value="None" disabled>
-                </div>
-                <div class="row-start-4 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Chain Name" required="" value="None" disabled>
-                </div>
-                <div class="row-start-4 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Brand Name" required="" value="None" disabled>
-                </div>
-                <div class="row-start-5 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="RAS Name" required="" value="None" disabled>
-                </div>
-                <div class="row-start-5 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="HR Name" required="" value="Ms. Sisa Narcisa" disabled>
-                </div>
-                <div class="relative row-start-5 col-span-2">
-                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <label for="number" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Date
-                        Started</label>
-                    <input datepicker type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Select your birthdate" value="10/21/2006" disabled>
-                </div>
+        </content>
 
+        <!-- Javascript Code -->
+        <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
+            class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
+            id="btn-back-to-top">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="currentColor"
+                    d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+                </path>
+            </svg>
+        </button>
+
+        <!-- view-employee modal -->
+        <div id="view-employee" aria-hidden="true"
+            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+            <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+                <!-- Modal content -->
+                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                    <div class="flex justify-end p-2">
+                        <button type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                            data-modal-toggle="view-employee">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white">Employee Payroll Salary</h3>
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="number"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Payroll
+                                    Number</label>
+                                <input type="text" name="companyID" id="companyID"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="0000-0001" required="" value="0000-0001" disabled>
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="text"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">ID
+                                    Number</label>
+                                <input type="text" name="lName" id="lName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="340" required="" value="340" disabled>
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="text"
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
+                                <input @input="capitalizeFName" type="text" name="fName" id="fName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Ibarra Crisostomo" required="" value="Ibarra Crisostomo" disabled>
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="text"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Cut-Off
+                                    Date</label>
+                                <input type="text" name="mName" id="mName"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="9" required="" value="October 06, 2021" disabled>
+                            </div>
+
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">No. of
+                                    Days</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Basic Rate" required="" value="4" disabled>
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Basic Rate" required="" value="Finds Finds Las Pinas" disabled>
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Basic Rate" required="" value="Vista Mall Department Store" disabled>
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">13th Month
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Basic Rate" required="" value="0.00" disabled>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <label for="jobPosition"
+                                class="text-xl font-medium text-gray-900 dark:text-white">Earnings</label>
+                        </div>
+
+                        <div class="grid grid-cols-6 gap-1">
+                            <div class="col-start-1 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
+                                    Rate</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Basic Rate" required="" value="370.00" disabled>
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA
+                                    Rate</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="0.00" disabled>
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA
+                                    Rate</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="0.00" disabled>
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Hour
+                                </label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="46.25" disabled>
+                            </div>
+                            <div class="col-start-5 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Minute
+                                </label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="0.77" disabled>
+                            </div>
+                            <div class="col-start-6 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
+                                    Rate</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="370.00" disabled>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-6 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="1,480.00" disabled>
+                            </div>
+
+                            <div class="col-start-2 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="0.00" disabled>
+                            </div>
+
+                            <div class="col-start-3 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="0.00" disabled>
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Overtime
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="0.00" disabled>
+                            </div>
+                            <div class="col-start-5 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Holiday
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="0.00" disabled>
+                            </div>
+
+                            <div class="col-start-6 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="1,480.00" disabled>
+                            </div>
+                        </div>
+                        <div class="col-start-1 col-end-7 w-full">
+                            <label for="jobPosition"
+                                class="text-xl font-medium text-gray-900 dark:text-white">Deduction</label>
+                        </div>
+                        <div class="grid grid-cols-5 gap-1">
+                            <div class="col-start-1 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Basic Rate" required="" value="260" disabled>
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="150.32" disabled>
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="50.00" disabled>
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Others</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="50.00" disabled>
+                            </div>
+                            <div class="col-start-5 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="460.32" disabled>
+                            </div>
+                        </div>
+                        <div class="col-start-1 col-end-7 w-full">
+                            <label for="jobPosition" class="text-xl font-medium text-gray-900 dark:text-white">NET
+                                PAY</label>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
+                                    Pay</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Basic Rate" required="" value="1,480.00" disabled>
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
+                                    Deduction</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="460.32" disabled>
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="jobPosition"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Salary</label>
+                                <input type="text" name="jobPosition" id="jobPosition"
+                                    class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="Per Hour" required="" value="1,019.68" disabled>
+                            </div>
+                        </div>
+                        <!-- <button type="submit" class="col-start-1 col-end-7 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                    </form>
+                </div>
             </div>
         </div>
-        <!--end profile  -->
+        <!-- end view-employee modal -->
 
-    </content>
-
-    <!-- Javascript Code -->
-    <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
-        class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
-        id="btn-back-to-top">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path fill="currentColor"
-                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
-            </path>
-        </svg>
-    </button>
-
-    <!-- view-employee modal -->
-    <div id="view-employee" aria-hidden="true"
-        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                <div class="flex justify-end p-2">
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="view-employee">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-2xl font-medium text-gray-900 dark:text-white">Employee Payroll Salary</h3>
-                    <div class="grid grid-cols-4 gap-2">
-                        <div class="col-start-1 col-span-1">
-                            <label for="number"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Payroll
-                                Number</label>
-                            <input type="text" name="companyID" id="companyID"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="0000-0001" required="" value="0000-0001" disabled>
-                        </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="text" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">ID
-                                Number</label>
-                            <input type="text" name="lName" id="lName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="340" required="" value="340" disabled>
-                        </div>
-                        <div class="col-start-3 col-span-1">
-                            <label for="text"
-                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
-                            <input @input="capitalizeFName" type="text" name="fName" id="fName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Ibarra Crisostomo" required="" value="Ibarra Crisostomo" disabled>
-                        </div>
-                        <div class="col-start-4 col-span-1">
-                            <label for="text"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Cut-Off
-                                Date</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="9" required="" value="October 06, 2021" disabled>
-                        </div>
-
+        <!-- edit-store modal -->
+        <div id="edit-store" aria-hidden="true" role="dialog"
+            class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="modal-dialog relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto ">
+                <!-- Modal content -->
+                <div class="relative top-72 mx-96 border w-full shadow-lg rounded-md bg-white ">
+                    <div class="flex justify-end p-2">
+                        <button type="button" id="close-store" onClick="closeStore()"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="grid grid-cols-3 gap-2">
-                        <div class="col-start-1 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">No. of
-                                Days</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="4" disabled>
-                        </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="Finds Finds Las Pinas" disabled>
-                        </div>
-                        <div class="col-start-3 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="Vista Mall Department Store" disabled>
-                        </div>
-                        <div class="col-start-4 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">13th Month
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="0.00" disabled>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <label for="jobPosition"
-                            class="text-xl font-medium text-gray-900 dark:text-white">Earnings</label>
-                    </div>
-
-                    <div class="grid grid-cols-6 gap-1">
-                        <div class="col-start-1 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
-                                Rate</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="370.00" disabled>
-                        </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA
-                                Rate</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
-                        </div>
-                        <div class="col-start-3 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA
-                                Rate</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
-                        </div>
-                        <div class="col-start-4 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Hour
-                            </label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="46.25" disabled>
-                        </div>
-                        <div class="col-start-5 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per Minute
-                            </label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.77" disabled>
-                        </div>
-                        <div class="col-start-6 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
-                                Rate</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="370.00" disabled>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-6 gap-2">
-                        <div class="col-start-1 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="1,480.00" disabled>
-                        </div>
-
-                        <div class="col-start-2 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
-                        </div>
-
-                        <div class="col-start-3 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SEA
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
-                        </div>
-                        <div class="col-start-4 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Overtime
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
-                        </div>
-                        <div class="col-start-5 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Holiday
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="0.00" disabled>
-                        </div>
-
-                        <div class="col-start-6 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="1,480.00" disabled>
-                        </div>
-                    </div>
-                    <div class="col-start-1 col-end-7 w-full">
-                        <label for="jobPosition"
-                            class="text-xl font-medium text-gray-900 dark:text-white">Deduction</label>
-                    </div>
-                    <div class="grid grid-cols-5 gap-1">
-                        <div class="col-start-1 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="260" disabled>
-                        </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="150.32" disabled>
-                        </div>
-                        <div class="col-start-3 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="50.00" disabled>
-                        </div>
-                        <div class="col-start-4 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Others</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="50.00" disabled>
-                        </div>
-                        <div class="col-start-5 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="460.32" disabled>
-                        </div>
-                    </div>
-                    <div class="col-start-1 col-end-7 w-full">
-                        <label for="jobPosition" class="text-xl font-medium text-gray-900 dark:text-white">NET
-                            PAY</label>
-                    </div>
-                    <div class="grid grid-cols-3 gap-2">
-                        <div class="col-start-1 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
-                                Pay</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Basic Rate" required="" value="1,480.00" disabled>
-                        </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Total
-                                Deduction</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="460.32" disabled>
-                        </div>
-                        <div class="col-start-3 col-span-1">
-                            <label for="jobPosition"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Salary</label>
-                            <input type="text" name="jobPosition" id="jobPosition"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Per Hour" required="" value="1,019.68" disabled>
-                        </div>
-                    </div>
-                    <!-- <button type="submit" class="col-start-1 col-end-7 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- end view-employee modal -->
-
-    <!-- edit salary modal -->
-    <div id="edit-store" aria-hidden="true"
-        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                <div class="flex justify-end p-2">
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="edit-store">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Edit Salary
-                    </h3>
+                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                        <h3 class="text-xl font-medium text-gray-900 dark:text-white text-center">Edit Salary Maintenance</h3>
 
                     <div class="grid grid-cols-5 gap-2">
                         <div class="col-start-1 col-span-1">
@@ -1637,7 +1540,7 @@
                         <div class="col-start-2 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
-                            <select name="Region" id="Region"
+                                <select name="Region" id="Region"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <option hidden selected>NCR</option>
                                 <option value="09:00">NCR</option>
@@ -1651,7 +1554,7 @@
                         <div class="col-start-3 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
-                            <select name="starttime" id="starttime"
+                                <select name="starttime" id="starttime"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <option hidden selected>Las Pinas City</option>
                                 <option value="09:00">Las Pinas City</option>
@@ -1663,7 +1566,7 @@
                         <div class="col-start-4 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                            <select name="Chain" id="Chain"
+                                <select name="Chain" id="Chain"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <option hidden selected>Finds Finds Las Pinas</option>
                                 <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
@@ -1676,7 +1579,7 @@
                         <div class="col-start-5 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                            <select name="Branch" id="Branch"
+                                <select name="Branch" id="Branch"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <option hidden selected>Vista Mall Department Store</option>
                                 <option value="Vista Mall Department Store">Vista Mall Department Store
@@ -1691,48 +1594,48 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-4 gap-2">
-                        <div class="col-start-1 col-span-1">
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
-                                Rate</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="P370.00" required="" value="P370.00">
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Basic
+                                    Rate</label>
+                                <input type="text" name="birthdate" id="birthdate"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="P370.00" required="" value="P370.00">
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
+                                    Hour</label>
+                                <input type="text" name="birthdate" id="birthdate"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="P46.25" required="" value="P46.25">
+                            </div>
+                            <div class="col-start-3 col-span-1">
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
+                                    Min</label>
+                                <input type="text" name="birthdate" id="birthdate"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="P0.77" required="" value="P0.77">
+                            </div>
+                            <div class="col-start-4 col-span-1">
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA</label>
+                                <input type="text" name="birthdate" id="birthdate"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="P0.00" required="" value="P0.00">
+                            </div>
                         </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
-                                Hour</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="P46.25" required="" value="P46.25">
-                        </div>
-                        <div class="col-start-3 col-span-1">
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Per
-                                Min</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="P0.77" required="" value="P0.77">
-                        </div>
-                        <div class="col-start-4 col-span-1">
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">COLA</label>
-                            <input type="text" name="birthdate" id="birthdate"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="P0.00" required="" value="P0.00">
-                        </div>
-                    </div>
-                    <button type="submit"
-                        class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
-                </form>
+                        <button type="submit"
+                            class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!--end salary modal-->
+        <!--end salary modal-->
 
-    <!-- delete salary modal -->
+    <!-- delete-salary modal -->
     <div id="delete-store" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">
         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
@@ -1750,71 +1653,69 @@
                     </button>
                 </div>
 
-                <div class="p-6 text-center">
-                    <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to
-                        delete this Salary?</h3>
-                    <button data-modal-toggle="popup-modal" type="button"
-                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                        Yes, I'm sure
-                    </button>
-                    <button data-modal-toggle="popup-modal" type="button"
-                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
-                        cancel</button>
+                    <div class="p-6 text-center">
+                        <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to
+                            delete this Salary?</h3>
+                        <button onClick="closeDeleteStore()" type="button"
+                            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                            Yes, I'm sure
+                        </button>
+                        <button onClick="closeDeleteStore()" type="button"
+                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                            cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--end delete salary modal-->
+        <!--end edit-store modal-->
 
-    <!-- edit-deduction modal -->
-    <div id="edit-deduction" aria-hidden="true"
-        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                <div class="flex justify-end p-2">
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="edit-deduction">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                    <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Edit Deduction</h3>
+        <!-- edit-deduction modal -->
+        <div id="edit-deduction" aria-hidden="true"
+            class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="modal-dialog relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto ">
+                <!-- Modal content -->
+                <div class="relative top-72 left-96 border w-full shadow-lg rounded-md bg-white">
+                    <div class="flex justify-end p-2">
+                        <button type="button" onClick="closeDeduction()"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                        <h3 class="text-xl font-medium text-gray-900 dark:text-white text-center">Edit Deduction Maintenance</h3>
 
-                    <div class="grid grid-cols-2 gap-2">
-                        <div class="col-start-1 col-span-1">
-                            <label for="text"
-                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Deduction
-                                ID</label>
-                            <input type="text" name="name" id="name"
-                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
-                                placeholder="" required="" value="SALARY-0001" readonly>
-                        </div>
-                        <div class="col-start-2 col-span-1">
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
-                                Salary</label>
-                            <select name="Chain" id="Chain"
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="col-start-1 col-span-1">
+                                <label for="text"
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                    ID</label>
+                                <input type="text" name="name" id="name"
+                                    class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    placeholder="BRANCH-0001" required="" value="SALARY-0001" readonly>
+                            </div>
+                            <div class="col-start-2 col-span-1">
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
+                                    Salary</label>
+                                    <select name="Chain" id="Chain"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <option hidden selected>P20,000.00 and below</option>
                                 <option value="Finds Finds Las Pinas">P20,000.00 and below</option>
                                 <option value="Robinsons Las Pinas">P20,001.00 - P25,000.00</option>
                                 <option value="Waltermart Makati">P25,001.00 - P27,000.00</option>
-                            </select>
+                            </select>                        </div>
                         </div>
-                    </div>
-
-                    <div class="grid grid-cols-4 gap-2">
+                        <div class="grid grid-cols-4 gap-2">
                         <div class="col-start-1 col-span-1">
                             <label for="date"
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
@@ -1885,7 +1786,7 @@
                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
                             <input type="text" name="birthdate" id="birthdate"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="P46.25" required="" value="P0.32">
+                                placeholder="P46.25" required="" value="P00.32">
                         </div>
                         <div class="col-start-3 col-span-1">
                             <label for="date"
@@ -1908,49 +1809,49 @@
             </div>
         </div>
     </div>
-    <!--end edit deduction modal-->
+    <!--end edit-store modal-->
 
-    <div id="delete-deduction" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">
-        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex justify-end p-2">
-                    <button type="button"
-                        class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="delete-deduction">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-
-                    <div class="p-6 text-center">
-                        <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want
-                            to
-                            delete this Deduction of Salary?</h3>
-                        <button data-modal-toggle="popup-modal" type="button"
-                            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                            Yes, I'm sure
+        <div id="delete-deduction" aria-hidden="true"
+            class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto left-96">
+                <!-- Modal content -->
+                <div class="relative top-72 left-96 right-0 border w-full shadow-lg rounded-md bg-white">
+                    <div class="flex justify-end p-2">
+                        <button type="button" onClick="closeDeleteDeduction()"
+                            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </button>
-                        <button data-modal-toggle="popup-modal" type="button"
-                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
-                            cancel</button>
-                    </div>
-                </div>
 
+                        <div class="p-6 text-center">
+                            <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want
+                                to
+                                delete this Deduction of Salary?</h3>
+                            <button onClick="closeDeleteDeduction()" type="button"
+                                class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                Yes, I'm sure
+                            </button>
+                            <button onClick="closeDeleteDeduction()" type="button"
+                                class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                                cancel</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
-    <!--end delete-deduction modal-->
-
-    <!-- edit-branch modal -->
+        <!--end delete-deduction modal-->
+         <!-- edit-branch modal -->
     <div id="edit-branch" aria-hidden="true"
         class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
         <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
@@ -2085,16 +1986,265 @@
         </div>
     </div>
     <!--end delete-branch modal-->
-
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type='text/javascript'>
+var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+var primaryKey = "";
+$(document).ready(function() {
 
-</body>
+    // Fetch all records
+    $('#but_fetchall').click(function() {
+
+        // AJAX GET request
+        $.ajax({
+            url: 'getSalaryMaintenance',
+            type: 'get',
+            dataType: 'json',
+            success: function(response) {
+                // $salary = [response];
+                createRows(response);
+
+            }
+        });
+        // console.log($salary);
+    });
+
+    // Search by userid
+    $('#but_search').click(function() {
+        var userid = Number($('#search').val().trim());
+
+        if (userid > 0) {
+
+            // AJAX POST request
+            $.ajax({
+                url: 'getUserbyid',
+                type: 'post',
+                data: {
+                    _token: CSRF_TOKEN,
+                    userid: userid
+                },
+                dataType: 'json',
+                success: function(response) {
+
+                    createRows(response);
+
+                }
+            });
+        }
+
+    });
+
+});
+
+// Create table rows
+function createRows(response) {
+    console.log(response);
+    var len = 0;
+    $('#salaryMaintenanceTable tbody').empty(); // Empty <tbody>
+    if (response['data'] != null) {
+        len = response['data'].length;
+    }
+
+    if (len > 0) {
+        for (var i = 0; i < len; i++) {
+            var branchID = response['data'][i].branchID;
+            primaryKey = branchID;
+            var region = response['data'][i].region;
+            var municipalitycity = response['data'][i].municipalitycity;
+            var chain = response['data'][i].chain;
+            var branch = response['data'][i].branch;
+            var basicRate = response['data'][i].basicRate;
+            var perHour = response['data'][i].perHour;
+            var perMin = response['data'][i].perMin;
+            var COLA = response['data'][i].COLA;
+
+            var tr_str = "<tr class='flex w-full even:bg-gray-100 odd:bg-white-100'>" +
+                "<td class='p-4 w-2/6'>" + branchID + "</td>" +
+                "<td class='p-4 w-2/6'>" + region + "</td>" +
+                "<td class='p-4 w-2/6'>" + municipalitycity + "</td>" +
+                "<td class='p-4 w-2/6'>" + chain + "</td>" +
+                "<td class='p-4 w-2/6'>" + branch + "</td>" +
+                "<td class='p-4 w-2/6'>" + "P" + basicRate + "</td>" +
+                "<td class='p-4 w-2/6'>" + "P" + perHour + "</td>" +
+                "<td class='p-4 w-2/6'>" + "P" + perMin + "</td>" +
+                "<td class='p-4 w-2/6'>" + "P" + COLA + "</td>" +
+                '<td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>' +
+                "</tr>";
+
+                    $("#salaryMaintenanceTable tbody").append(tr_str);
+                }
+            } else {
+                var tr_str = "<tr>" +
+                    "<td align='center' colspan='4'>No record found.</td>" +
+                    "</tr>";
+
+                $("#salaryMaintenanceTable tbody").append(tr_str);
+            }
+        }
+        function generatePrimaryKey(){
+
+            console.log(primaryKey);
+            const arr = primaryKey.split("-");
+            arr[1] = "000" + (parseInt(arr[1]) + 1);
+            primaryKey = arr[0] + "-" + arr[1];
+
+            document.getElementById("branchID").value=primaryKey;
+
+        }
+
+        let modal = document.getElementById('edit-store');
+
+        function editSalary() {
+            modal.style.display = "block";
+        }
+
+        function closeStore() {
+            modal.style.display = "none";
+        }
+
+        let modalStore = document.getElementById('delete-store');
+
+        function deleteSalary() {
+            modalStore.style.display = "block";
+        }
+
+        function closeDeleteStore() {
+            modalStore.style.display = "none";
+        }
+
+        let modalDeduction = document.getElementById('edit-deduction');
+
+        function editDeduction() {
+            modalDeduction.style.display = "block";
+        }
+
+        function closeDeduction() {
+            modalDeduction.style.display = "none";
+        }
+
+        let modalDeleteDeduction = document.getElementById('delete-deduction');
+
+        function deleteDeduction() {
+            modalDeleteDeduction.style.display = "block";
+        }
+
+        function closeDeleteDeduction() {
+            modalDeleteDeduction.style.display = "none";
+        }
+
+
+        $(document).ready(function() {
+
+            // Fetch all records
+            $('#fetchDeductionMaintenance').click(function() {
+
+                // AJAX GET request
+                $.ajax({
+                    url: 'getDeductionMaintenance',
+                    type: 'get',
+                    dataType: 'json',
+                    success: function(response) {
+
+                        createRowsDeduction(response);
+
+                    }
+
+                });
+                console.log("fetch deduction maintenance");
+            });
+
+            // Search by userid
+            $('#but_search').click(function() {
+                var userid = Number($('#search').val().trim());
+
+                if (userid > 0) {
+
+                    // AJAX POST request
+                    $.ajax({
+                        url: 'getUserbyid',
+                        type: 'post',
+                        data: {
+                            _token: CSRF_TOKEN,
+                            userid: userid
+                        },
+                        dataType: 'json',
+                        success: function(response) {
+
+                            createRows(response);
+
+                        }
+                    });
+                }
+
+            });
+
+        });
+
+        var primaryDeductionID = "";
+        // Create table rows
+        function createRowsDeduction(response) {
+            console.log(response);
+            var len = 0;
+            $('#deductionMaintenanceTable tbody').empty(); // Empty <tbody>
+            if (response['data'] != null) {
+                len = response['data'].length;
+            }
+
+            if (len > 0) {
+                for (var i = 0; i < len; i++) {
+                    var deductionID = response['data'][i].deductionID;
+                    primaryDeductionID = deductionID;
+                    var branchID = response['data'][i].branchID;
+                    var rangeSalary = response['data'][i].rangeSalary;
+                    var SSS = response['data'][i].SSS;
+                    var PHIC = response['data'][i].PHIC;
+                    var HMDF = response['data'][i].HMDF;
+                    var total = response['data'][i].total;
+
+                    var tr_str = "<tr class='flex w-full even:bg-gray-100 odd:bg-white-100'>" +
+                        "<td class='p-4 w-2/6'>" + deductionID + "</td>" +
+                        "<td class='p-4 w-2/6'>" + branchID + "</td>" +
+                        "<td class='p-4 w-2/6'>" + rangeSalary + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + SSS + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + PHIC + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + HMDF + "</td>" +
+                        "<td class='p-4 w-2/6'>" + "P" + total + "</td>" +
+                        "<td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>" +
+                        "</tr>";
+
+                    $("#deductionMaintenanceTable tbody").append(tr_str);
+                }
+            } else {
+                var tr_str = "<tr>" +
+                    "<td align='center' colspan='4'>No record found.</td>" +
+                    "</tr>";
+
+                $("#deductionMaintenanceTable tbody").append(tr_str);
+            }
+        }
+
+        function generatePrimaryDeduction(){
+            console.log(primaryDeductionID);
+            const arr = primaryDeductionID.split("-");
+            arr[1] = "000" + (parseInt(arr[1]) + 1);
+            primaryDeductionID = arr[0] + "-" + arr[1];
+
+            document.getElementById("deductionID").value=primaryDeductionID;
+
+        }
+        </script>
+    </body>
 
 </html>
 
 <!-- Javascript Code -->
 <script>
+// function editSalary(){
+//     console.log("Edit salary");
+//     $("#edit-store").modal();
+// }
 var navmenu = document.getElementById('navmenu');
 
 function toggleMenu() {
@@ -2237,6 +2387,194 @@ function hideBranchMaintenance() {
         x.style.display = "none";
     }
 }
+
+document.addEventListener('DOMContentLoaded', init, false);
+
+const pageSizeSalaryMaintenance = 10;
+let curPageSalaryMaintenance = 1;
+let tableSalaryMaintenance, dataSalaryMaintenance, sortColSalaryMaintenance;
+let sortAscSalaryMaintenance = false;
+
+const pageSizeDeductionMaintenance = 10;
+let curPageDeductionMaintenance = 1;
+let tableDeductionMaintenance, dataDeductionMaintenance, sortColDeductionMaintenance;
+let sortAscDeductionMaintenance = false;
+async function init() {
+
+    //Salary Maintenance
+    $.ajax({
+        url: 'getSalaryMaintenance',
+        type: 'get',
+        dataType: 'json',
+        success: function(response) {
+
+            // createRows(response);
+            dataSalaryMaintenance = Object.entries(response);
+            renderTableSalaryMaintenance();
+
+        }
+    });
+    console.log("start initialize");
+    tableSalaryMaintenance = document.querySelector('#salaryMaintenanceTable tbody');
+    document.querySelector('#nextButtonSalaryMaintenance').addEventListener('click', nextPageSalaryMaintenance,
+        false);
+    document.querySelector('#prevButtonSalaryMaintenance').addEventListener('click', previousPageSalaryMaintenance,
+        false);
+
+
+        //Deduction Maintenance
+        $.ajax({
+        url: 'getDeductionMaintenance',
+        type: 'get',
+        dataType: 'json',
+        success: function(response) {
+
+            // createRows(response);
+            dataDeductionMaintenance = Object.entries(response);
+            renderTableDeductionMaintenance();
+
+        }
+    });
+    tableDeductionMaintenance = document.querySelector('#deductionMaintenanceTable tbody');
+    document.querySelector('#nextButtonDeductionMaintenance').addEventListener('click', nextPageDeductionMaintenance,
+        false);
+    document.querySelector('#prevButtonDeductionMaintenance').addEventListener('click', previousPageDeductionMaintenance,
+        false);
+}
+//Salary Maintenance
+function renderTableSalaryMaintenance() {
+    // create html
+
+    // console.log(dataSalaryMaintenance[0][1]);
+    dataSalaryMaintenance = dataSalaryMaintenance[0][1];
+    console.log(dataSalaryMaintenance.length);
+    let result = '';
+    dataSalaryMaintenance.filter((row, index) => {
+        let start = (curPageSalaryMaintenance - 1) * pageSizeSalaryMaintenance;
+        let end = curPageSalaryMaintenance * pageSizeSalaryMaintenance;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${c.region}</td>
+     <td class="py-4 w-2/6">${c.municipalitycity}</td>
+     <td class="py-4 w-2/6">${c.chain}</td>
+     <td class="py-4 w-2/6">${c.branch}</td>
+	 <td class="py-4 w-2/6">${c.basicRate}</td>
+	 <td class="py-4 w-2/6">${c.perHour}</td>
+	 <td class="py-4 w-2/6">${c.perMin}</td>
+     <td class="py-4 w-2/6">${c.COLA}</td>
+     <td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>
+     </tr>`;
+     primaryKey = c.branchID;
+    });
+    tableSalaryMaintenance.innerHTML = result;
+}
+
+function previousPageSalaryMaintenance() {
+    if (curPageSalaryMaintenance > 1) curPageSalaryMaintenance--;
+    renderTableSalaryMaintenance();
+}
+function nextPageSalaryMaintenance() {
+    if ((curPageSalaryMaintenance * pageSizeSalaryMaintenance) < dataSalaryMaintenance.length)
+    curPageSalaryMaintenance++;
+    renderTableSalaryMaintenance();
+}
+
+// declare elements
+const searchBoxSalaryMaintenance = document.getElementById('searchBox');
+const tableSearchSalaryMaintenance = document.getElementById("salaryMaintenanceTable");
+const trsSalaryMaintenance = tableSearchSalaryMaintenance.tBodies[0].getElementsByTagName("tr");
+// add event listener to search box
+searchBoxSalaryMaintenance.addEventListener('keyup', performSearch);
+function performSearch() {
+    // Declare search string 
+    var filter = searchBox.value.toUpperCase();
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsSalaryMaintenance.length; rowI++) {
+        // define the row's cells
+        var tds = trsSalaryMaintenance[rowI].getElementsByTagName("td");
+        // hide the row
+        trsSalaryMaintenance[rowI].style.display = "none";
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trsSalaryMaintenance[rowI].style.display = "";
+                // skip to the next row
+                continue;
+            }
+        }
+    }
+}
+
+
+//Deduction Maintenance
+function renderTableDeductionMaintenance() {
+    // create html
+
+    // console.log(dataSalaryMaintenance[0][1]);
+    dataDeductionMaintenance = dataDeductionMaintenance[0][1];
+    console.log(dataDeductionMaintenance);
+    let result = '';
+    dataDeductionMaintenance.filter((row, index) => {
+        let start = (curPageDeductionMaintenance - 1) * pageSizeDeductionMaintenance;
+        let end = curPageDeductionMaintenance * pageSizeDeductionMaintenance;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.deductionID}</td>
+     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${c.rangeSalary}</td>
+     <td class="py-4 w-2/6">${c.SSS}</td>
+     <td class="py-4 w-2/6">${c.PHIC}</td>
+	 <td class="py-4 w-2/6">${c.HMDF}</td>
+	 <td class="py-4 w-2/6">${c.total}</td>
+     <td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>
+     </tr>`;
+    });
+    tableDeductionMaintenance.innerHTML = result;
+}
+
+function previousPageDeductionMaintenance() {
+    if (curPageDeductionMaintenance > 1) curPageDeductionMaintenance--;
+    renderTableSalaryMaintenance();
+}
+function nextPageDeductionMaintenance() {
+    if ((curPageDeductionMaintenance * pageSizeDeductionMaintenance) < dataDeductionMaintenance.length)
+    curPageDeductionMaintenance++;
+    renderTableDeductionMaintenance();
+}
+
+// declare elements
+const searchBoxDeductionMaintenance = document.getElementById('searchBoxDeduction');
+const tableSearchDeductionMaintenance = document.getElementById("deductionMaintenanceTable");
+const trsDeductionMaintenance = tableSearchDeductionMaintenance.tBodies[0].getElementsByTagName("tr");
+// add event listener to search box
+searchBoxDeductionMaintenance.addEventListener('keyup', performSearchDeduction);
+function performSearchDeduction() {
+    // Declare search string 
+    var filter = searchBoxDeduction.value.toUpperCase();
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsDeductionMaintenance.length; rowI++) {
+        // define the row's cells
+        var tds = trsDeductionMaintenance[rowI].getElementsByTagName("td");
+        // hide the row
+        trsDeductionMaintenance[rowI].style.display = "none";
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trsDeductionMaintenance[rowI].style.display = "";
+                // skip to the next row
+                continue;
+            }
+        }
+    }
+}
+
 
 function hideProfile() {
     var x = document.getElementById("profile");

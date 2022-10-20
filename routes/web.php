@@ -1,5 +1,13 @@
 <?php
 
+
+use App\Http\Controllers\branchController;
+use App\Http\Controllers\deductionController;
+use App\Http\Controllers\employeeController;
+use App\Http\Controllers\employeePayrollController;
+use App\Http\Controllers\overtimeController;
+use App\Http\Controllers\salaryController;
+use App\Http\Controllers\timeController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SendOvertimeEmailController;
@@ -43,6 +51,19 @@ Route::get('/reports', function () {
     return view('reports');
 });
 
+Route::resource('employee', employeeController::class);
+Route::post('salaryMaintenance', [salaryController::class, 'store']);
+Route::post('deductionMaintenance', [deductionController::class, 'store']);
+Route::get('/getSalaryMaintenance', [salaryController::class, 'getSalaryMaintenance']);
+Route::get('/getDeductionMaintenance', [deductionController::class, 'getDeductionMaintenance']);
+// Route::get('employee', [employeeController::class, 'index']);
+
+
+// Route::get('/', [EmployeeController::class, 'index']);
+Route::get('/getUsers', [employeeController::class, 'getUsers']);
+Route::get('/employee', [SendOTRequestEmailController::class, 'index']);
+
+Route::post('/employee/send', [SendOTRequestEmailController::class, 'send']);
 Route::get('/employee', [SendOvertimeEmailController::class, 'index']);
 Route::post('/employee/send', [SendOvertimeEmailController::class, 'send']);
 Route::get('/approver', [SendOvertimeEmailController::class, 'indexdenied']);

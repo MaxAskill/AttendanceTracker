@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/css/uikit.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/js/uikit.min.js"></script>
-    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Employee</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/js/uikit.min.js"></script>
+        <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    </head>
 
 <body class="xl:flex">
     <!-- component -->
@@ -41,131 +41,132 @@
                         alt="Sample image" />
                 </div>
 
-                <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#" onClick="showDailyTimeRecord()" @click="open = !open"
-                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900  dark:group-hover:text-white"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
-                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="32" />
-                                    <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69"
-                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="32" />
-                                </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" onClick="showAttendanceSummary()" @click="open = !open"
-                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    viewBox="0 0 512 512">
-                                    <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
-                                        x="48" y="80" width="416" height="384" rx="48" />
-                                    <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
-                                        stroke-linecap="round" d="M128 48v32M384 48v32" />
-                                    <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
-                                        d="M464 160H48" />
-                                </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">Attendance Summary</span>
-                            </a>
-                        </li>
+                    <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" onClick="showDailyTimeRecord()" @click="open = !open"
+                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900  dark:group-hover:text-white"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                        <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                    </svg>
+                                    <span class="flex-1 ml-3 whitespace-nowrap">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" onClick="showAttendanceSummary()" @click="open = !open"
+                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                        viewBox="0 0 512 512">
+                                        <rect fill="none" stroke="currentColor" stroke-linejoin="round"
+                                            stroke-width="32" x="48" y="80" width="416" height="384" rx="48" />
+                                        <path fill="none" stroke="currentColor" stroke-linejoin="round"
+                                            stroke-width="32" stroke-linecap="round" d="M128 48v32M384 48v32" />
+                                        <path fill="none" stroke="currentColor" stroke-linejoin="round"
+                                            stroke-width="32" d="M464 160H48" />
+                                    </svg>
+                                    <span class="flex-1 ml-3 whitespace-nowrap">Attendance Summary</span>
+                                </a>
+                            </li>
 
-                        <li>
-                            <a href="#" onClick="showOT()" @click="open = !open"
-                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288"
-                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="32" />
-                                </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">Overtime History</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" onClick="showProfile()"
-                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    viewBox="0 0 512 512">
-                                    <title>Person</title>
-                                    <path
-                                        d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
-                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="32" />
-                                    <path
-                                        d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
-                                        fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
-                                </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/"
-                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256"
-                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="32" />
-                                </svg><span class="flex-1 ml-3 whitespace-nowrap">Log Out</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </sidebar>
-    </div>
+                            <li>
+                                <a href="#" onClick="showOT()" @click="open = !open"
+                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                    </svg>
+                                    <span class="flex-1 ml-3 whitespace-nowrap">Overtime History</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" onClick="showProfile()"
+                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                        viewBox="0 0 512 512">
+                                        <title>Person</title>
+                                        <path
+                                            d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                        <path
+                                            d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
+                                            fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                            stroke-width="32" />
+                                    </svg>
+                                    <span class="flex-1 ml-3 whitespace-nowrap">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/"
+                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                        viewBox="0 0 512 512">
+                                        <path
+                                            d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                    </svg><span class="flex-1 ml-3 whitespace-nowrap">Log Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </sidebar>
+        </div>
 
-    <content class="xl:w-10/12 md:min-h-screen sm:w-full py-5 px-10">
-        <div id="dailyTimeRecord" style="display:block">
-            <div class="grid md:grid-cols-3 px-5 gap-5 mb-5">
+        <content class="xl:w-10/12 md:min-h-screen sm:w-full py-5 px-10">
+            <div id="dailyTimeRecord" style="display:block">
+                <div class="grid md:grid-cols-3 px-5 gap-5 mb-5">
 
-                <div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
-                    <h1 class="font-bold">Worked Hour Today</h1>
-                    <p><span id="hours" class="countdown font-mono text-2xl"> 00 : 00 : 00 : 00 </span></p>
-                </div>
-
-                <div class="bg-green-500 rounded-lg py-5 text-center text-white">
-                    <h1 class="font-bold">Timed In Today</h1>
-                    <span class="countdown font-mono text-2xl" id="timedIn">
-                        00 : 00 : 00
-                    </span>
-                </div>
-
-                <div class="bgpantone rounded-lg py-5 text-center text-white">
-                    <h1 class="font-bold">Estimated Time Out</h1>
-                    <span class="countdown font-mono text-2xl" id="time_out">
-                        00 : 00 : 00
-                    </span>
-                </div>
-            </div>
-            <!--END CLOCK-->
-            <div class="px-5 md:flex">
-
-                <div class="md:w-3/12 md:mb-0 mb-5">
-                    <div class="bg-white rounded-lg md:py-12 py-5 text-center text-white space-x-4 mb-5">
-                        <h1 class="text-gray-700 text-2xl font-bold">FILE OVERTIME</h1>
-                        <button
-                            class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-4 mt-1 hover:bg-gray-100 focus:outline-none"
-                            data-modal-toggle="authentication-modal">FILE<button>
+                    <div class="bg-gray-400 rounded-lg px-2 py-5 text-white text-center">
+                        <h1 class="font-bold">Worked Hour Today</h1>
+                        <p><span id="hours" class="countdown font-mono text-2xl"> 00 : 00 : 00 : 00 </span></p>
                     </div>
 
-                    <div class="bg-white rounded-2xl px-10 py-14 text-center text-white overflow-hidden">
-                        <h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
-                        <h1 class="text-gray-700 text-xl font-bold py-2 mb-2">SEPTEMBER 21, 2022</h1>
-                        <select id="timeschedule"
+                    <div class="bg-green-500 rounded-lg py-5 text-center text-white">
+                        <h1 class="font-bold">Timed In Today</h1>
+                        <span class="countdown font-mono text-2xl" id="timedIn">
+                            00 : 00 : 00
+                        </span>
+                    </div>
+
+                    <div class="bgpantone rounded-lg py-5 text-center text-white">
+                        <h1 class="font-bold">Estimated Time Out</h1>
+                        <span class="countdown font-mono text-2xl" id="time_out">
+                            00 : 00 : 00
+                        </span>
+                    </div>
+                </div>
+                <!--END CLOCK-->
+                <div class="px-5 md:flex">
+
+                    <div class="md:w-3/12 md:mb-0 mb-5">
+                        <div class="bg-white rounded-lg md:py-12 py-5 text-center text-white space-x-4 mb-5">
+                            <h1 class="text-gray-700 text-2xl font-bold">FILE OVERTIME</h1>
+                            <button
+                                class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-4 mt-1 hover:bg-gray-100 focus:outline-none"
+                                data-modal-toggle="authentication-modal">FILE<button>
+                        </div>
+
+                        <div class="bg-white rounded-2xl px-10 py-20 text-center text-white overflow-hidden">
+                            <h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
+                            <span class="text-gray-700 text-xl font-bold py-2" id="todayDate">SEPTEMBER 21, 2022</span>
+                            <select id="timeschedule"
                             class="w-2/3 inline-flex items-center bg-gray-50 border-2 border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             <option hidden selected>Time Schedule</option>
                             <option value="09:30">09:30 am - 06:00 pm</option>
@@ -173,47 +174,61 @@
                             <option value="08:00">08:00 am - 04:00 pm</option>
                             <option value="11:00">11:00 am - 09:00 pm</option>
                         </select>
-                        <div class="grid place-content-center py-5">
-                            <button
-                                class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 focus:outline-none"
-                                id="button-start">Check In<button>
-                                    <button
-                                        class="border-4 rounded-2xl text-xl border-pantone font-pantone py-2 px-2 hidden focus:outline-none"
-                                        id="button-stop" onClick="hideButton()">Check Out<button>
+                            <div class="grid place-content-center py-5">
+                                <input type="button"
+                                    class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 focus:outline-none"
+                                    id="button-start" value="Check In">
+                                <button
+                                    class="border-4 rounded-2xl text-xl border-pantone font-pantone py-2 px-2 hidden focus:outline-none"
+                                    id="button-stop" onClick="hideButton()">Check Out<button>
+                            </div>
+                            <table class="table-fixed w-full content-center text-left text-gray-700 border-separate">
+                                <tr>
+                                    <th class="py-1">AM IN :</th>
+                                    <th class="font-medium"><span id="amIn">
+                                            -- : -- : --
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th class="py-1">LB IN :</th>
+                                    <th class="font-medium"><span id="lbIn">
+                                            -- : -- : --
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th class="py-1">LB OUT :</th>
+                                    <th class="font-medium"><span id="lbOut">
+                                            -- : -- : --
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th class="py-1">CB IN :</th>
+                                    <th class="font-medium"><span id="cbIn">
+                                            -- : -- : --
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th class="py-1">CB OUT :</th>
+                                    <th class="font-medium"><span id="cbOut">
+                                            -- : -- : --
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th class="py-1">PM OUT :</th>
+                                    <th class="font-medium"><span id="pmOut">
+                                            -- : -- : --
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th class="py-1">DURATION :</th>
+                                    <th class="font-medium"><span id="duration">
+                                            -- : -- : --
+                                        </span></th>
+                                </tr>
+                            </table>
                         </div>
-                        <table class="table-fixed w-full content-center text-left text-gray-700 border-separate">
-                            <tr>
-                                <th class="py-1">AM IN :</th>
-                                <th class="font-medium">08:00 am</th>
-                            </tr>
-                            <tr>
-                                <th class="py-1">LB OUT :</th>
-                                <th class="font-medium">12:00 am</th>
-                            </tr>
-                            <tr>
-                                <th class="py-1">LB IN :</th>
-                                <th class="font-medium">01:00 pm</th>
-                            </tr>
-                            <tr>
-                                <th class="py-1">CB OUT :</th>
-                                <th class="font-medium">04:00 pm</th>
-                            </tr>
-                            <tr>
-                                <th class="py-1">CB IN :</th>
-                                <th class="font-medium">04:20 pm</th>
-                            </tr>
-                            <tr>
-                                <th class="py-1">PM OUT :</th>
-                                <th class="font-medium">06:30 pm</th>
-                            </tr>
-                            <tr>
-                                <th class="py-1">DURATION :</th>
-                                <th class="font-medium">8  hrs 30 mins</th>
-                            </tr>
-                        </table>
                     </div>
-                </div>
-                <!--END FILE AND TODAY-->
+                    <!--END FILE AND TODAY-->
 
                 <div class="md:w-9/12 md:ml-5">
                     <div class="md:row-start-1 md:row-span-2 md:col-span-4 sm:col-span-1 sm:col-span-1  drop-shadow-md">
@@ -224,12 +239,12 @@
                                 <h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
                             </div>
                             <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                <h1 class="text-lg font-bold">Late/Undertime</h1>
-                                <h2 class="text-2xl">00 hrs 00 mins</h2>
+                                <h1 class="text-lg font-bold">Late</h1>
+                                <h2 class="text-2xl">0 mins</h2>
                             </div>
                             <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                <h1 class="text-lg font-bold">Absent</h1>
-                                <h2 class="text-2xl">0 day/s</h2>
+                                <h1 class="text-lg font-bold">Undertime</h1>
+                                <h2 class="text-2xl">0 mins</h2>
                             </div>
                             <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
                                 <h1 class="text-lg font-bold">Overtime</h1>
@@ -242,60 +257,63 @@
                         </div>
                     </div>
 
-                    <div class="py-2 bgcolor drop-shadow-md rounded-xl ">
-                        <div class="grid md:grid-rows-2 md:grid-flow-col grid-cols-1 sm:px-5 sm:w-full md:mb-0 mb-2">
-                            <div class="md:row-start-1 row-span-1 md:flex">
-                                <h1 class="text-white md:text-4xl text-2xl font-bold mx-4">Daily Time Record</h1>
-                            </div>
-                            <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
-                                <div date-rangepicker class="md:flex items-center">
-                                    <span class="md:mx-4 text-white"> Sort By:</span>
-                                    <div class="relative">
-                                        <div
-                                            class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                            <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                                fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg>
+                        <div class="py-2 bgcolor drop-shadow-md rounded-xl ">
+                            <div
+                                class="grid md:grid-rows-2 md:grid-flow-col grid-cols-1 sm:px-5 sm:w-full md:mb-0 mb-2">
+                                <div class="md:row-start-1 row-span-1 md:flex">
+                                    <h1 class="text-white md:text-4xl text-2xl font-bold mx-4">Daily Time Record</h1>
+                                </div>
+                                <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
+                                    <div date-rangepicker class="md:flex items-center">
+                                        <span class="md:mx-4 text-white"> Sort By:</span>
+                                        <div class="relative">
+                                            <div
+                                                class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                                <svg aria-hidden="true"
+                                                    class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                                    fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            <input name="start" type="text"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Select date start">
                                         </div>
-                                        <input name="start" type="text"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            placeholder="Select date start">
+                                        <span class="md:mx-4 text-white">to</span>
+                                        <div class="relative">
+                                            <div
+                                                class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                                <svg aria-hidden="true"
+                                                    class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                                    fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            <input name="end" type="text"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Select date end">
+                                        </div>
                                     </div>
-                                    <span class="md:mx-4 text-white">to</span>
-                                    <div class="relative">
-                                        <div
-                                            class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                            <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                                fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                        <input name="end" type="text"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            placeholder="Select date end">
+                                </div>
+                                <div class="md:row-start-2 md:row-span-2 md:px-0 px-3">
+                                    <div class="md:flex  md:float-right ">
+                                        <button
+                                            class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                            data-modal-toggle="upload-file">Upload</button>
+                                        <button
+                                            class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                            onClick="printDataTimeRecord()">Print</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="md:row-start-2 md:row-span-2 md:px-0 px-3">
-                                <div class="md:flex  md:float-right ">
-                                    <button
-                                        class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                        data-modal-toggle="upload-file">Upload</button>
-                                    <button
-                                        class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                        onClick="printDataTimeRecord()">Print</button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row-start-2 row-span-5 col-span-2">
+                            <div class="row-start-2 row-span-5 col-span-2">
 
                             <div class="overflow-x-auto relative  sm:rounded-lg">
                                 <table id="timeRecord"
@@ -315,105 +333,105 @@
                                     </thead>
                                     <tbody>
 
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
 
-                            </div>
-                            <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
-                                <nav aria-label="Page navigation example w-full">
-                                    <ul class="inline-flex -space-x-px">
-                                        <li>
-                                            <a href="" id="prevButton"
-                                                class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                                        </li>
-                                        <li>
-                                            <a href=""
-                                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                                        </li>
-                                        <li>
-                                            <a href=""
-                                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                                        </li>
-                                        <li>
-                                            <a href="" aria-current="page"
-                                                class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                                        </li>
-                                        <li>
-                                            <a href=""
-                                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                                        </li>
-                                        <li>
-                                            <a href=""
-                                                class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                                        </li>
-                                        <li>
-                                            <a href="" id="nextButton"
-                                                class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                </div>
+                                <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
+                                    <nav aria-label="Page navigation example w-full">
+                                        <ul class="inline-flex -space-x-px">
+                                            <li>
+                                                <a href="" id="prevButton"
+                                                    class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                            </li>
+                                            <li>
+                                                <a href=""
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                            </li>
+                                            <li>
+                                                <a href=""
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="" aria-current="page"
+                                                    class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                            </li>
+                                            <li>
+                                                <a href=""
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                            </li>
+                                            <li>
+                                                <a href=""
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                            </li>
+                                            <li>
+                                                <a href="" id="nextButton"
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--END HOME-->
+            <!--END HOME-->
 
-        <div class="hide-show  px-5" id="attendanceSummary" style="display: none">
-            <div class="py-2 bgcolor drop-shadow-md rounded-xl">
-                <div class="grid md:grid-rows-2 md:grid-flow-col grid-cols-1 sm:px-5 sm:w-full md:mb-0 mb-2">
-                    <div class="md:row-start-1 row-span-1 md:flex">
-                        <h1 class="text-white md:text-4xl text-2xl font-bold mx-4">Attendance Summary</h1>
-                    </div>
-                    <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
-                        <input type="text" class="md:w-2/12 w-full form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+            <div class="hide-show  px-5" id="attendanceSummary" style="display: none">
+                <div class="py-2 bgcolor drop-shadow-md rounded-xl">
+                    <div class="grid md:grid-rows-2 md:grid-flow-col grid-cols-1 sm:px-5 sm:w-full md:mb-0 mb-2">
+                        <div class="md:row-start-1 row-span-1 md:flex">
+                            <h1 class="text-white md:text-4xl text-2xl font-bold mx-4">Attendance Summary</h1>
+                        </div>
+                        <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
+                            <input type="text" class="md:w-2/12 w-full form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
 						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchBox"
-                            placeholder="Search" />
-                        <div date-rangepicker class="md:flex items-center">
-                            <span class="md:mx-4 text-white"> Sort By:</span>
-                            <div class="relative">
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
+                                placeholder="Search" />
+                            <div date-rangepicker class="md:flex items-center">
+                                <span class="md:mx-4 text-white"> Sort By:</span>
+                                <div class="relative">
+                                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <input name="start" type="text"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Select date start">
                                 </div>
-                                <input name="start" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date start">
+                                <span class="md:mx-4 text-white">to</span>
+                                <div class="relative">
+                                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <input name="end" type="text"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Select date end">
+                                </div>
                             </div>
-                            <span class="md:mx-4 text-white">to</span>
-                            <div class="relative">
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <input name="end" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date end">
+                        </div>
+                        <div class="md:row-start-2 md:row-span-2 md:px-0 px-3">
+                            <div class="md:flex  md:float-right ">
+                                <button
+                                    class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                    data-modal-toggle="upload-file">Upload</button>
+                                <button
+                                    class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                    onClick="printDataAttendanceSummary()">Print</button>
                             </div>
                         </div>
                     </div>
-                    <div class="md:row-start-2 md:row-span-2 md:px-0 px-3">
-                        <div class="md:flex  md:float-right ">
-                            <!-- <button
-                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                data-modal-toggle="upload-file">Upload</button> -->
-                            <button
-                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                onClick="printDataAttendanceSummary()">Print</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row-start-2 row-span-5 col-span-2">
+                    <div class="row-start-2 row-span-5 col-span-2">
 
                     <div class="overflow-x-auto relative  sm:rounded-lg">
                         <table id="attendanceSummaryTable"
@@ -451,90 +469,90 @@
                             </tfoot>
                         </table>
 
-                    </div>
-                    <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
-                        <nav aria-label="Page navigation example w-full">
-                            <ul class="inline-flex -space-x-px">
-                                <li>
-                                    <span href="#" id="prevButtonAttendanceSummary"
-                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</span>
-                                </li>
-                                <li>
-                                    <span href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</span>
-                                </li>
-                                <li>
-                                    <span href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</span>
-                                </li>
-                                <li>
-                                    <span href="#" aria-current="page"
-                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</span>
-                                </li>
-                                <li>
-                                    <span href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</span>
-                                </li>
-                                <li>
-                                    <span href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</span>
-                                </li>
-                                <li>
-                                    <span href="#" id="nextButtonAttendanceSummary"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</span>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--END ATTENDANCE SUMMARY-->
-
-        <div class="hide-show  px-5" id="history" style="display: none">
-            <div class="py-2 bgcolor drop-shadow-md rounded-xl">
-                <div class="grid md:grid-rows-2 md:grid-flow-col grid-cols-1 sm:px-5 sm:w-full md:mb-0 mb-2">
-                    <div class="md:row-start-1 row-span-1 md:flex">
-                        <h1 class="text-white md:text-4xl text-2xl font-bold mx-4">Overtime History</h1>
-                    </div>
-                    <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
-                        <input type="text" class="md:w-2/12 w-full form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchBox"
-                            placeholder="Search" />
-                        <div date-rangepicker class="md:flex items-center">
-                            <span class="md:mx-4 text-white"> Sort By:</span>
-                            <div class="relative">
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <input name="start" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date start">
-                            </div>
-                            <span class="md:mx-4 text-white">to</span>
-                            <div class="relative">
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <input name="end" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date end">
-                            </div>
+                        </div>
+                        <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
+                            <nav aria-label="Page navigation example w-full">
+                                <ul class="inline-flex -space-x-px">
+                                    <li>
+                                        <span href="#" id="prevButtonAttendanceSummary"
+                                            class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</span>
+                                    </li>
+                                    <li>
+                                        <span href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</span>
+                                    </li>
+                                    <li>
+                                        <span href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</span>
+                                    </li>
+                                    <li>
+                                        <span href="#" aria-current="page"
+                                            class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</span>
+                                    </li>
+                                    <li>
+                                        <span href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</span>
+                                    </li>
+                                    <li>
+                                        <span href="#"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</span>
+                                    </li>
+                                    <li>
+                                        <span href="#" id="nextButtonAttendanceSummary"
+                                            class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</span>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!--END ATTENDANCE SUMMARY-->
 
-                <div class="row-start-2 row-span-5 col-span-2">
+            <div class="hide-show  px-5" id="history" style="display: none">
+                <div class="py-2 bgcolor drop-shadow-md rounded-xl">
+                    <div class="grid md:grid-rows-2 md:grid-flow-col grid-cols-1 sm:px-5 sm:w-full md:mb-0 mb-2">
+                        <div class="md:row-start-1 row-span-1 md:flex">
+                            <h1 class="text-white md:text-4xl text-2xl font-bold mx-4">Overtime History</h1>
+                        </div>
+                        <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
+                            <input type="text" class="md:w-2/12 w-full form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
+						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchBox"
+                                placeholder="Search" />
+                            <div date-rangepicker class="md:flex items-center">
+                                <span class="md:mx-4 text-white"> Sort By:</span>
+                                <div class="relative">
+                                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <input name="start" type="text"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Select date start">
+                                </div>
+                                <span class="md:mx-4 text-white">to</span>
+                                <div class="relative">
+                                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <input name="end" type="text"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Select date end">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-start-2 row-span-5 col-span-2">
 
                     <div class="overflow-x-auto relative  sm:rounded-lg">
                         <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
@@ -696,207 +714,211 @@
         </div>
         <!--END overtime history-->
 
-        <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
+            <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
-            <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
-                <div class="row-start-1 row-span-1 flex">
-                    <h1 class="text-white text-4xl font-bold px">Profile Information</h1>
-                </div>
-            </div>
-            <div class="grid grid-rows-4 grid-cols-6 gap-4">
-                <div class="row-start-1 row-span-2 col-span-2 justify-center flex items-center">
-                    <img src="img\profilepic.png" class="w-2/6 rounded-full bordercolor bordercolor border-4 "
-                        alt="Sample image" />
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Employee
-                        No.</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company ID" required="" value="0000-0001" disabled>
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">First
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="First Name" required="" value="Crisostomo" disabled>
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Middle
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Middle Name" required="" value="Simon" disabled>
-                </div>
-                <div class="row-start-1 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Last
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Last Name" required="" value="Ibarra" disabled>
-                </div>
-
-                <div class="relative row-start-2 col-span-1">
-                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
+                    <div class="row-start-1 row-span-1 flex">
+                        <h1 class="text-white text-4xl font-bold px">Profile Information</h1>
                     </div>
-                    <label for="number"
-                        class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Birthdate</label>
-                    <input datepicker type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Select your birthdate" value="12/14/1989" disabled>
                 </div>
-                <div class="row-start-2 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Contact
-                        No.</label>
-                    <input type="number" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Contact No." required="" value="09123456789" disabled>
-                </div>
-                <div class="row-start-2 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Email</label>
-                    <input type="email" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
-                </div>
-                <div class="row-start-3 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Job
-                        Position</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales"
-                        disabled>
-                </div>
-                <div class="row-start-3 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company Name" required="" value="New Barbizon Fashion Incorporation" disabled>
-                </div>
-                <div class="row-start-3 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Branch Name" required="" value="Robensons Department Store Bacolod" disabled>
-                </div>
-                <div class="row-start-3 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Chain Name" required="" value="Robensons Department Store" disabled>
-                </div>
-                <div class="row-start-3 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Brand Name" required="" value="At Home" disabled>
-                </div>
-                <div class="row-start-4 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="RAS Name" required="" value="Ms. Raquel Reyes" disabled>
-                </div>
-                <div class="row-start-4 col-span-2">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="HR Name" required="" value="Ms. Emma Gaccion" disabled>
-                </div>
-                <div class="relative row-start-4 col-span-1">
-                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                <div class="grid grid-rows-4 grid-cols-6 gap-4">
+                    <div class="row-start-1 row-span-2 col-span-2 justify-center flex items-center">
+                        <img src="img\profilepic.png" class="w-2/6 rounded-full bordercolor bordercolor border-4 "
+                            alt="Sample image" />
                     </div>
-                    <label for="number" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Date
-                        Started</label>
-                    <input datepicker type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Select your birthdate" value="10/21/2006" disabled>
-                </div>
-                <div class="row-start-4 col-span-1">
-                    <label for="text"
-                        class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Status</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="HR Name" required="" value="Active" disabled>
-                </div>
-            </div>
-        </div>
-        <!--end profile  -->
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Employee
+                            No.</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company ID" required="" value="0000-0001" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">First
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="First Name" required="" value="Crisostomo" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Middle
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Middle Name" required="" value="Simon" disabled>
+                    </div>
+                    <div class="row-start-1 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Last
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Last Name" required="" value="Ibarra" disabled>
+                    </div>
 
-        <!-- Main modal -->
-        <div id="denied-ot" aria-hidden="true"
-            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-            <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
-                <!-- Modal content -->
-                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-pantone">
-                    <div class="flex justify-end p-2">
-                        <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                            data-modal-toggle="denied-ot">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
+                    <div class="relative row-start-2 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                     clip-rule="evenodd"></path>
                             </svg>
-                        </button>
+                        </div>
+                        <label for="number"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Birthdate</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="12/14/1989" disabled>
                     </div>
-                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                        <h3 class="text-xl font-medium text-center font-pantone dark:text-white font-extrabold">
-                            OVERTIME REQUEST DENIED!</h3>
-
-                        <div>
-                            <label for="text"
-                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Approver
-                                Name: Capitan Tiago</label>
-                            <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                    <div class="row-start-2 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Contact
+                            No.</label>
+                        <input type="number" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Contact No." required="" value="09123456789" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Email</label>
+                        <input type="email" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-2">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Job
+                            Position</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales"
+                            disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Chain Name" required="" value="RDS" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="NBFI" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                    </div>
+                    <div class="relative row-start-4 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </div>
-                        <div>
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date
-                                Applied:
-                                September 14, 2022</label>
-                            <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
-                        </div>
-                        <div>
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Denied Date:
-                                September 15, 2022</label>
-                            <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
-                        </div>
-                        <div>
-                            <div class="flex justify-center">
-                                <div class="mb-3 xl:w-full">
-                                    <label for="exampleFormControlTextarea1"
-                                        class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
-                                    <textarea
-                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-pantone rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                        id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
-                                        disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
-                    </form>
+                        <label for="number" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Date
+                            Started</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="10/21/2006" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-1">
+                        <label for="text"
+                            class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Status</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Active" disabled>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!--end profile  -->
+
+            <!-- Main modal -->
+            <div id="denied-ot" aria-hidden="true"
+                class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+                <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
+                    <!-- Modal content -->
+                    <div
+                        class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-pantone">
+                        <div class="flex justify-end p-2">
+                            <button type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                                data-modal-toggle="denied-ot">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                            <h3 class="text-xl font-medium text-center font-pantone dark:text-white font-extrabold">
+                                OVERTIME REQUEST DENIED!</h3>
+
+                            <div>
+                                <label for="text"
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Approver
+                                    Name: Capitan Tiago</label>
+                                <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                            </div>
+                            <div>
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date
+                                    Applied:
+                                    September 14, 2022</label>
+                                <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                            </div>
+                            <div>
+                                <label for="date"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Denied Date:
+                                    September 15, 2022</label>
+                                <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                            </div>
+                            <div>
+                                <div class="flex justify-center">
+                                    <div class="mb-3 xl:w-full">
+                                        <label for="exampleFormControlTextarea1"
+                                            class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
+                                        <textarea
+                                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-pantone rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                            id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
+                                            disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
 
         <!-- Main modal -->
         <div id="authentication-modal" aria-hidden="true"
@@ -1003,58 +1025,60 @@
             </div>
         </div>
 
-        <!-- file upload modal -->
-        <div id="upload-file" aria-hidden="true"
-            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-            <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
-                <!-- Modal content -->
-                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
-                    <div class="flex justify-end p-2">
-                        <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                            data-modal-toggle="upload-file">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                        <h1 class="text-2xl font-medium text-gray-900 dark:text-white font-extrabold text-center">PROOF
-                            OF ATTENDANCE / OVERTIME</h1>
-                        <h3 class="text-xl font-medium text-gray-900 dark:text-white">Upload file:</h3>
-
-                        <div class="flex justify-center items-center w-full">
-                            <label for="dropzone-file"
-                                class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                                <div class="flex flex-col justify-center items-center pt-5 pb-6">
-                                    <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
-                                        </path>
-                                    </svg>
-                                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
-                                            class="font-semibold">Click to upload</span> or drag and drop</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-400">(PNG, IMG, JPEG, JPG, PDF)
-                                    </p>
-                                </div>
-                                <input id="dropzone-file" type="file" class="hidden">
-                            </label>
+            <!-- file upload modal -->
+            <div id="upload-file" aria-hidden="true"
+                class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+                <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
+                    <!-- Modal content -->
+                    <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                        <div class="flex justify-end p-2">
+                            <button type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                                data-modal-toggle="upload-file">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
                         </div>
+                        <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                            <h1 class="text-2xl font-medium text-gray-900 dark:text-white font-extrabold text-center">
+                                PROOF
+                                OF ATTENDANCE / OVERTIME</h1>
+                            <h3 class="text-xl font-medium text-gray-900 dark:text-white">Upload file:</h3>
 
-                        <button type="submit"
-                            class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
-                    </form>
+                            <div class="flex justify-center items-center w-full">
+                                <label for="dropzone-file"
+                                    class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                    <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                        <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                            </path>
+                                        </svg>
+                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
+                                                class="font-semibold">Click to upload</span> or drag and drop</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">(PNG, IMG, JPEG, JPG, PDF)
+                                        </p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" class="hidden">
+                                </label>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--end file upload modal-->
+            <!--end file upload modal-->
 
 
-    </content>
+        </content>
 
     <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
         class="md:visible invisible inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
@@ -1143,13 +1167,14 @@ function hideButton() {
 
     if (x.style.display === "none") {
         x.style.display = "block";
-
+        time_in();
         console.log("Button - stop")
     } else {
         x.style.display = "none";
 
     }
     showButton();
+
 }
 
 function showButton() {
@@ -1159,6 +1184,7 @@ function showButton() {
     } else {
         y.style.display = "block";
     }
+
 }
 //   if (y.style.display === "block") {
 //     y.style.display = "none";
@@ -1166,10 +1192,10 @@ function showButton() {
 //     y.style.display = "block";
 //   }
 
-var seconds = 00;
-var tens = 00;
-var minutes = 00;
-var hours = 00;
+var cseconds = 00;
+var ctens = 00;
+var cminutes = 00;
+var chours = 00;
 var appendTens = document.getElementById("tens")
 var appendSeconds = document.getElementById("seconds")
 var appendMinutes = document.getElementById("minutes")
@@ -1184,7 +1210,20 @@ buttonStart.onclick = function() {
     clearInterval(Interval);
     Interval = setInterval(startTimer, 10);
     time_in();
-    hideButton();
+
+    if (buttonStart.value === "Check In") {
+        buttonStart.value = "LB IN";
+    } else if (buttonStart.value === "LB IN") {
+        buttonStart.value = "LB OUT";
+    } else if (buttonStart.value === "LB OUT") {
+        buttonStart.value = "CB IN";
+    } else if (buttonStart.value === "CB IN") {
+        buttonStart.value = "CB OUT";
+    } else if (buttonStart.value === "CB OUT") {
+        buttonStart.value = "PM OUT";
+    }
+
+    // hideButton();
 
     //  document.getElementById("button-start").innerHTML = 'Check Out';
     //  document.getElementById("button-start").style.background='#AA0061';
@@ -1193,11 +1232,11 @@ buttonStart.onclick = function() {
 
 
 function startTimer() {
-    tens++;
+    ctens++;
 
-    if (tens <= 9) {
+    if (ctens <= 9) {
 
-        tens = "0" + tens;
+        ctens = "0" + ctens;
 
     }
 
@@ -1206,60 +1245,62 @@ function startTimer() {
     // 	tens = " " + tens
     // } 
 
-    if (tens > 99) {
+    if (ctens > 99) {
         //   console.log("seconds");
-        seconds++;
+        cseconds++;
 
-        if (seconds <= 9) {
-            seconds = "0" + seconds;
+        if (cseconds <= 9) {
+            cseconds = "0" + cseconds;
         } else {
-            seconds = seconds;
+            cseconds = cseconds;
         }
-        tens = 0;
-        tens = "0" + 0;
+        ctens = 0;
+        ctens = "0" + 0;
     }
 
-    if (seconds == 0) {
-        seconds = "00"
+    if (cseconds == 0) {
+        cseconds = "00"
     }
-    if (seconds > 60) {
+    if (cseconds > 60) {
         // console.log("minutes")
-        minutes++;
-        if (minutes <= 9) {
-            minutes = "0" + minutes;
+        cminutes++;
+        if (cminutes <= 9) {
+            cminutes = "0" + cminutes;
         } else {
-            minutes = minutes;
+            cminutes = cminutes;
         }
 
-        seconds = 0;
-        seconds = "0" + 0;
+        cseconds = 0;
+        cseconds = "0" + 0;
     }
-    if (minutes == 0) {
-        minutes = "00";
+    if (cminutes == 0) {
+        cminutes = "00";
     }
-    if (minutes > 60) {
+    if (cminutes > 60) {
         // console.log("hours")
-        hours++;
-        if (hours <= 9) {
-            hours = "0" + hours;
+        chours++;
+        if (chours <= 9) {
+            chours = "0" + chours;
         } else {
-            hours = hours;
+            chours = chours;
         }
-        minutes = 0;
-        minutes = "0" + 0;
+        cminutes = 0;
+        cminutes = "0" + 0;
     }
-    if (hours == 0) {
-        hours = "00";
+    if (chours == 0) {
+        chours = "00";
     }
     // console.log(hours + " : " + minutes + " : " + seconds + " : " + tens)
-    document.getElementById('hours').innerHTML = hours + " : " + minutes + " : " + seconds + " : " + tens;
+    document.getElementById('hours').innerHTML = chours + " : " + cminutes + " : " + cseconds + " : " + ctens;
 
 }
+var ctr = 1;
 
 function time_in() {
+
     var rtClock = new Date();
     console.log(rtClock.toLocaleTimeString('PST'));
-    document.getElementById('timedIn').innerHTML = rtClock.toLocaleTimeString('PST');
+
 
     var hours = rtClock.getHours();
     var minutes = rtClock.getMinutes();
@@ -1271,20 +1312,53 @@ function time_in() {
     seconds = ("0" + seconds).slice(-2);
 
     var amPm = (hours <= 12) ? "AM" : "PM";
-
     hours = (hours > 12) ? hours - 12 : hours;
-    document.getElementById('timedIn').innerHTML =
-        hours + " : " + minutes + " : " + seconds + " " + amPm;
+    if (ctr == 1) {
 
-    hours = parseInt(hours) + 9;
+        document.getElementById('timedIn').innerHTML = rtClock.toLocaleTimeString('PST');
+        document.getElementById('amIn').innerHTML =
+            hours + " : " + minutes + " : " + seconds + " " + amPm;
 
-    timeAmPm = (hours <= 12 && amPm == "PM") ? "PM" : "AM";
+        hours = parseInt(hours) + 9;
 
-    hours = (hours > 12) ? hours - 12 : hours;
+        timeAmPm = (hours <= 12 && amPm == "PM") ? "PM" : "AM";
 
+        hours = (hours > 12) ? hours - 12 : hours;
 
-    document.getElementById('time_out').innerHTML =
-        hours + " : " + minutes + " : " + seconds + " " + timeAmPm;
+        document.getElementById('time_out').innerHTML =
+            hours + " : " + minutes + " : " + seconds + " " + timeAmPm;
+        ctr = ctr + 1;
+        console.log("AM In", ctr);
+    } else if (ctr == 2) {
+        document.getElementById('lbIn').innerHTML =
+            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        ctr = ctr + 1;
+    } else if (ctr == 3) {
+        document.getElementById('lbOut').innerHTML =
+            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        ctr = ctr + 1;
+    } else if (ctr == 4) {
+        document.getElementById('cbIn').innerHTML =
+            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        ctr = ctr + 1;
+    } else if (ctr == 5) {
+        document.getElementById('cbOut').innerHTML =
+            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        ctr = ctr + 1;
+    } else if (ctr == 6) {
+        document.getElementById('pmOut').innerHTML =
+            hours + " : " + minutes + " : " + seconds + " " + amPm;
+        console.log(chours + " : " + cminutes + " : " + cseconds);
+        document.getElementById('duration').innerHTML =
+            chours + " hours " + cminutes + " mins " + cseconds + " secs";
+        clearInterval(Interval);
+        chours = "00";
+        cminutes = "00";
+        chours = "00";
+        document.getElementById('hours').innerHTML = chours + " : " + cminutes + " : " + cseconds + " : " + ctens;
+        ctr = ctr + 1;
+
+    }
 }
 
 // Get the button
@@ -1453,6 +1527,20 @@ respDTR = [{
 ]
 
 async function init() {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+        "October", "November", "December"
+    ];
+    const y = new Date();
+    const m = new Date();
+    const d = new Date();
+   
+    let year = y.getFullYear();
+    let month = months[m.getMonth()];
+    let day = d.getDate();
+   
+    let todayDate = month + " " + day + ", " + year;
+    document.getElementById('todayDate').innerHTML = todayDate;
+
 
     // Select the table (well, tbody)
     table = document.querySelector('#timeRecord tbody');
