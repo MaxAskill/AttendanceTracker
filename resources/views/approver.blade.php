@@ -1820,12 +1820,12 @@ async function init() {
     //Schedule Maintenance
     $.ajax({
         url: 'getScheduleMaintenance',
-        type: 'get',
+        type: 'GET',
         dataType: 'json',
         success: function(response) {
 
             // createRows(response);
-            dataScheduleMaintenance = Object.entries(response);
+            dataScheduleMaintenance = response;
             renderTableScheduleMaintenance();
 
         }
@@ -1844,7 +1844,7 @@ function renderTableScheduleMaintenance() {
     // create html
 
     // console.log(dataSalaryMaintenance[0][1]);
-    dataScheduleMaintenance = dataScheduleMaintenance[0][1];
+    // dataScheduleMaintenance = dataScheduleMaintenance[0][1];
     console.log(dataScheduleMaintenance.length);
     let result = '';
     dataScheduleMaintenance.filter((row, index) => {

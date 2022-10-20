@@ -22,12 +22,12 @@ class scheduleController extends Controller
 
     public function getScheduleMaintenance(){
     
-        $schedule = DB::select('SELECT *FROM schedulemaintenance'); 
-         
+        // $schedule = scheduleMaintenance::all(); 
+        $schedule = DB::select('SELECT * FROM schedulemaintenance ');
         // Fetch all records
-        $response['data'] = $schedule;
-    
-        return response()->json($response);
+        if($schedule == null)
+            return response()->json([]);
+        return response()->json($schedule);
       }
 
     function store(Request $request){

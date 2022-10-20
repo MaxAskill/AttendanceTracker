@@ -1205,24 +1205,33 @@ var buttonStart = document.getElementById('button-start');
 // var buttonStop = document.getElementById('button-stop');
 var buttonReset = document.getElementById('button-reset');
 var Interval;
-
+var ctr1 = 1;
 buttonStart.onclick = function() {
 
     clearInterval(Interval);
     Interval = setInterval(startTimer, 10);
     time_in();
-
-    if (buttonStart.value === "Check In") {
+    
+    if (ctr1 == 1) {
         buttonStart.value = "Check Out";
         document.getElementById("timeschedule").disabled = true;
-    } else if (buttonStart.value === "Check Out") {
+        ctr1 = ctr1 + 1;
+    } else if (ctr1 === 2) {
         buttonStart.value = "Check In";
-    } else if (buttonStart.value === "Check In") {
+        ctr1 = ctr1 + 1;
+    } else if (ctr1 === 3) {
         buttonStart.value = "Check Out";
-    } else if (buttonStart.value === "Check Out") {
+        ctr1 = ctr1 + 1;
+    } else if (ctr1 === 4) {
         buttonStart.value = "Check In";
-    } else if (buttonStart.value === "Check In") {
+        ctr1 = ctr1 + 1;
+    } else if (ctr1 === 5) {
         buttonStart.value = "Check Out";
+        ctr1 = ctr1 + 1;
+        
+    }else{
+        document.getElementById("button-start").disabled = true;
+        console.log("Disabled check in")
     }
 
     // hideButton();
