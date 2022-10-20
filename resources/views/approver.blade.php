@@ -578,7 +578,7 @@
                     </thead>
                     <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                         style="height: 73vh;">
-                        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="p-4 w-2/6">BRANCH-0001</td>
                                 <td class="p-4 w-2/6">NCR</td>
                                 <td class="p-4 w-2/6">Las Pinas City</td>
@@ -673,7 +673,7 @@
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="delete-schedule">Delete</button>
                                 </td>
-                            </tr> -->
+                            </tr>
                     </tbody>
                 </table>
                 <div class="grid justify-center items-center mb-3 bg-white">
@@ -1007,11 +1007,11 @@
         class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
         <div class="modal-dialog relative  sm:w-full xl:px-4 h-full md:h-auto ">
             <!-- Modal content -->
-            <div class="relative xl:w-1/3 ml-72 mt-24 -right-96 -bottom-12 border w-full shadow-lg rounded-md bg-white">
+            <div class="relative xl:w-1/3 ml-72 mt-24 -right-96 -bottom-12 w-full shadow-lg rounded-md bg-white border-4 border-solid border-black">
                 <div class="flex justify-end p-2">
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="deny-ot">
+                        onClick="closeappDenying()">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -1097,7 +1097,7 @@
         class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
         <div class="modal-dialog relative  sm:w-full xl:px-4 h-full md:h-auto ">
             <!-- Modal content -->
-            <div class="relative xl:w-1/3 ml-72 mt-56 -right-96 -bottom-12 border w-full shadow-lg rounded-md bg-white">
+            <div class="relative xl:w-1/3 ml-72 mt-56 -right-96 -bottom-12 w-full shadow-lg rounded-md bg-white border-4 border-solid border-black">
                 <div class="flex justify-end p-2">
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
@@ -1948,95 +1948,95 @@ async function init() {
     document.querySelector('#deniedprevButton').addEventListener('click', deniedpreviousPage, false);
 
     //Schedule Maintenance
-    $.ajax({
-        url: 'getScheduleMaintenance',
-        type: 'GET',
-        dataType: 'json',
-        success: function(response) {
+    // $.ajax({
+    //     url: 'getScheduleMaintenance',
+    //     type: 'GET',
+    //     dataType: 'json',
+    //     success: function(response) {
 
-            // createRows(response);
-            dataScheduleMaintenance = response;
-            renderTableScheduleMaintenance();
+    //         // createRows(response);
+    //         dataScheduleMaintenance = response;
+    //         renderTableScheduleMaintenance();
 
-        }
+    //     }
 
-    });
-    console.log(dataScheduleMaintenance);
-    tableScheduleMaintenance = document.querySelector('#scheduleMaintenanceTable tbody');
-    document.querySelector('#nextButtonScheduleMaintenance').addEventListener('click', nextPageScheduleMaintenance,
-        false);
-    document.querySelector('#prevButtonScheduleMaintenance').addEventListener('click',
-        previousPageScheduleMaintenance,
-        false);
+    // });
+    // console.log(dataScheduleMaintenance);
+    // tableScheduleMaintenance = document.querySelector('#scheduleMaintenanceTable tbody');
+    // document.querySelector('#nextButtonScheduleMaintenance').addEventListener('click', nextPageScheduleMaintenance,
+    //     false);
+    // document.querySelector('#prevButtonScheduleMaintenance').addEventListener('click',
+    //     previousPageScheduleMaintenance,
+    //     false);
 }
 
 //Salary Maintenance
-function renderTableScheduleMaintenance() {
-    // create html
+// function renderTableScheduleMaintenance() {
+//     // create html
 
-    // console.log(dataSalaryMaintenance[0][1]);
-    // dataScheduleMaintenance = dataScheduleMaintenance[0][1];
-    console.log(dataScheduleMaintenance.length);
-    let result = '';
-    dataScheduleMaintenance.filter((row, index) => {
-        let start = (curPageScheduleMaintenance - 1) * pageSizeScheduleMaintenance;
-        let end = curPageScheduleMaintenance * pageSizeScheduleMaintenance;
-        if (index >= start && index < end) return true;
-    }).forEach(c => {
-        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${c.scheduleID}</td>
-     <td class="py-4 w-2/6">${c.region}</td>
-     <td class="py-4 w-2/6">${c.municipalitycity}</td>
-     <td class="py-4 w-2/6">${c.chain}</td>
-     <td class="py-4 w-2/6">${c.branch}</td>
-	 <td class="py-4 w-2/6">${c.startTime}</td>
-	 <td class="py-4 w-2/6">${c.endTime}</td>
-     <td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>
-     </tr>`;
-        //  primaryKey = c.scheduleID;
-    });
-    tableScheduleMaintenance.innerHTML = result;
-}
+//     // console.log(dataSalaryMaintenance[0][1]);
+//     // dataScheduleMaintenance = dataScheduleMaintenance[0][1];
+//     console.log(dataScheduleMaintenance.length);
+//     let result = '';
+//     dataScheduleMaintenance.filter((row, index) => {
+//         let start = (curPageScheduleMaintenance - 1) * pageSizeScheduleMaintenance;
+//         let end = curPageScheduleMaintenance * pageSizeScheduleMaintenance;
+//         if (index >= start && index < end) return true;
+//     }).forEach(c => {
+//         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+//      <td class="py-4 w-2/6">${c.scheduleID}</td>
+//      <td class="py-4 w-2/6">${c.region}</td>
+//      <td class="py-4 w-2/6">${c.municipalitycity}</td>
+//      <td class="py-4 w-2/6">${c.chain}</td>
+//      <td class="py-4 w-2/6">${c.branch}</td>
+// 	 <td class="py-4 w-2/6">${c.startTime}</td>
+// 	 <td class="py-4 w-2/6">${c.endTime}</td>
+//      <td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>
+//      </tr>`;
+//         //  primaryKey = c.scheduleID;
+//     });
+//     tableScheduleMaintenance.innerHTML = result;
+// }
 
-function previousPageScheduleMaintenance() {
-    if (curPageScheduleMaintenance > 1) curPageScheduleMaintenance--;
-    renderTableScheduleMaintenance();
-}
+// function previousPageScheduleMaintenance() {
+//     if (curPageScheduleMaintenance > 1) curPageScheduleMaintenance--;
+//     renderTableScheduleMaintenance();
+// }
 
-function nextPageScheduleMaintenance() {
-    if ((curPageScheduleMaintenance * pageSizeSalaryMaintenance) < dataScheduleMaintenance.length)
-        curPageScheduleMaintenance++;
-    renderTableScheduleMaintenance();
-}
+// function nextPageScheduleMaintenance() {
+//     if ((curPageScheduleMaintenance * pageSizeSalaryMaintenance) < dataScheduleMaintenance.length)
+//         curPageScheduleMaintenance++;
+//     renderTableScheduleMaintenance();
+// }
 
 // declare elements
-const searchBoxScheduleMaintenance = document.getElementById('searchBoxSchedule');
-const tableSearchScheduleMaintenance = document.getElementById("scheduleMaintenanceTable");
-const trsScheduleMaintenance = tableSearchScheduleMaintenance.tBodies[0].getElementsByTagName("tr");
-// add event listener to search box
-searchBoxScheduleMaintenance.addEventListener('keyup', performSearchSchedule);
+// const searchBoxScheduleMaintenance = document.getElementById('searchBoxSchedule');
+// const tableSearchScheduleMaintenance = document.getElementById("scheduleMaintenanceTable");
+// const trsScheduleMaintenance = tableSearchScheduleMaintenance.tBodies[0].getElementsByTagName("tr");
+// // add event listener to search box
+// searchBoxScheduleMaintenance.addEventListener('keyup', performSearchSchedule);
 
-function performSearchSchedule() {
-    // Declare search string 
-    var filter = searchBox.value.toUpperCase();
-    // Loop through first tbody's rows
-    for (var rowI = 0; rowI < trsScheduleMaintenance.length; rowI++) {
-        // define the row's cells
-        var tds = trsScheduleMaintenance[rowI].getElementsByTagName("td");
-        // hide the row
-        trsScheduleMaintenance[rowI].style.display = "none";
-        // loop through row cells
-        for (var cellI = 0; cellI < tds.length; cellI++) {
-            // if there's a match
-            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                // show the row
-                trsScheduleMaintenance[rowI].style.display = "";
-                // skip to the next row
-                continue;
-            }
-        }
-    }
-}
+// function performSearchSchedule() {
+//     // Declare search string 
+//     var filter = searchBox.value.toUpperCase();
+//     // Loop through first tbody's rows
+//     for (var rowI = 0; rowI < trsScheduleMaintenance.length; rowI++) {
+//         // define the row's cells
+//         var tds = trsScheduleMaintenance[rowI].getElementsByTagName("td");
+//         // hide the row
+//         trsScheduleMaintenance[rowI].style.display = "none";
+//         // loop through row cells
+//         for (var cellI = 0; cellI < tds.length; cellI++) {
+//             // if there's a match
+//             if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+//                 // show the row
+//                 trsScheduleMaintenance[rowI].style.display = "";
+//                 // skip to the next row
+//                 continue;
+//             }
+//         }
+//     }
+// }
 
 function renderTable() {
     // create html
