@@ -122,7 +122,7 @@
                                         stroke-linejoin="round" stroke-width="32"
                                         d="M128 48v32M384 48v32M464 160H48M304 260l43.42-32H352v168M191.87 306.63c9.11 0 25.79-4.28 36.72-15.47a37.9 37.9 0 0011.13-27.26c0-26.12-22.59-39.9-47.89-39.9-21.4 0-33.52 11.61-37.85 18.93M149 374.16c4.88 8.27 19.71 25.84 43.88 25.84 28.59 0 52.12-15.94 52.12-43.82 0-12.62-3.66-24-11.58-32.07-12.36-12.64-31.25-17.48-41.55-17.48" />
                                 </svg>
-                                <span class="flex-1 ml-3 whitespace-nowrap">Schedule</span>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Schedule Maintenance</span>
                             </a>
                         </li>
                         <li>
@@ -239,10 +239,10 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="overflow-x-auto relative  sm:rounded-lg">
                 <table id="pendingTable"
-                    class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                    <thead class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied
@@ -348,24 +348,18 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed"
+            <div class="overflow-x-auto relative  sm:rounded-lg">
+                <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed"
                     id="approvedTable">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
-                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied
-                            </th>
-                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TargetOvertimeDate">
-                                Target
-                                Overtime Date</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TargetOvertimeDate">Target Overtime Date</th>
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Duration">Duration</th>
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Reason">Reason</th>
-                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedBy">Approved By
-                            </th>
-                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedDate">Approved
-                                Date
-                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedBy">Approved By</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedDate">Approved Date</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -447,7 +441,7 @@
                                                 ID</label>
                                             <input type="text" name="scheduleID" id="scheduleID"
                                                 class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
-                                                placeholder="Schedule ID" required="" readonly>
+                                                placeholder="SCHEDULE-0007" required="" readonly>
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
@@ -579,7 +573,7 @@
                     <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                         style="height: 73vh;">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0001</td>
+                            <td class="p-4 w-2/6">SCHEDULE-0001</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Las Pinas City</td>
                             <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
@@ -595,7 +589,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0002</td>
+                            <td class="p-4 w-2/6">SCHEDULE-0002</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Las Pinas City</td>
                             <td class="p-4 w-2/6">Robinsons Las Pinas</td>
@@ -611,7 +605,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0002</td>
+                            <td class="p-4 w-2/6">SCHEDULE-0002</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Las Pinas City</td>
                             <td class="p-4 w-2/6">Robinsons Las Pinas</td>
@@ -627,7 +621,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0004</td>
+                            <td class="p-4 w-2/6">SCHEDULE-0004</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Malabon City</td>
                             <td class="p-4 w-2/6">Fisher Mall Malabon</td>
@@ -643,7 +637,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0005</td>
+                            <td class="p-4 w-2/6">SCHEDULE-0005</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Malabon City</td>
                             <td class="p-4 w-2/6">Robinsons Malabon</td>
@@ -659,7 +653,7 @@
                             </td>
                         </tr>
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">BRANCH-0006</td>
+                            <td class="p-4 w-2/6">SCHEDULE-0006</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Mandaluyong City</td>
                             <td class="p-4 w-2/6">Robinsons Forum Pioneer</td>
@@ -765,8 +759,8 @@
                 </div>
             </div>
             <div>
-                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed" id="deniedTable">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed" id="deniedTable">
+                    <thead class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied
@@ -890,54 +884,54 @@
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Email</label>
                     <input type="email" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
+                        placeholder="Email" required="" value="kapitan.tiago@barbizonfashion.com" disabled>
                 </div>
                 <div class="row-start-3 col-span-3">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Job
                         Position</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Job Position" required="" value="NBFI Sales" disabled>
+                        placeholder="Job Position" required="" value="Approver" disabled>
                 </div>
                 <div class="row-start-3 col-span-3">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company Name" required="" value="NBFI" disabled>
+                        placeholder="Company Name" required="" value="Barbizon Everyday Group of Companies" disabled>
                 </div>
                 <div class="row-start-4 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                        placeholder="Branch Name" required="" value="None" disabled>
                 </div>
                 <div class="row-start-4 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Chain Name" required="" value="RDS" disabled>
+                        placeholder="Chain Name" required="" value="None" disabled>
                 </div>
                 <div class="row-start-4 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Brand Name" required="" value="Barbizon" disabled>
+                        placeholder="Brand Name" required="" value="At Home" disabled>
                 </div>
                 <div class="row-start-5 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                        placeholder="RAS Name" required="" value="None" disabled>
                 </div>
                 <div class="row-start-5 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                        placeholder="HR Name" required="" value="Ms. Sisa Narcisa" disabled>
                 </div>
                 <div class="relative row-start-5 col-span-2">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -1697,17 +1691,17 @@ respApprovedApplication = [{
 
 respDeniedApplication = [{
         "Name": "Crisostomo Ibarra",
-        "DateApplied": "September 16, 2021",
-        "TargetOvertimeDate": "September 18, 2021",
+        "DateApplied": "September 14, 2021",
+        "TargetOvertimeDate": "September 17, 2021",
         "DeniedBy": "Kapitan Tiago",
         "DeniedDate": "September 15, 2021"
     },
     {
         "Name": "Crisostomo Ibarra",
-        "DateApplied": "September 14, 2021",
+        "DateApplied": "September 08, 2021",
         "TargetOvertimeDate": "September 17, 2021",
         "DeniedBy": "Kapitan Tiago",
-        "DeniedDate": "September 10, 2021"
+        "DeniedDate": "September 14, 2021"
     }
 ]
 
@@ -1768,8 +1762,8 @@ async function init() {
     deniedtable = document.querySelector('#deniedTable tbody');
     // get the cats
     //   let resp = await fetch('https://www.raymondcamden.com/.netlify/functions/get-cats');
-    console.log(respApprovedApplication);
-    denieddata = respApprovedApplication;
+    console.log(respDeniedApplication);
+    denieddata = respDeniedApplication;
     deniedrenderTable();
 
     // listen for sort clicks

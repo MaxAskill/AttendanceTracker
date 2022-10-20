@@ -1012,46 +1012,46 @@
                             disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="New Barbizon Fashion Incorporation" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Branch
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                            placeholder="Branch Name" required="" value="Robensons Department Store Bacolod" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Chain
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Chain Name" required="" value="RDS" disabled>
-                    </div>
-                    <div class="row-start-3 col-span-1">
-                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
-                            Name</label>
-                        <input type="text" name="mName" id="mName"
-                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Company Name" required="" value="NBFI" disabled>
+                            placeholder="Chain Name" required="" value="Robensons Department Store" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Brand
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                            placeholder="Brand Name" required="" value="At Home" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text"
                             class="text-sm font-medium text-black block mb-2 dark:text-gray-300">RAS</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                            placeholder="RAS Name" required="" value="Ms. Raquel Reyes" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text"
                             class="text-sm font-medium text-black block mb-2 dark:text-gray-300">HR</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                            placeholder="HR Name" required="" value="Ms. Emma Gaccion" disabled>
                     </div>
                     <div class="relative row-start-4 col-span-1">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -1606,46 +1606,46 @@
                             disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="New Barbizon Fashion Incorporation" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Branch
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                            placeholder="Branch Name" required="" value="Robensons Department Store Bacolod" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Chain
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Chain Name" required="" value="RDS" disabled>
-                    </div>
-                    <div class="row-start-3 col-span-1">
-                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
-                            Name</label>
-                        <input type="text" name="mName" id="mName"
-                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Company Name" required="" value="NBFI" disabled>
+                            placeholder="Chain Name" required="" value="Robensons Department Store" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Brand
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                            placeholder="Brand Name" required="" value="At Home" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text"
                             class="text-sm font-medium text-black block mb-2 dark:text-gray-300">RAS</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                            placeholder="RAS Name" required="" value="Ms. Raquel Reyes" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text"
                             class="text-sm font-medium text-black block mb-2 dark:text-gray-300">HR</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                            placeholder="HR Name" required="" value="Ms. Emma Gaccion" disabled>
                     </div>
                     <div class="relative row-start-4 col-span-1">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -1939,33 +1939,33 @@
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Branch Name" required="" value="Robinson Department Store Bacolod" disabled>
+                        placeholder="Branch Name" required="" value="None" disabled>
                 </div>
                 <div class="row-start-4 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Chain Name" required="" value="Robinson Department Store" disabled>
+                        placeholder="Chain Name" required="" value="None" disabled>
                 </div>
                 <div class="row-start-4 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Brand Name" required="" value="Barbizon" disabled>
+                        placeholder="Brand Name" required="" value="None" disabled>
                 </div>
                 <div class="row-start-5 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                        placeholder="RAS Name" required="" value="None" disabled>
                 </div>
                 <div class="row-start-5 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                        placeholder="HR Name" required="" value="Gobernador General" disabled>
                 </div>
                 <div class="relative row-start-5 col-span-2">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -2719,7 +2719,7 @@
                                     Position</label>
                                 <input type="text" name="jobPosition" id="jobPosition"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Job Position" required="" value="NBFI Sales" disabled>
+                                    placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales" disabled>
                             </div>
                             <div class="col-start-2">
                                 <label for="email"
@@ -2742,29 +2742,28 @@
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company</label>
                                 <input type="text" name="companyID" id="companyID"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Company" required="" value="Cotton Mountain Corporation" disabled>
+                                    placeholder="Company" required="" value="New Barbizon Fashion Incorporation" disabled>
                             </div>
                             <div class="col-start-2 col-span-1">
                                 <label for="text"
-                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Brand</label>
-                                <input @input="capitalizeFName" type="text" name="fName" id="fName"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
+                                <input type="text" name="lName" id="lName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Brand" required="" value="At Home" disabled>
+                                    placeholder="Store Assignment" required="" value="Robensons Department Store Bacolod" disabled>
                             </div>
                             <div class="col-start-3 col-span-1">
                                 <label for="text"
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
                                 <input type="text" name="mName" id="mName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Chain" required="" value="ALL HOME" disabled>
+                                    placeholder="Chain" required="" value="Robensons Department Store" disabled>
                             </div>
                             <div class="col-start-4 col-span-1">
                                 <label for="text"
-                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Store
-                                    Assignment</label>
-                                <input type="text" name="lName" id="lName"
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Brand</label>
+                                <input @input="capitalizeFName" type="text" name="fName" id="fName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Store Assignment" required="" value="ALL HOME ILOILO" disabled>
+                                    placeholder="Brand" required="" value="At Home" disabled>
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-2">
@@ -2773,7 +2772,7 @@
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">RAS</label>
                                 <input type="text" name="birthdate" id="birthdate"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="RAS" required="" value="MS. RAQUEL REYES" disabled>
+                                    placeholder="RAS" required="" value="Ms. Raquel Reyes" disabled>
                             </div>
 
                             <div class="col-start-2 col-span-1">
@@ -2781,7 +2780,7 @@
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HR</label>
                                 <input type="text" name="cNumber" maxlength="11" id="cNumber"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="HR" required="" value="MS. EMMA GACCION" disabled>
+                                    placeholder="HR" required="" value="Ms. Emma Gaccion" disabled>
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-2">
@@ -2909,7 +2908,7 @@
                                     Position</label>
                                 <input type="text" name="jobPosition" id="jobPosition"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Job Position" required="" value="NBFI Sales">
+                                    placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales">
                             </div>
                             <div class="col-start-2">
                                 <label for="email"
@@ -2932,30 +2931,30 @@
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Company</label>
                                 <input type="text" name="companyID" id="companyID"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Company" required="" value="Cotton Mountain Corporation">
+                                    placeholder="Company" required="" value="New Barbizon Fashion Incorporation">
                             </div>
                             <div class="col-start-2 col-span-1">
                                 <label for="text"
-                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Brand</label>
-                                <input @input="capitalizeFName" type="text" name="fName" id="fName"
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
+                                <input type="text" name="lName" id="lName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Brand" required="" value="At Home">
+                                    placeholder="Branch" required="" value="Robensons Department Store Bacolod">
                             </div>
                             <div class="col-start-3 col-span-1">
                                 <label for="text"
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
                                 <input type="text" name="mName" id="mName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Chain" required="" value="ALL HOME">
+                                    placeholder="Chain" required="" value="Robensons Department Store">
                             </div>
                             <div class="col-start-4 col-span-1">
                                 <label for="text"
-                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Store
-                                    Assignment</label>
-                                <input type="text" name="lName" id="lName"
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Brand</label>
+                                <input @input="capitalizeFName" type="text" name="fName" id="fName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Store Assignment" required="" value="ALL HOME ILOILO">
+                                    placeholder="Brand" required="" value="At Home">
                             </div>
+                            
                         </div>
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-start-1 col-span-1">
@@ -2963,7 +2962,7 @@
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">RAS</label>
                                 <input type="text" name="birthdate" id="birthdate"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="RAS" required="" value="MS. RAQUEL REYES">
+                                    placeholder="RAS" required="" value="Ms. Raquel Reyes">
                             </div>
 
                             <div class="col-start-2 col-span-1">
@@ -2971,7 +2970,7 @@
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HR</label>
                                 <input type="text" name="cNumber" maxlength="11" id="cNumber"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="HR" required="" value="MS. EMMA GACCION">
+                                    placeholder="HR" required="" value="Ms. Emma Gaccion">
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-2">
@@ -4178,4 +4177,34 @@ var chartBarOvertime = new Chart(
     document.getElementById("chartBarOvertime"),
     configBarChartOvertime
 );
+
+function printDataEmployeeMasterList() {
+    var divToPrint = document.getElementById("employeeMasterListTable");
+    newWin = window.open("", "", "width=1200,height=900");
+    newWin.document.write(divToPrint.outerHTML);
+    newWin.document.close();
+    newWin.focus();
+    newWin.print();
+    newWin.close();
+}
+
+function printDataAttendanceSummary() {
+    var divToPrint = document.getElementById("attendanceSummaryTable");
+    newWin = window.open("", "", "width=1200,height=900");
+    newWin.document.write(divToPrint.outerHTML);
+    newWin.document.close();
+    newWin.focus();
+    newWin.print();
+    newWin.close();
+}
+
+function printDataEmployeeAttendance() {
+    var divToPrint = document.getElementById("employeeAttendance");
+    newWin = window.open("", "", "width=1200,height=900");
+    newWin.document.write(divToPrint.outerHTML);
+    newWin.document.close();
+    newWin.focus();
+    newWin.print();
+    newWin.close();
+}
 </script>

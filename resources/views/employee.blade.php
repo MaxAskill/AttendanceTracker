@@ -187,19 +187,19 @@
                                 <th class="font-medium">08:00 am</th>
                             </tr>
                             <tr>
-                                <th class="py-1">LB IN :</th>
+                                <th class="py-1">LB OUT :</th>
                                 <th class="font-medium">12:00 am</th>
                             </tr>
                             <tr>
-                                <th class="py-1">LB OUT :</th>
+                                <th class="py-1">LB IN :</th>
                                 <th class="font-medium">01:00 pm</th>
                             </tr>
                             <tr>
-                                <th class="py-1">CB IN :</th>
+                                <th class="py-1">CB OUT :</th>
                                 <th class="font-medium">04:00 pm</th>
                             </tr>
                             <tr>
-                                <th class="py-1">CB OUT :</th>
+                                <th class="py-1">CB IN :</th>
                                 <th class="font-medium">04:20 pm</th>
                             </tr>
                             <tr>
@@ -208,7 +208,7 @@
                             </tr>
                             <tr>
                                 <th class="py-1">DURATION :</th>
-                                <th class="font-medium">9 hrs 30 mins</th>
+                                <th class="font-medium">8  hrs 30 mins</th>
                             </tr>
                         </table>
                     </div>
@@ -305,10 +305,10 @@
                                         <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                                             <th scope="col" class="py-3 px-6" data-sort="Date">Date</th>
                                             <th scope="col" class="py-3 px-6" data-sort="AM">AM In</th>
-                                            <th scope="col" class="py-3 px-6" data-sort="LBIn">LB In</th>
-                                            <th scope="col" class="py-3 px-6" data-sort="LBOut">LB Out</th>
-                                            <th scope="col" class="py-3 px-6" data-sort="CBIn">CB In</th>
-                                            <th scope="col" class="py-3 px-6" data-sort="CBOut">CB Out</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="LBIn">LB Out</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="LBOut">LB In</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="CBIn">CB Out</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="CBOut">CB In</th>
                                             <th scope="col" class="py-3 px-6" data-sort="PM">PM Out</th>
                                             <th scope="col" class="py-3 px-6" data-sort="Duration">Duration</th>
                                         </tr>
@@ -403,9 +403,9 @@
                     </div>
                     <div class="md:row-start-2 md:row-span-2 md:px-0 px-3">
                         <div class="md:flex  md:float-right ">
-                            <button
+                            <!-- <button
                                 class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                data-modal-toggle="upload-file">Upload</button>
+                                data-modal-toggle="upload-file">Upload</button> -->
                             <button
                                 class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
                                 onClick="printDataAttendanceSummary()">Print</button>
@@ -642,16 +642,16 @@
                                 </tr>
                             </tbody>
                             <tfoot
-                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">TOTAL</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">06 hrs 00 mins</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="">--</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -774,44 +774,44 @@
                         disabled>
                 </div>
                 <div class="row-start-3 col-span-1">
+                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                        Name</label>
+                    <input type="text" name="mName" id="mName"
+                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        placeholder="Company Name" required="" value="New Barbizon Fashion Incorporation" disabled>
+                </div>
+                <div class="row-start-3 col-span-1">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                        placeholder="Branch Name" required="" value="Robensons Department Store Bacolod" disabled>
                 </div>
                 <div class="row-start-3 col-span-1">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Chain Name" required="" value="RDS" disabled>
-                </div>
-                <div class="row-start-3 col-span-1">
-                    <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
-                        Name</label>
-                    <input type="text" name="mName" id="mName"
-                        class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Company Name" required="" value="NBFI" disabled>
+                        placeholder="Chain Name" required="" value="Robensons Department Store" disabled>
                 </div>
                 <div class="row-start-3 col-span-1">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
                         Name</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="Brand Name" required="" value="Barbizon" disabled>
+                        placeholder="Brand Name" required="" value="At Home" disabled>
                 </div>
                 <div class="row-start-4 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                        placeholder="RAS Name" required="" value="Ms. Raquel Reyes" disabled>
                 </div>
                 <div class="row-start-4 col-span-2">
                     <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
                     <input type="text" name="mName" id="mName"
                         class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                        placeholder="HR Name" required="" value="Ms. Emma Gaccion" disabled>
                 </div>
                 <div class="relative row-start-4 col-span-1">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -888,8 +888,7 @@
                                     <textarea
                                         class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-pantone rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                         id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
-                                        disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. 
-                            Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
+                                        disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
                                 </div>
                             </div>
                         </div>
