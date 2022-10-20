@@ -156,7 +156,7 @@
                 <div class="px-5 md:flex">
 
                     <div class="md:w-3/12 md:mb-0 mb-5">
-                        <div class="bg-white rounded-lg md:py-12 py-5 text-center text-white space-x-4 mb-5">
+                        <div class="bg-white rounded-lg md:py-7 py-5 text-center text-white space-x-4 mb-5">
                             <h1 class="text-gray-700 text-2xl font-bold">FILE OVERTIME</h1>
                             <button
                                 class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-1 px-4 mt-1 hover:bg-gray-100 focus:outline-none"
@@ -517,7 +517,7 @@
                         </div>
                         <div class="md:row-start-2 row-span-1 md:flex pb-2 md:px-0 px-3">
                             <input type="text" class="md:w-2/12 w-full form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchBox"
+						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchOT"
                                 placeholder="Search" />
                             <div date-rangepicker class="md:flex items-center">
                                 <span class="md:mx-4 text-white"> Sort By:</span>
@@ -555,7 +555,8 @@
                     <div class="row-start-2 row-span-5 col-span-2">
 
                     <div class="overflow-x-auto relative  sm:rounded-lg">
-                        <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                    <!-- id="otTable" -->
+                        <table  class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
                             <thead
                                 class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr class="w-full even:bg-gray-100 odd:bg-white-100">
@@ -793,46 +794,46 @@
                             disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="New Barbizon Fashion Incorporation" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                            placeholder="Branch Name" required="" value="Robensons Department Store Bacolod" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Chain Name" required="" value="RDS" disabled>
-                    </div>
-                    <div class="row-start-3 col-span-1">
-                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
-                            Name</label>
-                        <input type="text" name="mName" id="mName"
-                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Company Name" required="" value="NBFI" disabled>
+                            placeholder="Chain Name" required="" value="Robensons Department Store" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                            placeholder="Brand Name" required="" value="At Home" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text"
                             class="text-sm font-medium text-white block mb-2 dark:text-gray-300">RAS</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                            placeholder="RAS Name" required="" value="Ms. Dona Victorina" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text"
                             class="text-sm font-medium text-white block mb-2 dark:text-gray-300">HR</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                            placeholder="HR Name" required="" value="Ms. Sisa Narcisa" disabled>
                     </div>
                     <div class="relative row-start-4 col-span-1">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -893,13 +894,13 @@
                                 <label for="date"
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date
                                     Applied:
-                                    September 14, 2022</label>
+                                    September 14, 2021</label>
                                 <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                             </div>
                             <div>
                                 <label for="date"
                                     class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Denied Date:
-                                    September 15, 2022</label>
+                                    September 17, 2021</label>
                                 <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                             </div>
                             <div>
