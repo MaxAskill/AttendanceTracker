@@ -36,8 +36,11 @@ class deductionController extends Controller
     function store(Request $request){
 
         $deduction = new deductionMaintenance();
-        $deduction->deductionID = "DEDUCTION-0005";
-        $deduction->branchID = $request->branchID;
+        $deduction->deductionID = $request->deductionID;
+        $deduction->region = $request->region;
+        $deduction->municipalitycity = $request->municipalitycity;
+        $deduction->chain = $request->chain;
+        $deduction->branch = $request->branch;
         $deduction->rangeSalary = $request->rangeSalary;
         $deduction->SSS = $request->SSS;
         $deduction->PHIC = $request->PHIC;

@@ -19,16 +19,29 @@ use Nexmo\Laravel\Facade\Nexmo;
 class branchController extends Controller
 {
 
-    function Branch(Request $request){
+
+    public function getBranchMaintenance(){
+    
+        $branch = branch::orderby('branchID','asc')->get(); 
+         
+        // Fetch all records
+        $response['data'] = $branch;
+    
+        return response()->json($response);
+      }
+
+    function store(Request $request){
 
         $branch = new branch();
         $branch->branchID = $request->branchID;
-        $branch->userID = $request->userID;
-        $branch->branchName = $request->branchName;
-        $branch->chainName = $request->companyName;
-        $branch->storeName = $request->storeName;
+        $branch->region = $request->region;
+        $branch->branch = $request->branch;
+        $branch->chain = $request->chain;
+        $branch->municipalitycity = $request->municipalitycity;
 
         $branch->save();
+
+        // return redirect('accounting')->with('flash_message', 'Branch added');
     }
 
 }

@@ -5,17 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class branch extends Model
+class scheduleMaintenance extends Model
 {
     use HasFactory;
-    protected $table = 'branch';
-    protected $primaryKey = 'branchID';
+    protected $table = 'schedulemaintenance';
+    protected $primaryKey = 'scheduleID';
     public $timestamps = false;
     protected $fillable = [
-        'branchID',
+        'scheduleID',
         'region',
         'municipalitycity',
         'chain',
-        'branch'
+        'branch',
+        'startTime',
+        'endTime',
     ];
 }

@@ -233,7 +233,7 @@
                                 class="text-white font-bold align-middle hover:align-top text-xl">No. of
                                 Application:
                                 <label class="text-4xl">1<label></span></div>
-                        <div class="row-start-1 col-span-1"><input type="text" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid transition ease-in-out
+                        <div class="row-start-1 col-span-1"><input type="search" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid transition ease-in-out
 								m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchBox"
                                 placeholder="Search" /></div>
                     </div>
@@ -330,7 +330,7 @@
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Select date start">
                             </div>
-                            <span class="mx-4 text-gray-500">to</span>
+                            <span class="mx-4 text-white">to</span>
                             <div class="relative">
                                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -354,12 +354,15 @@
                     <thead class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
-                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied</th>
-                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TargetOvertimeDate">Target Overtime Date</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="DateApplied">Date Applied
+                            </th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TargetOvertimeDate">Target
+                                Overtime Date</th>
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Duration">Duration</th>
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Reason">Reason</th>
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedBy">Approved By</th>
-                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedDate">Approved Date</th>
+                            <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="ApprovedDate">Approved Date
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -430,7 +433,10 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8"
+                                    action="{{ url('scheduleMaintenance') }}" method="POST"
+                                    enctype="multipart/form-data">
+                                    @csrf
                                     <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Add
                                         Schedule
                                     </h3>
@@ -440,40 +446,40 @@
                                                 class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Schedule
                                                 ID</label>
                                             <input type="text" name="scheduleID" id="scheduleID"
-                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
-                                                placeholder="SCHEDULE-0007" required="" readonly>
+                                                class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
+                                                placeholder="Schedule ID" required="">
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
-                                            <select name="Region" id="Region"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="region" id="region"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Region</option>
-                                                <option value="09:00">NCR</option>
-                                                <option value="09:30">Region 1</option>
-                                                <option value="10:00">Region 2</option>
-                                                <option value="10:30">Region 3</option>
-                                                <option value="11:00">Region 4</option>
-                                                <option value="11:30">Region 5</option>
+                                                <option value="NCR">NCR</option>
+                                                <option value="Region 1">Region 1</option>
+                                                <option value="Region 2">Region 2</option>
+                                                <option value="Region 3">Region 3</option>
+                                                <option value="Region 4">Region 4</option>
+                                                <option value="Region 5">Region 5</option>
                                             </select>
                                         </div>
                                         <div class="col-start-3 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
-                                            <select name="starttime" id="starttime"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="municipalitycity" id="municipalitycity"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Municipality/City</option>
-                                                <option value="09:00">Las Pinas City</option>
-                                                <option value="09:30">Makati City</option>
-                                                <option value="10:00">Malabon City</option>
-                                                <option value="10:30">Mandaluyong City</option>
+                                                <option value="Las Pinas City">Las Pinas City</option>
+                                                <option value="Makati City">Makati City</option>
+                                                <option value="Malabon City">Malabon City</option>
+                                                <option value="Mandaluyong City">Mandaluyong City</option>
                                             </select>
                                         </div>
                                         <div class="col-start-4 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                                            <select name="Chain" id="Chain"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="chain" id="chain"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Chain</option>
                                                 <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
                                                 <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
@@ -486,8 +492,8 @@
                                         <div class="col-start-5 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                                            <select name="Branch" id="Branch"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="branch" id="branch"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Branch</option>
                                                 <option value="Vista Mall Department Store">Vista Mall Department
                                                     Store
@@ -509,30 +515,30 @@
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Start
                                                 Time</label>
-                                            <select name="starttime" id="starttime"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="startTime" id="startTime"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Start Time</option>
-                                                <option value="09:00">09:00 am</option>
-                                                <option value="09:30">09:30 am</option>
-                                                <option value="10:00">10:00 am</option>
-                                                <option value="10:30">10:30 am</option>
-                                                <option value="11:00">11:00 am</option>
-                                                <option value="11:30">11:30 am</option>
+                                                <option value="09:00 am">09:00 am</option>
+                                                <option value="09:30 am">09:30 am</option>
+                                                <option value="10:00 am">10:00 am</option>
+                                                <option value="10:30 am">10:30 am</option>
+                                                <option value="11:00 am">11:00 am</option>
+                                                <option value="11:30 am">11:30 am</option>
                                             </select>
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">End
                                                 Time</label>
-                                            <select name="endtime" id="endtime"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="endTime" id="endTime"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>End Time</option>
-                                                <option value="06:00">06:00 pm</option>
-                                                <option value="06:30">06:30 pm</option>
-                                                <option value="07:00">07:00 pm</option>
-                                                <option value="07:30">07:30 pm</option>
-                                                <option value="08:00">08:00 pm</option>
-                                                <option value="08:30">08:30 pm</option>
+                                                <option value="06:00 pm">06:00 pm</option>
+                                                <option value="06:30 pm">06:30 pm</option>
+                                                <option value="07:00 pm">07:00 pm</option>
+                                                <option value="07:30 pm">07:30 pm</option>
+                                                <option value="08:00 pm">08:00 pm</option>
+                                                <option value="08:30 pm">08:30 pm</option>
                                             </select>
                                         </div>
                                     </div>
@@ -549,14 +555,14 @@
                     <div class="flex float-right">
                         <div class="mb-3 xl:w-96">
                             <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="exampleSearch"
-                                placeholder="Search" />
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl"
+                                id="searchBoxSchedule" placeholder="Search" />
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <table
+                <table id="scheduleMaintenance"
                     class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
                     <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full">
@@ -572,109 +578,109 @@
                     </thead>
                     <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                         style="height: 73vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SCHEDULE-0001</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
-                            <td class="p-4 w-2/6">Vista Mall Department Store</td>
-                            <td class="p-4 w-2/6">09:30 am</td>
-                            <td class="p-4 w-2/6">06:30 pm</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-schedule">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-schedule">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SCHEDULE-0002</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Robinsons Las Pinas</td>
-                            <td class="p-4 w-2/6">Robinsons Department Store</td>
-                            <td class="p-4 w-2/6">10:00 am</td>
-                            <td class="p-4 w-2/6">06:00 pm</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-schedule">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-schedule">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SCHEDULE-0002</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Las Pinas City</td>
-                            <td class="p-4 w-2/6">Robinsons Las Pinas</td>
-                            <td class="p-4 w-2/6">Robinsons Department Store</td>
-                            <td class="p-4 w-2/6">11:00 am</td>
-                            <td class="p-4 w-2/6">08:00 pm</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-schedule">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-schedule">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SCHEDULE-0004</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Malabon City</td>
-                            <td class="p-4 w-2/6">Fisher Mall Malabon</td>
-                            <td class="p-4 w-2/6">Fisher Mall Department Store</td>
-                            <td class="p-4 w-2/6">11:00 am</td>
-                            <td class="p-4 w-2/6">08:00 pm</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-schedule">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-schedule">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SCHEDULE-0005</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Malabon City</td>
-                            <td class="p-4 w-2/6">Robinsons Malabon</td>
-                            <td class="p-4 w-2/6">Robinsons Department Store</td>
-                            <td class="p-4 w-2/6">11:00 am</td>
-                            <td class="p-4 w-2/6">08:00 pm</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-schedule">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-schedule">Delete</button>
-                            </td>
-                        </tr>
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <td class="p-4 w-2/6">SCHEDULE-0006</td>
-                            <td class="p-4 w-2/6">NCR</td>
-                            <td class="p-4 w-2/6">Mandaluyong City</td>
-                            <td class="p-4 w-2/6">Robinsons Forum Pioneer</td>
-                            <td class="p-4 w-2/6">Robinsons Department Store</td>
-                            <td class="p-4 w-2/6">12:00 pm</td>
-                            <td class="p-4 w-2/6">09:00 pm</td>
-                            <td class="p-4 w-2/6"><button
-                                    class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="edit-schedule">Edit</button>
-                                <button
-                                    class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="delete-schedule">Delete</button>
-                            </td>
-                        </tr>
+                        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0001</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Las Pinas City</td>
+                                <td class="p-4 w-2/6">Finds Finds Las Pinas</td>
+                                <td class="p-4 w-2/6">Vista Mall Department Store</td>
+                                <td class="p-4 w-2/6">09:30 am</td>
+                                <td class="p-4 w-2/6">06:30 pm</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-schedule">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-schedule">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0002</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Las Pinas City</td>
+                                <td class="p-4 w-2/6">Robinsons Las Pinas</td>
+                                <td class="p-4 w-2/6">Robinsons Department Store</td>
+                                <td class="p-4 w-2/6">10:00 am</td>
+                                <td class="p-4 w-2/6">06:00 pm</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-schedule">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-schedule">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0002</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Las Pinas City</td>
+                                <td class="p-4 w-2/6">Robinsons Las Pinas</td>
+                                <td class="p-4 w-2/6">Robinsons Department Store</td>
+                                <td class="p-4 w-2/6">11:00 am</td>
+                                <td class="p-4 w-2/6">08:00 pm</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-schedule">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-schedule">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0004</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Malabon City</td>
+                                <td class="p-4 w-2/6">Fisher Mall Malabon</td>
+                                <td class="p-4 w-2/6">Fisher Mall Department Store</td>
+                                <td class="p-4 w-2/6">11:00 am</td>
+                                <td class="p-4 w-2/6">08:00 pm</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-schedule">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-schedule">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0005</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Malabon City</td>
+                                <td class="p-4 w-2/6">Robinsons Malabon</td>
+                                <td class="p-4 w-2/6">Robinsons Department Store</td>
+                                <td class="p-4 w-2/6">11:00 am</td>
+                                <td class="p-4 w-2/6">08:00 pm</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-schedule">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-schedule">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                                <td class="p-4 w-2/6">BRANCH-0006</td>
+                                <td class="p-4 w-2/6">NCR</td>
+                                <td class="p-4 w-2/6">Mandaluyong City</td>
+                                <td class="p-4 w-2/6">Robinsons Forum Pioneer</td>
+                                <td class="p-4 w-2/6">Robinsons Department Store</td>
+                                <td class="p-4 w-2/6">12:00 pm</td>
+                                <td class="p-4 w-2/6">09:00 pm</td>
+                                <td class="p-4 w-2/6"><button
+                                        class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="edit-schedule">Edit</button>
+                                    <button
+                                        class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
+                                        data-modal-toggle="delete-schedule">Delete</button>
+                                </td>
+                            </tr> -->
                     </tbody>
                 </table>
                 <div class="grid justify-center items-center mb-3 bg-white">
                     <nav aria-label="Page navigation example w-full">
                         <ul class="inline-flex -space-x-px">
                             <li>
-                                <a href="#"
+                                <a href="#" id="prevButtonScheduleMaintenance"
                                     class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                             </li>
                             <li>
@@ -698,7 +704,7 @@
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="#" id="nextButtonScheduleMaintenance"
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                             </li>
                         </ul>
@@ -759,7 +765,8 @@
                 </div>
             </div>
             <div>
-                <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed" id="deniedTable">
+                <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed"
+                    id="deniedTable">
                     <thead class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr class="w-full even:bg-gray-100 odd:bg-white-100">
                             <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Name">Name</th>
@@ -783,7 +790,7 @@
                     <nav aria-label="Page navigation example w-full">
                         <ul class="inline-flex -space-x-px">
                             <li>
-                                <a href="#"  id="deniednextButton"
+                                <a href="#" id="deniednextButton"
                                     class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                             </li>
                             <li>
@@ -996,11 +1003,11 @@
     <!--end approved modal-->
 
     <!-- Deny modal -->
-    <div id="deny-ot" aria-hidden="true"
-        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
+    <div id="view-denying" aria-hidden="true"
+        class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="modal-dialog relative  sm:w-full xl:px-4 h-full md:h-auto ">
             <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-black">
+            <div class="relative xl:w-1/3 ml-72 mt-24 -right-96 -bottom-12 border w-full shadow-lg rounded-md bg-white">
                 <div class="flex justify-end p-2">
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
@@ -1086,15 +1093,15 @@
     <!--end Deny Modal-->
 
     <!-- view ot modal -->
-    <div id="view-ot" aria-hidden="true"
-        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
+    <div id="view-pending" aria-hidden="true"
+        class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="modal-dialog relative  sm:w-full xl:px-4 h-full md:h-auto ">
             <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-black">
+            <div class="relative xl:w-1/3 ml-72 mt-56 -right-96 -bottom-12 border w-full shadow-lg rounded-md bg-white">
                 <div class="flex justify-end p-2">
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="view-ot">
+                        onClick="closeViewPending()">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -1121,6 +1128,62 @@
                         <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
                             Overtime Date:
                             <span class="font-normal">September 19, 2021</span></label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="mb-3 xl:w-full">
+                                <label for="exampleFormControlTextarea1"
+                                    class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
+                                <textarea
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-black rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
+                                    disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- view ot modal -->
+    <div id="view-approved" aria-hidden="true"
+        class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="modal-dialog relative  sm:w-full xl:px-4 h-full md:h-auto ">
+            <!-- Modal content -->
+            <div class="relative xl:w-1/3 ml-72 mt-56 -right-96 -bottom-12 w-full shadow-lg rounded-md bg-white border-4 border-solid border-black">
+                <div class="flex justify-end p-2">
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                        onClick="closeviewApproved()">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                    <h3 class="text-2xl font-medium text-center font-black dark:text-white font-extrabold">
+                        OVERTIME REQUEST!</h3>
+
+                    <div>
+                        <label for="text"
+                            class="capitalized font-medium text-gray-900 block dark:text-gray-300">Applicant Name:
+                            <span class="font-normal">Crisostomo Ibarra</span></label>
+                        <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                    </div>
+                    <div>
+                        <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Date Applied:
+                            <span class="font-normal">September 16, 2021</span></label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
+                            Overtime Date:
+                            <span class="font-normal">September 18, 2021</span></label>
                         <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
                     </div>
                     <div>
@@ -1307,16 +1370,72 @@
     </div>
     <!--end delete schedule modal-->
 
-    <!-- denied ot modal -->
-    <div id="denied-ot" aria-hidden="true"
-        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
+    <div id="view-otdenied" aria-hidden="true"
+    class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="modal-dialog relative  sm:w-full xl:px-4 h-full md:h-auto ">
             <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-pantone">
+            <div class="relative xl:w-1/3 ml-72 mt-56 -right-96 -bottom-12 w-full shadow-lg rounded-md bg-white border-4 border-solid border-black">
                 <div class="flex justify-end p-2">
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="denied-ot">
+                        onClick="closeOTDenied()">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                    <h3 class="text-2xl font-medium text-center font-black dark:text-white font-extrabold">
+                        OVERTIME REQUEST!</h3>
+
+                    <div>
+                        <label for="text"
+                            class="capitalized font-medium text-gray-900 block dark:text-gray-300">Applicant Name:
+                            <span class="font-normal">Crisostomo Ibarra</span></label>
+                        <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                    </div>
+                    <div>
+                        <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Date Applied:
+                            <span class="font-normal">September 14, 2021</span></label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <label for="date" class=" font-medium text-gray-900 block dark:text-gray-300">Target
+                            Overtime Date:
+                            <span class="font-normal">September 08, 2021</span></label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="mb-3 xl:w-full">
+                                <label for="exampleFormControlTextarea1"
+                                    class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
+                                <textarea
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-black rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
+                                    disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--end approved modal-->
+
+    <!-- denied ot modal -->
+    <div id="view-denied" aria-hidden="true"
+        class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="modal-dialog relative  sm:w-full xl:px-4 h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative xl:w-1/3 ml-72 mt-56 -right-96 -bottom-12 w-full shadow-lg rounded-md bg-white border-4 border-solid border-pantone">
+                <div class="flex justify-end p-2">
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                        onClick="closeviewDenied()">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -1379,13 +1498,63 @@
 </button>
 
 <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 </html>
 
 <!-- Javascript Code -->
 <script>
+let modalPending = document.getElementById('view-pending');
+let modalDenying = document.getElementById('view-denying');
+let modalApproved = document.getElementById('view-approved');
+let modalDenied = document.getElementById('view-denied');
+let modalOTDenied = document.getElementById('view-otdenied');
+
+function viewPending() {
+    modalPending.style.display = "block";
+}
+
+function appDenying() {
+    modalDenying.style.display = "block";
+}
+
+function viewApproved() {
+    modalApproved.style.display = "block";
+}
+
+function viewDenied() {
+    modalDenied.style.display = "block";
+}
+
+function viewOTDenied() {
+    modalOTDenied.style.display = "block";
+}
+
+function closeViewPending() {
+    modalPending.style.display = "none";
+}
+
+function closeappDenying() {
+    modalDenying.style.display = "none";
+}
+
+function closeviewApproved() {
+    modalApproved.style.display = "none";
+}
+
+function closeviewDenied() {
+    modalDenied.style.display = "none";
+}
+
+function closeOTDenied() {
+    modalOTDenied.style.display = "none";
+}
+
+
+
 var navmenu = document.getElementById('navmenu');
 
 function toggleMenu() {
@@ -1540,11 +1709,10 @@ const tableSearchAttendanceSummary = document.getElementById("pendingTable");
 const trs = tableSearchAttendanceSummary.tBodies[0].getElementsByTagName("tr");
 
 // add event listener to search box
-searchBox.addEventListener('keyup', performSearch);
+searchBox.addEventListener('keyup', performSearchPending);
 
 
-function performSearch() {
-
+function performSearchPending() {
     // Declare search string 
     var filter = searchBox.value.toUpperCase();
 
@@ -1581,10 +1749,10 @@ const tableSearchApprovedTable = document.getElementById("approvedTable");
 const trsApproved = tableSearchApprovedTable.tBodies[0].getElementsByTagName("tr");
 
 // add event listener to search box
-searchBoxApproved.addEventListener('keyup', performSearch);
+searchBoxApproved.addEventListener('keyup', performSearchApproved);
 
 
-function performSearch() {
+function performSearchApproved() {
 
     // Declare search string 
     var filter = searchBoxApproved.value.toUpperCase();
@@ -1622,10 +1790,10 @@ const tableSearchDeniedTable = document.getElementById("deniedTable");
 const trsDenied = tableSearchDeniedTable.tBodies[0].getElementsByTagName("tr");
 
 // add event listener to search box
-searchBoxDenied.addEventListener('keyup', performSearch);
+searchBoxDenied.addEventListener('keyup', performSearchDenied);
 
 
-function performSearch() {
+function performSearchDenied() {
 
     // Declare search string 
     var filter = searchBoxDenied.value.toUpperCase();
@@ -1722,6 +1890,11 @@ let deniedsortAsc = false;
 const deniedpageSize = 3;
 let deniedcurPage = 1;
 
+const pageSizeScheduleMaintenance = 10;
+let curPageScheduleMaintenance = 1;
+let tableScheduleMaintenance, dataScheduleMaintenance, sortColScheduleMaintenance;
+let sortAscScheduleMaintenance = false;
+
 async function init() {
 
     // Select the table (well, tbody)
@@ -1773,6 +1946,96 @@ async function init() {
 
     document.querySelector('#deniednextButton').addEventListener('click', deniednextPage, false);
     document.querySelector('#deniedprevButton').addEventListener('click', deniedpreviousPage, false);
+
+    //Schedule Maintenance
+    $.ajax({
+        url: 'getScheduleMaintenance',
+        type: 'get',
+        dataType: 'json',
+        success: function(response) {
+
+            // createRows(response);
+            dataScheduleMaintenance = Object.entries(response);
+            renderTableScheduleMaintenance();
+
+        }
+
+    });
+    console.log(dataScheduleMaintenance);
+    tableScheduleMaintenance = document.querySelector('#scheduleMaintenanceTable tbody');
+    document.querySelector('#nextButtonScheduleMaintenance').addEventListener('click', nextPageScheduleMaintenance,
+        false);
+    document.querySelector('#prevButtonScheduleMaintenance').addEventListener('click',
+        previousPageScheduleMaintenance,
+        false);
+}
+
+//Salary Maintenance
+function renderTableScheduleMaintenance() {
+    // create html
+
+    // console.log(dataSalaryMaintenance[0][1]);
+    dataScheduleMaintenance = dataScheduleMaintenance[0][1];
+    console.log(dataScheduleMaintenance.length);
+    let result = '';
+    dataScheduleMaintenance.filter((row, index) => {
+        let start = (curPageScheduleMaintenance - 1) * pageSizeScheduleMaintenance;
+        let end = curPageScheduleMaintenance * pageSizeScheduleMaintenance;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.scheduleID}</td>
+     <td class="py-4 w-2/6">${c.region}</td>
+     <td class="py-4 w-2/6">${c.municipalitycity}</td>
+     <td class="py-4 w-2/6">${c.chain}</td>
+     <td class="py-4 w-2/6">${c.branch}</td>
+	 <td class="py-4 w-2/6">${c.startTime}</td>
+	 <td class="py-4 w-2/6">${c.endTime}</td>
+     <td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>
+     </tr>`;
+        //  primaryKey = c.scheduleID;
+    });
+    tableScheduleMaintenance.innerHTML = result;
+}
+
+function previousPageScheduleMaintenance() {
+    if (curPageScheduleMaintenance > 1) curPageScheduleMaintenance--;
+    renderTableScheduleMaintenance();
+}
+
+function nextPageScheduleMaintenance() {
+    if ((curPageScheduleMaintenance * pageSizeSalaryMaintenance) < dataScheduleMaintenance.length)
+        curPageScheduleMaintenance++;
+    renderTableScheduleMaintenance();
+}
+
+// declare elements
+const searchBoxScheduleMaintenance = document.getElementById('searchBoxSchedule');
+const tableSearchScheduleMaintenance = document.getElementById("scheduleMaintenanceTable");
+const trsScheduleMaintenance = tableSearchScheduleMaintenance.tBodies[0].getElementsByTagName("tr");
+// add event listener to search box
+searchBoxScheduleMaintenance.addEventListener('keyup', performSearchSchedule);
+
+function performSearchSchedule() {
+    // Declare search string 
+    var filter = searchBox.value.toUpperCase();
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsScheduleMaintenance.length; rowI++) {
+        // define the row's cells
+        var tds = trsScheduleMaintenance[rowI].getElementsByTagName("td");
+        // hide the row
+        trsScheduleMaintenance[rowI].style.display = "none";
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trsScheduleMaintenance[rowI].style.display = "";
+                // skip to the next row
+                continue;
+            }
+        }
+    }
 }
 
 function renderTable() {
@@ -1790,12 +2053,12 @@ function renderTable() {
                             <td class="py-6 px-6 whitespace-nowrap">${c.Duration}</td>
                             <td class="py-6 px-6 whitespace-nowrap"><button
                                     class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></td>
+                                    onClick="viewPending()">VIEW</button></td>
                             <td class="py-6 px-6 whitespace-nowrap">
                             <button class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="approved-modal">Approve</button>
                             <button class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="deny-ot">Deny</button>
+                                    onClick="appDenying()">Deny</button>
                             </td>
                             </tr>`;
     });
@@ -1825,8 +2088,6 @@ function nextPage() {
     renderTable();
 }
 
-
-
 function approvedrenderTable() {
     // create html
     let approvedresult = '';
@@ -1842,7 +2103,7 @@ function approvedrenderTable() {
                             <td class="py-6 px-6 whitespace-nowrap">${c.Duration}</td>
                             <td class="py-6 px-6 whitespace-nowrap"><button
                                     class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></td>
+                                    onClick="viewApproved()">VIEW</button></td>
                             <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedBy}</td>
                             <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedDate}</td>
                             </tr>`;
@@ -1888,12 +2149,12 @@ function deniedrenderTable() {
                             <td class="py-6 px-6 whitespace-nowrap">${c.TargetOvertimeDate}</td>
                             <td class="py-6 px-6 whitespace-nowrap"><button
                                     class="bg-transparent hover:bg-white font-gray-700 font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-gray-700 hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="view-ot">VIEW</button></td>
+                                    onClick="viewOTDenied()">VIEW</button></td>
                             <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedBy}</td>
                             <td class="py-6 px-6 whitespace-nowrap">${c.ApprovedDate}</td>
                             <td class="py-5 w-1/6"><button
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                    data-modal-toggle="denied-ot"> VIEW</button></td>
+                                    onClick="viewDenied()"> VIEW</button></td>
                             </tr>`;
     });
     deniedtable.innerHTML = deniedresult;

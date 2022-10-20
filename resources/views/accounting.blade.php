@@ -605,55 +605,118 @@
                                         <h3 class="text-xl font-medium text-gray-900 dark:text-white">Add Deduction
                                             Maintenance</h3>
 
-                                        <div class="grid grid-cols-2 gap-2">
-                                            <div class="col-start-1 col-span-1">
-                                                <label for="text"
-                                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
-                                                    ID</label>
-                                                <input type="text" name="branchID" id="branchID"
-                                                    class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="Branch ID" required="" value="">
-                                            </div>
-                                            <div class="col-start-2 col-span-1">
-                                                <label for="text"
-                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
-                                                    Salary</label>
-                                                <input type="text" name="rangeSalary" id="rangeSalary"
-                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="Range Salary" required="" value="">
-                                            </div>
+                                            <div class="grid grid-cols-2 gap-2">
+                                        <div class="col-start-1 col-span-1">
+                                            <label for="text"
+                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Deduction
+                                                ID</label>
+                                            <input type="text" name="deductionID" id="deductionID"
+                                                class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
+                                                placeholder="Deduction ID" required="">
                                         </div>
+                                        <div class="col-start-2 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Range
+                                                Salary</label>
+                                            <select name="rangeSalary" id="rangeSalary"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Range Salary</option>
+                                                <option value="P20,000.00 and below">P20,000.00 and below</option>
+                                                <option value="P20,001.00 - P25,000.00">P20,001.00 - P25,000.00</option>
+                                                <option value="P25,001.00 - P27,000.00">P25,001.00 - P27,000.00</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-                                        <div class="grid grid-cols-4 gap-2">
-                                            <div class="col-start-1 col-span-1">
-                                                <label for="text"
-                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
-                                                <input type="text" name="SSS" id="SSS"
-                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="SSS" required="" value="">
-                                            </div>
-                                            <div class="col-start-2 col-span-1">
-                                                <label for="text"
-                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
-                                                <input type="text" name="PHIC" id="PHIC"
-                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="PHIC" required="" value="">
-                                            </div>
-                                            <div class="col-start-3 col-span-1">
-                                                <label for="text"
-                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
-                                                <input type="text" name="HMDF" id="HMDF"
-                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="HMDF" required="" value="">
-                                            </div>
-                                            <div class="col-start-4 col-span-1">
-                                                <label for="text"
-                                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">TOTAL</label>
-                                                <input type="text" name="total" id="total"
-                                                    class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="Total" required="" value="">
-                                            </div>
+                                    <div class="grid grid-cols-4 gap-2">
+                                        <div class="col-start-1 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
+                                            <select name="region" id="region"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Region</option>
+                                                <option value="NCR">NCR</option>
+                                                <option value="Region 1">Region 1</option>
+                                                <option value="Region 2">Region 2</option>
+                                                <option value="Region 3">Region 3</option>
+                                                <option value="Region 4">Region 4</option>
+                                                <option value="Region 5">Region 5</option>
+                                            </select>
                                         </div>
+                                        <div class="col-start-2 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
+                                            <select name="municipalitycity" id="municipalitycity"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Municipality/City</option>
+                                                <option value="Las Pinas City">Las Pinas City</option>
+                                                <option value="Makati City">Makati City</option>
+                                                <option value="Malabon City">Malabon City</option>
+                                                <option value="Mandaluyong City">Mandaluyong City</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-3 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
+                                            <select name="chain" id="chain"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Chain</option>
+                                                <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
+                                                <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
+                                                <option value="Waltermart Makati">Waltermart Makati</option>
+                                                <option value="Fisher Mall Malabon">Fisher Mall Malabon</option>
+                                                <option value="Robinsons Malabon">Robinsons Malabon</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-start-4 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
+                                            <select name="branch" id="branch"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                                <option hidden selected>Branch</option>
+                                                <option value="Vista Mall Department Store">Vista Mall Department Store
+                                                </option>
+                                                <option value="Robinsons Department Store">Robinsons Department Store
+                                                </option>
+                                                <option value="Waltermart Department Store">Waltermart Department Store
+                                                </option>
+                                                <option value="Fisher Mall Department Store">Fisher Mall Department
+                                                    Store</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-4 gap-2">
+                                        <div class="col-start-1 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">SSS</label>
+                                            <input type="text" name="SSS" id="SSS"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                placeholder="SSS" required="">
+                                        </div>
+                                        <div class="col-start-2 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">PHIC</label>
+                                            <input type="text" name="PHIC" id="PHIC"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                placeholder="PHIC" required="">
+                                        </div>
+                                        <div class="col-start-3 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">HMDF</label>
+                                            <input type="text" name="HMDF" id="HMDF"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                placeholder="HMDF" required="" >
+                                        </div>
+                                        <div class="col-start-4 col-span-1">
+                                            <label for="date"
+                                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">TOTAL</label>
+                                            <input type="text" name="total" id="total"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                placeholder="total" required="">
+                                        </div>
+                                    </div>
+
 
                                     <button type="submit"
                                         class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 outline-none">Add</button>
@@ -678,14 +741,17 @@
                         class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
                         <thead class="bg-gray-100 flex text-gray w-full">
                             <tr class="flex w-full">
-                                <th class="p-4 w-2/6">Deduction ID</th>
-                                <th class="p-4 w-2/6">Branch ID</th>
-                                <th class="p-4 w-2/6">Range Salary</th>
-                                <th class="p-4 w-2/6">SSS</th>
-                                <th class="p-4 w-2/6">PHIC</th>
-                                <th class="p-4 w-2/6">HMDF</th>
-                                <th class="p-4 w-2/6">TOTAL</th>
-                                <th class="p-4 w-2/6"></th>
+                            <th class="p-4 w-2/6">Deduction ID</th>
+                            <th class="p-4 w-2/6">Region</th>
+                            <th class="p-4 w-2/6">Municipality/City</th>
+                            <th class="p-4 w-2/6">Chain</th>
+                            <th class="p-4 w-2/6">Branch</th>
+                            <th class="p-4 w-2/6">Range Salary</th>
+                            <th class="p-4 w-1/6">SSS</th>
+                            <th class="p-4 w-1/6">PHIC</th>
+                            <th class="p-4 w-1/6">HMDF</th>
+                            <th class="p-4 w-1/6">TOTAL</th>
+                            <th class="p-4 w-2/6"></th>
                             </tr>
                         </thead>
                         <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
@@ -852,18 +918,19 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                                <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="{{ url('branchMaintenance') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <h3 class="text-4xl font-medium text-gray-900 dark:text-white text-center">Add
                                         Branch</h3>
 
                                     <div class="grid grid-cols-2 gap-2">
                                         <div class="col-start-1 col-span-2">
                                             <label for="text"
-                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Deduction
+                                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
                                                 ID</label>
-                                            <input type="text" name="name" id="name"
-                                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
-                                                placeholder="" required="" value="BRANCH-0007" readonly>
+                                            <input type="text" name="branchID" id="branchID"
+                                                class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
+                                                placeholder="" required="" value="">
                                         </div>
                                     </div>
 
@@ -871,34 +938,34 @@
                                         <div class="col-start-1 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Region</label>
-                                            <select name="Region" id="Region"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="region" id="region"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Region</option>
-                                                <option value="09:00">NCR</option>
-                                                <option value="09:30">Region 1</option>
-                                                <option value="10:00">Region 2</option>
-                                                <option value="10:30">Region 3</option>
-                                                <option value="11:00">Region 4</option>
-                                                <option value="11:30">Region 5</option>
+                                                <option value="NCR">NCR</option>
+                                                <option value="Region 1">Region 1</option>
+                                                <option value="Region 2">Region 2</option>
+                                                <option value="Region 3">Region 3</option>
+                                                <option value="Region 4">Region 4</option>
+                                                <option value="Region 4">Region 5</option>
                                             </select>
                                         </div>
                                         <div class="col-start-2 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Municipality/City</label>
-                                            <select name="starttime" id="starttime"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="municipalitycity" id="municipalitycity"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black focus:border-1 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Municipality/City</option>
-                                                <option value="09:00">Las Pinas City</option>
-                                                <option value="09:30">Makati City</option>
-                                                <option value="10:00">Malabon City</option>
-                                                <option value="10:30">Mandaluyong City</option>
+                                                <option value="Las Pinas">Las Pinas City</option>
+                                                <option value="Makati City">Makati City</option>
+                                                <option value="Malabon City">Malabon City</option>
+                                                <option value="Mandaluyong City">Mandaluyong City</option>
                                             </select>
                                         </div>
                                         <div class="col-start-3 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Chain</label>
-                                            <select name="Chain" id="Chain"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="chain" id="chain"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Chain</option>
                                                 <option value="Finds Finds Las Pinas">Finds Finds Las Pinas</option>
                                                 <option value="Robinsons Las Pinas">Robinsons Las Pinas</option>
@@ -910,8 +977,8 @@
                                         <div class="col-start-4 col-span-1">
                                             <label for="date"
                                                 class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch</label>
-                                            <select name="Branch" id="Branch"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                            <select name="branch" id="branch"
+                                                class="form-control bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                                 <option hidden selected>Branch</option>
                                                 <option value="Vista Mall Department Store">Vista Mall Department Store
                                                 </option>
@@ -937,14 +1004,14 @@
                     <div class="flex float-right">
                         <div class="mb-3 xl:w-96">
                             <input type="search" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="exampleSearch"
+						m-0 focus:text-gray-700 focus:bg-white focus:border-green-600 focus:outline-none rounded-xl" id="searchBoxBranch"
                                 placeholder="Search" />
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <table
+                <table id="branchMaintenanceTable"
                     class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
                     <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full">
@@ -959,7 +1026,7 @@
                     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
                     <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                         style="height: 73vh;">
-                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                        <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <td class="p-4 w-2/6">BRANCH-0001</td>
                             <td class="p-4 w-2/6">NCR</td>
                             <td class="p-4 w-2/6">Las Pinas City</td>
@@ -1042,7 +1109,7 @@
                                     class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="delete-branch">Delete</button>
                             </td>
-                        </tr>
+                        </tr> -->
 
                     </tbody>
                 </table>
@@ -1050,7 +1117,7 @@
                     <nav aria-label="Page navigation example w-full">
                         <ul class="inline-flex -space-x-px">
                             <li>
-                                <a href="#"
+                                <a href="#" id="prevButtonBranchMaintenance"
                                     class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
                             </li>
                             <li>
@@ -1074,7 +1141,7 @@
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="#" id="nextButtonBranchMaintenance"
                                     class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
                             </li>
                         </ul>
@@ -1992,97 +2059,7 @@
 <script type='text/javascript'>
 var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 var primaryKey = "";
-$(document).ready(function() {
 
-    // Fetch all records
-    $('#but_fetchall').click(function() {
-
-        // AJAX GET request
-        $.ajax({
-            url: 'getSalaryMaintenance',
-            type: 'get',
-            dataType: 'json',
-            success: function(response) {
-                // $salary = [response];
-                createRows(response);
-
-            }
-        });
-        // console.log($salary);
-    });
-
-    // Search by userid
-    $('#but_search').click(function() {
-        var userid = Number($('#search').val().trim());
-
-        if (userid > 0) {
-
-            // AJAX POST request
-            $.ajax({
-                url: 'getUserbyid',
-                type: 'post',
-                data: {
-                    _token: CSRF_TOKEN,
-                    userid: userid
-                },
-                dataType: 'json',
-                success: function(response) {
-
-                    createRows(response);
-
-                }
-            });
-        }
-
-    });
-
-});
-
-// Create table rows
-function createRows(response) {
-    console.log(response);
-    var len = 0;
-    $('#salaryMaintenanceTable tbody').empty(); // Empty <tbody>
-    if (response['data'] != null) {
-        len = response['data'].length;
-    }
-
-    if (len > 0) {
-        for (var i = 0; i < len; i++) {
-            var branchID = response['data'][i].branchID;
-            primaryKey = branchID;
-            var region = response['data'][i].region;
-            var municipalitycity = response['data'][i].municipalitycity;
-            var chain = response['data'][i].chain;
-            var branch = response['data'][i].branch;
-            var basicRate = response['data'][i].basicRate;
-            var perHour = response['data'][i].perHour;
-            var perMin = response['data'][i].perMin;
-            var COLA = response['data'][i].COLA;
-
-            var tr_str = "<tr class='flex w-full even:bg-gray-100 odd:bg-white-100'>" +
-                "<td class='p-4 w-2/6'>" + branchID + "</td>" +
-                "<td class='p-4 w-2/6'>" + region + "</td>" +
-                "<td class='p-4 w-2/6'>" + municipalitycity + "</td>" +
-                "<td class='p-4 w-2/6'>" + chain + "</td>" +
-                "<td class='p-4 w-2/6'>" + branch + "</td>" +
-                "<td class='p-4 w-2/6'>" + "P" + basicRate + "</td>" +
-                "<td class='p-4 w-2/6'>" + "P" + perHour + "</td>" +
-                "<td class='p-4 w-2/6'>" + "P" + perMin + "</td>" +
-                "<td class='p-4 w-2/6'>" + "P" + COLA + "</td>" +
-                '<td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>' +
-                "</tr>";
-
-                    $("#salaryMaintenanceTable tbody").append(tr_str);
-                }
-            } else {
-                var tr_str = "<tr>" +
-                    "<td align='center' colspan='4'>No record found.</td>" +
-                    "</tr>";
-
-                $("#salaryMaintenanceTable tbody").append(tr_str);
-            }
-        }
         function generatePrimaryKey(){
 
             console.log(primaryKey);
@@ -2133,98 +2110,8 @@ function createRows(response) {
         function closeDeleteDeduction() {
             modalDeleteDeduction.style.display = "none";
         }
-
-
-        $(document).ready(function() {
-
-            // Fetch all records
-            $('#fetchDeductionMaintenance').click(function() {
-
-                // AJAX GET request
-                $.ajax({
-                    url: 'getDeductionMaintenance',
-                    type: 'get',
-                    dataType: 'json',
-                    success: function(response) {
-
-                        createRowsDeduction(response);
-
-                    }
-
-                });
-                console.log("fetch deduction maintenance");
-            });
-
-            // Search by userid
-            $('#but_search').click(function() {
-                var userid = Number($('#search').val().trim());
-
-                if (userid > 0) {
-
-                    // AJAX POST request
-                    $.ajax({
-                        url: 'getUserbyid',
-                        type: 'post',
-                        data: {
-                            _token: CSRF_TOKEN,
-                            userid: userid
-                        },
-                        dataType: 'json',
-                        success: function(response) {
-
-                            createRows(response);
-
-                        }
-                    });
-                }
-
-            });
-
-        });
-
+ 
         var primaryDeductionID = "";
-        // Create table rows
-        function createRowsDeduction(response) {
-            console.log(response);
-            var len = 0;
-            $('#deductionMaintenanceTable tbody').empty(); // Empty <tbody>
-            if (response['data'] != null) {
-                len = response['data'].length;
-            }
-
-            if (len > 0) {
-                for (var i = 0; i < len; i++) {
-                    var deductionID = response['data'][i].deductionID;
-                    primaryDeductionID = deductionID;
-                    var branchID = response['data'][i].branchID;
-                    var rangeSalary = response['data'][i].rangeSalary;
-                    var SSS = response['data'][i].SSS;
-                    var PHIC = response['data'][i].PHIC;
-                    var HMDF = response['data'][i].HMDF;
-                    var total = response['data'][i].total;
-
-                    var tr_str = "<tr class='flex w-full even:bg-gray-100 odd:bg-white-100'>" +
-                        "<td class='p-4 w-2/6'>" + deductionID + "</td>" +
-                        "<td class='p-4 w-2/6'>" + branchID + "</td>" +
-                        "<td class='p-4 w-2/6'>" + rangeSalary + "</td>" +
-                        "<td class='p-4 w-2/6'>" + "P" + SSS + "</td>" +
-                        "<td class='p-4 w-2/6'>" + "P" + PHIC + "</td>" +
-                        "<td class='p-4 w-2/6'>" + "P" + HMDF + "</td>" +
-                        "<td class='p-4 w-2/6'>" + "P" + total + "</td>" +
-                        "<td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>" +
-                        "</tr>";
-
-                    $("#deductionMaintenanceTable tbody").append(tr_str);
-                }
-            } else {
-                var tr_str = "<tr>" +
-                    "<td align='center' colspan='4'>No record found.</td>" +
-                    "</tr>";
-
-                $("#deductionMaintenanceTable tbody").append(tr_str);
-            }
-        }
-
         function generatePrimaryDeduction(){
             console.log(primaryDeductionID);
             const arr = primaryDeductionID.split("-");
@@ -2399,6 +2286,11 @@ const pageSizeDeductionMaintenance = 10;
 let curPageDeductionMaintenance = 1;
 let tableDeductionMaintenance, dataDeductionMaintenance, sortColDeductionMaintenance;
 let sortAscDeductionMaintenance = false;
+
+const pageSizeBranchMaintenance = 10;
+let curPageBranchMaintenance = 1;
+let tableBranchMaintenance, dataBranchMaintenance, sortColBranchMaintenance;
+let sortAscBranchMaintenance = false;
 async function init() {
 
     //Salary Maintenance
@@ -2439,6 +2331,25 @@ async function init() {
     document.querySelector('#nextButtonDeductionMaintenance').addEventListener('click', nextPageDeductionMaintenance,
         false);
     document.querySelector('#prevButtonDeductionMaintenance').addEventListener('click', previousPageDeductionMaintenance,
+        false);
+
+        //Branch Maintenance
+        $.ajax({
+        url: 'getBranchMaintenance',
+        type: 'get',
+        dataType: 'json',
+        success: function(response) {
+
+            // createRows(response);
+            dataBranchMaintenance = Object.entries(response);
+            renderTableBranchMaintenance();
+
+        }
+    });
+    tableBranchMaintenance = document.querySelector('#branchMaintenanceTable tbody');
+    document.querySelector('#nextButtonBranchMaintenance').addEventListener('click', nextPageBranchMaintenance,
+        false);
+    document.querySelector('#prevButtonBranchMaintenance').addEventListener('click', previousPageBranchMaintenance,
         false);
 }
 //Salary Maintenance
@@ -2525,7 +2436,10 @@ function renderTableDeductionMaintenance() {
     }).forEach(c => {
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
      <td class="py-4 w-2/6">${c.deductionID}</td>
-     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${c.region}</td>
+     <td class="py-4 w-2/6">${c.municipalitycity}</td>
+     <td class="py-4 w-2/6">${c.chain}</td>
+     <td class="py-4 w-2/6">${c.branch}</td>
      <td class="py-4 w-2/6">${c.rangeSalary}</td>
      <td class="py-4 w-2/6">${c.SSS}</td>
      <td class="py-4 w-2/6">${c.PHIC}</td>
@@ -2568,6 +2482,70 @@ function performSearchDeduction() {
             if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
                 // show the row
                 trsDeductionMaintenance[rowI].style.display = "";
+                // skip to the next row
+                continue;
+            }
+        }
+    }
+}
+
+//Branch Maintenance
+function renderTableBranchMaintenance() {
+    // create html
+
+    // console.log(dataSalaryMaintenance[0][1]);
+    dataBranchMaintenance = dataBranchMaintenance[0][1];
+    console.log(dataBranchMaintenance);
+    let result = '';
+    dataBranchMaintenance.filter((row, index) => {
+        let start = (curPageBranchMaintenance - 1) * pageSizeBranchMaintenance;
+        let end = curPageBranchMaintenance * pageSizeBranchMaintenance;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${c.region}</td>
+     <td class="py-4 w-2/6">${c.municipalitycity}</td>
+     <td class="py-4 w-2/6">${c.chain}</td>
+     <td class="py-4 w-2/6">${c.branch}</td>
+     <td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>
+     </tr>`;
+    });
+    tableBranchMaintenance.innerHTML = result;
+}
+
+function previousPageBranchMaintenance() {
+    if (curPageBranchMaintenance > 1) curPageBranchMaintenance--;
+    renderTableBranchMaintenance();
+}
+function nextPageBranchMaintenance() {
+    if ((curPageBranchMaintenance * pageSizeBranchMaintenance) < dataBranchMaintenance.length)
+    curPageBranchMaintenance++;
+    renderTableBranchMaintenance();
+}
+
+// declare elements
+const searchBoxBranchMaintenance = document.getElementById('searchBoxBranch');
+const tableSearchBranchMaintenance = document.getElementById("branchMaintenanceTable");
+const trsBranchMaintenance = tableSearchBranchMaintenance.tBodies[0].getElementsByTagName("tr");
+// add event listener to search box
+searchBoxBranchMaintenance.addEventListener('keyup', performSearchBranch);
+
+function performSearchBranch() {
+    // Declare search string 
+    var filter = searchBoxBranchMaintenance.value.toUpperCase();
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsBranchMaintenance.length; rowI++) {
+        // define the row's cells
+        var tds = trsBranchMaintenance[rowI].getElementsByTagName("td");
+        // hide the row
+        trsBranchMaintenance[rowI].style.display = "none";
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trsBranchMaintenance[rowI].style.display = "";
                 // skip to the next row
                 continue;
             }

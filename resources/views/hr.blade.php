@@ -205,7 +205,7 @@
         <div id="Dashboard" class="flex  overflow-hidden rounded-lg mb-5" style="display: block">
             <div class="grid grid-rows-auto grid-cols-2 gap-5 px-5">
                 <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
-                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 WORKING LATE OR UNDERERTIME EMPLOYEES 
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 WORKING LATE OR UNDERTIME EMPLOYEES 
                     </div>
                     <select name="Date" id="Date"
                         class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
@@ -3087,6 +3087,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- file upload attendance modal -->
         <div id="upload-file-attendance" aria-hidden="true"
             class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
