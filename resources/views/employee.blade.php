@@ -14,32 +14,32 @@
         <!-- <link href="/dist/output.css" rel="stylesheet"> -->
     </head>
 
-    <body class="xl:flex">
-        <!-- component -->
-        <div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-2/12">
-            <sidebar @click.away="open = false"
-                class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0  top-overflow-visible"
-                x-data="{ open: false }">
-                <div class="flex-shrink-0 px-8 py-4 flex flex-row">
-                    <img src="img\logo.png" class="md:w-full w-6/12" alt="Sample image" />
-                    <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline ml-40"
-                        @click="open = !open">
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                            <path x-show="!open" fill-rule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
-                            <path x-show="open" fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
+<body class="xl:flex">
+    <!-- component -->
+    <div class="md:flex flex-col md:flex-row md:min-h-screen xl:w-2/12">
+        <sidebar @click.away="open = false"
+            class="flex flex-col w-full xl:h-screen sticky top-0 text-gray-700 bg-white flex-shrink-0  top-overflow-visible"
+            x-data="{ open: false }">
+            <div class="flex-shrink-0 px-8 py-4 flex flex-row">
+                <img src="img\logo.png" class="md:w-full w-6/12" alt="Sample image" />
+                <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline ml-40"
+                    @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'block': open, 'hidden': !open}"
+                class="flex-grow md:block float-right items-center justify-between">
+                <div class="flex justify-center ">
+                    <img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
+                        alt="Sample image" />
                 </div>
-                <nav :class="{'block': open, 'hidden': !open}"
-                    class="flex-grow md:block float-right items-center justify-between">
-                    <div class="flex justify-center md:unhidden hidden">
-                        <img src="img\profilepic.png" class="w-56 rounded-full bordercolor bordercolor border-4 "
-                            alt="Sample image" />
-                    </div>
 
                     <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
                         <ul class="space-y-2">
@@ -166,6 +166,14 @@
                         <div class="bg-white rounded-2xl px-10 py-20 text-center text-white overflow-hidden">
                             <h1 class="text-gray-700 text-6xl font-bold px">TODAY</h1>
                             <span class="text-gray-700 text-xl font-bold py-2" id="todayDate">SEPTEMBER 21, 2022</span>
+                            <select id="timeschedule"
+                            class="w-2/3 inline-flex items-center bg-gray-50 border-2 border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option hidden selected>Time Schedule</option>
+                            <option value="09:30">09:30 am - 06:00 pm</option>
+                            <option value="09:00">09:00 am - 05:00 pm</option>
+                            <option value="08:00">08:00 am - 04:00 pm</option>
+                            <option value="11:00">11:00 am - 09:00 pm</option>
+                        </select>
                             <div class="grid place-content-center py-5">
                                 <input type="button"
                                     class="border-4 rounded-2xl text-xl bordercolor font-themecolor py-2 px-2 focus:outline-none"
@@ -222,33 +230,32 @@
                     </div>
                     <!--END FILE AND TODAY-->
 
-                    <div class="md:w-9/12 md:ml-5">
+                <div class="md:w-9/12 md:ml-5">
+                    <div class="md:row-start-1 md:row-span-2 md:col-span-4 sm:col-span-1 sm:col-span-1  drop-shadow-md">
                         <div
-                            class="md:row-start-1 md:row-span-2 md:col-span-4 sm:col-span-1 sm:col-span-1  drop-shadow-md">
-                            <div
-                                class="flex h-full bg-white rounded-2xl grid md:grid-flow-row md:grid-rows-2 md:grid-cols-4  mb-5">
-                                <div class="md:row-start-1 md:col-span-4 text-center">
-                                    <h1 class="text-6xl font-bold text-gray-700">Summary</h1>
-                                    <h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
-                                </div>
-                                <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                    <h1 class="text-lg font-bold">Late</h1>
-                                    <h2 class="text-2xl">0 mins</h2>
-                                </div>
-                                <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                    <h1 class="text-lg font-bold">Undertime</h1>
-                                    <h2 class="text-2xl">0 mins</h2>
-                                </div>
-                                <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                    <h1 class="text-lg font-bold">Overtime</h1>
-                                    <h2 class="text-2xl">00 hrs 00 mins</h2>
-                                </div>
-                                <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
-                                    <h1 class="text-lg font-bold">Hours Rendered</h1>
-                                    <h2 class="text-2xl">110 hrs 08 mins</h2>
-                                </div>
+                            class="flex h-full bg-white rounded-2xl grid md:grid-flow-row md:grid-rows-2 md:grid-cols-4  mb-5">
+                            <div class="md:row-start-1 md:col-span-4 text-center">
+                                <h1 class="text-6xl font-bold text-gray-700">Summary</h1>
+                                <h2 class="text-lg font-bold text-gray-700">SEPTEMBER 2022</h2>
+                            </div>
+                            <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
+                                <h1 class="text-lg font-bold">Late</h1>
+                                <h2 class="text-2xl">0 mins</h2>
+                            </div>
+                            <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
+                                <h1 class="text-lg font-bold">Undertime</h1>
+                                <h2 class="text-2xl">0 mins</h2>
+                            </div>
+                            <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
+                                <h1 class="text-lg font-bold">Overtime</h1>
+                                <h2 class="text-2xl">00 hrs 00 mins</h2>
+                            </div>
+                            <div class="md:row-start-2 col-span-1 text-center py-2 text-gray-700">
+                                <h1 class="text-lg font-bold">Hours Rendered</h1>
+                                <h2 class="text-2xl">110 hrs 08 mins</h2>
                             </div>
                         </div>
+                    </div>
 
                         <div class="py-2 bgcolor drop-shadow-md rounded-xl ">
                             <div
@@ -308,23 +315,23 @@
 
                             <div class="row-start-2 row-span-5 col-span-2">
 
-                                <div class="overflow-x-auto relative  sm:rounded-lg">
-                                    <table id="timeRecord"
-                                        class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
-                                        <thead
-                                            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                            <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                                <th scope="col" class="py-3 px-6" data-sort="Date">Date</th>
-                                                <th scope="col" class="py-3 px-6" data-sort="AM">AM In</th>
-                                                <th scope="col" class="py-3 px-6" data-sort="LBIn">LB In</th>
-                                                <th scope="col" class="py-3 px-6" data-sort="LBOut">LB Out</th>
-                                                <th scope="col" class="py-3 px-6" data-sort="CBIn">CB In</th>
-                                                <th scope="col" class="py-3 px-6" data-sort="CBOut">CB Out</th>
-                                                <th scope="col" class="py-3 px-6" data-sort="PM">PM Out</th>
-                                                <th scope="col" class="py-3 px-6" data-sort="Duration">Duration</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
+                            <div class="overflow-x-auto relative  sm:rounded-lg">
+                                <table id="timeRecord"
+                                    class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                                    <thead
+                                        class="text-ml text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                        <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                                            <th scope="col" class="py-3 px-6" data-sort="Date">Date</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="AM">AM In</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="LBIn">LB In</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="LBOut">LB Out</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="CBIn">CB In</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="CBOut">CB Out</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="PM">PM Out</th>
+                                            <th scope="col" class="py-3 px-6" data-sort="Duration">Duration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
                                         </tbody>
                                     </table>
@@ -426,45 +433,41 @@
 
                     <div class="row-start-2 row-span-5 col-span-2">
 
-                        <div class="overflow-x-auto relative  sm:rounded-lg">
-                            <table id="attendanceSummaryTable"
-                                class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
-                                <thead
-                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Date">Date</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Time In
-                                        </th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeOut">Time Out
-                                        </th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Late">Late</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">
-                                            Undertime
-                                        </th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Overtime">
-                                            Overtime
-                                        </th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="HoursRendered">
-                                            Hours
-                                            Rendered</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                    <div class="overflow-x-auto relative  sm:rounded-lg">
+                        <table id="attendanceSummaryTable"
+                            class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                            <thead
+                                class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Date">Date</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Time In</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeOut">Time Out
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Late">Late</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">Undertime
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Overtime">Overtime
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="HoursRendered">Hours
+                                        Rendered</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-900">
 
-                                </tbody>
-                                <tfoot
-                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">110 hrs 08 hrs</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                            </tbody>
+                            <tfoot
+                                class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">110 hrs 08 hrs</th>
+                                </tr>
+                            </tfoot>
+                        </table>
 
                         </div>
                         <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
@@ -551,296 +554,165 @@
 
                     <div class="row-start-2 row-span-5 col-span-2">
 
-                        <div class="overflow-x-auto relative  sm:rounded-lg">
-                            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:table-fixed">
-                                <thead
-                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Target
-                                            Overtime Date</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Date">Date
-                                            Applied
-                                        </th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeOut">Overtime
-                                            In
-                                        </th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Late">Overtime
-                                            Out
-                                        </th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">Total
-                                            OT
-                                            Hours</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">
-                                            Approved
-                                            By</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Overtime">
-                                            Approval
-                                            Date</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="HoursRendered">
-                                            Status
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <td scope="row"
-                                            class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            September 21, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 19, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap font-bold text-orange-500">Pending</td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <td scope="row"
-                                            class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            September 15, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 16, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <td scope="row"
-                                            class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            September 17, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 14, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap font-bold font-pantone"
-                                            data-modal-toggle="denied-ot">Denied</td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <td scope="row"
-                                            class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            September 15, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <td scope="row"
-                                            class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            September 11, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 16, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <td scope="row"
-                                            class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            September 08, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 14, 20211</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">--</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
-                                        <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
-                                        <td class="py-6 px-6 whitespace-nowrap font-bold font-pantone"
-                                            data-modal-toggle="denied-ot">Denied</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot
-                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr class="w-full even:bg-gray-100 odd:bg-white-100">
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                        <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-
-                        </div>
-                        <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
-                            <nav aria-label="Page navigation example w-full">
-                                <ul class="inline-flex -space-x-px">
-                                    <li>
-                                        <span href="#" id="prevButtonAttendanceSummary"
-                                            class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</span>
-                                    </li>
-                                    <li>
-                                        <span href="#"
-                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</span>
-                                    </li>
-                                    <li>
-                                        <span href="#"
-                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</span>
-                                    </li>
-                                    <li>
-                                        <span href="#" aria-current="page"
-                                            class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</span>
-                                    </li>
-                                    <li>
-                                        <span href="#"
-                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</span>
-                                    </li>
-                                    <li>
-                                        <span href="#"
-                                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</span>
-                                    </li>
-                                    <li>
-                                        <span href="#" id="nextButtonAttendanceSummary"
-                                            class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</span>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--END ATTENDANCE SUMMARY-->
-
-            <div class="grid bg-transparent overflow-hidden drop-shadow-md " id="history" style="display:none">
-                <div class="grid bgcolor rounded-lg grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                    <div class="row-start-1 row-span-1 flex">
-                        <h1 class="text-white text-4xl font-bold px">Overtime History</h1>
+                    <div class="overflow-x-auto relative  sm:rounded-lg">
+                        <table class="w-full text-base text-left text-gray-500 dark:text-gray-400 md:table-fixed">
+                            <thead
+                                class="text-sm text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeIn">Target
+                                        Overtime Date</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Date">Date Applied
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="TimeOut">Overtime In
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Late">Overtime Out
+                                    </th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">Total OT
+                                        Hours</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Undertime">Approved
+                                        By</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="Overtime">Approval
+                                        Date</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap" data-sort="HoursRendered">Status
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" class="text-gray-900">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 21, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 19, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold text-orange-500">Pending</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 16, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 17, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 14, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-pantone"
+                                        data-modal-toggle="denied-ot">Denied</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 11, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 15, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">06 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">08 : 05 pm</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">02 hrs 00 mins</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 16, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-themecolor">Approved</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td scope="row"
+                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        September 08, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 14, 20211</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">--</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">Kapitan Tiago</td>
+                                    <td class="py-6 px-6 whitespace-nowrap">September 25, 2021</td>
+                                    <td class="py-6 px-6 whitespace-nowrap font-bold font-pantone"
+                                        data-modal-toggle="denied-ot">Denied</td>
+                                </tr>
+                            </tbody>
+                            <tfoot
+                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr class="w-full even:bg-gray-100 odd:bg-white-100">
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">TOTAL</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                    <th scope="col" class="py-3 px-6 whitespace-nowrap">--</th>
+                                </tr>
+                            </tfoot>
+                        </table>
 
                     </div>
-                    <div class="row-start-2 row-span-1 flex items-center">
-                        <div class="xl:w-96 xl:h-46">
-                            <input type="text" class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid bordercolor transition ease-in-out
-						m-0 focus:text-gray-700 focus:bg-white focus:border-white focus:outline-none rounded-xl" id="searchOT"
-                                placeholder="Search" />
-                        </div>
-                        <span class="text-white ml-2"> Sort By:</span>
-                        <div date-rangepicker class="flex items-center pl-5">
-                            <div class="relative">
-
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-
-                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-
-                                <input name="start" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date start">
-                            </div>
-                            <span class="mx-4 text-white">to</span>
-                            <div class="relative">
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <input name="end" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date end">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
-                        <thead class="bg-gray-100 flex text-gray w-full pr-5">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <th class="p-4 w-2/6" data-sort="DateApplied">Date Applied</th>
-                                <th class="p-4 w-2/6" data-sort="TargetOvertimeDate">Target Overtime Date</th>
-                                <th class="p-4 w-2/6" data-sort="Overtime">Overtime In</th>
-                                <th class="p-4 w-2/6" data-sort="OvertimeOut">Overtime Out</th>
-                                <th class="p-4 w-2/6" data-sort="TotalOtHours">Total OT Hours</th>
-                                <th class="p-4 w-2/6" data-sort="ApprovedBy">Approved By</th>
-                                <th class="p-4 w-2/6" data-sort="ApprovalDate">Approval Date</th>
-                                <th class="p-4 w-2/6" data-sort="Status">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 14, 2021</td>
-                                <td class="py-4 w-2/6">September 08, 2021</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Maria D. Clara</td>
-                                <td class="py-4 w-2/6">September 18, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                            </tr>
-                        </tbody>
-                        <tfoot class="bg-gray-100 flex text-gray w-full pr-4">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <th class="p-4 w-2/6">TOTAL</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">6 hrs 00 hrs</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <div class="grid justify-center items-center mb-3 bg-white">
+                    <div class="bg-transparent grid justify-center items-center mt-2 bg-white">
                         <nav aria-label="Page navigation example w-full">
                             <ul class="inline-flex -space-x-px">
                                 <li>
-                                    <a href="#" id="prevButtonOvertimeHistory"
-                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                    <span href="#" id="prevButtonAttendanceSummary"
+                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</span>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</span>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</span>
                                 </li>
                                 <li>
-                                    <a href="#" aria-current="page"
-                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                    <span href="#" aria-current="page"
+                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</span>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</span>
                                 </li>
                                 <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                    <span href="#"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</span>
                                 </li>
                                 <li>
-                                    <a href="#" id="nextButtonOvertimeHistory"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                    <span href="#" id="nextButtonAttendanceSummary"
+                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</span>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
-            <!--end overtime history  -->
+        </div>
+        <!--END overtime history-->
 
             <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
@@ -1049,77 +921,110 @@
                 </div>
             </div>
 
-            <!-- Main modal -->
-            <div id="authentication-modal" aria-hidden="true"
-                class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-                <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
-                    <!-- Modal content -->
-                    <div
-                        class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-black">
-                        <div class="flex justify-end p-2">
-                            <button type="button"
-                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                                data-modal-toggle="authentication-modal">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
+        <!-- Main modal -->
+        <div id="authentication-modal" aria-hidden="true"
+            class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+            <div class="relative xl:w-2/5 sm:w-full xl:px-4 h-full md:h-auto">
+                <!-- Modal content -->
+                <div class="bg-white rounded-lg shadow relative dark:bg-gray-700 border-4 border-solid border-black">
+                    <div class="flex justify-end p-2">
+                        <button type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                            data-modal-toggle="authentication-modal">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    @if(count($errors) >0)
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">x</button>
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
+                    @if($message = Session::get('success'))
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>{{$message}}</strong>
+                    @endif
+
+                    <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" method="post"
+                        action="{{ url('employee/send') }}">
+                        {{ csrf_field() }}
+                        <h3 class="text-2xl font-medium text-center text-gray-900 dark:text-white font-extrabold">
+                            Filing Overtime</h3>
+
+                        <div>
+                            <label for="text"
+                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
+                            <input type="text" name="name" id="name"
+                                class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="FirstName MiddleInitial LastName" required="">
+                        </div>
+                        <div class="relative ">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                            </button>
+                            </div>
+                            <label for="number"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target OT
+                                Date</label>
+                            <input datepicker type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Select date" name="otdate" id="otdate">
                         </div>
-                        <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                            <h3 class="text-2xl font-medium text-center text-gray-900 dark:text-white font-extrabold">
-                                Filing Overtime</h3>
-
-                            <div>
-                                <label for="text"
-                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
-                                <input type="text" name="name" id="name"
-                                    class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="FirstName MiddleInitial LastName" required="" disabled>
-                            </div>
-                            <div class="relative ">
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <label for="number"
-                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target OT
-                                    Date</label>
-                                <input datepicker type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date">
-                            </div>
-                            <div>
-                                <label for="date"
-                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Duration</label>
-                                <input type="text" name="birthdate" id="birthdate"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="(E.g 2hrs. and 30 minsearchBoxs)" required="">
-                            </div>
-                            <div>
-                                <div class="flex justify-center">
-                                    <div class="mb-3 xl:w-full">
-                                        <label for="exampleFormControlTextarea1"
-                                            class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
-                                        <textarea
-                                            class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                            id="exampleFormControlTextarea1" rows="8"
-                                            placeholder="Your messge"></textarea>
-                                    </div>
+                        <div>
+                            <label for="date"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Duration</label>
+                            <input type="text" name="otduration" id="otduration"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="(E.g 2hrs. and 30 minsearchBoxs)" required="" id="otduration">
+                        </div>
+                        <div>
+                            <label for="date"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Email</label>
+                            <input type="email" name="email" id="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="fname.lname@gmail.com" required="" id="email">
+                        </div>
+                        <div hidden>
+                            <label for="text"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Status</label>
+                            <input type="text" name="status" id="status"
+                                class="bg-gray-50  border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                value="pending" required="" readonly>
+                        </div>
+                        <div>
+                            <div class="flex justify-center">
+                                <div class="mb-3 xl:w-full">
+                                    <label for="exampleFormControlTextarea1"
+                                        class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
+                                    <textarea
+                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                        id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
+                                        name="otreason" id="otreason"></textarea>
                                 </div>
                             </div>
-                            <button type="submit"
-                                class="w-full text-white bg-black hover:bg-white hover:text-black border-2 hover:border-black focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
-                        </form>
-                    </div>
+                        </div>
+                        <input type="submit"
+                            class="w-full text-white bg-black hover:bg-white hover:text-black border-2 hover:border-black focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                            name="send" value="Send" />
+                    </form>
                 </div>
             </div>
+        </div>
 
             <!-- file upload modal -->
             <div id="upload-file" aria-hidden="true"
@@ -1176,111 +1081,21 @@
 
         </content>
 
-        <!-- <footer>
-        <div class="w-full md:w-96 md:max-w-full mx-auto">
-            <div class="p-6 border border-gray-300 sm:rounded-md">
-                @if(count($errors) > 0)
-                <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alertt">x</button>
-                    <ul>
-                        @foreach($errors->all as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-                <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alertt">x</button>
-                    <ul>
-                        @foreach($errors->all as $error)
-                        <li>{{ $$message }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @if($message = Session::get('success'))
-
-                @endif
-                <form method="post" action="{{ url('employee/send')}}">
-                    {{csrf_field()}}
-                    <label class="block mb-6">
-                        <span class="text-gray-700">Your name</span>
-                        <input type="text" name="name" class="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " placeholder="Joe Bloggs" />
-                    </label>
-                    <label class="block mb-6">
-                        <span class="text-gray-700">Email address</span>
-                        <input name="email" type="email" class="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " placeholder="joe.bloggs@example.com" required />
-                    </label>
-                    <label class="block mb-6">
-                        <span class="text-gray-700">Message</span>
-                        <textarea name="message" class="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " rows="3" placeholder="Tell us what you're thinking about..."></textarea>
-                    </label>
-                    <div class="mb-6">
-                        <input type="submit" class="
-            h-10
-            px-5
-            text-indigo-100
-            bg-indigo-700
-            rounded-lg
-            transition-colors
-            duration-150
-            focus:shadow-outline
-            hover:bg-indigo-800
-          " name="send" value="Send"/>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </footer> -->
-
-        <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
-            class="md:visible invisible inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
-            id="btn-back-to-top">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path fill="currentColor"
-                    d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
-                </path>
-            </svg>
-        </button>
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-        <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
-        <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </body>
+    <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
+        class="md:visible invisible inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase roun	-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
+        id="btn-back-to-top">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+            </path>
+        </svg>
+    </button>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+</body>
 
 </html>
 
@@ -1290,6 +1105,7 @@ function showAttendanceSummary() {
     x.style.display = "block";
     hideDailyTimeRecord();
     hideOT();
+    hideProfile();
 }
 
 function hideDailyTimeRecord() {
@@ -1305,6 +1121,7 @@ function showDailyTimeRecord() {
 
     hideAttendanceSummary();
     hideOT();
+    hideProfile();
 }
 
 function hideAttendanceSummary() {
@@ -1318,6 +1135,7 @@ function showOT() {
     x.style.display = "block";
     hideAttendanceSummary();
     hideDailyTimeRecord();
+    hideProfile();
 }
 
 function hideOT() {
@@ -1954,13 +1772,13 @@ function renderTableAttendanceSummary() {
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-     <td scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">${c.Date}</td>
-     <td class="py-6 px-6 whitespace-nowrap">${c.TimeIn}</td>
-     <td class="py-6 px-6 whitespace-nowrap">${c.TimeOut}</td>
-     <td class="py-6 px-6 whitespace-nowrap">${c.Late}</td>
-	 <td class="py-6 px-6 whitespace-nowrap">${c.Undertime}</td>
-	 <td class="py-6 px-6 whitespace-nowrap">${c.Overtime}</td>
-	 <td class="py-6 px-6 whitespace-nowrap">${c.HoursRendered}</td>
+     <td scope="row" class="py-5 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">${c.Date}</td>
+     <td class="py-5 px-6 whitespace-nowrap">${c.TimeIn}</td>
+     <td class="py-5 px-6 whitespace-nowrap">${c.TimeOut}</td>
+     <td class="py-5 px-6 whitespace-nowrap">${c.Late}</td>
+	 <td class="py-5 px-6 whitespace-nowrap">${c.Undertime}</td>
+	 <td class="py-5 px-6 whitespace-nowrap">${c.Overtime}</td>
+	 <td class="py-5 px-6 whitespace-nowrap">${c.HoursRendered}</td>
      </tr>`;
     });
     tableAttendanceSummary.innerHTML = result;
@@ -2070,23 +1888,23 @@ function renderTableOvertimeHistory() {
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${c.DateApplied}</td>
-     <td class="py-4 w-2/6">${c.TargetOvertimeDate}</td>
-     <td class="py-4 w-2/6">${c.OvertimeIn}</td>
-     <td class="py-4 w-2/6">${c.OvertimeOut}</td>
-	 <td class="py-4 w-2/6">${c.TotalOtHours}</td>
-	 <td class="py-4 w-2/6">${c.ApprovedBy}</td>
-	 <td class="py-4 w-2/6">${c.ApprovalDate}</td>
-     <td class="py-4 w-2/6 font-bold" data-modal-toggle="denied-ot">${c.Status}</td>`
+     <td class="py-5 w-2/6">${c.DateApplied}</td>
+     <td class="py-5 w-2/6">${c.TargetOvertimeDate}</td>
+     <td class="py-5 w-2/6">${c.OvertimeIn}</td>
+     <td class="py-5 w-2/6">${c.OvertimeOut}</td>
+	 <td class="py-5 w-2/6">${c.TotalOtHours}</td>
+	 <td class="py-5 w-2/6">${c.ApprovedBy}</td>
+	 <td class="py-5 w-2/6">${c.ApprovalDate}</td>
+     <td class="py-5 w-2/6 font-bold" data-modal-toggle="denied-ot">${c.Status}</td>`
 
         if (c.Status == "Approved") {
-            `<td class="py-4 w-2/6 font-bold font-themecolor">${c.Status}</td>`
+            `<td class="py-5 w-2/6 font-bold font-themecolor">${c.Status}</td>`
             console.log("Approved Status");
         } else if (c.Status == "Denied") {
-            `<td class="py-4 w-2/6 font-bold font-pantone">${c.Status}</td>`
+            `<td class="py-5 w-2/6 font-bold font-pantone">${c.Status}</td>`
             console.log("Denied Status");
         } else {
-            `<td class="py-4 w-2/6 font-bold text-orange-500">${c.Status}</td>`
+            `<td class="py-5 w-2/6 font-bold text-orange-500">${c.Status}</td>`
             console.log("Pending Status");
         }
 

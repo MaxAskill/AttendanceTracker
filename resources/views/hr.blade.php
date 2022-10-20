@@ -39,127 +39,148 @@
                             alt="Sample image" />
                     </div>
 
-                    <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="#" onClick="showEmployeeList()" @click="open = !open"
-                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                        viewBox="0 0 512 512">
-                                        <path
-                                            d="M402 168c-2.93 40.67-33.1 72-66 72s-63.12-31.32-66-72c-3-42.31 26.37-72 66-72s69 30.46 66 72z"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="32" />
-                                        <path
-                                            d="M336 304c-65.17 0-127.84 32.37-143.54 95.41-2.08 8.34 3.15 16.59 11.72 16.59h263.65c8.57 0 13.77-8.25 11.72-16.59C463.85 335.36 401.18 304 336 304z"
-                                            fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                            stroke-width="32" />
-                                        <path
-                                            d="M200 185.94c-2.34 32.48-26.72 58.06-53 58.06s-50.7-25.57-53-58.06C91.61 152.15 115.34 128 147 128s55.39 24.77 53 57.94z"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="32" />
-                                        <path
-                                            d="M206 306c-18.05-8.27-37.93-11.45-59-11.45-52 0-102.1 25.85-114.65 76.2-1.65 6.66 2.53 13.25 9.37 13.25H154"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-miterlimit="10" stroke-width="32" />
-                                    </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Employee Master List</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" onClick="showEmployeeSalary()" @click="open = !open"
-                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                        viewBox="0 0 512 512">
-                                        <title>Cash</title>
-                                        <rect x="32" y="80" width="448" height="256" rx="16" ry="16"
-                                            transform="rotate(180 256 208)" fill="none" stroke="currentColor"
-                                            stroke-linejoin="round" stroke-width="32" />
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="32" d="M64 384h384M96 432h320" />
-                                        <circle cx="256" cy="208" r="80" fill="none" stroke="currentColor"
-                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-                                        <path
-                                            d="M480 160a80 80 0 01-80-80M32 160a80 80 0 0080-80M480 256a80 80 0 00-80 80M32 256a80 80 0 0180 80"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="32" />
-                                    </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Employee Payroll Salary</span>
-                                </a>
-                            </li>
+                <div class="overflow-y-auto py-4 px-3 rounded dark:bg-gray-800">
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" onClick="showDashboard()" @click="open = !open"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <title>Grid</title>
+                                    <rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onClick="showEmployeeList()" @click="open = !open"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M402 168c-2.93 40.67-33.1 72-66 72s-63.12-31.32-66-72c-3-42.31 26.37-72 66-72s69 30.46 66 72z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <path
+                                        d="M336 304c-65.17 0-127.84 32.37-143.54 95.41-2.08 8.34 3.15 16.59 11.72 16.59h263.65c8.57 0 13.77-8.25 11.72-16.59C463.85 335.36 401.18 304 336 304z"
+                                        fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                                    <path
+                                        d="M200 185.94c-2.34 32.48-26.72 58.06-53 58.06s-50.7-25.57-53-58.06C91.61 152.15 115.34 128 147 128s55.39 24.77 53 57.94z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <path
+                                        d="M206 306c-18.05-8.27-37.93-11.45-59-11.45-52 0-102.1 25.85-114.65 76.2-1.65 6.66 2.53 13.25 9.37 13.25H154"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                                        stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Employee Master List</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onClick="showEmployeeSalary()" @click="open = !open"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <title>Cash</title>
+                                    <rect x="32" y="80" width="448" height="256" rx="16" ry="16"
+                                        transform="rotate(180 256 208)" fill="none" stroke="currentColor"
+                                        stroke-linejoin="round" stroke-width="32" />
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="32" d="M64 384h384M96 432h320" />
+                                    <circle cx="256" cy="208" r="80" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                                    <path
+                                        d="M480 160a80 80 0 01-80-80M32 160a80 80 0 0080-80M480 256a80 80 0 00-80 80M32 256a80 80 0 0180 80"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Employee Payroll Salary</span>
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="#" onClick="showattendanceSummary()" @click="open = !open"
-                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                        viewBox="0 0 512 512">
-                                        <rect fill="none" stroke="currentColor" stroke-linejoin="round"
-                                            stroke-width="32" x="48" y="80" width="416" height="384" rx="48" />
-                                        <path fill="none" stroke="currentColor" stroke-linejoin="round"
-                                            stroke-width="32" stroke-linecap="round" d="M128 48v32M384 48v32" />
-                                        <path fill="none" stroke="currentColor" stroke-linejoin="round"
-                                            stroke-width="32" d="M464 160H48" />
-                                    </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Attendance Summary</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" onClick="showOTSummary()" @click="open = !open"
-                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                        viewBox="0 0 512 512">
-                                        <path
-                                            d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="32" />
-                                    </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Overtime Application</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" onClick="showProfile()"
-                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                        viewBox="0 0 512 512">
-                                        <title>Bar Chart</title>
-                                        <path d="M32 32v432a16 16 0 0016 16h432" fill="none" stroke="currentColor"
-                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-                                        <rect x="96" y="224" width="80" height="192" rx="20" ry="20" fill="none"
-                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="32" />
-                                        <rect x="240" y="176" width="80" height="240" rx="20" ry="20" fill="none"
-                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="32" />
-                                        <rect x="383.64" y="112" width="80" height="304" rx="20" ry="20" fill="none"
-                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="32" />
-                                    </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Reports</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" onClick="showProfile()"
-                                    class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                        viewBox="0 0 512 512">
-                                        <path
-                                            d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="32" />
-                                        <path
-                                            d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
-                                            fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                            stroke-width="32" />
-                                    </svg>
-                                    <span class="flex-1 ml-3 whitespace-nowrap">Profile</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="#" onClick="showattendanceSummary()" @click="open = !open"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                        x="48" y="80" width="416" height="384" rx="48" />
+                                    <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                        stroke-linecap="round" d="M128 48v32M384 48v32" />
+                                    <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"
+                                        d="M464 160H48" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Attendance Summary</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onClick="showOTSummary()" @click="open = !open"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Overtime Application</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onClick="showReports()"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <title>Bar Chart</title>
+                                    <path d="M32 32v432a16 16 0 0016 16h432" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                                    <rect x="96" y="224" width="80" height="192" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="240" y="176" width="80" height="240" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <rect x="383.64" y="112" width="80" height="304" rx="20" ry="20" fill="none"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onClick="showProfile()"
+                                class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="flex-shrink-0 w-6 h-6 hover:font-themecolor hover:font-bold transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <path
+                                        d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
+                                        fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Profile</span>
+                            </a>
+                        </li>
 
                             <li>
                                 <a href="/"
@@ -180,12 +201,99 @@
             </sidebar>
         </div>
 
-        <content class="xl:w-10/12 sm:w-full px-10 mt-5">
-            <div id="employeeMasterList" class="grid bg-white sm:w-full rounded-lg overflow-hidden"
-                style="display: block">
-                <div class="grid grid-rows-1 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
-                    <div class="row-start-1 row-span-1 flex">
-                        <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
+    <content class="xl:w-10/12 sm:w-full px-10 mt-5">
+        <div id="Dashboard" class="flex  overflow-hidden rounded-lg mb-5" style="display: block">
+            <div class="grid grid-rows-auto grid-cols-2 gap-5 px-5">
+                <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 WORKING LATE OR UNDERERTIME EMPLOYEES 
+                    </div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>October</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarLateUndertime"></canvas>
+                </div>
+                <div class="start-col-2 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES IN TERMS OF HOURS RENDERED
+                    </div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>October</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarHoursRendered"></canvas>
+                </div>
+                <div class="start-col-1 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES WITH THE MOST ABSENCES</div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>October</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarAbsent"></canvas>
+                </div>
+                <div class="start-col-2 col-span-1 shadow-lg rounded-lg overflow-hidden border-2 border-gray-900">
+                    <div class="text-gray-800 text-2xl font-bold px-5 pt-2">TOP 5 EMPLOYEES WITH A LOT OF OVERTIME</div>
+                    <select name="Date" id="Date"
+                        class="ml-5 bg-transparent w-1/4 border-2 border-gray-900 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-1 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                        <option hidden selected>October</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                    <canvas class="p-5" id="chartBarOvertime"></canvas>
+                </div>
+            </div>
+        </div>
+        <!--end dashboard -->
+
+        <div id="employeeMasterList" class="grid bg-white sm:w-full rounded-lg overflow-hidden" style="display: none">
+            <div class="grid grid-rows-1 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
+                <div class="row-start-1 row-span-1 flex">
+                    <h1 class="text-gray-800 text-4xl font-bold px">Employee Master List</h1>
 
                         <!-- Modal toggle -->
                         <button
@@ -763,87 +871,36 @@
                                 <!-- <a href="#individualovertimeHistory"><button
                                     class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
                                     onClick="showindividualOT()">OT History</button></a> -->
-                                <button
-                                    class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                    onClick="printDataAttendanceSummary()">Print</button>
-                            </div>
+                            <button
+                                class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
+                                onClick="printDataAttendanceSummary()">Print</button>
                         </div>
                     </div>
-                    <div>
-                        <table id="attendanceSummaryTable" class="text-center w-full bg-white hover:table-fixed ">
-                            <thead class="bg-gray-100 flex text-gray w-full">
-                                <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                    <th class="p-4 w-2/6" data-sort="Name">Name</th>
-                                    <th class="p-4 w-2/6" data-sort="Date">Date</th>
-                                    <th class="p-4 w-2/6" data-sort="TimeIn">Time In</th>
-                                    <th class="p-4 w-2/6" data-sort="TimeOut">Time Out</th>
-                                    <th class="p-4 w-2/6" data-sort="Late">Late</th>
-                                    <th class="p-4 w-2/6" data-sort="Undertime">Undertime</th>
-                                    <th class="p-4 w-2/6" data-sort="Overtime">Overtime</th>
-                                    <th class="p-4 w-2/6" data-sort="HoursRendered">Hours Rendered</th>
-                                    <th class="p-4 w-2/6" data-sort="Record">Record</th>
-                                </tr>
-                            </thead>
-                            <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-                            <tbody class="bg-grey-light flex flex-col w-full" style="height: 73vh">
-                                <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                    <td colspan="9" class="py-4 w-2/6"><i>Loading...</i></td>
-                                </tr>
-                                <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Crisostomo Ibarra</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">08 : 34 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
-                            </tr>
+                </div>
+                <div>
+                    <table id="attendanceSummaryTable" class="text-center w-full bg-white hover:table-fixed ">
+                        <thead class="bg-gray-100 flex text-gray w-full">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Maria Clara</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">09 : 00 am</td>
-                                <td class="py-4 w-2/6">02 : 07 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
+                                <th class="p-4 w-2/6" data-sort="Name">Name</th>
+                                <th class="p-4 w-2/6" data-sort="Date">Date</th>
+                                <th class="p-4 w-2/6" data-sort="TimeIn">Time In</th>
+                                <th class="p-4 w-2/6" data-sort="TimeOut">Time Out</th>
+                                <th class="p-4 w-2/6" data-sort="Late">Late</th>
+                                <th class="p-4 w-2/6" data-sort="Undertime">Undertime</th>
+                                <th class="p-4 w-2/6" data-sort="Overtime">Overtime</th>
+                                <th class="p-4 w-2/6" data-sort="HoursRendered">Hours Rendered</th>
+                                <th class="p-4 w-2/6" data-sort="Record">Record</th>
                             </tr>
+                        </thead>
+                        <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
+                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 73vh">
                             <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Doña Victorina</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">09 : 00 am</td>
-                                <td class="py-4 w-2/6">02 : 07 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
+                                <td colspan="9" class="py-4 w-2/6"><i>Loading...</i></td>
                             </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">Don Anastacio</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">08 : 28 am</td>
-                                <td class="py-4 w-2/6">02 : 07 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">08 hrs 10 mins</td>
-                                <td class="p-4 w-2/6"><a href="#individualattendanceSummary"><button
-                                            class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-4 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
-                                            onClick="showindividualAttendance()">View</button></a></td>
-                            </tr> -->
-                        </table>
-                        <div class="grid justify-center items-center mb-3 bg-white">
-                            <nav aria-label="Page navigation example w-full">
+                        </tbody>
+                    </table>
+                    <div class="grid justify-center items-center mb-3 bg-white">
+                        <nav aria-label="Page navigation example w-full">
 
                                 <ul class="inline-flex -space-x-px">
                                     <li>
@@ -1528,118 +1585,114 @@
                                 placeholder="Last Name" required="" value="Ibarra" disabled>
                         </div>
 
-                        <div class="relative row-start-2 col-span-1">
-                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <label for="number"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Birthdate</label>
-                            <input datepicker type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select your birthdate" value="12/14/1989" disabled>
+                    <div class="relative row-start-2 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </div>
-                        <div class="row-start-2 col-span-1">
-                            <label for="text"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Contact
-                                No.</label>
-                            <input type="number" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Contact No." required="" value="09123456789" disabled>
+                        <label for="number"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Birthdate</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="12/14/1989" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Contact
+                            No.</label>
+                        <input type="number" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Contact No." required="" value="09123456789" disabled>
+                    </div>
+                    <div class="row-start-2 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Email</label>
+                        <input type="email" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-2">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Job
+                            Position</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales"
+                            disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Branch
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Chain
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Chain Name" required="" value="RDS" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Company Name" required="" value="NBFI" disabled>
+                    </div>
+                    <div class="row-start-3 col-span-1">
+                        <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Brand
+                            Name</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Brand Name" required="" value="Barbizon" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">RAS</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-2">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">HR</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Helena Loyola" disabled>
+                    </div>
+                    <div class="relative row-start-4 col-span-1">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </div>
-                        <div class="row-start-2 col-span-2">
-                            <label for="text"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Email</label>
-                            <input type="email" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Email" required="" value="crisostomo.ibarra@barbizonfashion.com" disabled>
-                        </div>
-                        <div class="row-start-3 col-span-2">
-                            <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Job
-                                Position</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales"
-                                disabled>
-                        </div>
-                        <div class="row-start-3 col-span-1">
-                            <label for="text"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Branch
-                                Name</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Branch Name" required="" value="RDS Bacolod" disabled>
-                        </div>
-                        <div class="row-start-3 col-span-1">
-                            <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Chain
-                                Name</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Chain Name" required="" value="RDS" disabled>
-                        </div>
-                        <div class="row-start-3 col-span-1">
-                            <label for="text"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Company
-                                Name</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Company Name" required="" value="NBFI" disabled>
-                        </div>
-                        <div class="row-start-3 col-span-1">
-                            <label for="text" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Brand
-                                Name</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="Brand Name" required="" value="Barbizon" disabled>
-                        </div>
-                        <div class="row-start-4 col-span-2">
-                            <label for="text"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">RAS</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="RAS Name" required="" value="Ms. Revelyn Loyola" disabled>
-                        </div>
-                        <div class="row-start-4 col-span-2">
-                            <label for="text"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">HR</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="HR Name" required="" value="Helena Loyola" disabled>
-                        </div>
-                        <div class="relative row-start-4 col-span-1">
-                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                <svg aria-hidden="true" class="w-5 h-5 mt-6 text-gray-500 dark:text-gray-400"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <label for="number"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Date
-                                Started</label>
-                            <input datepicker type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select your birthdate" value="10/21/2006" disabled>
-                        </div>
-                        <div class="row-start-4 col-span-1">
-                            <label for="text"
-                                class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Status</label>
-                            <input type="text" name="mName" id="mName"
-                                class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="HR Name" required="" value="Active" disabled>
-                        </div>
+                        <label for="number" class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Date
+                            Started</label>
+                        <input datepicker type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Select your birthdate" value="10/21/2006" disabled>
+                    </div>
+                    <div class="row-start-4 col-span-1">
+                        <label for="text"
+                            class="text-sm font-medium text-black block mb-2 dark:text-gray-300">Status</label>
+                        <input type="text" name="mName" id="mName"
+                            class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="HR Name" required="" value="Active" disabled>
                     </div>
                 </div>
-                <!--end profile  -->
-                <div
-                    class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-t-lg">
-                    <div class="row-start-1 row-span-1 flex">
-                        <h1 class="text-white text-4xl font-bold px">Employee's Overtime Application</h1>
+            </div>
+            <!--end profile  -->
+            <div
+                class="grid grid-rows-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full grid bgcolor overflow-hidden rounded-t-lg">
+                <div class="row-start-1 row-span-1 flex">
+                    <h1 class="text-white text-4xl font-bold px">Employee's Overtime Application</h1>
 
                     </div>
                     <div class="row-start-2 row-span-1 flex items-center">
@@ -1662,158 +1715,160 @@
                                     </svg>
                                 </div>
 
-                                <input name="start" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date start">
+                            <input name="start" type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Select date start">
+                        </div>
+                        <span class="mx-4 text-white">to</span>
+                        <div class="relative">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
                             </div>
-                            <span class="mx-4 text-white">to</span>
-                            <div class="relative">
-                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 font-themecolor dark:text-gray-400"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <input name="end" type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Select date end">
-                            </div>
+                            <input name="end" type="text"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Select date end">
                         </div>
                     </div>
                 </div>
-                <div>
-                    <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
-                        <thead class="bg-gray-100 flex text-gray w-full pr-5">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <th class="p-4 w-2/6" data-sort="DateApplied">Date Applied</th>
-                                <th class="p-4 w-2/6" data-sort="TargetOvertimeDate">Target Overtime Date</th>
-                                <th class="p-4 w-2/6" data-sort="Overtime">Overtime In</th>
-                                <th class="p-4 w-2/6" data-sort="OvertimeOut">Overtime Out</th>
-                                <th class="p-4 w-2/6" data-sort="TotalOtHours">Total OT Hours</th>
-                                <th class="p-4 w-2/6" data-sort="ApprovedBy">Approved By</th>
-                                <th class="p-4 w-2/6" data-sort="ApprovalDate">Approval Date</th>
-                                <th class="p-4 w-2/6" data-sort="Status">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
-                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                             <td colspan="8" class="py-4 w-2/6"><i>Loading...</i></td>
-                        </tr> -->
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 21, 2021</td>
-                                <td class="py-4 w-2/6">September 19, 2021</td>
-                                <td class="py-4 w-2/6">09 : 05 am</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 16, 2021</td>
-                                <td class="py-4 w-2/6">September 18, 2021</td>
-                                <td class="py-4 w-2/6">06 : 05 pm</td>
-                                <td class="py-4 w-2/6">08 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Maria D. Clara</td>
-                                <td class="py-4 w-2/6">September 15, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 14, 2021</td>
-                                <td class="py-4 w-2/6">September 17, 2021</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Maria D. Clara</td>
-                                <td class="py-4 w-2/6">September 15, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 25, 2021</td>
-                                <td class="py-4 w-2/6">September 15, 2021</td>
-                                <td class="py-4 w-2/6">06 : 05 pm</td>
-                                <td class="py-4 w-2/6">08 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Padre Damaso</td>
-                                <td class="py-4 w-2/6">September 25, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 15, 2021</td>
-                                <td class="py-4 w-2/6">September 11, 2021</td>
-                                <td class="py-4 w-2/6">06 : 05 pm</td>
-                                <td class="py-4 w-2/6">08 : 05 pm</td>
-                                <td class="py-4 w-2/6">02 hrs 00 mins</td>
-                                <td class="py-4 w-2/6">Maria D. Clara</td>
-                                <td class="py-4 w-2/6">September 16, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
-                            </tr>
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <td class="py-4 w-2/6">September 14, 2021</td>
-                                <td class="py-4 w-2/6">September 08, 2021</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">--</td>
-                                <td class="py-4 w-2/6">Maria D. Clara</td>
-                                <td class="py-4 w-2/6">September 18, 2021</td>
-                                <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
-                            </tr>
-                        </tbody>
-                        <tfoot class="bg-gray-100 flex text-gray w-full pr-4">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                                <th class="p-4 w-2/6">TOTAL</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">6 hrs 00 hrs</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                                <th class="p-4 w-2/6">--</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <div class="grid justify-center items-center mb-5 bgcolor">
-                        <nav aria-label="Page navigation example w-full">
-                            <ul class="inline-flex -space-x-px">
-                                <li>
-                                    <a href="#" id="prevButtonOvertimeHistory"
-                                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                                </li>
-                                <li>
-                                    <a href="#" aria-current="page"
-                                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                                </li>
-                                <li>
-                                    <a href="#" id="nextButtonOvertimeHistory"
-                                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+            </div>
+            <div>
+                <table class="text-center w-full bg-white text-center rounded-lg hover:table-fixed ">
+                    <thead class="bg-gray-100 flex text-gray w-full pr-5">
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <th class="p-4 w-2/6" data-sort="DateApplied">Date Applied</th>
+                            <th class="p-4 w-2/6" data-sort="TargetOvertimeDate">Target Overtime Date</th>
+                            <th class="p-4 w-2/6" data-sort="Overtime">Overtime In</th>
+                            <th class="p-4 w-2/6" data-sort="OvertimeOut">Overtime Out</th>
+                            <th class="p-4 w-2/6" data-sort="TotalOtHours">Total OT Hours</th>
+                            <th class="p-4 w-2/6" data-sort="ApprovedBy">Approved By</th>
+                            <th class="p-4 w-2/6" data-sort="ApprovalDate">Approval Date</th>
+                            <th class="p-4 w-2/6" data-sort="Status">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-grey-light flex flex-col w-full" style="height: 65vh;">
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">September 21, 2021</td>
+                            <td class="py-4 w-2/6">September 19, 2021</td>
+                            <td class="py-4 w-2/6">09 : 05 am</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6 font-bold text-orange-500">Pending</td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">September 16, 2021</td>
+                            <td class="py-4 w-2/6">September 18, 2021</td>
+                            <td class="py-4 w-2/6">06 : 05 pm</td>
+                            <td class="py-4 w-2/6">08 : 05 pm</td>
+                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
+                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">September 14, 2021</td>
+                            <td class="py-4 w-2/6">September 17, 2021</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">September 25, 2021</td>
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6">06 : 05 pm</td>
+                            <td class="py-4 w-2/6">08 : 05 pm</td>
+                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
+                            <td class="py-4 w-2/6">Padre Damaso</td>
+                            <td class="py-4 w-2/6">September 25, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">September 15, 2021</td>
+                            <td class="py-4 w-2/6">September 11, 2021</td>
+                            <td class="py-4 w-2/6">06 : 05 pm</td>
+                            <td class="py-4 w-2/6">08 : 05 pm</td>
+                            <td class="py-4 w-2/6">02 hrs 00 mins</td>
+                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">September 16, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-themecolor">Approved</td>
+                        </tr>
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <td class="py-4 w-2/6">September 14, 2021</td>
+                            <td class="py-4 w-2/6">September 08, 2021</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">--</td>
+                            <td class="py-4 w-2/6">Maria D. Clara</td>
+                            <td class="py-4 w-2/6">September 18, 2021</td>
+                            <td class="py-4 w-2/6 font-bold font-pantone" data-modal-toggle="denied-ot">Denied</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="bg-gray-100 flex text-gray w-full pr-4">
+                        <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <th class="p-4 w-2/6">TOTAL</th>
+                            <th class="p-4 w-2/6">--</th>
+                            <th class="p-4 w-2/6">--</th>
+                            <th class="p-4 w-2/6">--</th>
+                            <th class="p-4 w-2/6">6 hrs 00 hrs</th>
+                            <th class="p-4 w-2/6">--</th>
+                            <th class="p-4 w-2/6">--</th>
+                            <th class="p-4 w-2/6">--</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="grid justify-center items-center mb-5 bgcolor">
+                    <nav aria-label="Page navigation example w-full">
+                        <ul class="inline-flex -space-x-px">
+                            <li>
+                                <a href="#" id="prevButtonOvertimeHistory"
+                                    class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-current="page"
+                                    class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                            </li>
+                            <li>
+                                <a href="#" id="nextButtonOvertimeHistory"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <!--end individual overtime history-->
+        </div>
+        <!--end individual overtime history-->
 
-            <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
+        <div class="grid overflow-hidden rounded-lg py-10 px-10" id="reports" style="display:none">
+            <img src="img\underconstruction.png" class="w-1/2 mx-80" alt="Sample image" />
+        </div>
+        <!--end reports  -->
+
+        <div class="grid bgcolor overflow-hidden rounded-lg py-10 px-10 my-32" id="profile" style="display:none">
 
                 <div class="grid bg-transparent grid-rows-2 grid-flow-col sm:w-full">
                     <div class="row-start-1 row-span-1 flex">
@@ -2091,45 +2146,42 @@
                         <h3 class="text-xl font-medium text-center font-pantone dark:text-white font-extrabold">
                             OVERTIME REQUEST DENIED!</h3>
 
-                        <div>
-                            <label for="text"
-                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Applicant
-                                Name: Crisostomo Ibarra</label>
-                            <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
-                        </div>
-                        <div>
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date
-                                Applied:
-                                September 14, 2021</label>
-                            <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
-                        </div>
-                        <div>
-                            <label for="date"
-                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target
-                                Date:
-                                September 17, 2021</label>
-                            <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
-                        </div>
-                        <div>
-                            <div class="flex justify-center">
-                                <div class="mb-3 xl:w-full">
-                                    <label for="exampleFormControlTextarea1"
-                                        class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
-                                    <textarea
-                                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-pantone rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                        id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
-                                        disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. 
-                            Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
-                                </div>
+                    <div>
+                        <label for="text"
+                            class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Applicant
+                            Name: Crisostomo Ibarra</label>
+                        <!-- <input type="text" name="name" id="name" class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="FirstName MiddleInitial LastName" required="" disabled> -->
+                    </div>
+                    <div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Date
+                            Applied:
+                            September 14, 2021</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <label for="date" class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Target
+                            Date:
+                            September 17, 2021</label>
+                        <!-- <input type="date" name="birthdate" id="birthdate" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Birthdate" required=""> -->
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="mb-3 xl:w-full">
+                                <label for="exampleFormControlTextarea1"
+                                    class="form-label inline-block mb-2 text-gray-700 font-bold">Reason</label>
+                                <textarea
+                                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-2 border-solid border-pantone rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                    id="exampleFormControlTextarea1" rows="8" placeholder="Your messge"
+                                    disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in finibus enim. Phasellus nec dolor scelerisque, scelerisque sapien quis, viverra elit. Vestibulum vel aliquet nibh. Vivamus quis blandit est. Nullam id posuere velit, sed molestie justo. Aenean commodo faucibus purus, nec ullamcorper urna venenatis sed. Nunc aliquam viverra tellus eget gravida. In vel malesuada lacus. Mauris mattis eros id est egestas sollicitudin. Duis eu purus sapien. Nullam ut quam vitae diam egestas vulputate non eu tellus.</textarea>
                             </div>
                         </div>
-                        <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
-                    </form>
-                </div>
+                    </div>
+                    <!-- <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button> -->
+                </form>
             </div>
         </div>
-        <!--end denied ot modal-->
+    </div>
+    <!--end denied ot modal-->
 
         <!-- print modal -->
         <div id="print" aria-hidden="true"
@@ -3196,7 +3248,7 @@
         <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
         <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script type='text/javascript'>
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $(document).ready(function() {
@@ -3349,6 +3401,25 @@ function backToTop() {
     // 		}
 }
 
+function showDashboard() {
+    var x = document.getElementById("Dashboard");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    }
+    hideProfile();
+    hideEmployeeList();
+    hideEmployeeSalary();
+    hideOTSummary();
+    hideReports();
+}
+
+function hideDashboard() {
+    var x = document.getElementById("Dashboard");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }
+}
+
 function showindividualAttendance() {
     var x = document.getElementById("individualattendanceSummary");
     if (x.style.display === "none") {
@@ -3370,10 +3441,12 @@ function showattendanceSummary() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
+    hideDashboard();
     hideProfile();
     hideEmployeeList();
     hideEmployeeSalary();
     hideOTSummary();
+    hideReports();
 }
 
 function hideattendanceSummary() {
@@ -3402,10 +3475,12 @@ function showOTSummary() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
+    hideDashboard();
     hideProfile();
     hideEmployeeList();
     hideEmployeeSalary();
     hideattendanceSummary();
+    hideReports();
 }
 
 function hideOTSummary() {
@@ -3420,11 +3495,12 @@ function showEmployeeList() {
     if (x.style.display === "none") {
         x.style.display = "block";
     }
+    hideDashboard();
     hideProfile();
     hideEmployeeSalary();
     hideattendanceSummary();
     hideOTSummary();
-
+    hideReports();
 }
 
 function showEmployeeSalary() {
@@ -3434,10 +3510,12 @@ function showEmployeeSalary() {
         console.log("hide employee list")
     }
 
+    hideDashboard();
     hideProfile();
     hideEmployeeList();
     hideattendanceSummary();
     hideOTSummary();
+    hideReports();
 }
 
 function hideEmployeeList() {
@@ -3458,16 +3536,38 @@ function hideEmployeeSalary() {
 
 }
 
+function showReports() {
+    var x = document.getElementById("reports");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        console.log("hide profile");
+    }
+    hideDashboard();
+    hideEmployeeList();
+    hideEmployeeSalary();
+    hideattendanceSummary();
+    hideOTSummary();
+}
+
+function hideReports() {
+    var x = document.getElementById("reports");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }
+}
+
 function showProfile() {
     var x = document.getElementById("profile");
     if (x.style.display === "none") {
         x.style.display = "block";
         console.log("hide profile");
     }
+    hideDashboard();
     hideEmployeeList();
     hideEmployeeSalary();
     hideattendanceSummary();
     hideOTSummary();
+    hideReports();
 }
 
 function hideProfile() {
@@ -4091,4 +4191,116 @@ function printDataEmployeeAttendance() {
     newWin.close();
 
 }
+
+const labelsBarChartLateUndertime = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartLateUndertime = {
+    labels: labelsBarChartLateUndertime,
+    datasets: [{
+        label: "Minutes",
+        backgroundColor: "hsl(325.8,100%,33.3%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [160, 123, 110, 75, 73],
+    }, ],
+};
+
+const configBarChartLateUndertime = {
+    type: "bar",
+    data: dataBarChartLateUndertime,
+    options: {},
+};
+
+var chartBarLateUndertime = new Chart(
+    document.getElementById("chartBarLateUndertime"),
+    configBarChartLateUndertime
+);
+
+const labelsBarChartHoursRendered = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartHoursRendered = {
+    labels: labelsBarChartHoursRendered,
+    datasets: [{
+        label: "Minutes",
+        backgroundColor: "hsl(183.5,100%,33.9%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [600, 583, 573, 540, 490],
+    }, ],
+};
+
+const configBarChartHoursRendered = {
+    type: "bar",
+    data: dataBarChartHoursRendered,
+    options: {},
+};
+
+var chartBarHoursRendered = new Chart(
+    document.getElementById("chartBarHoursRendered"),
+    configBarChartHoursRendered
+);
+
+const labelsBarChartAbsent = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartAbsent = {
+    labels: labelsBarChartAbsent,
+    datasets: [{
+        label: "No. of absent",
+        backgroundColor: "hsl(325.8,100%,33.3%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [10, 4, 3, 3, 2],
+    }, ],
+};
+
+const configBarChartAbsent = {
+    type: "bar",
+    data: dataBarChartAbsent,
+    options: {},
+};
+
+var chartBarAbsent = new Chart(
+    document.getElementById("chartBarAbsent"),
+    configBarChartAbsent
+);
+
+const labelsBarChartOvertime = [
+    "Crisostomo Ibarra",
+    "Maria Clara",
+    "Doña Victorina",
+    "Doña Consolacíon",
+    "Pilósofo Tasyo",
+];
+const dataBarChartOvertime = {
+    labels: labelsBarChartOvertime,
+    datasets: [{
+        label: "Minutes",
+        backgroundColor: "hsl(183.5,100%,33.9%)",
+        borderColor: "hsl(0,0%,100%)",
+        data: [110, 96, 78, 65, 60],
+    }, ],
+};
+
+const configBarChartOvertime = {
+    type: "bar",
+    data: dataBarChartOvertime,
+    options: {},
+};
+
+var chartBarOvertime = new Chart(
+    document.getElementById("chartBarOvertime"),
+    configBarChartOvertime
+);
 </script>
