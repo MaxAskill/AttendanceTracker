@@ -190,25 +190,25 @@
                                         </span></th>
                                 </tr>
                                 <tr>
-                                    <th class="py-1">LB IN :</th>
+                                    <th class="py-1">LB OUT :</th>
                                     <th class="font-medium"><span id="lbIn">
                                             -- : -- : --
                                         </span></th>
                                 </tr>
                                 <tr>
-                                    <th class="py-1">LB OUT :</th>
+                                    <th class="py-1">LB IN :</th>
                                     <th class="font-medium"><span id="lbOut">
                                             -- : -- : --
                                         </span></th>
                                 </tr>
                                 <tr>
-                                    <th class="py-1">CB IN :</th>
+                                    <th class="py-1">CB OUT :</th>
                                     <th class="font-medium"><span id="cbIn">
                                             -- : -- : --
                                         </span></th>
                                 </tr>
                                 <tr>
-                                    <th class="py-1">CB OUT :</th>
+                                    <th class="py-1">CB IN :</th>
                                     <th class="font-medium"><span id="cbOut">
                                             -- : -- : --
                                         </span></th>
@@ -421,9 +421,9 @@
                         </div>
                         <div class="md:row-start-2 md:row-span-2 md:px-0 px-3">
                             <div class="md:flex  md:float-right ">
-                                <button
+                                <!-- <button
                                     class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
-                                    data-modal-toggle="upload-file">Upload</button>
+                                    data-modal-toggle="upload-file">Upload</button> -->
                                 <button
                                     class="px-1 py-1 bg-white font-themecolor border-2 border-white mt-2 mr-3 rounded-lg hover:bg-transparent hover:text-white focus:outline-none"
                                     onClick="printDataAttendanceSummary()">Print</button>
@@ -729,7 +729,7 @@
                     </div>
                     <div class="row-start-1 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Employee
-                            No.</label>
+                            ID</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Company ID" required="" value="0000-0001" disabled>
@@ -790,7 +790,7 @@
                             Position</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporation Sales"
+                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporated Promodiser"
                             disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
@@ -798,21 +798,21 @@
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Company Name" required="" value="New Barbizon Fashion Incorporation" disabled>
+                            placeholder="Company Name" required="" value="New Barbizon Fashion Incorporated" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Branch Name" required="" value="Robensons Department Store Bacolod" disabled>
+                            placeholder="Branch Name" required="" value="Robinsons Department Store Bacolod" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Chain
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Chain Name" required="" value="Robensons Department Store" disabled>
+                            placeholder="Chain Name" required="" value="Robinsons Department Store" disabled>
                     </div>
                     <div class="row-start-3 col-span-1">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Brand
@@ -984,6 +984,13 @@
                             <input datepicker type="text"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Select date" name="otdate" id="otdate">
+                        </div>
+                        <div>
+                            <label for="date"
+                                class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Starts of Overtime</label>
+                            <input type="text" name="otduration" id="otduration"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="(E.g 07:30 pm)" required="" id="otduration">
                         </div>
                         <div>
                             <label for="date"
@@ -1338,7 +1345,7 @@ function time_in() {
         hours = (hours > 12) ? hours - 12 : hours;
 
         document.getElementById('time_out').innerHTML =
-            hours + " : " + minutes + " : " + seconds + " " + timeAmPm;
+            hours + " : " + minutes + " : " + seconds + " " + "PM";
         ctr = ctr + 1;
         console.log("AM In", ctr);
     } else if (ctr == 2) {

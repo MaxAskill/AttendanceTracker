@@ -114,7 +114,7 @@
                                 <span class="flex-1 ml-3 whitespace-nowrap">Deduction Maintenance</span>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#" onClick="showBranchMaintenance()" @click="open = !open"
                                 class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@
                                 </svg>
                                 <span class="flex-1 ml-3 whitespace-nowrap">Branch Maintenance</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#" onClick="showProfile()"
                                 class="flex items-center employesidebar p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -184,7 +184,7 @@
             <div id="employeeSalary" class="grid bgcolor overflow-hidden rounded-lg mb-5" style="display: none">
                 <div class="grid grid-rows-1 grid-col-2 grid-flow-col lg:px-10 sm:px-5 py-5 sm:w-full">
                     <div class="row-start-1 col-span-1 flex">
-                        <h1 class="text-white text-4xl font-bold px">Employee Payroll Salary</h1>
+                        <h1 class="text-white text-4xl font-bold px">Employee Payroll Summary</h1>
                     </div>
 
                     <div class="row-start-1 col-span-1 flex">
@@ -199,7 +199,7 @@
                 <table class="text-center w-full bg-white hover:table-fixed ">
                     <thead class="bg-gray-100 flex text-gray w-full">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-                            <th class="p-4 w-2/6">ID Number</th>
+                            <th class="p-4 w-2/6">Employee ID</th>
                             <th class="p-4 w-2/6">Name</th>
                             <th class="p-4 w-2/6">Cut-Off Date</th>
                             <th class="p-4 w-2/6">No. of Days</th>
@@ -214,13 +214,13 @@
                     <tbody class="bg-grey-light flex flex-col w-full" style="height: 73vh;">
                         <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                             <td class="py-4 w-2/6">0000-0001</td>
-                            <td class="py-4 w-2/6">Ibarra Crisostomo</td>
+                            <td class="py-4 w-2/6">Crisostomo Ibarra</td>
                             <td class="py-4 w-2/6">October 06, 2021</td>
                             <td class="py-4 w-2/6">4</td>
                             <td class="py-4 w-2/6">P370.00</td>
                             <td class="py-4 w-2/6">P1,480.00</td>
                             <td class="py-4 w-2/6">0.00</td>
-                            <td class="py-4 w-2/6">P352.82</td>
+                            <td class="py-4 w-2/6">P460.32</td>
                             <td class="py-4 w-2/6"><button
                                     class="bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none"
                                     data-modal-toggle="view-employee">View</button></td>
@@ -315,11 +315,11 @@
                                         <div class="grid grid-cols-5 gap-2">
                                             <div class="col-start-1 col-span-1">
                                                 <label for="text"
-                                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Salary
                                                     ID</label>
                                                 <input type="text" name="branchID" id="branchID"
                                                     class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                                    placeholder="Branch ID" required="" readonly>
+                                                    placeholder="Branch ID" required=""  value="SALARY-0007"readonly>
                                             </div>
                                             <div class="col-start-2 col-span-1">
                                                 <label for="date"
@@ -408,7 +408,7 @@
                         class="text-center w-full bg-white place-items-center rounded-lg  overflow-x-scroll px-10 overflow-auto">
                         <thead class="bg-gray-100 flex text-gray w-full">
                             <tr class="flex w-full">
-                                <th class="p-4 w-2/6">Branch ID</th>
+                                <th class="p-4 w-2/6">Salary ID</th>
                                 <th class="p-4 w-2/6">Region</th>
                                 <th class="p-4 w-2/6">Municipality/City</th>
                                 <th class="p-4 w-2/6">Chain</th>
@@ -930,7 +930,7 @@
                                                 ID</label>
                                             <input type="text" name="branchID" id="branchID"
                                                 class="form-control capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-black block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white outline-none"
-                                                placeholder="" required="" value="">
+                                                placeholder="Branch ID" required="" value="">
                                         </div>
                                     </div>
 
@@ -1164,7 +1164,7 @@
                             alt="Sample image" />
                     </div>
                     <div class="row-start-1 col-span-1">
-                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
+                        <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Employee
                             ID</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -1226,14 +1226,14 @@
                             Position</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Job Position" required="" value="NBFI Sales" disabled>
+                            placeholder="Job Position" required="" value="New Barbizon Fashion Incorporated Sales" disabled>
                     </div>
                     <div class="row-start-3 col-span-3">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Company
                             Name</label>
                         <input type="text" name="mName" id="mName"
                             class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                            placeholder="Company Name" required="" value="NBFI" disabled>
+                            placeholder="Company Name" required="" value="New Barbizon Incorpated Incorporated" disabled>
                     </div>
                     <div class="row-start-4 col-span-2">
                         <label for="text" class="text-sm font-medium text-white block mb-2 dark:text-gray-300">Branch
@@ -1323,7 +1323,7 @@
                         </button>
                     </div>
                     <form class="space-y-3 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
-                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white">Employee Payroll Salary</h3>
+                        <h3 class="text-2xl font-medium text-gray-900 dark:text-white">Employee Payroll Summary</h3>
                         <div class="grid grid-cols-4 gap-2">
                             <div class="col-start-1 col-span-1">
                                 <label for="number"
@@ -1335,8 +1335,8 @@
                             </div>
                             <div class="col-start-2 col-span-1">
                                 <label for="text"
-                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">ID
-                                    Number</label>
+                                    class="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Employee ID
+                                    </label>
                                 <input type="text" name="lName" id="lName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                     placeholder="340" required="" value="340" disabled>
@@ -1346,7 +1346,7 @@
                                     class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Name</label>
                                 <input @input="capitalizeFName" type="text" name="fName" id="fName"
                                     class="capitalized bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="Ibarra Crisostomo" required="" value="Ibarra Crisostomo" disabled>
+                                    placeholder="Ibarra Crisostomo" required="" value="Crisostomo Ibarra" disabled>
                             </div>
                             <div class="col-start-4 col-span-1">
                                 <label for="text"
@@ -1598,11 +1598,11 @@
                     <div class="grid grid-cols-5 gap-2">
                         <div class="col-start-1 col-span-1">
                             <label for="text"
-                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Salary
                                 ID</label>
                             <input type="text" name="name" id="name"
                                 class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                placeholder="BRANCH-0001" required="" value="BRANCH-0001">
+                                placeholder="BRANCH-0001" required="" value="SALARY-0001">
                         </div>
                         <div class="col-start-2 col-span-1">
                             <label for="date"
@@ -1704,14 +1704,14 @@
 
     <!-- delete-salary modal -->
     <div id="delete-store" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full  justify-center items-center">
-        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="relative p-4 w-full max-w-md h-full md:h-auto left-96">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="relative top-72 left-96 right-0 border w-full shadow-lg rounded-md bg-white">
                 <div class="flex justify-end p-2">
                     <button type="button"
                         class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="delete-store">
+                        onClick="closeDeleteStore()">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -1727,7 +1727,7 @@
                                 d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to
-                            delete this Salary?</h3>
+                            delete this Salary Maintenance Record?</h3>
                         <button onClick="closeDeleteStore()" type="button"
                             class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
                             Yes, I'm sure
@@ -1740,6 +1740,45 @@
             </div>
         </div>
         <!--end edit-store modal-->
+
+         <!-- delete-branch modal -->
+    <div id="delete-branch" aria-hidden="true"
+        class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="relative p-4 w-full max-w-md h-full md:h-auto left-96">
+            <!-- Modal content -->
+            <div class="relative top-72 left-96 right-0 border w-full shadow-lg rounded-md bg-white">
+                <div class="flex justify-end p-2">
+                    <button type="button"
+                        class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                        onClick="closeDeleteBranch()">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                    <div class="p-6 text-center">
+                        <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to
+                            delete this Branch?</h3>
+                        <button onClick="closeDeleteBranch()" type="button"
+                            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                            Yes, I'm sure
+                        </button>
+                        <button onClick="closeDeleteBranch()" type="button"
+                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                            cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end delete-branch modal-->
 
         <!-- edit-deduction modal -->
         <div id="edit-deduction" aria-hidden="true"
@@ -1764,11 +1803,11 @@
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-start-1 col-span-1">
                                 <label for="text"
-                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Branch
+                                    class="capitalized text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300">Deduction
                                     ID</label>
                                 <input type="text" name="name" id="name"
                                     class="capitalize bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                    placeholder="BRANCH-0001" required="" value="SALARY-0001" readonly>
+                                    placeholder="BRANCH-0001" required="" value="DEDUCTION-0001" readonly>
                             </div>
                             <div class="col-start-2 col-span-1">
                                 <label for="date"
@@ -1920,14 +1959,14 @@
         <!--end delete-deduction modal-->
          <!-- edit-branch modal -->
     <div id="edit-branch" aria-hidden="true"
-        class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
-        <div class="relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
+        class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="modal-dialog relative xl:w-3/5 sm:w-full xl:px-4 h-full md:h-auto">
             <!-- Modal content -->
-            <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+            <div class="relative top-72 left-96 border w-full shadow-lg rounded-md bg-white">
                 <div class="flex justify-end p-2">
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                        data-modal-toggle="edit-branch">
+                        onClick="closeEditBranch()">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -2006,7 +2045,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit"
+                    <button type="submit" onClick="closeEditBranch()"
                         class="col-start-1 col-span-1 w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
                 </form>
             </div>
@@ -2058,16 +2097,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type='text/javascript'>
 var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-var primaryKey = "";
+var primaryKey = "SALARY-0007";
 
         function generatePrimaryKey(){
 
-            console.log(primaryKey);
-            const arr = primaryKey.split("-");
-            arr[1] = "000" + (parseInt(arr[1]) + 1);
-            primaryKey = arr[0] + "-" + arr[1];
+            // console.log(primaryKey);
+            // const arr = primaryKey.split("-");
+            // arr[1] = "000" + (parseInt(arr[1]) + 1);
+            // primaryKey = arr[0] + "-" + arr[1];
 
-            document.getElementById("branchID").value=primaryKey;
+            document.getElementById("salaryID").value=primaryKey;
 
         }
 
@@ -2109,6 +2148,26 @@ var primaryKey = "";
 
         function closeDeleteDeduction() {
             modalDeleteDeduction.style.display = "none";
+        }
+
+        let modalEditBranch = document.getElementById('edit-branch');
+
+        function editBranch() {
+            modalEditBranch.style.display = "block";
+        }
+
+        function closeEditBranch() {
+            modalEditBranch.style.display = "none";
+        }
+
+        let modalDeleteBranch = document.getElementById('delete-branch');
+
+        function deleteBranch() {
+            modalDeleteBranch.style.display = "block";
+        }
+
+        function closeDeleteBranch() {
+            modalDeleteBranch.style.display = "none";
         }
  
         var primaryDeductionID = "";
@@ -2366,7 +2425,7 @@ function renderTableSalaryMaintenance() {
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${"SALARY-000"+c.salaryID}</td>
      <td class="py-4 w-2/6">${c.region}</td>
      <td class="py-4 w-2/6">${c.municipalitycity}</td>
      <td class="py-4 w-2/6">${c.chain}</td>
@@ -2429,24 +2488,26 @@ function renderTableDeductionMaintenance() {
     dataDeductionMaintenance = dataDeductionMaintenance[0][1];
     console.log(dataDeductionMaintenance);
     let result = '';
+    let x = 1;
     dataDeductionMaintenance.filter((row, index) => {
         let start = (curPageDeductionMaintenance - 1) * pageSizeDeductionMaintenance;
         let end = curPageDeductionMaintenance * pageSizeDeductionMaintenance;
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${c.deductionID}</td>
+     <td class="py-4 w-2/6">${"DEDUCTION-000"+x}</td>
      <td class="py-4 w-2/6">${c.region}</td>
      <td class="py-4 w-2/6">${c.municipalitycity}</td>
      <td class="py-4 w-2/6">${c.chain}</td>
      <td class="py-4 w-2/6">${c.branch}</td>
      <td class="py-4 w-2/6">${c.rangeSalary}</td>
-     <td class="py-4 w-2/6">${c.SSS}</td>
-     <td class="py-4 w-2/6">${c.PHIC}</td>
-	 <td class="py-4 w-2/6">${c.HMDF}</td>
-	 <td class="py-4 w-2/6">${c.total}</td>
+     <td class="py-4 w-1/6">${c.SSS}</td>
+     <td class="py-4 w-1/6">${c.PHIC}</td>
+	 <td class="py-4 w-1/6">${c.HMDF}</td>
+	 <td class="py-4 w-1/6">${c.total}</td>
      <td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>
      </tr>`;
+     x++;
     });
     tableDeductionMaintenance.innerHTML = result;
 }
@@ -2497,19 +2558,22 @@ function renderTableBranchMaintenance() {
     dataBranchMaintenance = dataBranchMaintenance[0][1];
     console.log(dataBranchMaintenance);
     let result = '';
+    let x = 1;
     dataBranchMaintenance.filter((row, index) => {
         let start = (curPageBranchMaintenance - 1) * pageSizeBranchMaintenance;
         let end = curPageBranchMaintenance * pageSizeBranchMaintenance;
         if (index >= start && index < end) return true;
     }).forEach(c => {
+        
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${c.branchID}</td>
+     <td class="py-4 w-2/6">${"BRANCH-000"+x}</td>
      <td class="py-4 w-2/6">${c.region}</td>
      <td class="py-4 w-2/6">${c.municipalitycity}</td>
      <td class="py-4 w-2/6">${c.chain}</td>
      <td class="py-4 w-2/6">${c.branch}</td>
-     <td class='p-4 w-2/6'> <button onClick='editDeduction()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteDeduction()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>
+     <td class='p-4 w-2/6'> <button onClick='editBranch()' class='btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='edit-deduction'>Edit</button><button onClick='deleteBranch()' class='btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none' data-modal-toggle='delete-deduction'>Delete</button></td>
      </tr>`;
+     x++;
     });
     tableBranchMaintenance.innerHTML = result;
 }
