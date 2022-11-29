@@ -2360,7 +2360,7 @@ async function init() {
         success: function(response) {
 
             // createRows(response);
-            dataSalaryMaintenance = Object.entries(response);
+            dataSalaryMaintenance = response;
             renderTableSalaryMaintenance();
 
         }
@@ -2381,7 +2381,7 @@ async function init() {
         success: function(response) {
 
             // createRows(response);
-            dataDeductionMaintenance = Object.entries(response);
+            dataDeductionMaintenance = response;
             renderTableDeductionMaintenance();
 
         }
@@ -2416,7 +2416,7 @@ function renderTableSalaryMaintenance() {
     // create html
 
     // console.log(dataSalaryMaintenance[0][1]);
-    dataSalaryMaintenance = dataSalaryMaintenance[0][1];
+    // dataSalaryMaintenance = dataSalaryMaintenance[0][1];
     console.log(dataSalaryMaintenance.length);
     let result = '';
     dataSalaryMaintenance.filter((row, index) => {
@@ -2425,7 +2425,7 @@ function renderTableSalaryMaintenance() {
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${"SALARY-000"+c.salaryID}</td>
+     <td class="py-4 w-2/6">${c.salaryID}</td>
      <td class="py-4 w-2/6">${c.region}</td>
      <td class="py-4 w-2/6">${c.municipalitycity}</td>
      <td class="py-4 w-2/6">${c.chain}</td>
@@ -2485,7 +2485,7 @@ function renderTableDeductionMaintenance() {
     // create html
 
     // console.log(dataSalaryMaintenance[0][1]);
-    dataDeductionMaintenance = dataDeductionMaintenance[0][1];
+    // dataDeductionMaintenance = dataDeductionMaintenance[0][1];
     console.log(dataDeductionMaintenance);
     let result = '';
     let x = 1;
@@ -2495,7 +2495,7 @@ function renderTableDeductionMaintenance() {
         if (index >= start && index < end) return true;
     }).forEach(c => {
         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-     <td class="py-4 w-2/6">${"DEDUCTION-000"+x}</td>
+     <td class="py-4 w-2/6">${c.deductionID}</td>
      <td class="py-4 w-2/6">${c.region}</td>
      <td class="py-4 w-2/6">${c.municipalitycity}</td>
      <td class="py-4 w-2/6">${c.chain}</td>

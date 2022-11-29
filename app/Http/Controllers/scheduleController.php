@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 use Vonage\Client\Credentials\Basic;
 use Vonage\Client;
 use Vonage\SMS\Message\SMS;
@@ -22,8 +23,8 @@ class scheduleController extends Controller
 
     public function getScheduleMaintenance(){
     
-        // $schedule = scheduleMaintenance::all(); 
-        $schedule = DB::select('SELECT * FROM schedulemaintenance ');
+        $schedule = scheduleMaintenance::all(); 
+        // $schedule = DB::select('SELECT * FROM schedulemaintenance ');
         // Fetch all records
         if($schedule == null)
             return response()->json([]);

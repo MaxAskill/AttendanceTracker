@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- <link href="/dist/output.css" rel="stylesheet"> -->
     </head>
@@ -608,7 +609,7 @@
                         </thead>
                         <tbody class="bg-grey-light flex flex-col text-center items-left justify-left w-full"
                             style="height: 73vh;">
-                            <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+                            <!-- <tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
                                 <td class="p-4 w-2/6">SCHEDULE-0001</td>
                                 <td class="p-4 w-2/6">NCR</td>
                                 <td class="p-4 w-2/6">Las Pinas City</td>
@@ -715,7 +716,7 @@
                                         class="bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none"
                                         data-modal-toggle="delete-schedule">Delete</button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                     <div class="grid justify-center items-center mb-3 bg-white">
@@ -1582,7 +1583,7 @@
     </button>
 
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -1590,7 +1591,10 @@
 </html>
 
 <!-- Javascript Code -->
-<script>
+
+<script type='text/javascript'>
+var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
 let modalPending = document.getElementById('view-pending');
 let modalDenying = document.getElementById('view-denying');
 let modalApproved = document.getElementById('view-approved');
@@ -2031,96 +2035,96 @@ async function init() {
     document.querySelector('#deniednextButton').addEventListener('click', deniednextPage, false);
     document.querySelector('#deniedprevButton').addEventListener('click', deniedpreviousPage, false);
 
-    //Schedule Maintenance
-    // $.ajax({
-    //     url: 'getScheduleMaintenance',
-    //     type: 'GET',
-    //     dataType: 'json',
-    //     success: function(response) {
+    // Schedule Maintenance
+    $.ajax({
+        url: 'getScheduleMaintenance',
+        type: 'get',
+        dataType: 'json',
+        success: function(response) {
 
-    //         // createRows(response);
-    //         dataScheduleMaintenance = response;
-    //         renderTableScheduleMaintenance();
+            // createRows(response);
+            dataScheduleMaintenance = response;
+            renderTableScheduleMaintenance();
 
-    //     }
+        }
 
-    // });
-    // console.log(dataScheduleMaintenance);
-    // tableScheduleMaintenance = document.querySelector('#scheduleMaintenanceTable tbody');
-    // document.querySelector('#nextButtonScheduleMaintenance').addEventListener('click', nextPageScheduleMaintenance,
-    //     false);
-    // document.querySelector('#prevButtonScheduleMaintenance').addEventListener('click',
-    //     previousPageScheduleMaintenance,
-    //     false);
+    });
+    console.log(dataScheduleMaintenance);
+    tableScheduleMaintenance = document.querySelector('#scheduleMaintenanceTable tbody');
+    document.querySelector('#nextButtonScheduleMaintenance').addEventListener('click', nextPageScheduleMaintenance,
+        false);
+    document.querySelector('#prevButtonScheduleMaintenance').addEventListener('click',
+        previousPageScheduleMaintenance,
+        false);
 }
 
-//Salary Maintenance
-// function renderTableScheduleMaintenance() {
-//     // create html
+// Salary Maintenance
+function renderTableScheduleMaintenance() {
+    // create html
 
-//     // console.log(dataSalaryMaintenance[0][1]);
-//     // dataScheduleMaintenance = dataScheduleMaintenance[0][1];
-//     console.log(dataScheduleMaintenance.length);
-//     let result = '';
-//     dataScheduleMaintenance.filter((row, index) => {
-//         let start = (curPageScheduleMaintenance - 1) * pageSizeScheduleMaintenance;
-//         let end = curPageScheduleMaintenance * pageSizeScheduleMaintenance;
-//         if (index >= start && index < end) return true;
-//     }).forEach(c => {
-//         result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
-//      <td class="py-4 w-2/6">${c.scheduleID}</td>
-//      <td class="py-4 w-2/6">${c.region}</td>
-//      <td class="py-4 w-2/6">${c.municipalitycity}</td>
-//      <td class="py-4 w-2/6">${c.chain}</td>
-//      <td class="py-4 w-2/6">${c.branch}</td>
-// 	 <td class="py-4 w-2/6">${c.startTime}</td>
-// 	 <td class="py-4 w-2/6">${c.endTime}</td>
-//      <td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>
-//      </tr>`;
-//         //  primaryKey = c.scheduleID;
-//     });
-//     tableScheduleMaintenance.innerHTML = result;
-// }
+    // console.log(dataSalaryMaintenance[0][1]);
+    // dataScheduleMaintenance = dataScheduleMaintenance[0][1];
+    console.log(dataScheduleMaintenance.length);
+    let result = '';
+    dataScheduleMaintenance.filter((row, index) => {
+        let start = (curPageScheduleMaintenance - 1) * pageSizeScheduleMaintenance;
+        let end = curPageScheduleMaintenance * pageSizeScheduleMaintenance;
+        if (index >= start && index < end) return true;
+    }).forEach(c => {
+        result += `<tr class="flex w-full even:bg-gray-100 odd:bg-white-100">
+     <td class="py-4 w-2/6">${c.scheduleID}</td>
+     <td class="py-4 w-2/6">${c.region}</td>
+     <td class="py-4 w-2/6">${c.municipalitycity}</td>
+     <td class="py-4 w-2/6">${c.chain}</td>
+     <td class="py-4 w-2/6">${c.branch}</td>
+	 <td class="py-4 w-2/6">${c.startTime}</td>
+	 <td class="py-4 w-2/6">${c.endTime}</td>
+     <td class="p-4 w-2/6"><button onClick="editSalary()" id="editSalary" class="btn bg-transparent hover:bg-white font-themecolor font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 bordercolor hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="edit-store">Edit</button><button id="deleteSalary" onCLick="deleteSalary()" class="btn bg-transparent hover:bg-white font-pantone font-semibold hover:text-opacity-50 py-0.5 px-2 border-2 border-pantone hover:bg-gray-200 rounded-2xl focus:outline-none" data-modal-toggle="delete-store">Delete</button></td>
+     </tr>`;
+        //  primaryKey = c.scheduleID;
+    });
+    tableScheduleMaintenance.innerHTML = result;
+}
 
-// function previousPageScheduleMaintenance() {
-//     if (curPageScheduleMaintenance > 1) curPageScheduleMaintenance--;
-//     renderTableScheduleMaintenance();
-// }
+function previousPageScheduleMaintenance() {
+    if (curPageScheduleMaintenance > 1) curPageScheduleMaintenance--;
+    renderTableScheduleMaintenance();
+}
 
-// function nextPageScheduleMaintenance() {
-//     if ((curPageScheduleMaintenance * pageSizeSalaryMaintenance) < dataScheduleMaintenance.length)
-//         curPageScheduleMaintenance++;
-//     renderTableScheduleMaintenance();
-// }
+function nextPageScheduleMaintenance() {
+    if ((curPageScheduleMaintenance * pageSizeSalaryMaintenance) < dataScheduleMaintenance.length)
+        curPageScheduleMaintenance++;
+    renderTableScheduleMaintenance();
+}
 
 // declare elements
-// const searchBoxScheduleMaintenance = document.getElementById('searchBoxSchedule');
-// const tableSearchScheduleMaintenance = document.getElementById("scheduleMaintenanceTable");
-// const trsScheduleMaintenance = tableSearchScheduleMaintenance.tBodies[0].getElementsByTagName("tr");
-// // add event listener to search box
-// searchBoxScheduleMaintenance.addEventListener('keyup', performSearchSchedule);
+const searchBoxScheduleMaintenance = document.getElementById('searchBoxSchedule');
+const tableSearchScheduleMaintenance = document.getElementById("scheduleMaintenanceTable");
+const trsScheduleMaintenance = tableSearchScheduleMaintenance.tBodies[0].getElementsByTagName("tr");
+// add event listener to search box
+searchBoxScheduleMaintenance.addEventListener('keyup', performSearchSchedule);
 
-// function performSearchSchedule() {
-//     // Declare search string 
-//     var filter = searchBox.value.toUpperCase();
-//     // Loop through first tbody's rows
-//     for (var rowI = 0; rowI < trsScheduleMaintenance.length; rowI++) {
-//         // define the row's cells
-//         var tds = trsScheduleMaintenance[rowI].getElementsByTagName("td");
-//         // hide the row
-//         trsScheduleMaintenance[rowI].style.display = "none";
-//         // loop through row cells
-//         for (var cellI = 0; cellI < tds.length; cellI++) {
-//             // if there's a match
-//             if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-//                 // show the row
-//                 trsScheduleMaintenance[rowI].style.display = "";
-//                 // skip to the next row
-//                 continue;
-//             }
-//         }
-//     }
-// }
+function performSearchSchedule() {
+    // Declare search string 
+    var filter = searchBox.value.toUpperCase();
+    // Loop through first tbody's rows
+    for (var rowI = 0; rowI < trsScheduleMaintenance.length; rowI++) {
+        // define the row's cells
+        var tds = trsScheduleMaintenance[rowI].getElementsByTagName("td");
+        // hide the row
+        trsScheduleMaintenance[rowI].style.display = "none";
+        // loop through row cells
+        for (var cellI = 0; cellI < tds.length; cellI++) {
+            // if there's a match
+            if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // show the row
+                trsScheduleMaintenance[rowI].style.display = "";
+                // skip to the next row
+                continue;
+            }
+        }
+    }
+}
 
 function renderTable() {
     // create html

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 use Vonage\Client\Credentials\Basic;
 use Vonage\Client;
@@ -21,12 +22,13 @@ class deductionController extends Controller
 
     public function getDeductionMaintenance(){
     
-        $deduction = deductionMaintenance::orderby('deductionID','asc')->get(); 
-         
-        // Fetch all records
-        $response['data'] = $deduction;
-    
-        return response()->json($response);
+         // $schedule = scheduleMaintenance::all(); 
+         $deduction = DB::select('SELECT * FROM deductionmaintenance ');
+         // Fetch all records
+         if($deduction == null)
+             return response()->json([]);
+         return response()->json($deduction);
+       
       }
 
     public function create(){

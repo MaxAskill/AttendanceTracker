@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 use Vonage\Client\Credentials\Basic;
 use Vonage\Client;
@@ -22,12 +23,12 @@ class branchController extends Controller
 
     public function getBranchMaintenance(){
     
-        $branch = branch::orderby('branchID','asc')->get(); 
-         
+        // $schedule = scheduleMaintenance::all(); 
+        $branch = DB::select('SELECT * FROM branch');
         // Fetch all records
-        $response['data'] = $branch;
-    
-        return response()->json($response);
+        if($branch == null)
+            return response()->json([]);
+        return response()->json($branch);
       }
 
     function store(Request $request){

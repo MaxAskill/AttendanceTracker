@@ -4989,7 +4989,7 @@ async function init() {
         success: function(response) {
 
             // createRows(response);
-            dataBranchMaintenance = Object.entries(response);
+            dataBranchMaintenance = response;
             renderTableBranchMaintenance();
 
         }
@@ -5094,7 +5094,7 @@ function renderTableBranchMaintenance() {
     // create html
 
     // console.log(dataSalaryMaintenance[0][1]);
-    dataBranchMaintenance = dataBranchMaintenance[0][1];
+    // dataBranchMaintenance = dataBranchMaintenance[0][1];
     console.log(dataBranchMaintenance);
     let result = '';
     let x = 1;

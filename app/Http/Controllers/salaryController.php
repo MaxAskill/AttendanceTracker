@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 use Vonage\Client\Credentials\Basic;
 use Vonage\Client;
@@ -22,12 +23,20 @@ class salaryController extends Controller
 
     public function getSalaryMaintenance(){
     
-        $salary = salaryMaintenance::orderby('salaryID','asc')->select('*')->get(); 
-         
+
+        // $schedule = scheduleMaintenance::all(); 
+        $salary = DB::select('SELECT * FROM salarymaintenance ');
         // Fetch all records
-        $response['data'] = $salary;
+        if($salary == null)
+            return response()->json([]);
+        return response()->json($salary);
+
+        // $salary = salaryMaintenance::orderby('salaryID','asc')->select('*')->get(); 
+         
+        // // Fetch all records
+        // $response['data'] = $salary;
     
-        return response()->json($response);
+        // return response()->json($response);
       }
 
     public function create(){
